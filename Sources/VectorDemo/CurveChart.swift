@@ -5,8 +5,8 @@ import DocumentKit
 // pairs, one per corpus size N: the build's bar is as wide as its seconds (three units
 // per second), and the judge's bar is one hair wide, its exact seconds standing in the
 // label. The measurements are stated facts with provenance: the build column taken with
-// `swift run Tools curve` on the direct-coordinates layout (DESIGN21 v32), the judge
-// column with `swift run Tools curve --judge` (the second judge, Curve.md's table).
+// `swift run ShowcaseTools curve` on the direct-coordinates layout (DESIGN21 v32), the judge
+// column with `swift run ShowcaseTools curve --judge` (the second judge, Curve.md's table).
 // The four layouts the build crossed to reach these numbers live in Curve.md's series
 // table: this figure carries the standing state, the page carries the history.
 
@@ -84,7 +84,7 @@ extension CurveAxisTextY {
 enum CurveFootText: Close {}
 extension CurveFootText {
     public static var typeName: String {
-        "each doubling of N doubles the judge, the build grows near N^1.3 · reproduce: swift run Tools curve --judge 3200 6400 12800"
+        "each doubling of N doubles the judge, the build grows near N^1.3 · reproduce: swift run ShowcaseTools curve --judge 3200 6400 12800"
     }
 }
 enum CurveFootY: Close {}
@@ -101,8 +101,8 @@ extension LegendJudgeText {
 }
 
 // ── the measurements, one label per bar: stated, never computed (§S15).
-// build (direct coordinates, `swift run Tools curve`, DESIGN21 v32): 3200 → 34 s,
-// 6400 → 82 s, 12800 → 199 s. judge (`swift run Tools curve --judge`, Curve.md's
+// build (direct coordinates, `swift run ShowcaseTools curve`, DESIGN21 v32): 3200 → 34 s,
+// 6400 → 82 s, 12800 → 199 s. judge (`swift run ShowcaseTools curve --judge`, Curve.md's
 // table): 3200 → 0.28 s, 6400 → 0.55 s, 12800 → 1.10 s. ──
 
 enum N3200Text: Close {}

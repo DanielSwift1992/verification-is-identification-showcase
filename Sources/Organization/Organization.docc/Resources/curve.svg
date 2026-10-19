@@ -100,7 +100,7 @@
 </g>
 <g transform="translate(0, 300)">
 <g transform="translate(0, 0)">
-<text x="480" y="16" text-anchor="middle" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="10">each doubling of N doubles the judge, the build grows near N^1.3 · reproduce: swift run Tools curve --judge 3200 6400 12800</text>
+<text x="480" y="16" text-anchor="middle" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="10">each doubling of N doubles the judge, the build grows near N^1.3 · reproduce: swift run ShowcaseTools curve --judge 3200 6400 12800</text>
 </g>
 </g>
 </g>
