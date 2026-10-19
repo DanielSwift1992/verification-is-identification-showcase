@@ -18,7 +18,7 @@ Four of the employee cards have a login keypad. A key is a link to a declared st
 
 ## Build and check
 
-The theory package is the sibling checkout `../verification-is-identification`. `VI_THEORY_PATH` names another one.
+`swift build` builds against the theory revision `Package.swift` pins. [`check.sh`](check.sh) uses the sibling checkout `../verification-is-identification` instead, and `VI_THEORY_PATH` names another one: two artifacts this package renders belong to the theory, and the checks diff them there.
 
 `swift build` checks the whole package. `swift test` runs the company's count tests and prints "Executed 15 tests". The [Curve](https://danielswift1992.github.io/verification-is-identification/documentation/verificationisidentification/curve/) page reports measurements as the company grows to 12,800 employees, and `swift run ShowcaseTools curve 400 800 1600` reruns them.
 

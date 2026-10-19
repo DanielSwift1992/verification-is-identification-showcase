@@ -14,12 +14,16 @@ import Foundation
 //   site       build the combined DocC archive of this package and serve it locally.
 //   readme     the README's company numbers, counted from the team files and the pages.
 //
-// A disposable worktree of this package builds against the theory package by an absolute
-// path, so the relative default of Package.swift is resolved here, once, for every child.
+// A disposable worktree of this package lives in a temporary directory, where the sibling
+// checkout of the theory is not a sibling. When a sibling exists and VI_THEORY_PATH is unset,
+// its absolute path is resolved here, once, for every child; otherwise the children build
+// against the pinned revision of Package.swift, as this process did.
 if ProcessInfo.processInfo.environment["VI_THEORY_PATH"] == nil {
     let theory = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
         .appendingPathComponent("../verification-is-identification").standardizedFileURL.path
-    setenv("VI_THEORY_PATH", theory, 0)
+    if FileManager.default.fileExists(atPath: theory + "/Package.swift") {
+        setenv("VI_THEORY_PATH", theory, 0)
+    }
 }
 
 switch CommandLine.arguments.dropFirst().first {

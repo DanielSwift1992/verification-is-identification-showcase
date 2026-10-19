@@ -1,11 +1,13 @@
 // swift-tools-version: 5.9
 // The showcase package: the company world, its rendering and its checks, a consumer of the
-// theory package (T-0015). Development builds against a sibling checkout of the theory;
-// VI_THEORY_PATH names another one (ShowcaseTools sets it for its disposable worktrees).
-// A release pins a tagged revision of the theory instead.
+// theory package (T-0015). It is checked against the theory at `theoryRevision`. VI_THEORY_PATH
+// names a local checkout of the theory instead: check.sh sets it to the sibling checkout, the
+// workflow to the revision it checks out, and ShowcaseTools passes it to its disposable worktrees.
 import PackageDescription
 
-let theory = Context.environment["VI_THEORY_PATH"] ?? "../verification-is-identification"
+let theoryRevision = "458dd5aacbc5d7c6f2d9a75dff3c49850f41b74b"
+let theory: Package.Dependency = Context.environment["VI_THEORY_PATH"].map { .package(path: $0) }
+    ?? .package(url: "https://github.com/DanielSwift1992/verification-is-identification", revision: theoryRevision)
 
 let package = Package(
     name: "VerificationIsIdentificationShowcase",
@@ -20,7 +22,7 @@ let package = Package(
         .library(name: "DocumentKit", targets: ["DocumentKit"]),
     ],
     dependencies: [
-        .package(path: theory),
+        theory,
         // Docs only: Swift-DocC renders the catalogs into a browsable site. NOT a target dependency.
         .package(url: "https://github.com/swiftlang/swift-docc-plugin", from: "1.0.0"),
     ],
