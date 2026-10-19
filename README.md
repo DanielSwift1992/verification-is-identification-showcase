@@ -20,7 +20,7 @@ Four of the employee cards have a type-checked keypad, an example of navigation 
 
 ## Build and check
 
-`swift build` builds against the theory revision that `Package.swift` pins, so an ordinary build reproduces anywhere. `swift test` runs the company's count tests and prints "Executed 15 tests".
+`swift build` builds against the theory revision that `Package.swift` pins, so an ordinary build reproduces without a sibling checkout of the theory. `swift test` runs the company's count tests and prints "Executed 15 tests".
 
 [`check.sh`](check.sh) runs every law of this package: the build and its tests, the seven refusals of the published claim, the dynamics rules, the committed artifacts against the types that produce them, the second judge against the compiler under planted changes, the numbers on this page, the census and the voice. Two of the regenerated artifacts belong to the theory, the curve chart and the covered visible claim, so the full check needs the theory's source tree: the sibling checkout `../verification-is-identification`, or the checkout `VI_THEORY_PATH` names.
 
