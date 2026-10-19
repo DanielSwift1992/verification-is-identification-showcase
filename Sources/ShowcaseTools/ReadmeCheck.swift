@@ -91,7 +91,8 @@ enum ReadmeCheck {
                 lies.append("the claim \"\(expectation.pattern)\" is gone from the README, and the gate holds it")
                 continue
             }
-            for value in found where value != expectation.count {
+            let drifted = found.filter { $0 != expectation.count }
+            for value in drifted {
                 lies.append(
                     "the README says \(value) where the packages count \(expectation.count) (\(expectation.name))"
                 )
@@ -108,7 +109,8 @@ enum ReadmeCheck {
             if stated.isEmpty {
                 lies.append("the roster-walk claim \"people in <depth>\" is gone from the \(home.0)")
             }
-            for value in stated where value != rosterDepth {
+            let wrong = stated.filter { $0 != rosterDepth }
+            for value in wrong {
                 lies.append(
                     "the \(home.0) says the roster walk takes \(value) choices where "
                         + "\(people) people halve in \(rosterDepth)"
@@ -121,7 +123,8 @@ enum ReadmeCheck {
         if keypadCards.isEmpty {
             lies.append("the keypad-cards claim \"<n> of the employee cards\" is gone from the README")
         }
-        for value in keypadCards where value != credentialed {
+        let overstated = keypadCards.filter { $0 != credentialed }
+        for value in overstated {
             lies.append(
                 "the README says \(value) cards carry a keypad where Team.swift declares "
                     + "\(credentialed) credentialed people"
