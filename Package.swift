@@ -6,7 +6,9 @@
 import PackageDescription
 
 let theoryRevision = "458dd5aacbc5d7c6f2d9a75dff3c49850f41b74b"
-let theory: Package.Dependency = Context.environment["VI_THEORY_PATH"].map { .package(path: $0) }
+// The name keeps `package: "verification-is-identification"` resolving whatever the checkout's
+// directory is called: a path dependency otherwise takes its identity from the directory name.
+let theory: Package.Dependency = Context.environment["VI_THEORY_PATH"].map { .package(name: "verification-is-identification", path: $0) }
     ?? .package(url: "https://github.com/DanielSwift1992/verification-is-identification", revision: theoryRevision)
 
 let package = Package(
