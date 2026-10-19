@@ -140,6 +140,7 @@ The card is on the person's symbol page. The signed-in page is the same card, on
 
 - ``Architecture``
 - ``GateMechanism``
+- <doc:Curve>
 
 ### How it is written
 

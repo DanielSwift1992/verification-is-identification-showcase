@@ -3,8 +3,8 @@
 // The company half of the theory package's readme law, moved with the company (T-0015):
 // people from the two team files, tests from this package's test sources, keypad cards from
 // the credentialed people, the walk depths from the roster and the Organization page, and
-// the two numbers a theory documentation page owns (the keypad's 6561 on Neighbors, the
-// curve's 12800 on Curve), read from the theory checkout. A claim that drifts fails by name,
+// the keypad's 6561, owned by the theory's Neighbors page and read from its checkout, and the
+// curve's 12800, owned by this package's Curve page. A claim that drifts fails by name,
 // and a claim that disappears fails too: silence is also a drift.
 
 import Foundation
@@ -74,7 +74,7 @@ enum ReadmeCheck {
         let tests = countMatches(swiftSources("Tests"), of: "func test")
         let docc = "Sources/VerificationIsIdentification/VerificationIsIdentification.docc"
         let keypadSequences = claims(require(docc + "/Neighbors.md", in: theory), "= (\\d+)").first ?? 0
-        let curveEmployees = claims(require(docc + "/Curve.md", in: theory), "N = ([\\d,]+)").first ?? 0
+        let curveEmployees = claims(require("Sources/Organization/Organization.docc/Curve.md"), "N = ([\\d,]+)").first ?? 0
 
         // What the README says, each pattern read at every occurrence.
         let expectations: [(pattern: String, count: Int, name: String)] = [

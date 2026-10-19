@@ -22,13 +22,13 @@ Four of the employee cards have a type-checked keypad, an example of navigation 
 
 With `VI_THEORY_PATH` unset, `swift build` uses the theory revision pinned in `Package.swift`. Setting it selects a local theory checkout instead. `swift test` runs the company's count tests and prints "Executed 15 tests".
 
-[`check.sh`](check.sh) runs the package's registered checks: the build and its tests, the seven refusals of the published claim, the dynamics rules, the committed artifacts against the types that produce them, the second judge against the compiler under planted changes, the numbers on this page, the census, the voice and the grammar. Two of the regenerated artifacts belong to the theory, the curve chart and the covered visible claim, so the full check needs the theory's source tree: the sibling checkout `../verification-is-identification`, or the checkout `VI_THEORY_PATH` names.
+[`check.sh`](check.sh) runs the package's registered checks: the build and its tests, the seven refusals of the published claim, the dynamics rules, the committed artifacts against the types that produce them, the second judge against the compiler under planted changes, the numbers on this page, the census, the voice and the grammar. The grammar check reads the theory's lexicon and the readme check reads the theory's Neighbors page, so the full check needs the theory's source tree: the sibling checkout `../verification-is-identification`, or the checkout `VI_THEORY_PATH` names.
 
 `swift package --allow-writing-to-package-directory generate` regenerates the checked-in roster, walk sources, font metrics and SVG artwork.
 
 ## Build cost
 
-The [Curve](https://danielswift1992.github.io/verification-is-identification/documentation/verificationisidentification/curve/) page measures how the build time grows as the company grows to 12,800 employees, and `swift run ShowcaseTools curve 400 800 1600` reruns the measurement. A recorded measurement on a 14-core Apple M4 Pro, taken while the company was still inside the theory package: a clean build in about eight minutes, a rebuild after a comment-only policy edit in about ten seconds.
+The [Curve](https://danielswift1992.github.io/verification-is-identification-showcase/documentation/organization/curve/) page measures how the build time grows as the company grows to 12,800 employees, and `swift run ShowcaseTools curve 400 800 1600` reruns the measurement. A recorded measurement on a 14-core Apple M4 Pro, taken while the company was still inside the theory package: a clean build in about eight minutes, a rebuild after a comment-only policy edit in about ten seconds.
 
 | Part | Source |
 | --- | --- |

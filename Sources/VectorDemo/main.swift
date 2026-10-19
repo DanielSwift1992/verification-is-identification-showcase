@@ -14,10 +14,8 @@ func write(_ content: String, _ name: String) {
     try? content.write(toFile: "\(out)/\(name).svg", atomically: true, encoding: .utf8)
 }
 
-// The curve chart is a figure of the theory's Curve page: it is written into the theory checkout
-// (VI_THEORY_PATH, else the sibling), where the showcase's artifacts law diffs it.
-let coreOut = (ProcessInfo.processInfo.environment["VI_THEORY_PATH"] ?? "../verification-is-identification")
-    + "/Sources/VerificationIsIdentification/VerificationIsIdentification.docc/Resources"
+// The curve chart belongs to the Curve page of the Organization catalog.
+let coreOut = "Sources/Organization/Organization.docc/Resources"
 
 func writeCore(_ content: String, _ name: String) {
     try? content.write(toFile: "\(coreOut)/\(name).svg", atomically: true, encoding: .utf8)

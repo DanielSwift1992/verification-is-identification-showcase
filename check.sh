@@ -39,11 +39,11 @@ LAWS=(
 "build|the package builds and its tests pass|swift build && swift test"
 "publication|the published claim holds and its seven mutations are refused by name|bash Checks/publication.sh"
 "rules|a rule is one substitution|swift run Tools lint Sources/DynamicsDemo/Rules.swift --strict"
-"artifacts|the committed artifacts match the types, byte for byte|swift package --allow-writing-to-package-directory generate >/dev/null && swift run OrgDemo render-doc >/dev/null && swift run DocumentKitDemo render-doc >/dev/null && swift run DocumentKitDemo claim --write >/dev/null && swift run VectorDemo all >/dev/null && git diff --exit-code && git -C \"$VI_THEORY_PATH\" diff --exit-code -- Sources/VerificationIsIdentification/VerificationIsIdentification.docc/Resources/curve.svg Sources/Examples/Examples.docc/CoveredVisibleClaim.md"
+"artifacts|the committed artifacts match the types, byte for byte|swift package --allow-writing-to-package-directory generate >/dev/null && swift run OrgDemo render-doc >/dev/null && swift run DocumentKitDemo render-doc >/dev/null && swift run DocumentKitDemo claim --write >/dev/null && swift run VectorDemo all >/dev/null && git diff --exit-code"
 "judge|the second judge agrees with the compiler|swift run ShowcaseTools judge diff 200"
 "readme|the numbers are counted, not remembered|swift run ShowcaseTools readme"
 "census|the declaration count per target|swift run Tools census --target DocumentKit=Sources/DocumentKit --target Organization=Sources/Organization --target ShowcaseTools+Plugins=Sources/ShowcaseTools,Plugins"
-"voice|lexical counts do not exceed their authored pins|swift run Tools voice --scope kit=docs:Sources/DocumentKit@18 --scope pages=markdown:Sources!Papers@303 --scope readme=file:README.md@0"
+"voice|lexical counts do not exceed their authored pins|swift run Tools voice --scope kit=docs:Sources/DocumentKit@18 --scope pages=markdown:Sources!Papers@304 --scope readme=file:README.md@0"
 "law|the grammar carries every source file|swift run Tools grammar"
 )
 

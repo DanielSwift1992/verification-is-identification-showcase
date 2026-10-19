@@ -15,10 +15,7 @@ if CommandLine.arguments.dropFirst().first == "claim" {
     if CommandLine.arguments.contains("--write") {
         do {
             try statement.write(
-                // A page of the theory's Examples catalog, rendered here from DocumentKit's claim and
-                // diffed in the theory checkout by the showcase's artifacts law.
-                toFile: (ProcessInfo.processInfo.environment["VI_THEORY_PATH"] ?? "../verification-is-identification")
-                    + "/Sources/Examples/Examples.docc/CoveredVisibleClaim.md",
+                toFile: "Sources/DocumentKit/DocumentKit.docc/CoveredVisibleClaim.md",
                 atomically: true,
                 encoding: .utf8
             )
