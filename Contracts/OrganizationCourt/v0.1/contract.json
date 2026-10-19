@@ -1,0 +1,217 @@
+{
+  "schema": "showcase.organization.conformance/1",
+  "suite": "showcase.organization.questions/0.1",
+  "scope": "Finite suite for the company's plain court: the policy this package declares, read over its fragment. Passing does not establish general implementation equivalence or complete coverage of the fragment.",
+  "reference": "ShowcaseTools judge, OrganizationCourt at showcase fd5023b + T-0028 step 2",
+  "versions": {
+    "question": "showcase.organization.policy-premises/1",
+    "input": "showcase.organization.fragment/1",
+    "response": "showcase.organization.cli-text/1"
+  },
+  "ownership": {
+    "organization": "showcase",
+    "where": "vi (Contracts/Court)",
+    "count": "vi (Contracts/Court)",
+    "delivery": "gate"
+  },
+  "missing_files": [
+    "fixtures/intentionally-absent.swift"
+  ],
+  "files": {
+    "fixtures/company.swift": {
+      "sha256": "b50b518bb97c75f947694f7a9971a0488446453c7163ce51ecccb6a9b7771702",
+      "origin": "ShowcaseTools generate org 48, at showcase fd5023b"
+    },
+    "fixtures/grants-world-home-lie.swift": {
+      "sha256": "35098035f2b8c603c651e134f2a3b81d57b3eceef0919848ae7855cc15ad53ca",
+      "origin": "grants-world.swift with its first Home = Finance moved to Engineering"
+    },
+    "fixtures/grants-world.swift": {
+      "sha256": "1d42fc786f19cb081bf45d64382073a5110ef1fbba121062b02e6577c0472f8d",
+      "origin": "gate demo org (people.csv, grants.csv) at gate 24c70f4"
+    },
+    "fixtures/lie-cross-department.swift": {
+      "sha256": "ebe6ca2f21f04796d0bb6f07fec4ef2d136b142583c8e5d166157afb8f055f09",
+      "origin": "company.swift with one lie of ShowcaseTools/JudgeDiff.swift planted"
+    },
+    "fixtures/lie-foreign-rank.swift": {
+      "sha256": "83402c93fbb09ee42a24e17e96a305a383007d410b851332c637e19108b92472",
+      "origin": "company.swift with one lie of ShowcaseTools/JudgeDiff.swift planted"
+    },
+    "fixtures/lie-rank-misspelled.swift": {
+      "sha256": "02d884f19ccdde1e3e9c5c7040c91c56abc40a2059a5ab92642feba8771ebd19",
+      "origin": "company.swift with one lie of ShowcaseTools/JudgeDiff.swift planted"
+    },
+    "fixtures/lie-site-department.swift": {
+      "sha256": "8ce48d9b9000a01f01736d0a96e61bd4fde152cbf030620defd49d5bd95bd996",
+      "origin": "company.swift with one lie of ShowcaseTools/JudgeDiff.swift planted"
+    }
+  },
+  "cases": [
+    {
+      "id": "company-holds",
+      "pass": "plain",
+      "files": [
+        "fixtures/company.swift"
+      ],
+      "what": "the generated company of 48 holds",
+      "expected": {
+        "exit": 0,
+        "stdout": {
+          "line_patterns": [
+            "✓ THE JUDGE holds: 96 declarations · 480 lookups · 576 premises · [0-9]+\\.[0-9] ms"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "company-cross-department",
+      "pass": "plain",
+      "files": [
+        "fixtures/lie-cross-department.swift"
+      ],
+      "what": "a cross-department access in the last ledger entry",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 1 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    lie\\-cross\\-department\\.swift:860  VerifiedView requires Emp0047\\.Home == FinanceShare\\.Home: Engineering against Finance"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "company-rank-misspelled",
+      "pass": "plain",
+      "files": [
+        "fixtures/lie-rank-misspelled.swift"
+      ],
+      "what": "a rank spelled to nothing",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 2 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    lie\\-rank\\-misspelled\\.swift:589  Emp0042\\.Rank: the name MisspelledIndividualContributor resolves to nothing",
+            "    lie\\-rank\\-misspelled\\.swift:1147  VerifiedAtRank: Emp0042\\.Rank resolves to nothing"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "company-site-department",
+      "pass": "plain",
+      "files": [
+        "fixtures/lie-site-department.swift"
+      ],
+      "what": "a site pointing at a department",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 2 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    lie\\-site\\-department\\.swift:184  Person requires Site in workplace: Emp0001\\.Site = Finance lands in department",
+            "    lie\\-site\\-department\\.swift:1308  VerifiedAtWorkplace requires Emp0001\\.Site == OnSite: Finance against OnSite"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "company-foreign-rank",
+      "pass": "plain",
+      "files": [
+        "fixtures/lie-foreign-rank.swift"
+      ],
+      "what": "a team claiming a foreign rank in its last entry",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 1 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    lie\\-foreign\\-rank\\.swift:1293  VerifiedAtRank requires Emp0047\\.Rank == IndividualContributor: Manager against IndividualContributor"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "grants-world-holds",
+      "pass": "plain",
+      "files": [
+        "fixtures/grants-world.swift"
+      ],
+      "what": "the world gate seeds from people.csv and grants.csv holds",
+      "expected": {
+        "exit": 0,
+        "stdout": {
+          "line_patterns": [
+            "✓ THE JUDGE holds: 18 declarations · 64 lookups · 82 premises · [0-9]+\\.[0-9] ms"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "grants-world-home-lie",
+      "pass": "plain",
+      "files": [
+        "fixtures/grants-world-home-lie.swift"
+      ],
+      "what": "a home moved to another department",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 2 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    grants\\-world\\-home\\-lie\\.swift:122  VerifiedInDepartment requires Emp9000\\.Home == Finance: Engineering against Finance",
+            "    grants\\-world\\-home\\-lie\\.swift:200  VerifiedView requires Emp9000\\.Home == FinanceShare\\.Home: Engineering against Finance"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "missing-file",
+      "pass": "plain",
+      "files": [
+        "fixtures/intentionally-absent.swift"
+      ],
+      "what": "a named file that is not there",
+      "expected": {
+        "exit": 2,
+        "stdout": {
+          "lines": []
+        },
+        "stderr": {
+          "lines": [
+            "✗ THE JUDGE cannot read the corpus"
+          ]
+        }
+      }
+    }
+  ],
+  "remaining": [
+    "The table of policy premises is stated in the court a second time on purpose; this suite measures the court against frozen answers, not the policy against the compiler (the judge law does that).",
+    "The usage text of a door names that door and is outside the suite.",
+    "The parse door prints what the reader read in a shape each carrier chooses for its own consumer (an array here, a page-keyed object in the bench port); it is inspection, not a verdict, and is outside this suite."
+  ]
+}

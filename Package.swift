@@ -22,6 +22,10 @@ let package = Package(
         // DocumentKit: atoms (Close) and combinators (Open) that compose into documents.
         // Rendering is typeName walking the Paired chain.
         .library(name: "DocumentKit", targets: ["DocumentKit"]),
+
+        // OrganizationCourt: the company's plain court, the second arbiter beside the compiler.
+        // It reads the company's fragment against the policy this package declares.
+        .library(name: "OrganizationCourt", targets: ["OrganizationCourt"]),
     ],
     dependencies: [
         theory,
@@ -30,12 +34,17 @@ let package = Package(
     ],
     targets: [
         // The commands that read or build this package's world: prose, generate, curve,
-        // judge diff/chain, site. The lint, grammar, census, voice and plain judge are the
-        // theory's Tools, run from this root.
+        // judge (the plain court, diff, chain), site. The lint, grammar, census and voice are
+        // the theory's Tools, run from this root.
         .executableTarget(name: "ShowcaseTools", dependencies: [
-            .product(name: "Court", package: "verification-is-identification"),
+            "OrganizationCourt",
             .product(name: "Alphabet", package: "verification-is-identification"),
         ]),
+
+        // The company's plain court: one dictionary of declarations, one lookup per reference,
+        // one table row per premise. Foundation only. Its folder is Sources/Court, the tools'
+        // scope the theory's grammar names for a court.
+        .target(name: "OrganizationCourt", path: "Sources/Court"),
 
         // Spells Organization/Prose.json into Glyph atoms + Open types on every build.
         .plugin(name: "ProseGen", capability: .buildTool(), dependencies: ["ShowcaseTools"]),

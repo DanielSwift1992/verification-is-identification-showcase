@@ -1,5 +1,5 @@
 import Foundation
-import Court
+import OrganizationCourt
 
 // ═══════════════════════════════════════════════════════════════
 // THE CURVE names the saturation instrument: universes of growing size, each fully
@@ -110,7 +110,7 @@ enum Curve {
             }
             if seatJudge {
                 let corpus = worktree + "/Sources/Organization/System/GeneratedTeam.swift"
-                guard let judged = Judge.judge(paths: [corpus]), judged.refusals.isEmpty else {
+                guard let judged = OrganizationJudge.judge(paths: [corpus]), judged.refusals.isEmpty else {
                     print(String(format: "%6d   %5.0fs   JUDGE REFUSES", n, seconds))
                     break
                 }
@@ -166,7 +166,7 @@ enum Curve {
             let seconds = Date().timeIntervalSince(started)
             if seatJudge {
                 let corpus = worktree + "/Sources/Organization/System/GeneratedTeam.swift"
-                let judged = Judge.judge(paths: [corpus])
+                let judged = OrganizationJudge.judge(paths: [corpus])
                 let milliseconds = judged?.milliseconds ?? -1
                 print(String(format: "%6d   %5.0fs   %5.0f ms", f, seconds, milliseconds))
             } else {

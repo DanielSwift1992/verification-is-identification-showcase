@@ -41,7 +41,7 @@ At N = 6400 the third layout hit a wall: the Swift frontend aborted (signal 4) d
 
 ### The second judge
 
-The package carries a second checker beside the compiler: `swift run Tools judge Sources/Organization/System/GeneratedTeam.swift` reads the generated company file, resolves every reference through one dictionary of declarations, and checks every access premise as a table row. No solver runs. The corpus the compiler proves in seconds is judged in milliseconds:
+The package carries a second checker beside the compiler: `swift run ShowcaseTools judge Sources/Organization/System/GeneratedTeam.swift` reads the generated company file, resolves every reference through one dictionary of declarations, and checks every access premise as a table row. No solver runs. The corpus the compiler proves in seconds is judged in milliseconds:
 
 | N | `swift build`, full package | the judge | the judge, chained spelling |
 | --- | --- | --- | --- |

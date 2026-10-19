@@ -1,16 +1,18 @@
 import Foundation
+import OrganizationCourt
 
 // ShowcaseTools: the commands that read or build this package's world. The lint, grammar,
-// census, voice and plain judge are the theory package's `Tools`, run from this package's
-// root (`swift run Tools …`); these are the ones that need the company itself.
+// census and voice are the theory package's `Tools`, run from this package's root
+// (`swift run Tools …`); these are the ones that need the company itself.
 //
 //   prose      spell Prose.json into Glyph atoms + Open types, run by the ProseGen build plugin.
 //   generate   regenerate the roster (`org [N]`), the font metrics (`font`), or both (`all`):
 //              checked-in artifacts. The card art, the diagrams and the chart are VectorDemo's;
 //              the complete regenerate is `swift package generate`.
 //   curve      the saturation instrument: growing companies, timed builds, the growth law.
-//   judge      `diff N` seats the second arbiter beside the compiler on one corpus under
-//              planted lies; `chain N [--swift]` replays the derivation-chain spelling.
+//   judge      the company's plain court over the paths it is given (`parse` prints what it
+//              read); `diff N` seats it beside the compiler on one corpus under planted lies;
+//              `chain N [--swift]` replays the derivation-chain spelling.
 //   site       build the combined DocC archive of this package and serve it locally.
 //   readme     the README's company numbers, counted from the team files and the pages.
 //
@@ -33,11 +35,11 @@ case "site":     Site.run(Array(CommandLine.arguments.dropFirst(2)))
 case "readme":   ReadmeCheck.run(Array(CommandLine.arguments.dropFirst(2)))
 case "judge":
     let arguments = Array(CommandLine.arguments.dropFirst(2))
-    guard arguments.first == "diff" || arguments.first == "chain" else {
-        FileHandle.standardError.write(Data("usage: ShowcaseTools judge <diff|chain> [N]: the plain judge is the theory package's `swift run Tools judge <paths>`\n".utf8))
-        exit(2)
+    if arguments.first == "diff" || arguments.first == "chain" {
+        JudgeDiff.run(arguments)
+    } else {
+        OrganizationJudge.run(arguments)
     }
-    JudgeDiff.run(arguments)
 case "generate":
     let sub = Array(CommandLine.arguments.dropFirst(2))
     let rest = Array(sub.dropFirst())

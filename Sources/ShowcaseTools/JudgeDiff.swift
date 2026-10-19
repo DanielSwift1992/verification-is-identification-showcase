@@ -1,4 +1,4 @@
-import Court
+import OrganizationCourt
 import Foundation
 
 // ═══════════════════════════════════════════════════════════════
@@ -12,9 +12,9 @@ import Foundation
 // that the law moved, not the data (Play Is Proof PP15: the human read of the
 // policy file is the floor beneath both records).
 //
-// `Tools judge diff [N]`   — generate a company of N in a disposable worktree, run
+// `ShowcaseTools judge diff [N]`   — generate a company of N in a disposable worktree, run
 //                            both judges clean, then under each planted lie.
-// `Tools judge chain [N] [--swift]` — rewrite every hire's rank as a derivation from
+// `ShowcaseTools judge chain [N] [--swift]` — rewrite every hire's rank as a derivation from
 //                            the previous hire (`EmpK.Rank.Next`), the spelling whose
 //                            depth killed the standing arbiter's deserializer, and
 //                            show the second judge settles it link by link with the
@@ -75,7 +75,7 @@ enum JudgeDiff {
 
     struct Lie {
         let name: String
-        let apply: (String, Judge.Judgment) -> (text: String, tokens: [String])?
+        let apply: (String, OrganizationJudge.Judgment) -> (text: String, tokens: [String])?
     }
 
     static func lastSegment(of marker: String, in text: String) -> Range<String.Index>? {
@@ -101,7 +101,7 @@ enum JudgeDiff {
                 .trimmingCharacters(in: CharacterSet(charactersIn: " \n\t>"))
             guard let planted = otherShare[share] else { return nil }
             let home = clean.coordinates[person]?["Home"] ?? "?"
-            let plantedHome = Judge.shareHomes[planted] ?? "?"
+            let plantedHome = OrganizationJudge.shareHomes[planted] ?? "?"
             let mutated = text.replacingCharacters(in: range,
                 with: segment.replacingOccurrences(of: share, with: planted))
             return (mutated, [person, home, plantedHome])
@@ -131,7 +131,7 @@ enum JudgeDiff {
             let claimed = inner.split(separator: ",")[1]
                 .trimmingCharacters(in: CharacterSet(charactersIn: " \n\t>"))
             let held = clean.coordinates[person]?["Rank"] ?? "?"
-            let foreign = Judge.nextInCycle[claimed] ?? "Lead"
+            let foreign = OrganizationJudge.nextInCycle[claimed] ?? "Lead"
             let mutated = text.replacingCharacters(in: range,
                 with: segment.replacingOccurrences(of: claimed, with: foreign))
             return (mutated, [person, held, foreign])
@@ -159,7 +159,7 @@ enum JudgeDiff {
         }
 
         print("\n  the corpus: a company of \(count), one file, two judges\n")
-        guard let clean = Judge.judge(paths: [corpus]) else { exit(2) }
+        guard let clean = OrganizationJudge.judge(paths: [corpus]) else { exit(2) }
         let cleanSwift = standingArbiter(in: worktree)
         let judgeVerdict = clean.refusals.isEmpty ? "holds" : "refuses"
         let swiftVerdict = cleanSwift.passed ? "holds" : "refuses"
@@ -174,7 +174,7 @@ enum JudgeDiff {
                 continue
             }
             try? planted.text.write(toFile: corpus, atomically: true, encoding: .utf8)
-            let judged = Judge.judge(paths: [corpus])!
+            let judged = OrganizationJudge.judge(paths: [corpus])!
             let swifted = standingArbiter(in: worktree)
             try? original.write(toFile: corpus, atomically: true, encoding: .utf8)
 
@@ -215,7 +215,7 @@ enum JudgeDiff {
             try? law.replacingOccurrences(of: gateWhole, with: gateLoose)
                 .write(toFile: filtering, atomically: true, encoding: .utf8)
             try? planted.text.write(toFile: corpus, atomically: true, encoding: .utf8)
-            let judged = Judge.judge(paths: [corpus])!
+            let judged = OrganizationJudge.judge(paths: [corpus])!
             let swifted = standingArbiter(in: worktree)
             try? law.write(toFile: filtering, atomically: true, encoding: .utf8)
             try? original.write(toFile: corpus, atomically: true, encoding: .utf8)
@@ -287,10 +287,10 @@ enum JudgeDiff {
         let corpus = worktree + "/Sources/Organization/System/GeneratedTeam.swift"
         guard let original = try? String(contentsOfFile: corpus, encoding: .utf8) else { exit(2) }
 
-        guard let direct = Judge.judge(paths: [corpus]) else { exit(2) }
+        guard let direct = OrganizationJudge.judge(paths: [corpus]) else { exit(2) }
         let chainedText = chained(original)
         try? chainedText.write(toFile: corpus, atomically: true, encoding: .utf8)
-        guard let derived = Judge.judge(paths: [corpus]) else { exit(2) }
+        guard let derived = OrganizationJudge.judge(paths: [corpus]) else { exit(2) }
 
         print("\n  the chain at N = \(count): every hire's rank derives from the previous hire\n")
         print("  direct spelling:  judge \(direct.refusals.isEmpty ? "holds" : "refuses") in "
@@ -298,7 +298,7 @@ enum JudgeDiff {
         print("  chained spelling: judge \(derived.refusals.isEmpty ? "holds" : "refuses") in "
             + "\(String(format: "%.0f", derived.milliseconds)) ms")
         if derived.refusals.isEmpty == false {
-            Judge.report(derived)
+            OrganizationJudge.report(derived)
             exit(1)
         }
         let identical = direct.coordinates == derived.coordinates
