@@ -34,3 +34,19 @@ VerificationIsIdentification, Alphabet, GrammarLexicon, Court (where and count c
 3. Move the slice in one change, with its tests, generation command, tools, laws and documentation; nothing else in that change.
 4. In the theory package: drop the showcase expectations from the readme law, reduce `docs.yml` to four targets, point the README's demonstration section here.
 5. CI and Pages for this package; both packages green on clean machines.
+
+## The move, 19 October 2026 (T-0015, step 3)
+
+The slice of the theory at `6244eb87` is copied here unchanged: the targets above, the plugins GenerateCommand, ProseGen and CensusGen, OrganizationTests, and `Checks/Publication.swift`. The theory side prepared three things first: `press --rules`, the `Tools` and `LawCheck` products, and `census --target` and `voice --scope`.
+
+What changed in the move:
+
+- `ShowcaseTools` carries the commands that build or read the company: prose, generate (org, font), curve, site, `judge diff` and `judge chain` (JudgeDiff, moved out of Court), and the company half of the readme law. CodeForm and SourceFile move with GenerateOrg, their only user.
+- The plain judge, `Press` and the where courts stay in the theory: gate compiles every `Sources/Court/*.swift` of its pin, and `Press.Term` is the term language of the where judge.
+- CensusGen counts the theory's targets through its checkout and this package's targets in place, with `census --target`.
+- `Package.swift` reads `VI_THEORY_PATH`, defaulting to the sibling checkout; ShowcaseTools sets the absolute path for the disposable worktrees of `judge diff` and `curve`.
+- `Checks/publication.sh` runs the seven `PUBLICATION_*` refusals with the theory's protocol: positive fixture first, exit 1, the rejected type named, no crash or missing module.
+
+Still open before this package replaces the theory's targets: the `voice` scopes for DocumentKit and these catalogs, the `census` law, the grammar mirror (`Tools grammar` reads GrammarLexicon from the theory checkout), the documentation site and its Pages, and the theory's own step: removing the moved targets, its README pointer and docs.yml on four targets, published only after this package has its own remote and Pages.
+
+Two artifacts of the theory package are produced by code of this one: the curve chart `Resources/curve.svg` of the theory's catalog (VectorDemo `chart`) and `Sources/Examples/Examples.docc/CoveredVisibleClaim.md` (DocumentKitDemo `claim --write`). The Curve page is part of the theory's Topics tree, so both stay there. This package writes them into the theory checkout (`VI_THEORY_PATH`) and its artifacts law diffs them there. The theory alone cannot regenerate them: the build dependency runs the other way from the code dependency, a debt of the contract between the packages (Desk task T-0016) until the chart and the claim render without DocumentKit.
