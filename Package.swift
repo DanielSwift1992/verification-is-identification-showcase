@@ -5,7 +5,7 @@
 // workflow to the revision it checks out, and ShowcaseTools passes it to its disposable worktrees.
 import PackageDescription
 
-let theoryRevision = "458dd5aacbc5d7c6f2d9a75dff3c49850f41b74b"
+let theoryRevision = "50a9bb9a364688508a55986b08ea9d269f3c4a29"
 // The name keeps `package: "verification-is-identification"` resolving whatever the checkout's
 // directory is called: a path dependency otherwise takes its identity from the directory name.
 let theory: Package.Dependency = Context.environment["VI_THEORY_PATH"].map { .package(name: "verification-is-identification", path: $0) }

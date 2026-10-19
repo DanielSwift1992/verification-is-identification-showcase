@@ -22,7 +22,7 @@ Four of the employee cards have a type-checked keypad, an example of navigation 
 
 With `VI_THEORY_PATH` unset, `swift build` uses the theory revision pinned in `Package.swift`. Setting it selects a local theory checkout instead. `swift test` runs the company's count tests and prints "Executed 15 tests".
 
-[`check.sh`](check.sh) runs every law of this package: the build and its tests, the seven refusals of the published claim, the dynamics rules, the committed artifacts against the types that produce them, the second judge against the compiler under planted changes, the numbers on this page, the census and the voice. Two of the regenerated artifacts belong to the theory, the curve chart and the covered visible claim, so the full check needs the theory's source tree: the sibling checkout `../verification-is-identification`, or the checkout `VI_THEORY_PATH` names.
+[`check.sh`](check.sh) runs every law of this package: the build and its tests, the seven refusals of the published claim, the dynamics rules, the committed artifacts against the types that produce them, the second judge against the compiler under planted changes, the numbers on this page, the census, the voice and the grammar. Two of the regenerated artifacts belong to the theory, the curve chart and the covered visible claim, so the full check needs the theory's source tree: the sibling checkout `../verification-is-identification`, or the checkout `VI_THEORY_PATH` names.
 
 `swift package --allow-writing-to-package-directory generate` regenerates the checked-in roster, walk sources, font metrics and SVG artwork.
 

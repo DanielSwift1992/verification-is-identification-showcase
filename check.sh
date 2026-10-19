@@ -44,6 +44,7 @@ LAWS=(
 "readme|the numbers are counted, not remembered|swift run ShowcaseTools readme"
 "census|the declaration count per target|swift run Tools census --target DocumentKit=Sources/DocumentKit --target Organization=Sources/Organization --target ShowcaseTools+Plugins=Sources/ShowcaseTools,Plugins"
 "voice|lexical counts do not exceed their authored pins|swift run Tools voice --scope kit=docs:Sources/DocumentKit@18 --scope pages=markdown:Sources!Papers@303 --scope readme=file:README.md@0"
+"law|the grammar carries every source file|swift run Tools grammar"
 )
 
 if [ "$MODE_LIST" = "yes" ]; then
