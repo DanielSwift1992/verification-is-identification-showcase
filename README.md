@@ -24,6 +24,8 @@ The theory package is the sibling checkout `../verification-is-identification`. 
 
 [`check.sh`](check.sh) lists this package's checks: the build and tests, the dynamics rules, the committed artifacts against the types that produce them, the second judge against the compiler under planted lies, and the numbers on this page. `swift package --allow-writing-to-package-directory generate` regenerates the checked-in roster, walk sources, font metrics and SVG artwork.
 
+A recorded local measurement on a 14-core Apple M4 Pro, taken when the company was still part of the theory package: a clean build in about eight minutes, a rebuild after a comment-only policy edit in about ten seconds. These numbers describe that setup.
+
 | Part | Source |
 | --- | --- |
 | The company: people, policy, pages | [`Sources/Organization`](Sources/Organization), [`Sources/OrgWalkPages`](Sources/OrgWalkPages) |
