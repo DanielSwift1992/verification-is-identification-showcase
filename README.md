@@ -2,11 +2,11 @@
 
 This repository contains a 204-person company written as Swift types: its people, their documents, the access rules and an intranet website. The same declarations are checked against the access rules and rendered into the website. Pages and navigation are generated ahead of time, so browsing them needs no application server.
 
-The types and rules come from [Verification Is Identification](https://github.com/DanielSwift1992/verification-is-identification). This repository shows what can be constructed and checked with them.
+The structural vocabulary comes from [Verification Is Identification](https://github.com/DanielSwift1992/verification-is-identification). This repository supplies the company and its access policy, then checks and renders that declared world.
 
 ## The company
 
-Declarations describe the 204 people, their documents and their access requests. An access rule is a conditional conformance, and the compiler checks every declared request against the rules.
+Declarations describe the 204 people, their documents and their access requests. An access rule is a conditional conformance, and the compiler checks the declared access assertions against those rules.
 
 [Open the playground](https://danielswift1992.github.io/typed-playground/), change a declaration and see how the checker responds. **Plant a lie** changes a declaration for the checker to read. The At scale tab checks a 12,800-person file with the page's JavaScript checker. [Its checks](https://github.com/DanielSwift1992/typed-playground#the-checks) document the supported subset of Swift.
 
@@ -20,7 +20,7 @@ Four of the employee cards have a type-checked keypad, an example of navigation 
 
 ## Build and check
 
-`swift build` builds against the theory revision that `Package.swift` pins, so an ordinary build reproduces without a sibling checkout of the theory. `swift test` runs the company's count tests and prints "Executed 15 tests".
+With `VI_THEORY_PATH` unset, `swift build` uses the theory revision pinned in `Package.swift`. Setting it selects a local theory checkout instead. `swift test` runs the company's count tests and prints "Executed 15 tests".
 
 [`check.sh`](check.sh) runs every law of this package: the build and its tests, the seven refusals of the published claim, the dynamics rules, the committed artifacts against the types that produce them, the second judge against the compiler under planted changes, the numbers on this page, the census and the voice. Two of the regenerated artifacts belong to the theory, the curve chart and the covered visible claim, so the full check needs the theory's source tree: the sibling checkout `../verification-is-identification`, or the checkout `VI_THEORY_PATH` names.
 
