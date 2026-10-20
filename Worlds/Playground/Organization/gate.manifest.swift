@@ -26,11 +26,11 @@ public protocol Theirs {}
 public enum DrawingProfileFile: Role {}
 public enum DrawingSource: Role {}
 extension DrawingSource {
-    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@1accd2b61cbedccea2dc697e6daeb65799ab2338" }
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@4ab5dcda82710756cc6b596979f55fe9768c6a3d" }
 }
 public enum FontSource: Role {}
 extension FontSource {
-    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@1accd2b61cbedccea2dc697e6daeb65799ab2338" }
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@4ab5dcda82710756cc6b596979f55fe9768c6a3d" }
 }
 public enum TheorySource: Role {}
 extension TheorySource {

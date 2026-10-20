@@ -5,7 +5,7 @@
       "row": "TheDrawing",
       "path": ".gate/inputs/DrawingProfile.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
       "source_path": "Worlds/Playground/Site/DrawingProfile.swift",
       "sha256": "db59159587189df75c94a3c417562dbb92582eaed5a3af46b1446bdc90b4bd08"
     },
@@ -13,15 +13,15 @@
       "row": "ThePalette",
       "path": ".gate/inputs/Palette.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
       "source_path": "Worlds/Playground/Site/Palette.swift",
-      "sha256": "6b6f00153384ccc8c266b03b68b3919e388e642bf2d80db64bb1c07fb5471538"
+      "sha256": "c3a28b82fd9d14ac409c5dedba24d53158df00f9e67b7c53f9adc8c5e37d3fa5"
     },
     {
       "row": "TheFont",
       "path": ".gate/inputs/font.ttf",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
       "source_path": "Assets/InterVariable.ttf",
       "sha256": "4989b125924991b90d05b2d16e0e388c48f7d5bb8b30539bbf9c755278d0ccaf"
     },
@@ -29,7 +29,7 @@
       "row": "TheMetrics",
       "path": ".gate/inputs/metrics.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
       "source_path": "Sources/DocumentKit/GeneratedFontMetrics.swift",
       "sha256": "44cc532765c2be7e4069513387db74c7db66d0986449375dae53a570226eb1d9"
     },
@@ -37,7 +37,7 @@
       "row": "TheLicense",
       "path": ".gate/inputs/license.txt",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
       "source_path": "Assets/InterLicense.txt",
       "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
     },
@@ -53,25 +53,25 @@
       "row": "TheSpectrum",
       "path": ".gate/inputs/Spectrum.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
       "source_path": "Sources/DocumentKit/Spectrum.swift",
-      "sha256": "59c6404a0deec3248d6dc9bce2e5bbd17b95f491017998b1873461f54213789e"
+      "sha256": "9e1efba56c40c8fa7b8cd3833ae30ec6d9f1f64de08917ed31b8fdf2707f6be5"
     },
     {
       "row": "TheBindings",
       "path": ".gate/inputs/DrawingBindings.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
       "source_path": "Worlds/Playground/Site/DrawingBindings.swift",
-      "sha256": "831b1a1ca2e593e393f58c46def44f40c960650b86c6eae5ba5204cab5e26757"
+      "sha256": "82ac340400ee61a8b20e5a444409a3aa00f2749ec92715da92524d84755223f7"
     },
     {
       "row": "TheContract",
       "path": ".gate/inputs/DrawingContract.json",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
       "source_path": "Contracts/Drawing/v0.1/contract.json",
-      "sha256": "2b8ae6e655a7d9f6274d7bbe09756c4e9f15e8a433a2dd2b2495fa51f192f31e"
+      "sha256": "c970aaa030212cc2188523adedcc90a57518c8bcfd0052ab92699e3e5ae55664"
     }
   ],
   "languages": {
