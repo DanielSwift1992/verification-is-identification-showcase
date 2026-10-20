@@ -26,15 +26,13 @@ import DocumentKit
 // Two mounts, not two palettes: Lit is the theme the page wears, Dim the one
 // the dark canvas wears, and a role that never dims states Lit alone.
 //
-// Legibility is judged, not promised. The contrast bound is a committee's
-// rational number and enters as data, by cross multiplication: 4.5 to 1 is nine
-// against two, and with relative luminance carried in eight thousand one
-// hundred and ninety two parts the whole inequality clears its denominators
-// into 40 bright against 180 dark and 57344, and the forty rides on
-// the bright side at the point of use, where the compiler wants a lone name. An inequality is stated as an
-// equality with its own slack, and a slack is a count, which is never negative:
-// stating the slack IS the proof that the pair clears the bound. Lighten a
-// background here and the slack no longer settles, so the judge names the pair.
+// The contrast bound is the stated rational 4.5 to 1. Clearing its
+// denominators on this page's scale gives 40 bright = 180 dark + 57344 + slack.
+// Slack is a nonnegative count. Each Legible carries its count reading in R1,
+// derived from that pair's own bright level, dark level and slack. The fixed
+// coefficients are sums of doublings. The count court checks that equality
+// and names a changed pair. Nominal equality and Swift conformance are separate.
+// Checks/Playground/palette-count.py compares the numbers with the pinned page.
 
 public typealias Step = Half<Half<Half<Half<Half<Unit>>>>>
 
@@ -45,12 +43,31 @@ public typealias ScreenLight<R: Structure, G: Structure, B: Structure> = XYZWrit
 
 // what the eye takes from a mix: the Y weights of the three primaries, in the
 // same thirty-seconds the levels are stated in
-public typealias Luminance<R: Structure, G: Structure, B: Structure> = Plus<Times<R, Plus<U4, Plus<U2, U1>>>, Plus<Times<G, Plus<U16, Plus<U4, Plus<U2, U1>>>>, Times<B, U2>>>
+public typealias Luminance<R: Structure, G: Structure, B: Structure> = Plus<Scale7<R>, Plus<Scale23<G>, Twice<B>>>
 
-public protocol ContrastHolds {}
-public enum Legible<Bright, Dark, Slack>: Close {}
-extension Legible: ContrastHolds
-where Bright == Plus<Times<Plus<U128, Plus<U32, Plus<U16, U4>>>, Dark>, Plus<Times<Plus<U4, Plus<U2, U1>>, Times<U512, U16>>, Slack>> {}
+// Bright is the level itself. The reading presents the factor forty once here.
+public enum Legible<Bright: Structure, Dark: Structure, Slack: Structure>: Close {
+    public typealias R1 = ContrastCount<Scale40<Bright>, Dark, Slack>
+}
+
+public typealias Scale7<S: Structure> = Plus<S, Plus<Twice<S>, Twice<Twice<S>>>>
+public typealias Scale16<S: Structure> = Twice<Twice<Twice<Twice<S>>>>
+public typealias Scale23<S: Structure> = Plus<S, Plus<Twice<S>, Plus<Twice<Twice<S>>, Twice<Twice<Twice<Twice<S>>>>>>>
+public typealias Scale40<S: Structure> = Plus<Twice<Twice<Twice<S>>>, Twice<Twice<Twice<Twice<Twice<S>>>>>>
+public typealias Scale180<S: Structure> = Plus<Twice<Twice<S>>, Plus<Twice<Twice<Twice<Twice<S>>>>, Plus<Twice<Twice<Twice<Twice<Twice<S>>>>>, Twice<Twice<Twice<Twice<Twice<Twice<Twice<S>>>>>>>>>>
+public typealias Scale512<S: Structure> = Twice<Twice<Twice<Twice<Twice<Twice<Twice<Twice<Twice<S>>>>>>>>>
+
+public enum PaletteLight: Close {}
+public enum PaletteContrastQuestion: Close {}
+public enum UnaryArithmeticEncoding: Close {}
+public enum ContrastCount<Bright: Structure, Dark: Structure, Slack: Structure>: PredicateReading {
+    public typealias Left = Bright
+    public typealias Right = Plus<Scale180<Dark>, Plus<Scale7<Scale16<U512>>, Slack>>
+    public typealias Answer = Right
+    public typealias Sigma = PaletteLight
+    public typealias Encoding = UnaryArithmeticEncoding
+    public typealias Predicate = PaletteContrastQuestion
+}
 
 public typealias PaperLitRed = U256
 public typealias PaperLitGreen = U256
@@ -358,54 +375,37 @@ extension SurfaceTrackNamesWord {
 }
 
 // every pair a reader actually meets, each with the slack that proves it
-public typealias TextOnPaperSlack = Plus<Times<U512, Plus<U256, Plus<U128, Plus<U32, Plus<U16, Plus<U4, U2>>>>>>, Never>
-// gate-unsupported: TextOnPaper | count v0.1 normalization budget (57 344)
-public typealias TextOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, TextLitY, TextOnPaperSlack>
-public typealias TextOnMistSlack = Plus<Times<U512, Plus<U256, Plus<U128, Plus<U8, U1>>>>, Never>
-// gate-unsupported: TextOnMist | count v0.1 normalization budget (57 344)
-public typealias TextOnMist = Legible<Times<Plus<U32, U8>, MistLitY>, TextLitY, TextOnMistSlack>
-public typealias MutedOnPaperSlack = Plus<Times<U512, Plus<U32, Plus<U16, Plus<U4, Plus<U2, U1>>>>>, U256>
-// gate-unsupported: MutedOnPaper | count v0.1 normalization budget (57 344)
-public typealias MutedOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, MutedLitY, MutedOnPaperSlack>
-public typealias MutedOnMistSlack = Plus<Times<U512, Plus<U8, U2>>, U256>
-// gate-unsupported: MutedOnMist | count v0.1 normalization budget (57 344)
-public typealias MutedOnMist = Legible<Times<Plus<U32, U8>, MistLitY>, MutedLitY, MutedOnMistSlack>
-public typealias InkOnAccentSlack = Plus<Times<U512, Plus<U256, Plus<U64, Plus<U2, U1>>>>, Plus<U64, U16>>
-// gate-unsupported: InkOnAccent | count v0.1 normalization budget (57 344)
-public typealias InkOnAccent = Legible<Times<Plus<U32, U8>, AccentLitY>, InkLitY, InkOnAccentSlack>
-public typealias ActionOnPaperSlack = Plus<Times<U512, U2>, U32>
-// gate-unsupported: ActionOnPaper | count v0.1 normalization budget (57 344)
-public typealias ActionOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, ActionLitY, ActionOnPaperSlack>
-public typealias RefusalOnPaperSlack = Plus<Times<U512, Plus<U16, Plus<U8, U4>>>, Plus<U256, Plus<U128, U16>>>
-// gate-unsupported: RefusalOnPaper | count v0.1 normalization budget (57 344)
-public typealias RefusalOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, RefusalLitY, RefusalOnPaperSlack>
-public typealias LawOnPaperSlack = Plus<Times<U512, Plus<U32, Plus<U4, U2>>>, Plus<U256, Plus<U128, Plus<U64, Plus<U32, Plus<U16, U4>>>>>>
-// gate-unsupported: LawOnPaper | count v0.1 normalization budget (57 344)
-public typealias LawOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, LawLitY, LawOnPaperSlack>
-public typealias OkOnPaperSlack = Plus<Times<U512, Plus<U16, Plus<U8, Plus<U4, Plus<U2, U1>>>>>, Plus<U256, Plus<U32, U16>>>
-// gate-unsupported: OkOnPaper | count v0.1 normalization budget (57 344)
-public typealias OkOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, OkLitY, OkOnPaperSlack>
-public typealias KeywordOnPaperSlack = Plus<Times<U512, Plus<U128, Plus<U64, Plus<U32, U4>>>>, Plus<U32, Plus<U16, Plus<U8, U4>>>>
-// gate-unsupported: KeywordOnPaper | count v0.1 normalization budget (57 344)
-public typealias KeywordOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, KeywordLitY, KeywordOnPaperSlack>
-public typealias LiteralOnPaperSlack = Plus<Times<U512, Plus<U128, Plus<U32, U8>>>, Plus<U256, Plus<U64, Plus<U32, U8>>>>
-// gate-unsupported: LiteralOnPaper | count v0.1 normalization budget (57 344)
-public typealias LiteralOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, LiteralLitY, LiteralOnPaperSlack>
-public typealias CommentOnPaperSlack = Plus<Times<U512, Plus<U64, Plus<U32, Plus<U16, U2>>>>, Plus<U256, Plus<U128, Plus<U64, Plus<U16, U4>>>>>
-// gate-unsupported: CommentOnPaper | count v0.1 normalization budget (57 344)
-public typealias CommentOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, CommentLitY, CommentOnPaperSlack>
-public typealias AttributeOnPaperSlack = Plus<Times<U512, Plus<U4, U1>>, Plus<U64, Plus<U32, Plus<U16, U4>>>>
-// gate-unsupported: AttributeOnPaper | count v0.1 normalization budget (57 344)
-public typealias AttributeOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, AttributeLitY, AttributeOnPaperSlack>
-public typealias LocalTypeOnPaperSlack = Plus<Times<U512, Plus<U256, Plus<U64, Plus<U2, U1>>>>, Plus<U256, Plus<U64, Plus<U32, Plus<U16, Plus<U8, U4>>>>>>
-// gate-unsupported: LocalTypeOnPaper | count v0.1 normalization budget (57 344)
-public typealias LocalTypeOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, LocalTypeLitY, LocalTypeOnPaperSlack>
-public typealias KnownNameOnPaperSlack = Plus<Times<U512, Plus<U256, Plus<U128, Plus<U32, Plus<U8, Plus<U4, U2>>>>>>, Plus<U256, Plus<U32, Plus<U16, Plus<U8, U4>>>>>
-// gate-unsupported: KnownNameOnPaper | count v0.1 normalization budget (57 344)
-public typealias KnownNameOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, KnownNameLitY, KnownNameOnPaperSlack>
-public typealias TextOnSurfaceCardDimSlack = Plus<Times<U512, Plus<U256, Plus<U64, Plus<U16, U8>>>>, U128>
-// gate-unsupported: TextOnSurfaceCardDim | count v0.1 normalization budget (57 344)
-public typealias TextOnSurfaceCardDim = Legible<Times<Plus<U32, U8>, TextDimY>, SurfaceCardDimY, TextOnSurfaceCardDimSlack>
-public typealias MutedOnSurfaceCardDimSlack = Plus<Times<U512, Plus<U64, Plus<U32, Plus<U8, Plus<U4, Plus<U2, U1>>>>>>, Plus<U256, U128>>
-// gate-unsupported: MutedOnSurfaceCardDim | count v0.1 normalization budget (57 344)
-public typealias MutedOnSurfaceCardDim = Legible<Times<Plus<U32, U8>, MutedDimY>, SurfaceCardDimY, MutedOnSurfaceCardDimSlack>
+public typealias TextOnPaperSlack = Plus<Scale512<Plus<U256, Plus<U128, Plus<U32, Plus<U16, Plus<U4, U2>>>>>>, Never>
+public typealias TextOnPaper = Legible<PaperLitY, TextLitY, TextOnPaperSlack>
+public typealias TextOnMistSlack = Plus<Scale512<Plus<U256, Plus<U128, Plus<U8, U1>>>>, Never>
+public typealias TextOnMist = Legible<MistLitY, TextLitY, TextOnMistSlack>
+public typealias MutedOnPaperSlack = Plus<Scale512<Plus<U32, Plus<U16, Plus<U4, Plus<U2, U1>>>>>, U256>
+public typealias MutedOnPaper = Legible<PaperLitY, MutedLitY, MutedOnPaperSlack>
+public typealias MutedOnMistSlack = Plus<Scale512<Plus<U8, U2>>, U256>
+public typealias MutedOnMist = Legible<MistLitY, MutedLitY, MutedOnMistSlack>
+public typealias InkOnAccentSlack = Plus<Scale512<Plus<U256, Plus<U64, Plus<U2, U1>>>>, Plus<U64, U16>>
+public typealias InkOnAccent = Legible<AccentLitY, InkLitY, InkOnAccentSlack>
+public typealias ActionOnPaperSlack = Plus<Scale512<U2>, U32>
+public typealias ActionOnPaper = Legible<PaperLitY, ActionLitY, ActionOnPaperSlack>
+public typealias RefusalOnPaperSlack = Plus<Scale512<Plus<U16, Plus<U8, U4>>>, Plus<U256, Plus<U128, U16>>>
+public typealias RefusalOnPaper = Legible<PaperLitY, RefusalLitY, RefusalOnPaperSlack>
+public typealias LawOnPaperSlack = Plus<Scale512<Plus<U32, Plus<U4, U2>>>, Plus<U256, Plus<U128, Plus<U64, Plus<U32, Plus<U16, U4>>>>>>
+public typealias LawOnPaper = Legible<PaperLitY, LawLitY, LawOnPaperSlack>
+public typealias OkOnPaperSlack = Plus<Scale512<Plus<U16, Plus<U8, Plus<U4, Plus<U2, U1>>>>>, Plus<U256, Plus<U32, U16>>>
+public typealias OkOnPaper = Legible<PaperLitY, OkLitY, OkOnPaperSlack>
+public typealias KeywordOnPaperSlack = Plus<Scale512<Plus<U128, Plus<U64, Plus<U32, U4>>>>, Plus<U32, Plus<U16, Plus<U8, U4>>>>
+public typealias KeywordOnPaper = Legible<PaperLitY, KeywordLitY, KeywordOnPaperSlack>
+public typealias LiteralOnPaperSlack = Plus<Scale512<Plus<U128, Plus<U32, U8>>>, Plus<U256, Plus<U64, Plus<U32, U8>>>>
+public typealias LiteralOnPaper = Legible<PaperLitY, LiteralLitY, LiteralOnPaperSlack>
+public typealias CommentOnPaperSlack = Plus<Scale512<Plus<U64, Plus<U32, Plus<U16, U2>>>>, Plus<U256, Plus<U128, Plus<U64, Plus<U16, U4>>>>>
+public typealias CommentOnPaper = Legible<PaperLitY, CommentLitY, CommentOnPaperSlack>
+public typealias AttributeOnPaperSlack = Plus<Scale512<Plus<U4, U1>>, Plus<U64, Plus<U32, Plus<U16, U4>>>>
+public typealias AttributeOnPaper = Legible<PaperLitY, AttributeLitY, AttributeOnPaperSlack>
+public typealias LocalTypeOnPaperSlack = Plus<Scale512<Plus<U256, Plus<U64, Plus<U2, U1>>>>, Plus<U256, Plus<U64, Plus<U32, Plus<U16, Plus<U8, U4>>>>>>
+public typealias LocalTypeOnPaper = Legible<PaperLitY, LocalTypeLitY, LocalTypeOnPaperSlack>
+public typealias KnownNameOnPaperSlack = Plus<Scale512<Plus<U256, Plus<U128, Plus<U32, Plus<U8, Plus<U4, U2>>>>>>, Plus<U256, Plus<U32, Plus<U16, Plus<U8, U4>>>>>
+public typealias KnownNameOnPaper = Legible<PaperLitY, KnownNameLitY, KnownNameOnPaperSlack>
+public typealias TextOnSurfaceCardDimSlack = Plus<Scale512<Plus<U256, Plus<U64, Plus<U16, U8>>>>, U128>
+public typealias TextOnSurfaceCardDim = Legible<TextDimY, SurfaceCardDimY, TextOnSurfaceCardDimSlack>
+public typealias MutedOnSurfaceCardDimSlack = Plus<Scale512<Plus<U64, Plus<U32, Plus<U8, Plus<U4, Plus<U2, U1>>>>>>, Plus<U256, U128>>
+public typealias MutedOnSurfaceCardDim = Legible<MutedDimY, SurfaceCardDimY, MutedOnSurfaceCardDimSlack>

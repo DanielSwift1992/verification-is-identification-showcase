@@ -1,109 +1,309 @@
 {
   "world": "Worlds/Playground/Site/Palette.swift",
-  "required_outcome": "partial",
-  "verified_by_gate_in_3b": false,
+  "required_outcome": "holds",
   "requirements": [
     {
       "id": "TextOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 362,
-      "relation": "public typealias TextOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, TextLitY, TextOnPaperSlack>"
+      "relation": "public typealias TextOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, TextLitY, TextOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "TextOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "TextOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "TextOnPaper.R1"
+      }
     },
     {
       "id": "TextOnMist",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 364,
-      "relation": "public typealias TextOnMist = Legible<Times<Plus<U32, U8>, MistLitY>, TextLitY, TextOnMistSlack>"
+      "relation": "public typealias TextOnMist = Legible<Times<Plus<U32, U8>, MistLitY>, TextLitY, TextOnMistSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "TextOnMist.R1"
+      ],
+      "negative_control": {
+        "alias": "TextOnMist",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "TextOnMist.R1"
+      }
     },
     {
       "id": "MutedOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 366,
-      "relation": "public typealias MutedOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, MutedLitY, MutedOnPaperSlack>"
+      "relation": "public typealias MutedOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, MutedLitY, MutedOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "MutedOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "MutedOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "MutedOnPaper.R1"
+      }
     },
     {
       "id": "MutedOnMist",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 368,
-      "relation": "public typealias MutedOnMist = Legible<Times<Plus<U32, U8>, MistLitY>, MutedLitY, MutedOnMistSlack>"
+      "relation": "public typealias MutedOnMist = Legible<Times<Plus<U32, U8>, MistLitY>, MutedLitY, MutedOnMistSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "MutedOnMist.R1"
+      ],
+      "negative_control": {
+        "alias": "MutedOnMist",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "MutedOnMist.R1"
+      }
     },
     {
       "id": "InkOnAccent",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 370,
-      "relation": "public typealias InkOnAccent = Legible<Times<Plus<U32, U8>, AccentLitY>, InkLitY, InkOnAccentSlack>"
+      "relation": "public typealias InkOnAccent = Legible<Times<Plus<U32, U8>, AccentLitY>, InkLitY, InkOnAccentSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "InkOnAccent.R1"
+      ],
+      "negative_control": {
+        "alias": "InkOnAccent",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "InkOnAccent.R1"
+      }
     },
     {
       "id": "ActionOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 372,
-      "relation": "public typealias ActionOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, ActionLitY, ActionOnPaperSlack>"
+      "relation": "public typealias ActionOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, ActionLitY, ActionOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "ActionOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "ActionOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "ActionOnPaper.R1"
+      }
     },
     {
       "id": "RefusalOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 374,
-      "relation": "public typealias RefusalOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, RefusalLitY, RefusalOnPaperSlack>"
+      "relation": "public typealias RefusalOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, RefusalLitY, RefusalOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "RefusalOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "RefusalOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "RefusalOnPaper.R1"
+      }
     },
     {
       "id": "LawOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 376,
-      "relation": "public typealias LawOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, LawLitY, LawOnPaperSlack>"
+      "relation": "public typealias LawOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, LawLitY, LawOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "LawOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "LawOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "LawOnPaper.R1"
+      }
     },
     {
       "id": "OkOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 378,
-      "relation": "public typealias OkOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, OkLitY, OkOnPaperSlack>"
+      "relation": "public typealias OkOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, OkLitY, OkOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "OkOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "OkOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "OkOnPaper.R1"
+      }
     },
     {
       "id": "KeywordOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 380,
-      "relation": "public typealias KeywordOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, KeywordLitY, KeywordOnPaperSlack>"
+      "relation": "public typealias KeywordOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, KeywordLitY, KeywordOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "KeywordOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "KeywordOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "KeywordOnPaper.R1"
+      }
     },
     {
       "id": "LiteralOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 382,
-      "relation": "public typealias LiteralOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, LiteralLitY, LiteralOnPaperSlack>"
+      "relation": "public typealias LiteralOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, LiteralLitY, LiteralOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "LiteralOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "LiteralOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "LiteralOnPaper.R1"
+      }
     },
     {
       "id": "CommentOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 384,
-      "relation": "public typealias CommentOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, CommentLitY, CommentOnPaperSlack>"
+      "relation": "public typealias CommentOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, CommentLitY, CommentOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "CommentOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "CommentOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "CommentOnPaper.R1"
+      }
     },
     {
       "id": "AttributeOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 386,
-      "relation": "public typealias AttributeOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, AttributeLitY, AttributeOnPaperSlack>"
+      "relation": "public typealias AttributeOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, AttributeLitY, AttributeOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "AttributeOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "AttributeOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "AttributeOnPaper.R1"
+      }
     },
     {
       "id": "LocalTypeOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 388,
-      "relation": "public typealias LocalTypeOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, LocalTypeLitY, LocalTypeOnPaperSlack>"
+      "relation": "public typealias LocalTypeOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, LocalTypeLitY, LocalTypeOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "LocalTypeOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "LocalTypeOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "LocalTypeOnPaper.R1"
+      }
     },
     {
       "id": "KnownNameOnPaper",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 390,
-      "relation": "public typealias KnownNameOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, KnownNameLitY, KnownNameOnPaperSlack>"
+      "relation": "public typealias KnownNameOnPaper = Legible<Times<Plus<U32, U8>, PaperLitY>, KnownNameLitY, KnownNameOnPaperSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "KnownNameOnPaper.R1"
+      ],
+      "negative_control": {
+        "alias": "KnownNameOnPaper",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "KnownNameOnPaper.R1"
+      }
     },
     {
       "id": "TextOnSurfaceCardDim",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 392,
-      "relation": "public typealias TextOnSurfaceCardDim = Legible<Times<Plus<U32, U8>, TextDimY>, SurfaceCardDimY, TextOnSurfaceCardDimSlack>"
+      "relation": "public typealias TextOnSurfaceCardDim = Legible<Times<Plus<U32, U8>, TextDimY>, SurfaceCardDimY, TextOnSurfaceCardDimSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "TextOnSurfaceCardDim.R1"
+      ],
+      "negative_control": {
+        "alias": "TextOnSurfaceCardDim",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "TextOnSurfaceCardDim.R1"
+      }
     },
     {
       "id": "MutedOnSurfaceCardDim",
-      "reason": "count v0.1 normalization budget (57 344)",
       "source_line": 394,
-      "relation": "public typealias MutedOnSurfaceCardDim = Legible<Times<Plus<U32, U8>, MutedDimY>, SurfaceCardDimY, MutedOnSurfaceCardDimSlack>"
+      "relation": "public typealias MutedOnSurfaceCardDim = Legible<Times<Plus<U32, U8>, MutedDimY>, SurfaceCardDimY, MutedOnSurfaceCardDimSlack>",
+      "previous_reason": "count v0.1 normalization budget (57 344)",
+      "route": "count",
+      "targets": [
+        "MutedOnSurfaceCardDim.R1"
+      ],
+      "negative_control": {
+        "alias": "MutedOnSurfaceCardDim",
+        "argument": "Slack",
+        "add": "Unit",
+        "exit": 1,
+        "refused": "MutedOnSurfaceCardDim.R1"
+      }
     }
-  ]
+  ],
+  "question": {
+    "id": "vi.count.unit-never-plus/1",
+    "predicate": "PaletteContrastQuestion",
+    "encoding": "UnaryArithmeticEncoding",
+    "sigma": "PaletteLight"
+  },
+  "origin": {
+    "repository": "https://github.com/DanielSwift1992/typed-playground",
+    "revision": "400b6674d1c120bb2b86150631093f86ec4d7994",
+    "path": "corpus/Palette.swift",
+    "fixture": "origins/Palette.swift",
+    "sha256": "edfe1b1dd287cdfbbc09af9a544d677c0aad0e5b3084655370cb5d475edf6534"
+  },
+  "unsupported": []
 }

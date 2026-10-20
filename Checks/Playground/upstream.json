@@ -137,9 +137,9 @@
       "source": "corpus/Palette.swift",
       "target": "Worlds/Playground/Site/Palette.swift",
       "source_sha256": "edfe1b1dd287cdfbbc09af9a544d677c0aad0e5b3084655370cb5d475edf6534",
-      "sha256": "bd34b48fcfa94631c72696685ebab2c9e0dce48365783bd6d0f1eb441ee462a0",
+      "sha256": "6b6f00153384ccc8c266b03b68b3919e388e642bf2d80db64bb1c07fb5471538",
       "byte_for_byte": false,
-      "transformation": "preserved Legible residue comments"
+      "transformation": "T-0032 revision 2: each original Legible ID carries R1 from its own bright level, dark level and slack; fixed sums of doublings replace products; original integer relations and addressed mutations checked by palette-count.py"
     },
     {
       "source": "corpus/worlds/Typewriter.swift",
