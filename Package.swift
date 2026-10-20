@@ -5,7 +5,7 @@
 // workflow to the revision it checks out, and ShowcaseTools passes it to its disposable worktrees.
 import PackageDescription
 
-let theoryRevision = "50a9bb9a364688508a55986b08ea9d269f3c4a29"
+let theoryRevision = "95513b4bd8605c2c3c0df3290c0160c0203def2c"
 // The name keeps `package: "verification-is-identification"` resolving whatever the checkout's
 // directory is called: a path dependency otherwise takes its identity from the directory name.
 let theory: Package.Dependency = Context.environment["VI_THEORY_PATH"].map { .package(name: "verification-is-identification", path: $0) }
@@ -111,5 +111,63 @@ let package = Package(
 
         // count pins the numbers the showcase's body-composed types settle to.
         .testTarget(name: "OrganizationTests", dependencies: ["Organization"]),
+
+        // The playground's worlds are compiled here, beside the kit they speak.
+        // The gate manifests name their courts; they are not Swift target sources.
+        .target(name: "AtomTab", dependencies: [
+            "DocumentKit",
+            .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
+        ], path: "Worlds/Playground/Atom", exclude: ["gate.manifest.swift"],
+           sources: ["Atom.swift", "AtomPages.swift"]),
+        .target(name: "BasicsTab", dependencies: [
+            "DocumentKit",
+            .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
+        ], path: "Worlds/Playground/Basics", exclude: ["gate.manifest.swift"],
+           sources: ["Basics.swift"]),
+        .target(name: "CompanyTab", dependencies: [
+            "DocumentKit", "Organization",
+            .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
+        ], path: "Worlds/Playground/Company", exclude: ["gate.manifest.swift"],
+           sources: ["Company.swift"]),
+        .target(name: "FAQTab", dependencies: [
+            "DocumentKit",
+            .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
+        ], path: "Worlds/Playground/FAQ", exclude: ["gate.manifest.swift"],
+           sources: ["FAQ.swift"]),
+        .target(name: "LightTab", dependencies: [
+            "DocumentKit",
+            .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
+        ], path: "Worlds/Playground/Light", exclude: ["gate.manifest.swift"],
+           sources: ["Light.swift", "LightPages.swift"]),
+        .target(name: "OrganizationTab", dependencies: [
+            "DocumentKit", "Organization",
+            .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
+        ], path: "Worlds/Playground/Organization", exclude: ["gate.manifest.swift"],
+           sources: ["Organization.swift"]),
+        .target(name: "ReadMeTab", dependencies: [
+            "DocumentKit",
+            .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
+        ], path: "Worlds/Playground/ReadMe", exclude: ["gate.manifest.swift"],
+           sources: ["ReadMe.swift"]),
+        .target(name: "RulesTab", dependencies: [
+            "DocumentKit",
+            .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
+        ], path: "Worlds/Playground/Rules", exclude: ["gate.manifest.swift"],
+           sources: ["Rules.swift"]),
+        .target(name: "TypewriterTab", dependencies: [
+            "DocumentKit",
+            .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
+        ], path: "Worlds/Playground/Typewriter", exclude: ["gate.manifest.swift"],
+           sources: ["Typewriter.swift"]),
+        .target(name: "WorldTab", dependencies: [
+            "DocumentKit",
+            .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
+        ], path: "Worlds/Playground/World", exclude: ["gate.manifest.swift"],
+           sources: ["World.swift"]),
+        .target(name: "PlaygroundSite", dependencies: [
+            "DocumentKit",
+            .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
+        ], path: "Worlds/Playground/Site", exclude: ["gate.manifest.swift"],
+           sources: ["Manifest.swift", "Palette.swift"]),
     ]
 )

@@ -1,0 +1,43 @@
+{
+  "world": "Worlds/Playground/Company/Company.swift",
+  "lies": {
+    "cross": [
+      "        VerifiedView<\n            Emp03,\n            EngineeringShare\n        >.self;",
+      "        VerifiedView<\n            Emp03,\n            FinanceShare\n        >.self;"
+    ],
+    "rank": [
+      "public enum Emp02: Employee, Person {\n    public typealias Rank = Lead",
+      "public enum Emp02: Employee, Person {\n    public typealias Rank = Leed"
+    ],
+    "site": [
+      "    public typealias Born = Y1815\n    public typealias Site = OnSite\n    public typealias Sex = Given.Sex\n}\n\npublic enum Company",
+      "    public typealias Born = Y1815\n    public typealias Site = Sales\n    public typealias Sex = Given.Sex\n}\n\npublic enum Company"
+    ]
+  },
+  "golden": {
+    "clean": {
+      "declarations": 15,
+      "lookups": 47,
+      "premises": 45,
+      "refusals": []
+    },
+    "cross": [
+      {
+        "line": 106,
+        "premise": "VerifiedView requires Emp03.Home == FinanceShare.Home: Engineering against Finance"
+      }
+    ],
+    "rank": [
+      {
+        "line": 48,
+        "premise": "Emp02.Rank: the name Leed resolves to nothing"
+      }
+    ],
+    "site": [
+      {
+        "line": 71,
+        "premise": "Person requires Site in workplace: Emp04.Site = Sales lands in department"
+      }
+    ]
+  }
+}

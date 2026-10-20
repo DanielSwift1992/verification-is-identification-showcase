@@ -1,0 +1,25 @@
+{
+  "world": "Worlds/Playground/Basics/Basics.swift",
+  "cases": [
+    {
+      "id": "illegal-import",
+      "prefix": "import Foundation\n",
+      "expect": "the imports are fixed"
+    },
+    {
+      "id": "orphan-extension",
+      "suffix": "\nextension NoSuchOwner {\n    public static var typeName: String { \"x\" }\n}\n",
+      "expect": "an extension names `NoSuchOwner`"
+    },
+    {
+      "id": "dangling-top-alias",
+      "suffix": "\npublic typealias Probe = NoSuchName\n",
+      "expect": "`Probe` names `NoSuchName`"
+    },
+    {
+      "id": "builder-missing",
+      "suffix": "\npublic enum ProbeRow: HFlow {\n    public typealias Given = U512\n    public static var body: some Structure & Divides {\n        Air<U2>.self\n    }\n}\n",
+      "expect": "states no @StructureBuilder"
+    }
+  ]
+}

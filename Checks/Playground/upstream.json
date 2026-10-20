@@ -1,0 +1,164 @@
+{
+  "source_repository": "https://github.com/DanielSwift1992/typed-playground",
+  "source_revision": "400b6674d1c120bb2b86150631093f86ec4d7994",
+  "showcase_base": "6d48b55d512c3b90b2b1c5c07d223420643f90e4",
+  "compiler_theory_revision": "95513b4bd8605c2c3c0df3290c0160c0203def2c",
+  "gate_role_reference": "61422112396ff7e3406c2cf1c1c6fe3bc9da213e",
+  "files": [
+    {
+      "source": "corpus/worlds/Atom.swift",
+      "target": "Worlds/Playground/Atom/Atom.swift",
+      "source_sha256": "3d7c9d5e85de483339c1f1a028e1807257fcf5eeab106c139863e932f628dbda",
+      "sha256": "3d7c9d5e85de483339c1f1a028e1807257fcf5eeab106c139863e932f628dbda",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/worlds/AtomPages.swift",
+      "target": "Worlds/Playground/Atom/AtomPages.swift",
+      "source_sha256": "da766db6cc0714dcc62fa8ed4fa2d9dc13f1c4e5fc5f7a46c60bc7432b4d1d5d",
+      "sha256": "da766db6cc0714dcc62fa8ed4fa2d9dc13f1c4e5fc5f7a46c60bc7432b4d1d5d",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/worlds/Basics.swift",
+      "target": "Worlds/Playground/Basics/Basics.swift",
+      "source_sha256": "6bb923d2b5e07befe63bf0681880eaa7ef3f85ecb2750a9d11aa6e4cfdd909ec",
+      "sha256": "6bb923d2b5e07befe63bf0681880eaa7ef3f85ecb2750a9d11aa6e4cfdd909ec",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/worlds/Company.swift",
+      "target": "Worlds/Playground/Company/Company.swift",
+      "source_sha256": "e2570be76c11add181cfe034b984a96fac93c895de3f94d5855e8238e84ead72",
+      "sha256": "e2570be76c11add181cfe034b984a96fac93c895de3f94d5855e8238e84ead72",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/worlds/FAQ.swift",
+      "target": "Worlds/Playground/FAQ/FAQ.swift",
+      "source_sha256": "bc8e4e6f1c092837ef25a8cc9c24570604740b1057290ecb565872de59a43f97",
+      "sha256": "bc8e4e6f1c092837ef25a8cc9c24570604740b1057290ecb565872de59a43f97",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/worlds/Light.swift",
+      "target": "Worlds/Playground/Light/Light.swift",
+      "source_sha256": "b3ff0796dfad01004d39c0e6b0092ba3691646ae29493c1f10cb34dabe83988d",
+      "sha256": "b3ff0796dfad01004d39c0e6b0092ba3691646ae29493c1f10cb34dabe83988d",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/worlds/LightPages.swift",
+      "target": "Worlds/Playground/Light/LightPages.swift",
+      "source_sha256": "8a513832878c9921b76e4b410fb4047caf8e32d6ea92d4270150dbdcff4036a8",
+      "sha256": "8a513832878c9921b76e4b410fb4047caf8e32d6ea92d4270150dbdcff4036a8",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/worlds/Organization.swift",
+      "target": "Worlds/Playground/Organization/Organization.swift",
+      "source_sha256": "fb0928e281e1593e2c346a8937f663a8333439a1e6cfa5fa242c1a23c69edcd0",
+      "sha256": "fb0928e281e1593e2c346a8937f663a8333439a1e6cfa5fa242c1a23c69edcd0",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/worlds/ReadMe.swift",
+      "target": "Worlds/Playground/ReadMe/ReadMe.swift",
+      "source_sha256": "4b2ad8d82e83e04825d5761e95b9d23ec108d657f7f7a4d7422086f8591b793f",
+      "sha256": "4b2ad8d82e83e04825d5761e95b9d23ec108d657f7f7a4d7422086f8591b793f",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/worlds/Rules.swift",
+      "target": "Worlds/Playground/Rules/Rules.swift",
+      "source_sha256": "d56c0373a8a321d87a735044a6e5002853f974df265a03b8502fd3173a9b9ec9",
+      "sha256": "d56c0373a8a321d87a735044a6e5002853f974df265a03b8502fd3173a9b9ec9",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/worlds/Typewriter.swift",
+      "target": "Worlds/Playground/Typewriter/Typewriter.swift",
+      "source_sha256": "a756761596b50d838d489e9869b01bcbb3d522036b025286c6e4dbb2df0d37ea",
+      "sha256": "a756761596b50d838d489e9869b01bcbb3d522036b025286c6e4dbb2df0d37ea",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/worlds/World.swift",
+      "target": "Worlds/Playground/World/World.swift",
+      "source_sha256": "ab9c11f30d33a6565d2d880861527fea89c05264c1a69db5c179b91eaceb6ba2",
+      "sha256": "ab9c11f30d33a6565d2d880861527fea89c05264c1a69db5c179b91eaceb6ba2",
+      "byte_for_byte": true
+    },
+    {
+      "source": "corpus/Manifest.swift",
+      "target": "Worlds/Playground/Site/Manifest.swift",
+      "source_sha256": "8a4cbc32e4cc14de901520a2da13cdbc6996fb99217dce4b2cab468ade6daa4c",
+      "sha256": "8a4cbc32e4cc14de901520a2da13cdbc6996fb99217dce4b2cab468ade6daa4c",
+      "byte_for_byte": true,
+      "transformation": null
+    },
+    {
+      "source": "corpus/Palette.swift",
+      "target": "Worlds/Playground/Site/Palette.swift",
+      "source_sha256": "edfe1b1dd287cdfbbc09af9a544d677c0aad0e5b3084655370cb5d475edf6534",
+      "sha256": "bd34b48fcfa94631c72696685ebab2c9e0dce48365783bd6d0f1eb441ee462a0",
+      "byte_for_byte": false,
+      "transformation": "17 unsupported comments only"
+    },
+    {
+      "source": "goldens/dynamics-world.swift",
+      "target": "Checks/Playground/goldens/dynamics-world.swift",
+      "source_sha256": "1daeb0ed5ee8ab305e2b4f4d59f9966a434359fd9f9e38b02dc61be3133bc19e",
+      "sha256": "1daeb0ed5ee8ab305e2b4f4d59f9966a434359fd9f9e38b02dc61be3133bc19e",
+      "byte_for_byte": true
+    },
+    {
+      "source": "goldens/dynamics-draw.svg",
+      "target": "Checks/Playground/goldens/dynamics-draw.svg",
+      "source_sha256": "1550c40d36a568a5e0ad85e3988532fa9fe6812f16a12f54615c7300f8492550",
+      "sha256": "1550c40d36a568a5e0ad85e3988532fa9fe6812f16a12f54615c7300f8492550",
+      "byte_for_byte": true
+    },
+    {
+      "source": "goldens/vector-plate.txt",
+      "target": "Checks/Playground/goldens/vector-plate.txt",
+      "source_sha256": "f4ebea40945bd3c7c3c57473726e3b1722188b888eab6ff48971ea3291141fe8",
+      "sha256": "f4ebea40945bd3c7c3c57473726e3b1722188b888eab6ff48971ea3291141fe8",
+      "byte_for_byte": true
+    }
+  ],
+  "derived_data_sources": [
+    {
+      "source": "index.html",
+      "sha256": "17f82b25b0d06f335c2c94c601f299af7cd10e8fc76689c3727c35317428ac93"
+    },
+    {
+      "source": "check.js",
+      "sha256": "7bb1e99945109bbeb1371f6a52f53a0dabac464c1a81a7872100e7ab6c2b53d8"
+    },
+    {
+      "source": "check-kit.js",
+      "sha256": "76e449ca3fc6ac4cd5f72ddc47b5f44bcd5874847057cce3d86da0c1f0293f64"
+    },
+    {
+      "source": "check-theory.sh",
+      "sha256": "8bbf9feb950458dae505b668d041de6fb395c9ff99567cb57e524d785e484ba3"
+    }
+  ],
+  "original_judge_theory_revision": "50a9bb9a364688508a55986b08ea9d269f3c4a29",
+  "original_kit_showcase_revision": "8b69d9f3be6f9f6c46ae51492ad1972c4b4ccc5c",
+  "court_definitions": {
+    "Primitive.swift": {
+      "repository": "verification-is-identification",
+      "revision": "95513b4bd8605c2c3c0df3290c0160c0203def2c",
+      "source": "Sources/VerificationIsIdentification/Primitive.swift",
+      "sha256": "c2700f5d176d4f30159b9996cbe41d33fc2f14dfb6e7ad355e081014f8c4482a"
+    },
+    "Spectrum.swift": {
+      "repository": "verification-is-identification-showcase",
+      "revision": "same showcase revision as the worlds",
+      "source": "Sources/DocumentKit/Spectrum.swift",
+      "sha256": "59c6404a0deec3248d6dc9bce2e5bbd17b95f491017998b1873461f54213789e"
+    }
+  }
+}

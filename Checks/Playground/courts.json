@@ -1,0 +1,145 @@
+{
+  "definitions": [
+    "Primitive.swift",
+    "Spectrum.swift"
+  ],
+  "definition_revisions": "Primitive from Package.swift theoryRevision; Spectrum from this showcase revision",
+  "recorded_by": "typed-playground 400b667/check.js and check-theory.sh; replay belongs to gate step 3c",
+  "cases": [
+    {
+      "id": "light-clean",
+      "world": "Light",
+      "court": "where",
+      "exit": 0,
+      "prefix": "✓ THE WHERE holds: 11 equalities and 0 memberships"
+    },
+    {
+      "id": "light-halving",
+      "world": "Light",
+      "court": "where",
+      "exit": 1,
+      "mutation": [
+        "    public typealias Vertical = Twice<Lit1>\n}",
+        "    public typealias Vertical = Lit1\n}"
+      ],
+      "refused": [
+        "HalfFact",
+        "QuarterFact"
+      ],
+      "refusal_count": 2
+    },
+    {
+      "id": "light-dark-gap",
+      "world": "Light",
+      "court": "where",
+      "exit": 1,
+      "mutation": [
+        "    public typealias Gap = Plus<Lit1, Twice<Never>>",
+        "    public typealias Gap = Twice<Lit1>"
+      ],
+      "refused": [
+        "FirstDark"
+      ],
+      "refusal_count": 1
+    },
+    {
+      "id": "atom-clean-where",
+      "world": "Atom",
+      "court": "where",
+      "exit": 1,
+      "refused": [
+        "GroundFloorStitch",
+        "SecondFloorStitch",
+        "ThirdFloorStitch",
+        "TwoRoadsOneDrop"
+      ],
+      "refusal_count": 4
+    },
+    {
+      "id": "atom-forbidden-emission",
+      "world": "Atom",
+      "court": "where",
+      "exit": 1,
+      "mutation": [
+        "public typealias LymanFact = Lowers<Orbital2p, Orbital1s>",
+        "public typealias LymanFact = Lowers<Orbital2p, Orbital1s>\npublic typealias Trap = Lowers<Orbital2s, Orbital1s>"
+      ],
+      "additional_refused": [
+        "Trap"
+      ]
+    },
+    {
+      "id": "atom-two-roads",
+      "world": "Atom",
+      "court": "where",
+      "exit": 1,
+      "mutation": [
+        "public enum BetaJump: Close {\n    public typealias Drop = Rung2",
+        "public enum BetaJump: Close {\n    public typealias Drop = Rung3"
+      ],
+      "additional_refused": [
+        "TwoRoadsFact"
+      ]
+    },
+    {
+      "id": "atom-forbidden-absorption",
+      "world": "Atom",
+      "court": "where",
+      "exit": 1,
+      "mutation": [
+        "public typealias ShineBetaFact = Raises<Orbital2s, Orbital4p>",
+        "public typealias ShineBetaFact = Raises<Orbital2s, Orbital3s>"
+      ],
+      "additional_refused": [
+        "ShineBetaFact"
+      ]
+    },
+    {
+      "id": "atom-clean-count",
+      "world": "Atom",
+      "court": "count",
+      "exit": 0,
+      "question": {
+        "predicate": "TickCountQuestion",
+        "encoding": "UnaryArithmeticEncoding",
+        "sigma": "AtomLevels"
+      },
+      "prefix": "✓ COUNT holds: 10 source-bound readings"
+    },
+    {
+      "id": "atom-count-lie",
+      "world": "Atom",
+      "court": "count",
+      "exit": 1,
+      "question": {
+        "predicate": "TickCountQuestion",
+        "encoding": "UnaryArithmeticEncoding",
+        "sigma": "AtomLevels"
+      },
+      "mutation": [
+        "public typealias BalmerAlphaDrop = Plus<U16, U4>",
+        "public typealias BalmerAlphaDrop = Plus<U16, Plus<U4, U1>>"
+      ],
+      "refused_readings": [
+        "BalmerAlphaBinding.Right",
+        "ThroughFloorThreeBinding.Right"
+      ],
+      "left": 37,
+      "answer": 36,
+      "refusal_count": 2
+    },
+    {
+      "id": "palette-budget",
+      "world": "Site/Palette",
+      "court": "where",
+      "exit": 2,
+      "contains": "normalization limit reached",
+      "residue_fixture": "palette-residue.json"
+    }
+  ],
+  "native_wasm_parity": [
+    "light-clean",
+    "atom-clean-where",
+    "atom-clean-count"
+  ]
+}

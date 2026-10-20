@@ -1,0 +1,156 @@
+{
+  "dynamics": {
+    "source": "goldens/dynamics-world.swift",
+    "expected_svg": "goldens/dynamics-draw.svg",
+    "gameKit": {
+      "seeds": [
+        "SpanNothing",
+        "SurfaceCard",
+        "SurfaceTrack",
+        "TextPrimary",
+        "TextSecondary",
+        "AccentRole",
+        "ActionRole",
+        "LineRole",
+        "Muted",
+        "Ink",
+        "Mist",
+        "Paper",
+        "TextXS",
+        "TextS",
+        "TextM",
+        "TextL",
+        "TitleT",
+        "WeightRegular",
+        "WeightBold",
+        "R10",
+        "R12",
+        "HairlineWidth",
+        "FontStack",
+        "U1",
+        "U2",
+        "U4",
+        "U8",
+        "U16",
+        "U32",
+        "U64",
+        "U128",
+        "U256",
+        "U512",
+        "EdgeMargin",
+        "Breath",
+        "HairBreath",
+        "TrackHeight",
+        "DotSlot",
+        "KeySide",
+        "SlotRule",
+        "OnAccent",
+        "OnActionRole",
+        "Never",
+        "PanelWide"
+      ],
+      "generics": [
+        "Air",
+        "Flexible",
+        "Layered",
+        "Tally",
+        "Plus",
+        "Times",
+        "Twice",
+        "Half",
+        "Fixed",
+        "SpanHosted",
+        "SpanLink",
+        "Halfway",
+        "Under",
+        "Paired",
+        "RuleKey",
+        "TermText",
+        "CenteredBaseline",
+        "Chord",
+        "LineTally",
+        "Tick"
+      ],
+      "bareSeeds": []
+    },
+    "refusals": 0,
+    "errors": 0,
+    "canvases": 1
+  },
+  "world_cases": [
+    [
+      "introFile",
+      "ReadMe.swift"
+    ],
+    [
+      "organizationFile",
+      "Organization.swift"
+    ],
+    [
+      "basicsFile",
+      "Basics.swift"
+    ],
+    [
+      "typewriterFile",
+      "Typewriter.swift"
+    ],
+    [
+      "worldFile",
+      "World.swift"
+    ],
+    [
+      "lightFile",
+      "Light.swift",
+      "lightPagesFile"
+    ],
+    [
+      "atomFile",
+      "Atom.swift",
+      "atomPagesFile"
+    ],
+    [
+      "rulesFile",
+      "Rules.swift"
+    ],
+    [
+      "faqFile",
+      "FAQ.swift"
+    ]
+  ],
+  "each_world": {
+    "renderer_errors": 0,
+    "dangling_names": 0,
+    "guard_objections": 0,
+    "canvases_minimum": 1
+  },
+  "plain_court_only_if_conformance": [
+    "Employee",
+    "Person"
+  ],
+  "light_color_occurrences": {
+    "color(xyz-d65 0.250 0.093 0.000)": 7,
+    "color(xyz-d65 0.093 0.312 1.031)": 2,
+    "color(xyz-d65 0.125 0.046 0.000)": 2,
+    "color(xyz-d65 0.171 0.203 0.515)": 3,
+    "color(xyz-d65 0.062 0.023 0.000)": 4,
+    "color(xyz-d65 0.000 0.000 0.000)": 9,
+    "color(xyz-d65 0.343 0.406 1.031)": 2,
+    "color(xyz-d65 1.375 0.968 0.000)": 1,
+    "color(xyz-d65 1.031 0.781 0.000)": 1
+  },
+  "atom_color_occurrences": {
+    "color(xyz-d65 0.031 0.011 0.000)": 1,
+    "color(xyz-d65 0.011 0.039 0.128)": 1
+  },
+  "vector_plate": {
+    "source": "goldens/vector-plate.txt",
+    "minimum_checks": 28,
+    "plate_contains": [
+      "data-vi-rules=\"PlateSet<PlateOn>\"",
+      "data-vi-rules=\"PlateSet\""
+    ],
+    "light_contains": [
+      "data-vi-rules=\"SetAlpha<Rung1>\""
+    ]
+  }
+}
