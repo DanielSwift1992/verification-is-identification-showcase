@@ -5,17 +5,17 @@
       "row": "TheDrawing",
       "path": ".gate/inputs/DrawingProfile.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "29ee6ee257dbe3ba930c5c164ba47cb0a678a46c",
+      "revision": "3feb541b592461db977f941c48e98a4f3ea485a4",
       "source_path": "Worlds/Playground/Site/DrawingProfile.swift",
-      "sha256": "0694afe36ced26fcffca0869e49da786bfb62497cfe8fceca5e67f8587c28802"
+      "sha256": "01fcb9069c203e357733f4abcba9778bf2841bdee8993b8610e8b396e80173f6"
     },
     {
       "row": "ThePalette",
       "path": ".gate/inputs/Palette.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "29ee6ee257dbe3ba930c5c164ba47cb0a678a46c",
+      "revision": "3feb541b592461db977f941c48e98a4f3ea485a4",
       "source_path": "Worlds/Playground/Site/Palette.swift",
-      "sha256": "0036127e4ee69b24f0039889fbd573a05cbcce84797539083fa0a7349fa686f5"
+      "sha256": "6b6f00153384ccc8c266b03b68b3919e388e642bf2d80db64bb1c07fb5471538"
     },
     {
       "row": "TheFont",
@@ -56,6 +56,14 @@
       "revision": "7bc13e157a29a6cab4b2a7cf43b6e913267e520a",
       "source_path": "Sources/DocumentKit/Spectrum.swift",
       "sha256": "59c6404a0deec3248d6dc9bce2e5bbd17b95f491017998b1873461f54213789e"
+    },
+    {
+      "row": "TheBindings",
+      "path": ".gate/inputs/DrawingBindings.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "3feb541b592461db977f941c48e98a4f3ea485a4",
+      "source_path": "Worlds/Playground/Site/DrawingBindings.swift",
+      "sha256": "831b1a1ca2e593e393f58c46def44f40c960650b86c6eae5ba5204cab5e26757"
     }
   ],
   "languages": {

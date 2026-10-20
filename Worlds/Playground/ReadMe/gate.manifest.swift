@@ -24,7 +24,7 @@ public protocol Theirs {}
 public enum DrawingProfileFile: Role {}
 public enum DrawingSource: Role {}
 extension DrawingSource {
-    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@29ee6ee257dbe3ba930c5c164ba47cb0a678a46c" }
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@3feb541b592461db977f941c48e98a4f3ea485a4" }
 }
 public enum FontSource: Role {}
 extension FontSource {
@@ -82,4 +82,12 @@ public enum TheSpectrum: Theirs {
 }
 extension TheSpectrum {
     public static var typeName: String { ".gate/inputs/Spectrum.swift" }
+}
+
+public enum TheBindings: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = DrawingSource
+}
+extension TheBindings {
+    public static var typeName: String { ".gate/inputs/DrawingBindings.swift" }
 }
