@@ -167,7 +167,7 @@ let package = Package(
         .target(name: "PlaygroundSite", dependencies: [
             "DocumentKit",
             .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
-        ], path: "Worlds/Playground/Site", exclude: ["gate.manifest.swift"],
+        ], path: "Worlds/Playground/Site", exclude: ["gate.manifest.swift", "DrawingProfile.swift"],
            sources: ["Manifest.swift", "Palette.swift"]),
     ]
 )

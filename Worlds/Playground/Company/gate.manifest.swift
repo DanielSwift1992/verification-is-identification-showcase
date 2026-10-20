@@ -11,3 +11,13 @@ public enum TheCompany: Mine {
 extension TheCompany {
     public static var typeName: String { "Company.swift" }
 }
+
+// The drawing profile is an input shared with the other worlds.
+public protocol Theirs {}
+public enum DrawingProfileFile: Role {}
+public enum TheDrawing: Theirs {
+    public typealias Kind = DrawingProfileFile
+}
+extension TheDrawing {
+    public static var typeName: String { "../Site/DrawingProfile.swift" }
+}
