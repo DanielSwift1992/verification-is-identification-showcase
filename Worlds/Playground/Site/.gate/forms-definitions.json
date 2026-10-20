@@ -5,15 +5,15 @@
       "row": "TheDrawing",
       "path": "DrawingProfile.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "3feb541b592461db977f941c48e98a4f3ea485a4",
+      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
       "source_path": "Worlds/Playground/Site/DrawingProfile.swift",
-      "sha256": "01fcb9069c203e357733f4abcba9778bf2841bdee8993b8610e8b396e80173f6"
+      "sha256": "db59159587189df75c94a3c417562dbb92582eaed5a3af46b1446bdc90b4bd08"
     },
     {
       "row": "TheFont",
       "path": ".gate/inputs/font.ttf",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "7bc13e157a29a6cab4b2a7cf43b6e913267e520a",
+      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
       "source_path": "Assets/InterVariable.ttf",
       "sha256": "4989b125924991b90d05b2d16e0e388c48f7d5bb8b30539bbf9c755278d0ccaf"
     },
@@ -21,7 +21,7 @@
       "row": "TheMetrics",
       "path": ".gate/inputs/metrics.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "7bc13e157a29a6cab4b2a7cf43b6e913267e520a",
+      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
       "source_path": "Sources/DocumentKit/GeneratedFontMetrics.swift",
       "sha256": "44cc532765c2be7e4069513387db74c7db66d0986449375dae53a570226eb1d9"
     },
@@ -29,7 +29,7 @@
       "row": "TheLicense",
       "path": ".gate/inputs/license.txt",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "7bc13e157a29a6cab4b2a7cf43b6e913267e520a",
+      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
       "source_path": "Assets/InterLicense.txt",
       "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
     },
@@ -45,7 +45,7 @@
       "row": "TheSpectrum",
       "path": ".gate/inputs/Spectrum.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "7bc13e157a29a6cab4b2a7cf43b6e913267e520a",
+      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
       "source_path": "Sources/DocumentKit/Spectrum.swift",
       "sha256": "59c6404a0deec3248d6dc9bce2e5bbd17b95f491017998b1873461f54213789e"
     },
@@ -53,9 +53,17 @@
       "row": "TheBindings",
       "path": "DrawingBindings.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "3feb541b592461db977f941c48e98a4f3ea485a4",
+      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
       "source_path": "Worlds/Playground/Site/DrawingBindings.swift",
       "sha256": "831b1a1ca2e593e393f58c46def44f40c960650b86c6eae5ba5204cab5e26757"
+    },
+    {
+      "row": "TheContract",
+      "path": ".gate/inputs/DrawingContract.json",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "1accd2b61cbedccea2dc697e6daeb65799ab2338",
+      "source_path": "Contracts/Drawing/v0.1/contract.json",
+      "sha256": "2b8ae6e655a7d9f6274d7bbe09756c4e9f15e8a433a2dd2b2495fa51f192f31e"
     }
   ],
   "languages": {

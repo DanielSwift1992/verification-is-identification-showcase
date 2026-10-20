@@ -24,11 +24,11 @@ public protocol Theirs {}
 public enum DrawingProfileFile: Role {}
 public enum DrawingSource: Role {}
 extension DrawingSource {
-    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@3feb541b592461db977f941c48e98a4f3ea485a4" }
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@1accd2b61cbedccea2dc697e6daeb65799ab2338" }
 }
 public enum FontSource: Role {}
 extension FontSource {
-    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@7bc13e157a29a6cab4b2a7cf43b6e913267e520a" }
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@1accd2b61cbedccea2dc697e6daeb65799ab2338" }
 }
 public enum TheorySource: Role {}
 extension TheorySource {
@@ -90,4 +90,12 @@ public enum TheBindings: Theirs {
 }
 extension TheBindings {
     public static var typeName: String { ".gate/inputs/DrawingBindings.swift" }
+}
+
+public enum TheContract: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = DrawingSource
+}
+extension TheContract {
+    public static var typeName: String { ".gate/inputs/DrawingContract.json" }
 }
