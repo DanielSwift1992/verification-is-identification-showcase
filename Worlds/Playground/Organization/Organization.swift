@@ -21,19 +21,19 @@ extension OrgWhyOne {
 }
 public enum OrgWhyTwo: Close {}
 extension OrgWhyTwo {
-    public static var typeName: String { "Every number below is read out of the file on every edit: nothing is stored beside it." }
+    public static var typeName: String { "The drawing reads the declarations in this file. Browser drafts are saved with their verdict." }
 }
 public enum OrgWhyThree: Close {}
 extension OrgWhyThree {
-    public static var typeName: String { "Press Hire one more: a fifth person is written into the file, and every number follows." }
+    public static var typeName: String { "Open Full to change a person or a department alias; the drawing reads the changed declarations." }
 }
 public enum OrgWhyFour: Close {}
 extension OrgWhyFour {
-    public static var typeName: String { "Plant a lie writes one false line: the judge refuses the file and names the line." }
+    public static var typeName: String { "Change an employee Home from Finance to Sales; the company court names a broken share claim." }
 }
 public enum OrgWhyFive: Close {}
 extension OrgWhyFive {
-    public static var typeName: String { "Press Table under the preview: the same people appear as rows." }
+    public static var typeName: String { "Open Table to read the declarations as rows; a name leads to its source." }
 }
 public enum PeopleWord: Close {}
 extension PeopleWord {
@@ -41,7 +41,7 @@ extension PeopleWord {
 }
 public enum AccessWord: Close {}
 extension AccessWord {
-    public static var typeName: String { "claims proved" }
+    public static var typeName: String { "claims read" }
 }
 public enum FinanceWord: Close {}
 extension FinanceWord {
@@ -57,7 +57,7 @@ extension WalkWord {
 }
 public enum FootWord: Close {}
 extension FootWord {
-    public static var typeName: String { "Break it by hand: change one Finance to Sales on the left. The judge refuses the share lines." }
+    public static var typeName: String { "The court reads the declared company fragment. Edited page bodies have not been checked by Swift." }
 }
 public enum OrganizationAlt: Close {}
 extension OrganizationAlt {

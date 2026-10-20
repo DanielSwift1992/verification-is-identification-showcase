@@ -49,9 +49,9 @@
       "source": "corpus/worlds/FAQ.swift",
       "target": "Worlds/Playground/FAQ/Dictionary/FAQ.swift",
       "source_sha256": "bc8e4e6f1c092837ef25a8cc9c24570604740b1057290ecb565872de59a43f97",
-      "sha256": "6c668c47cb3b730aabd74757a044e04db686ff402e18a40d7d3466c993d66848",
+      "sha256": "e26ff06ab1ebb0e1d58634e4a97289fc80e735d01557764712f55ce3c33088ac",
       "byte_for_byte": false,
-      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json; available-bench copy repair, exact phrases in copy-r3.json"
     },
     {
       "source": "corpus/worlds/FAQ.swift",
@@ -89,17 +89,17 @@
       "source": "corpus/worlds/Organization.swift",
       "target": "Worlds/Playground/Organization/Organization.swift",
       "source_sha256": "fb0928e281e1593e2c346a8937f663a8333439a1e6cfa5fa242c1a23c69edcd0",
-      "sha256": "0ac96729f9730f0c1185adbdef45d1000d46d37aaded149bf6539491f5079e5b",
+      "sha256": "ed17f77580890cbff0aeb049ff36e48cd25a92abe23f7230a9538a16f8816b7b",
       "byte_for_byte": false,
-      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json; available-bench copy repair, exact phrases in copy-r3.json"
     },
     {
       "source": "corpus/worlds/ReadMe.swift",
       "target": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
       "source_sha256": "4b2ad8d82e83e04825d5761e95b9d23ec108d657f7f7a4d7422086f8591b793f",
-      "sha256": "b7251a542519d544ec54ca16a7d74731affaa6af85a8d60578573e7d6ecec5c4",
+      "sha256": "e59e7f0953400e1e88cb265e8dd12f642c45c6542bbc5fa2c0f80afc42617af3",
       "byte_for_byte": false,
-      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json; available-bench copy repair, exact phrases in copy-r3.json"
     },
     {
       "source": "corpus/worlds/ReadMe.swift",
@@ -129,9 +129,9 @@
       "source": "corpus/Manifest.swift",
       "target": "Worlds/Playground/Site/Manifest.swift",
       "source_sha256": "8a4cbc32e4cc14de901520a2da13cdbc6996fb99217dce4b2cab468ade6daa4c",
-      "sha256": "8a4cbc32e4cc14de901520a2da13cdbc6996fb99217dce4b2cab468ade6daa4c",
-      "byte_for_byte": true,
-      "transformation": null
+      "sha256": "a9d26f353a0ed0988baef8dd7c7e38ad03724162b2eb2c3b391ab8b0970410c5",
+      "byte_for_byte": false,
+      "transformation": "original source; available-bench copy repair, exact phrases in copy-r3.json"
     },
     {
       "source": "corpus/Palette.swift",
@@ -145,9 +145,9 @@
       "source": "corpus/worlds/Typewriter.swift",
       "target": "Worlds/Playground/Typewriter/Dictionary/Typewriter.swift",
       "source_sha256": "a756761596b50d838d489e9869b01bcbb3d522036b025286c6e4dbb2df0d37ea",
-      "sha256": "d720b00b6b82b9eb2aaee3184ea3d6e4c5df8ff241cb37e18394a290bd5c0645",
+      "sha256": "841732eda090c59e482c907fbf2c5d536cd4001ecbf52bb7e735e9ba2659f038",
       "byte_for_byte": false,
-      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json; available-bench copy repair, exact phrases in copy-r3.json"
     },
     {
       "source": "corpus/worlds/Typewriter.swift",
@@ -229,5 +229,6 @@
       "sha256": "59c6404a0deec3248d6dc9bce2e5bbd17b95f491017998b1873461f54213789e"
     }
   },
-  "initial_import_showcase_base": "6d48b55d512c3b90b2b1c5c07d223420643f90e4"
+  "initial_import_showcase_base": "6d48b55d512c3b90b2b1c5c07d223420643f90e4",
+  "copy_repair": "copy-r3.json"
 }

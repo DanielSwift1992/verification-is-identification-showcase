@@ -1,15 +1,11 @@
 import VerificationIsIdentification
 import DocumentKit
 
-// THE SITE'S OWN PARTS, written the way every tab is written: declarations and
-// atoms, judged by the same judge the page runs. build.mjs reads this file with
-// that judge and prints index.html from it, so the list of worlds the site ships
-// is declared once instead of remembered in three places, and check.js refuses a
-// world this file forgets or invents.
-//
-// A world is one Swift file under corpus/worlds and the name the page reads it
-// by. The two are separate facts: the file is what `swift build` compiles and
-// what a reader downloads, the name is what the page's own code calls it.
+// Gate reads these declarations to order and label the worlds in its bench rail.
+// File names the world directory; SwiftPM and gate.manifest.swift name its paths.
+// Swift compiles dictionaries and bodies. Browser courts read the declared roles.
+// Reads and Seeds retain the original associations; copy changes are recorded in
+// Checks/Playground/copy-r3.json, beside the original source hashes.
 
 public enum ReadMeWorld: Close {
     public typealias File = ReadMeFileWord
@@ -234,7 +230,7 @@ extension ReadMeShownWord {
 }
 public enum ReadMeCaptionWord: Close {}
 extension ReadMeCaptionWord {
-    public static var typeName: String { "the page draws its own manual: this introduction is the file on the left" }
+    public static var typeName: String { "ReadMe.swift introduces the worlds. Open Drawing for the page, or Full for its source." }
 }
 
 public enum OrganizationTab: Close {
@@ -259,7 +255,7 @@ extension OrganizationShownWord {
 }
 public enum OrganizationCaptionWord: Close {}
 extension OrganizationCaptionWord {
-    public static var typeName: String { "a company as types: the cards count the people declared in the file" }
+    public static var typeName: String { "Organization.swift declares four people and their department shares. Edit a Home alias in Full; the company court reports its line." }
 }
 
 public enum ScaleTab: Close {
@@ -281,11 +277,11 @@ extension ScaleTitleWord {
 }
 public enum ScaleShownWord: Close {}
 extension ScaleShownWord {
-    public static var typeName: String { "BigCompany.swift" }
+    public static var typeName: String { "Company.swift" }
 }
 public enum ScaleCaptionWord: Close {}
 extension ScaleCaptionWord {
-    public static var typeName: String { "12,800 people, 136,000 lines: a planted lie is named by line, on every edit" }
+    public static var typeName: String { "Company.swift contains the generated company. The editor shows a portion; the court reads the complete company fragment." }
 }
 
 public enum BasicsTab: Close {
@@ -310,7 +306,7 @@ extension BasicsShownWord {
 }
 public enum BasicsCaptionWord: Close {}
 extension BasicsCaptionWord {
-    public static var typeName: String { "layout in four steps: a row, three shares, a dot, a film" }
+    public static var typeName: String { "Basics.swift declares the shapes that BasicsPages.swift draws. Open Drawing; edited page bodies are not compiled here." }
 }
 
 public enum WriterTab: Close {
@@ -335,7 +331,7 @@ extension WriterShownWord {
 }
 public enum WriterCaptionWord: Close {}
 extension WriterCaptionWord {
-    public static var typeName: String { "type on your keyboard: a keystroke appends one character to the Note literal in the file" }
+    public static var typeName: String { "Typewriter.swift declares a note and its keys. This bench draws them. Edit the Note literal in Full; keyboard typing into the drawing is not available." }
 }
 
 public enum ButtonsTab: Close {
@@ -360,7 +356,7 @@ extension ButtonsShownWord {
 }
 public enum ButtonsCaptionWord: Close {}
 extension ButtonsCaptionWord {
-    public static var typeName: String { "every key on the canvas is a rule declared in the file: a press rewrites one typealias line" }
+    public static var typeName: String { "World.swift declares the keys and their rules. A matching key changes an alias in the open file. Open Drawing." }
 }
 
 public enum LightTab: Close {
@@ -385,7 +381,7 @@ extension LightShownWord {
 }
 public enum LightCaptionWord: Close {}
 extension LightCaptionWord {
-    public static var typeName: String { "the lamp is code: edit a number and every colour is recomputed; the where court holds the certificates beside it" }
+    public static var typeName: String { "Light.swift declares the lamp and its supported equalities. Open Drawing; the where court reads the declarations." }
 }
 
 public enum AtomTabEntry: Close {
@@ -410,7 +406,7 @@ extension AtomShownWord {
 }
 public enum AtomCaptionWord: Close {}
 extension AtomCaptionWord {
-    public static var typeName: String { "the atom is a few lines, not a simulation: the certificates are in the editor, the pages behind them; change a law and the courts re-read every claim" }
+    public static var typeName: String { "Atom.swift declares Electron and its readings. A matching key changes the alias. Count and where report supported readings; four nominal where refusals are expected." }
 }
 
 public enum RulesTab: Close {
@@ -435,7 +431,7 @@ extension RulesShownWord {
 }
 public enum RulesCaptionWord: Close {}
 extension RulesCaptionWord {
-    public static var typeName: String { "how to write here: the two moves, the five forms, the law" }
+    public static var typeName: String { "Rules.swift states the forms and substitution rules. The browser runs limited guards; edited page bodies have not been checked by Swift." }
 }
 
 public enum FAQTab: Close {
@@ -460,5 +456,5 @@ extension FAQShownWord {
 }
 public enum FAQCaptionWord: Close {}
 extension FAQCaptionWord {
-    public static var typeName: String { "the FAQ is a file: edit an answer and the page redraws it" }
+    public static var typeName: String { "FAQ.swift contains the questions and answers drawn by FAQPages.swift. Edit the words in Full." }
 }

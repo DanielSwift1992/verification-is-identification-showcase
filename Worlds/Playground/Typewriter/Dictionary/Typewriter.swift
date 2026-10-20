@@ -32,15 +32,15 @@ extension SheetTitle {
 }
 public enum SheetSub: Close {}
 extension SheetSub {
-    public static var typeName: String { "On this tab the free text is one quoted literal, and the judge reads it." }
+    public static var typeName: String { "Note is a quoted literal in Typewriter.swift. Open Full to edit its text." }
 }
 public enum SheetSubTwo: Close {}
 extension SheetSubTwo {
-    public static var typeName: String { "Each keystroke appends one character to the Note literal." }
+    public static var typeName: String { "The bench draws the note and its keys; typing into the drawing is not available." }
 }
 public enum SheetSubThree: Close {}
 extension SheetSubThree {
-    public static var typeName: String { "Backspace removes one character. Escape clears the sheet." }
+    public static var typeName: String { "Change the Note literal in Full; the renderer reads the new text." }
 }
 public enum SheetSubFour: Close {}
 extension SheetSubFour {
@@ -48,7 +48,7 @@ extension SheetSubFour {
 }
 public enum TrySheet: Close {}
 extension TrySheet {
-    public static var typeName: String { "Break it: type a quote. It is outside the literal's alphabet, refused by name." }
+    public static var typeName: String { "The renderer reports text it cannot draw. This is a limited reading, not Swift compilation." }
 }
 public enum TrySheetTwo: Close {}
 extension TrySheetTwo {

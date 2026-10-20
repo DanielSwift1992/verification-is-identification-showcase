@@ -1,0 +1,248 @@
+{
+  "base_showcase": "902643189a89460153bbeb26088f0e75f84c98e7",
+  "baseline": "400b6674d1c120bb2b86150631093f86ec4d7994",
+  "reason": "T-0023 one-ui decision, T1-T4: words describe the available bench, not retired actions.",
+  "changes": [
+    {
+      "path": "Worlds/Playground/Site/Manifest.swift",
+      "before": "the page draws its own manual: this introduction is the file on the left",
+      "after": "ReadMe.swift introduces the worlds. Open Drawing for the page, or Full for its source."
+    },
+    {
+      "path": "Worlds/Playground/Site/Manifest.swift",
+      "before": "a company as types: the cards count the people declared in the file",
+      "after": "Organization.swift declares four people and their department shares. Edit a Home alias in Full; the company court reports its line."
+    },
+    {
+      "path": "Worlds/Playground/Site/Manifest.swift",
+      "before": "12,800 people, 136,000 lines: a planted lie is named by line, on every edit",
+      "after": "Company.swift contains the generated company. The editor shows a portion; the court reads the complete company fragment."
+    },
+    {
+      "path": "Worlds/Playground/Site/Manifest.swift",
+      "before": "BigCompany.swift",
+      "after": "Company.swift"
+    },
+    {
+      "path": "Worlds/Playground/Site/Manifest.swift",
+      "before": "layout in four steps: a row, three shares, a dot, a film",
+      "after": "Basics.swift declares the shapes that BasicsPages.swift draws. Open Drawing; edited page bodies are not compiled here."
+    },
+    {
+      "path": "Worlds/Playground/Site/Manifest.swift",
+      "before": "type on your keyboard: a keystroke appends one character to the Note literal in the file",
+      "after": "Typewriter.swift declares a note and its keys. This bench draws them. Edit the Note literal in Full; keyboard typing into the drawing is not available."
+    },
+    {
+      "path": "Worlds/Playground/Site/Manifest.swift",
+      "before": "every key on the canvas is a rule declared in the file: a press rewrites one typealias line",
+      "after": "World.swift declares the keys and their rules. A matching key changes an alias in the open file. Open Drawing."
+    },
+    {
+      "path": "Worlds/Playground/Site/Manifest.swift",
+      "before": "the lamp is code: edit a number and every colour is recomputed; the where court holds the certificates beside it",
+      "after": "Light.swift declares the lamp and its supported equalities. Open Drawing; the where court reads the declarations."
+    },
+    {
+      "path": "Worlds/Playground/Site/Manifest.swift",
+      "before": "the atom is a few lines, not a simulation: the certificates are in the editor, the pages behind them; change a law and the courts re-read every claim",
+      "after": "Atom.swift declares Electron and its readings. A matching key changes the alias. Count and where report supported readings; four nominal where refusals are expected."
+    },
+    {
+      "path": "Worlds/Playground/Site/Manifest.swift",
+      "before": "how to write here: the two moves, the five forms, the law",
+      "after": "Rules.swift states the forms and substitution rules. The browser runs limited guards; edited page bodies have not been checked by Swift."
+    },
+    {
+      "path": "Worlds/Playground/Site/Manifest.swift",
+      "before": "the FAQ is a file: edit an answer and the page redraws it",
+      "after": "FAQ.swift contains the questions and answers drawn by FAQPages.swift. Edit the words in Full."
+    },
+    {
+      "path": "Worlds/Playground/Organization/Organization.swift",
+      "before": "Every number below is read out of the file on every edit: nothing is stored beside it.",
+      "after": "The drawing reads the declarations in this file. Browser drafts are saved with their verdict."
+    },
+    {
+      "path": "Worlds/Playground/Organization/Organization.swift",
+      "before": "Press Hire one more: a fifth person is written into the file, and every number follows.",
+      "after": "Open Full to change a person or a department alias; the drawing reads the changed declarations."
+    },
+    {
+      "path": "Worlds/Playground/Organization/Organization.swift",
+      "before": "Plant a lie writes one false line: the judge refuses the file and names the line.",
+      "after": "Change an employee Home from Finance to Sales; the company court names a broken share claim."
+    },
+    {
+      "path": "Worlds/Playground/Organization/Organization.swift",
+      "before": "Press Table under the preview: the same people appear as rows.",
+      "after": "Open Table to read the declarations as rows; a name leads to its source."
+    },
+    {
+      "path": "Worlds/Playground/Organization/Organization.swift",
+      "before": "claims proved",
+      "after": "claims read"
+    },
+    {
+      "path": "Worlds/Playground/Organization/Organization.swift",
+      "before": "Break it by hand: change one Finance to Sales on the left. The judge refuses the share lines.",
+      "after": "The court reads the declared company fragment. Edited page bodies have not been checked by Swift."
+    },
+    {
+      "path": "Worlds/Playground/Typewriter/Dictionary/Typewriter.swift",
+      "before": "On this tab the free text is one quoted literal, and the judge reads it.",
+      "after": "Note is a quoted literal in Typewriter.swift. Open Full to edit its text."
+    },
+    {
+      "path": "Worlds/Playground/Typewriter/Dictionary/Typewriter.swift",
+      "before": "Each keystroke appends one character to the Note literal.",
+      "after": "The bench draws the note and its keys; typing into the drawing is not available."
+    },
+    {
+      "path": "Worlds/Playground/Typewriter/Dictionary/Typewriter.swift",
+      "before": "Backspace removes one character. Escape clears the sheet.",
+      "after": "Change the Note literal in Full; the renderer reads the new text."
+    },
+    {
+      "path": "Worlds/Playground/Typewriter/Dictionary/Typewriter.swift",
+      "before": "Break it: type a quote. It is outside the literal's alphabet, refused by name.",
+      "after": "The renderer reports text it cannot draw. This is a limited reading, not Swift compilation."
+    },
+    {
+      "path": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+      "before": "Everything software does, it does by running: drawing a page, computing a colour, answering a click. To know what a program will do, you run it and watch. A check is a run too: a test is one run, one path of many. On this page nothing runs. The layout of these bands, a company of 12,800 people, the physics of light, one hydrogen atom: each is a file of declarations, and the page draws everything you see from them. Here the check is a reading, not a run, and the reader is called the judge: on every keystroke the judge re-reads the whole file, and a lie, about a salary, a colour, or an electron’s jump, is a line number on your screen. Reading is linear: the judge re-reads the largest file here, 136,000 lines, in 0.2 seconds. A compiler computes what you write out in full here, and takes 199 seconds on the same company: the chart below is both, measured. All of it is checkable right here, in this editor.",
+      "after": "ReadMe.swift names the words on this page; ReadMePages.swift declares their layout. Gate draws both from the pinned showcase world. Choose a world in the rail, then open Drawing or Full. Atom declares Electron: a matching key changes that alias, and the courts read the supported declarations. Browser drafts are saved with their verdict, including refusals. Edited page bodies have not been checked by Swift. The company chart records an earlier run; it is not a timing promise for this browser."
+    },
+    {
+      "path": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+      "before": "A test checks one run. The judge checks every claim, on every edit.",
+      "after": "The courts read supported relations. The badge names what was read and what was not."
+    },
+    {
+      "path": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+      "before": "The Code · Table switch under the preview swaps the editor for a table.",
+      "after": "Bare, Table, Drawing and Full are views of the open world in this bench."
+    },
+    {
+      "path": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+      "before": "Break it: press Plant a lie on The organization: the key flips one declaration, and the judge refuses the file, naming the exact line.",
+      "after": "In The organization, open Full and change an employee Home alias. The company court names a broken share claim."
+    },
+    {
+      "path": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+      "before": "The organization: four people as types, with keys to hire and to plant a lie.",
+      "after": "The organization: four people as types. Edit their declarations in Full."
+    },
+    {
+      "path": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+      "before": "At scale: the same company at 12,800 people, judged in 0.2 seconds per edit.",
+      "after": "At scale: a generated company. Projections show a portion; the court reads its complete fragment."
+    },
+    {
+      "path": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+      "before": "A typewriter: free text as one quoted literal.",
+      "after": "A typewriter: a Note literal to edit in Full; typing into the drawing is not available."
+    },
+    {
+      "path": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+      "before": "This page is build time only: everything you write is a declaration, the judge checks it, the renderer draws it, and nothing ever steps through it.",
+      "after": "The worlds declare types. JavaScript draws them and runs the supported courts and guards; it does not compile edited page bodies."
+    },
+    {
+      "path": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+      "before": "Each doubling of N doubles the judge’s time. The build grows near N^1.3.",
+      "after": "This chart records the earlier compiler and company-court run, with its original inputs."
+    },
+    {
+      "path": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+      "before": "A bar's width is its seconds. N is the number of people, and the page builds them on the At scale tab.",
+      "after": "A bar's width records seconds from that run. At scale opens the generated company; it does not rerun this compiler measurement."
+    },
+    {
+      "path": "Worlds/Playground/FAQ/Dictionary/FAQ.swift",
+      "before": "Every tab here is a Swift file, in a stated subset of the language. Download one, and the theory’s repository compiles it: the verdicts are the same.",
+      "after": "Each world has declarations and page bodies in showcase. Swift checked the pinned sources. The browser reads supported relations and guards; it does not compile edits."
+    },
+    {
+      "path": "Worlds/Playground/FAQ/Dictionary/FAQ.swift",
+      "before": "One dictionary pass over the file, then one lookup per claim. No code of yours executes: there is no evaluator, only lookups in fixed tables.",
+      "after": "The company court looks up its declared premises. Where and count reduce the supported relations. JavaScript performs those readings and draws the page."
+    },
+    {
+      "path": "Worlds/Playground/FAQ/Dictionary/FAQ.swift",
+      "before": "A verdict is a lookup, not a search: the judge builds the dictionary once per keystroke, and every claim after that is one read. The chart is in Read me.",
+      "after": "The company court checks the complete declared fragment. Read me preserves an earlier timing chart; it is not a promise for every edit."
+    },
+    {
+      "path": "Worlds/Playground/FAQ/Dictionary/FAQ.swift",
+      "before": "Four verdicts recorded from the reference judge, a Swift program, re-run on every load. The badge counts the matches: 4/4 means this page’s verdicts match the reference.",
+      "after": "The badge reports this world: no readings presented, supported readings hold, refusals, or an unsupported remainder. Page bodies edited here have not been checked by Swift."
+    }
+  ],
+  "drawings": {
+    "Atom": [
+      {
+        "name": "AtomArt",
+        "bytes": 25364,
+        "sha256": "ae65b3577752063cfaeeeb9678eac0ccc37f3e2a96bcc81a809d6c4273bbd19e"
+      }
+    ],
+    "Basics": [
+      {
+        "name": "BasicsArt",
+        "bytes": 5355,
+        "sha256": "dc7f6fa04567c29b31ad6360d8b181b3bb9f8e154b9a89cb37d7c97d0d821e68"
+      }
+    ],
+    "Company": [],
+    "FAQ": [
+      {
+        "name": "FaqArt",
+        "bytes": 5928,
+        "sha256": "1797e93f92a57a0da1b85cb4a5c8c8213ffce4d3b11affbb96d5b17edafdfa3e"
+      }
+    ],
+    "Light": [
+      {
+        "name": "LightArt",
+        "bytes": 64582,
+        "sha256": "69efe03b97566041f3f3709deb8866cb3d191ad282bc44ae2b3bd54494d24649"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "OrganizationArt",
+        "bytes": 5187,
+        "sha256": "1094e4adfc7024171c7ffd699754b5dc21bcdeadd31cbe9d49d3e2a494a33d77"
+      }
+    ],
+    "ReadMe": [
+      {
+        "name": "IntroArt",
+        "bytes": 20723,
+        "sha256": "b8a9ba64346a74c97922140ce72c78cbc598a061628e87df3c2bccb33a99dbd6"
+      }
+    ],
+    "Rules": [
+      {
+        "name": "RulesArt",
+        "bytes": 8407,
+        "sha256": "8095ea5aa548716228b73e3d6f5d0ae45be29f4aadd5d80b91c651ed0a44c981"
+      }
+    ],
+    "Typewriter": [
+      {
+        "name": "SheetArt",
+        "bytes": 2627,
+        "sha256": "79c7765fdb51c87b3e83551139c0ddd1266fbd619ca63f8291e23cf8c6fabc98"
+      }
+    ],
+    "World": [
+      {
+        "name": "WorldArt",
+        "bytes": 11967,
+        "sha256": "e7e6fb83505fb302d63380a6e282e225ea996da92ab81019cc56181138859c3d"
+      }
+    ]
+  }
+}

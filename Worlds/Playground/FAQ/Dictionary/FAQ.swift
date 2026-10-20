@@ -115,7 +115,7 @@ public enum QSixLabel: SpanLabel {
 public typealias FaqTextWide = Plus<U256, Plus<U128, U32>>
 public enum AOneParaWord: Close {}
 extension AOneParaWord {
-    public static var typeName: String { "Every tab here is a Swift file, in a stated subset of the language. Download one, and the theory’s repository compiles it: the verdicts are the same." }
+    public static var typeName: String { "Each world has declarations and page bodies in showcase. Swift checked the pinned sources. The browser reads supported relations and guards; it does not compile edits." }
 }
 public enum AOneParaText: SpanLabelWrapped {
     public typealias Y = Tally<Plus<U32, U8>>
@@ -134,7 +134,7 @@ public enum FaqCardOne: SpanTrackOutlined {
 }
 public enum ATwoParaWord: Close {}
 extension ATwoParaWord {
-    public static var typeName: String { "One dictionary pass over the file, then one lookup per claim. No code of yours executes: there is no evaluator, only lookups in fixed tables." }
+    public static var typeName: String { "The company court looks up its declared premises. Where and count reduce the supported relations. JavaScript performs those readings and draws the page." }
 }
 public enum ATwoParaText: SpanLabelWrapped {
     public typealias Y = Tally<Plus<U32, U8>>
@@ -153,7 +153,7 @@ public enum FaqCardTwo: SpanTrackOutlined {
 }
 public enum AThreeParaWord: Close {}
 extension AThreeParaWord {
-    public static var typeName: String { "A verdict is a lookup, not a search: the judge builds the dictionary once per keystroke, and every claim after that is one read. The chart is in Read me." }
+    public static var typeName: String { "The company court checks the complete declared fragment. Read me preserves an earlier timing chart; it is not a promise for every edit." }
 }
 public enum AThreeParaText: SpanLabelWrapped {
     public typealias Y = Tally<Plus<U32, U8>>
@@ -172,7 +172,7 @@ public enum FaqCardThree: SpanTrackOutlined {
 }
 public enum AFourParaWord: Close {}
 extension AFourParaWord {
-    public static var typeName: String { "Four verdicts recorded from the reference judge, a Swift program, re-run on every load. The badge counts the matches: 4/4 means this page’s verdicts match the reference." }
+    public static var typeName: String { "The badge reports this world: no readings presented, supported readings hold, refusals, or an unsupported remainder. Page bodies edited here have not been checked by Swift." }
 }
 public enum AFourParaText: SpanLabelWrapped {
     public typealias Y = Tally<Plus<U32, U8>>

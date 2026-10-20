@@ -60,15 +60,15 @@ extension Judge12800Word {
 }
 public enum CurveMoral: Close {}
 extension CurveMoral {
-    public static var typeName: String { "Each doubling of N doubles the judge’s time. The build grows near N^1.3." }
+    public static var typeName: String { "This chart records the earlier compiler and company-court run, with its original inputs." }
 }
 public enum CurveNoteOne: Close {}
 extension CurveNoteOne {
-    public static var typeName: String { "A bar's width is its seconds. N is the number of people, and the page builds them on the At scale tab." }
+    public static var typeName: String { "A bar's width records seconds from that run. At scale opens the generated company; it does not rerun this compiler measurement." }
 }
 public enum CurveNoteTwo: Close {}
 extension CurveNoteTwo {
-    public static var typeName: String { "A test checks one run. The judge checks every claim, on every edit." }
+    public static var typeName: String { "The courts read supported relations. The badge names what was read and what was not." }
 }
 public enum ExplainHeadWord: Close {}
 extension ExplainHeadWord {
@@ -116,7 +116,7 @@ extension ReadingsHeadWord {
 }
 public enum ReadingsIntroWord: Close {}
 extension ReadingsIntroWord {
-    public static var typeName: String { "The Code · Table switch under the preview swaps the editor for a table." }
+    public static var typeName: String { "Bare, Table, Drawing and Full are views of the open world in this bench." }
 }
 public enum CodeHeadWord: Close {}
 extension CodeHeadWord {
@@ -573,7 +573,7 @@ public enum TryTwoLabel: SpanLabelWrapped {
 public typealias IntroParaWide = Plus<U256, Plus<U128, Plus<U64, U32>>>
 public enum ValueParaWord: Close {}
 extension ValueParaWord {
-    public static var typeName: String { "Everything software does, it does by running: drawing a page, computing a colour, answering a click. To know what a program will do, you run it and watch. A check is a run too: a test is one run, one path of many. On this page nothing runs. The layout of these bands, a company of 12,800 people, the physics of light, one hydrogen atom: each is a file of declarations, and the page draws everything you see from them. Here the check is a reading, not a run, and the reader is called the judge: on every keystroke the judge re-reads the whole file, and a lie, about a salary, a colour, or an electron’s jump, is a line number on your screen. Reading is linear: the judge re-reads the largest file here, 136,000 lines, in 0.2 seconds. A compiler computes what you write out in full here, and takes 199 seconds on the same company: the chart below is both, measured. All of it is checkable right here, in this editor." }
+    public static var typeName: String { "ReadMe.swift names the words on this page; ReadMePages.swift declares their layout. Gate draws both from the pinned showcase world. Choose a world in the rail, then open Drawing or Full. Atom declares Electron: a matching key changes that alias, and the courts read the supported declarations. Browser drafts are saved with their verdict, including refusals. Edited page bodies have not been checked by Swift. The company chart records an earlier run; it is not a timing promise for this browser." }
 }
 public enum SwiftParaWord: Close {}
 extension SwiftParaWord {
@@ -589,7 +589,7 @@ public enum SwiftParaText: SpanLabelWrapped {
 }
 public enum PageBuildParaWord: Close {}
 extension PageBuildParaWord {
-    public static var typeName: String { "This page is build time only: everything you write is a declaration, the judge checks it, the renderer draws it, and nothing ever steps through it." }
+    public static var typeName: String { "The worlds declare types. JavaScript draws them and runs the supported courts and guards; it does not compile edited page bodies." }
 }
 public enum PageBuildParaText: SpanLabelWrapped {
     public typealias Y = Tally<U16>
@@ -613,7 +613,7 @@ public enum ReadingsMoralParaText: SpanLabelWrapped {
 }
 public enum TryLieParaWord: Close {}
 extension TryLieParaWord {
-    public static var typeName: String { "Break it: press Plant a lie on The organization: the key flips one declaration, and the judge refuses the file, naming the exact line." }
+    public static var typeName: String { "In The organization, open Full and change an employee Home alias. The company court names a broken share claim." }
 }
 public enum TryLieParaText: SpanLabelWrapped {
     public typealias Y = Tally<U16>
@@ -629,11 +629,11 @@ extension TabsHead {
 }
 public enum TabOrgWord: Close {}
 extension TabOrgWord {
-    public static var typeName: String { "The organization: four people as types, with keys to hire and to plant a lie." }
+    public static var typeName: String { "The organization: four people as types. Edit their declarations in Full." }
 }
 public enum TabScaleWord: Close {}
 extension TabScaleWord {
-    public static var typeName: String { "At scale: the same company at 12,800 people, judged in 0.2 seconds per edit." }
+    public static var typeName: String { "At scale: a generated company. Projections show a portion; the court reads its complete fragment." }
 }
 public enum TabBasicsWord: Close {}
 extension TabBasicsWord {
@@ -641,7 +641,7 @@ extension TabBasicsWord {
 }
 public enum TabWriterWord: Close {}
 extension TabWriterWord {
-    public static var typeName: String { "A typewriter: free text as one quoted literal." }
+    public static var typeName: String { "A typewriter: a Note literal to edit in Full; typing into the drawing is not available." }
 }
 public enum TabButtonsWord: Close {}
 extension TabButtonsWord {
