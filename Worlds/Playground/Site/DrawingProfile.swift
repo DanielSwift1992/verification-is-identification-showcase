@@ -59,275 +59,275 @@ public enum TheDrawingProfile: DrawingProfile {
 
 public enum BindingReference0: Word {}
 extension BindingReference0 {
-    public static var typeName: String { "ThePalette::BindPaperLight" }
+    public static var typeName: String { "TheBindings::BindPaperLight" }
 }
 
 public enum BindingReference1: Word {}
 extension BindingReference1 {
-    public static var typeName: String { "ThePalette::BindPaperDark" }
+    public static var typeName: String { "TheBindings::BindPaperDark" }
 }
 
 public enum BindingReference2: Word {}
 extension BindingReference2 {
-    public static var typeName: String { "ThePalette::BindMistLight" }
+    public static var typeName: String { "TheBindings::BindMistLight" }
 }
 
 public enum BindingReference3: Word {}
 extension BindingReference3 {
-    public static var typeName: String { "ThePalette::BindMistDark" }
+    public static var typeName: String { "TheBindings::BindMistDark" }
 }
 
 public enum BindingReference4: Word {}
 extension BindingReference4 {
-    public static var typeName: String { "ThePalette::BindInkLight" }
+    public static var typeName: String { "TheBindings::BindInkLight" }
 }
 
 public enum BindingReference5: Word {}
 extension BindingReference5 {
-    public static var typeName: String { "ThePalette::BindInkDark" }
+    public static var typeName: String { "TheBindings::BindInkDark" }
 }
 
 public enum BindingReference6: Word {}
 extension BindingReference6 {
-    public static var typeName: String { "ThePalette::BindTextLight" }
+    public static var typeName: String { "TheBindings::BindTextLight" }
 }
 
 public enum BindingReference7: Word {}
 extension BindingReference7 {
-    public static var typeName: String { "ThePalette::BindTextDark" }
+    public static var typeName: String { "TheBindings::BindTextDark" }
 }
 
 public enum BindingReference8: Word {}
 extension BindingReference8 {
-    public static var typeName: String { "ThePalette::BindMutedLight" }
+    public static var typeName: String { "TheBindings::BindMutedLight" }
 }
 
 public enum BindingReference9: Word {}
 extension BindingReference9 {
-    public static var typeName: String { "ThePalette::BindMutedDark" }
+    public static var typeName: String { "TheBindings::BindMutedDark" }
 }
 
 public enum BindingReference10: Word {}
 extension BindingReference10 {
-    public static var typeName: String { "ThePalette::BindLineLight" }
+    public static var typeName: String { "TheBindings::BindLineLight" }
 }
 
 public enum BindingReference11: Word {}
 extension BindingReference11 {
-    public static var typeName: String { "ThePalette::BindLineDark" }
+    public static var typeName: String { "TheBindings::BindLineDark" }
 }
 
 public enum BindingReference12: Word {}
 extension BindingReference12 {
-    public static var typeName: String { "ThePalette::BindAccentLight" }
+    public static var typeName: String { "TheBindings::BindAccentLight" }
 }
 
 public enum BindingReference13: Word {}
 extension BindingReference13 {
-    public static var typeName: String { "ThePalette::BindAccentDark" }
+    public static var typeName: String { "TheBindings::BindAccentDark" }
 }
 
 public enum BindingReference14: Word {}
 extension BindingReference14 {
-    public static var typeName: String { "ThePalette::BindActionLight" }
+    public static var typeName: String { "TheBindings::BindActionLight" }
 }
 
 public enum BindingReference15: Word {}
 extension BindingReference15 {
-    public static var typeName: String { "ThePalette::BindActionDark" }
+    public static var typeName: String { "TheBindings::BindActionDark" }
 }
 
 public enum BindingReference16: Word {}
 extension BindingReference16 {
-    public static var typeName: String { "ThePalette::BindRefusalLight" }
+    public static var typeName: String { "TheBindings::BindRefusalLight" }
 }
 
 public enum BindingReference17: Word {}
 extension BindingReference17 {
-    public static var typeName: String { "ThePalette::BindRefusalDark" }
+    public static var typeName: String { "TheBindings::BindRefusalDark" }
 }
 
 public enum BindingReference18: Word {}
 extension BindingReference18 {
-    public static var typeName: String { "ThePalette::BindLawLight" }
+    public static var typeName: String { "TheBindings::BindLawLight" }
 }
 
 public enum BindingReference19: Word {}
 extension BindingReference19 {
-    public static var typeName: String { "ThePalette::BindLawDark" }
+    public static var typeName: String { "TheBindings::BindLawDark" }
 }
 
 public enum BindingReference20: Word {}
 extension BindingReference20 {
-    public static var typeName: String { "ThePalette::BindOkLight" }
+    public static var typeName: String { "TheBindings::BindOkLight" }
 }
 
 public enum BindingReference21: Word {}
 extension BindingReference21 {
-    public static var typeName: String { "ThePalette::BindOkDark" }
+    public static var typeName: String { "TheBindings::BindOkDark" }
 }
 
 public enum BindingReference22: Word {}
 extension BindingReference22 {
-    public static var typeName: String { "ThePalette::BindKeywordLight" }
+    public static var typeName: String { "TheBindings::BindKeywordLight" }
 }
 
 public enum BindingReference23: Word {}
 extension BindingReference23 {
-    public static var typeName: String { "ThePalette::BindKeywordDark" }
+    public static var typeName: String { "TheBindings::BindKeywordDark" }
 }
 
 public enum BindingReference24: Word {}
 extension BindingReference24 {
-    public static var typeName: String { "ThePalette::BindLiteralLight" }
+    public static var typeName: String { "TheBindings::BindLiteralLight" }
 }
 
 public enum BindingReference25: Word {}
 extension BindingReference25 {
-    public static var typeName: String { "ThePalette::BindLiteralDark" }
+    public static var typeName: String { "TheBindings::BindLiteralDark" }
 }
 
 public enum BindingReference26: Word {}
 extension BindingReference26 {
-    public static var typeName: String { "ThePalette::BindCommentLight" }
+    public static var typeName: String { "TheBindings::BindCommentLight" }
 }
 
 public enum BindingReference27: Word {}
 extension BindingReference27 {
-    public static var typeName: String { "ThePalette::BindCommentDark" }
+    public static var typeName: String { "TheBindings::BindCommentDark" }
 }
 
 public enum BindingReference28: Word {}
 extension BindingReference28 {
-    public static var typeName: String { "ThePalette::BindAttributeLight" }
+    public static var typeName: String { "TheBindings::BindAttributeLight" }
 }
 
 public enum BindingReference29: Word {}
 extension BindingReference29 {
-    public static var typeName: String { "ThePalette::BindAttributeDark" }
+    public static var typeName: String { "TheBindings::BindAttributeDark" }
 }
 
 public enum BindingReference30: Word {}
 extension BindingReference30 {
-    public static var typeName: String { "ThePalette::BindLocalTypeLight" }
+    public static var typeName: String { "TheBindings::BindLocalTypeLight" }
 }
 
 public enum BindingReference31: Word {}
 extension BindingReference31 {
-    public static var typeName: String { "ThePalette::BindLocalTypeDark" }
+    public static var typeName: String { "TheBindings::BindLocalTypeDark" }
 }
 
 public enum BindingReference32: Word {}
 extension BindingReference32 {
-    public static var typeName: String { "ThePalette::BindKnownNameLight" }
+    public static var typeName: String { "TheBindings::BindKnownNameLight" }
 }
 
 public enum BindingReference33: Word {}
 extension BindingReference33 {
-    public static var typeName: String { "ThePalette::BindKnownNameDark" }
+    public static var typeName: String { "TheBindings::BindKnownNameDark" }
 }
 
 public enum BindingReference34: Word {}
 extension BindingReference34 {
-    public static var typeName: String { "ThePalette::BindSurfaceCardLight" }
+    public static var typeName: String { "TheBindings::BindSurfaceCardLight" }
 }
 
 public enum BindingReference35: Word {}
 extension BindingReference35 {
-    public static var typeName: String { "ThePalette::BindSurfaceCardDark" }
+    public static var typeName: String { "TheBindings::BindSurfaceCardDark" }
 }
 
 public enum BindingReference36: Word {}
 extension BindingReference36 {
-    public static var typeName: String { "ThePalette::BindSurfaceTrackLight" }
+    public static var typeName: String { "TheBindings::BindSurfaceTrackLight" }
 }
 
 public enum BindingReference37: Word {}
 extension BindingReference37 {
-    public static var typeName: String { "ThePalette::BindSurfaceTrackDark" }
+    public static var typeName: String { "TheBindings::BindSurfaceTrackDark" }
 }
 
 public enum LegibleReference0: Word {}
 extension LegibleReference0 {
-    public static var typeName: String { "ThePalette::ReadTextOnPaper" }
+    public static var typeName: String { "TheBindings::ReadTextOnPaper" }
 }
 
 public enum LegibleReference1: Word {}
 extension LegibleReference1 {
-    public static var typeName: String { "ThePalette::ReadTextOnMist" }
+    public static var typeName: String { "TheBindings::ReadTextOnMist" }
 }
 
 public enum LegibleReference2: Word {}
 extension LegibleReference2 {
-    public static var typeName: String { "ThePalette::ReadMutedOnPaper" }
+    public static var typeName: String { "TheBindings::ReadMutedOnPaper" }
 }
 
 public enum LegibleReference3: Word {}
 extension LegibleReference3 {
-    public static var typeName: String { "ThePalette::ReadMutedOnMist" }
+    public static var typeName: String { "TheBindings::ReadMutedOnMist" }
 }
 
 public enum LegibleReference4: Word {}
 extension LegibleReference4 {
-    public static var typeName: String { "ThePalette::ReadInkOnAccent" }
+    public static var typeName: String { "TheBindings::ReadInkOnAccent" }
 }
 
 public enum LegibleReference5: Word {}
 extension LegibleReference5 {
-    public static var typeName: String { "ThePalette::ReadActionOnPaper" }
+    public static var typeName: String { "TheBindings::ReadActionOnPaper" }
 }
 
 public enum LegibleReference6: Word {}
 extension LegibleReference6 {
-    public static var typeName: String { "ThePalette::ReadRefusalOnPaper" }
+    public static var typeName: String { "TheBindings::ReadRefusalOnPaper" }
 }
 
 public enum LegibleReference7: Word {}
 extension LegibleReference7 {
-    public static var typeName: String { "ThePalette::ReadLawOnPaper" }
+    public static var typeName: String { "TheBindings::ReadLawOnPaper" }
 }
 
 public enum LegibleReference8: Word {}
 extension LegibleReference8 {
-    public static var typeName: String { "ThePalette::ReadOkOnPaper" }
+    public static var typeName: String { "TheBindings::ReadOkOnPaper" }
 }
 
 public enum LegibleReference9: Word {}
 extension LegibleReference9 {
-    public static var typeName: String { "ThePalette::ReadKeywordOnPaper" }
+    public static var typeName: String { "TheBindings::ReadKeywordOnPaper" }
 }
 
 public enum LegibleReference10: Word {}
 extension LegibleReference10 {
-    public static var typeName: String { "ThePalette::ReadLiteralOnPaper" }
+    public static var typeName: String { "TheBindings::ReadLiteralOnPaper" }
 }
 
 public enum LegibleReference11: Word {}
 extension LegibleReference11 {
-    public static var typeName: String { "ThePalette::ReadCommentOnPaper" }
+    public static var typeName: String { "TheBindings::ReadCommentOnPaper" }
 }
 
 public enum LegibleReference12: Word {}
 extension LegibleReference12 {
-    public static var typeName: String { "ThePalette::ReadAttributeOnPaper" }
+    public static var typeName: String { "TheBindings::ReadAttributeOnPaper" }
 }
 
 public enum LegibleReference13: Word {}
 extension LegibleReference13 {
-    public static var typeName: String { "ThePalette::ReadLocalTypeOnPaper" }
+    public static var typeName: String { "TheBindings::ReadLocalTypeOnPaper" }
 }
 
 public enum LegibleReference14: Word {}
 extension LegibleReference14 {
-    public static var typeName: String { "ThePalette::ReadKnownNameOnPaper" }
+    public static var typeName: String { "TheBindings::ReadKnownNameOnPaper" }
 }
 
 public enum LegibleReference15: Word {}
 extension LegibleReference15 {
-    public static var typeName: String { "ThePalette::ReadTextOnSurfaceCardDim" }
+    public static var typeName: String { "TheBindings::ReadTextOnSurfaceCardDim" }
 }
 
 public enum LegibleReference16: Word {}
 extension LegibleReference16 {
-    public static var typeName: String { "ThePalette::ReadMutedOnSurfaceCardDim" }
+    public static var typeName: String { "TheBindings::ReadMutedOnSurfaceCardDim" }
 }

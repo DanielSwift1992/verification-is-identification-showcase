@@ -168,6 +168,6 @@ let package = Package(
             "DocumentKit",
             .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
         ], path: "Worlds/Playground/Site", exclude: ["gate.manifest.swift", "DrawingProfile.swift"],
-           sources: ["Manifest.swift", "Palette.swift"]),
+           sources: ["Manifest.swift", "Palette.swift", "DrawingBindings.swift"]),
     ]
 )
