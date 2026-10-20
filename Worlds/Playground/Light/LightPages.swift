@@ -559,7 +559,7 @@ public enum PatchesRow: HFlow {
         Air<U8>.self
         Fixed<Plus<U32, U8>, PatchY>.self
         Air<U16>.self
-        Fixed<LightParaWide, PatchNoteLabel>.self
+        Fixed<PatchNoteWide, PatchNoteLabel>.self
         Flexible<SpanNothing>.self
         Air<EdgeMargin>.self
     }

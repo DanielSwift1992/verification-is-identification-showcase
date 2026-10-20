@@ -2085,7 +2085,11 @@ public typealias GasNoteTall = Times<LineTally<GasNoteWord, LightParaWide, TextS
 public typealias MapIntroTall = Plus<Times<LineTally<MapIntroWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>
 public typealias MapIRTall = Times<LineTally<MapIRWord, LightParaWide, TextS>, Plus<U16, U4>>
 public typealias BeamsTall = Plus<Times<LineTally<BeamsParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>
-public typealias PatchNoteTall = Times<LineTally<PatchNoteWord, LightParaWide, TextXS>, Plus<U16, U4>>
+// The row's note owns only the remainder after margins, caption and both samples.
+public typealias PatchSamplesWide = Twice<Plus<U32, U8>>
+public typealias PatchFixedWide = Plus<Twice<EdgeMargin>, Plus<WindowCapCol, Plus<PatchSamplesWide, Plus<U8, U16>>>>
+public typealias PatchNoteWide = Rest<LightSurface, PatchFixedWide>
+public typealias PatchNoteTall = Times<LineTally<PatchNoteWord, PatchNoteWide, TextXS>, Plus<U16, U4>>
 public typealias PrismNoteTall = Times<LineTally<PrismNoteWord, LightParaWide, TextS>, Plus<U16, U4>>
 public typealias BeamsFactTall = Plus<Times<LineTally<BeamsFactParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>
 public typealias IRLessonTall = Times<LineTally<IRLessonWord, LightParaWide, TextS>, Plus<U16, U4>>

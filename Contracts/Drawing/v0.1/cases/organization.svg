@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 556" role="img" data-vi-canvas="1" font-family="Inter, Roboto, system-ui, sans-serif" aria-label="The organization&apos;s page: counted cards and a live link.">
+<filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+<feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="#000000" flood-opacity="0.10"/>
+</filter>
+<g transform="translate(0, 16)">
+<g transform="translate(16, 0)">
+<circle cx="8" cy="20" r="5" fill="var(--vi-accent, #FFDD2D)"><animate attributeName="opacity" values="1;0.55;1" dur="4s" repeatCount="indefinite"/></circle>
+</g>
+<g transform="translate(40, 0)">
+<text x="0" y="29" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="21">The Organization</text>
+</g>
+</g>
+<g transform="translate(0, 68)">
+<g transform="translate(48, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="17">Four people, their departments and shares, written as types</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="17">in the file on the left.</text>
+</g>
+<g transform="translate(528, 0)">
+</g>
+</g>
+<g transform="translate(0, 108)">
+<g transform="translate(48, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="17">The drawing reads the declarations in this file. Browser</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="17">drafts are saved with their verdict.</text>
+</g>
+<g transform="translate(528, 0)">
+</g>
+</g>
+<g transform="translate(0, 148)">
+<g transform="translate(48, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="17">Open Full to change a person or a department alias; the</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="17">drawing reads the changed declarations.</text>
+</g>
+<g transform="translate(528, 0)">
+</g>
+</g>
+<g transform="translate(0, 188)">
+<g transform="translate(48, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="17">Change an employee Home from Finance to Sales; the</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="17">company court names a broken share claim.</text>
+</g>
+<g transform="translate(528, 0)">
+</g>
+</g>
+<g transform="translate(0, 236)">
+<g transform="translate(48, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="17">Open Table to read the declarations as rows; a name leads</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="17">to its source.</text>
+</g>
+<g transform="translate(528, 0)">
+</g>
+</g>
+<g transform="translate(0, 308)">
+<g transform="translate(16, 0)">
+<g filter="url(#soft-shadow)">
+<rect x="0" width="272" height="96" rx="12" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+</g>
+<g transform="translate(304, 0)">
+<rect x="0" width="272" height="96" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(592, 0)">
+<rect x="0" width="272" height="96" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-on-accent, #1C1C1E)" font-weight="400" font-size="11">people</text>
+<text x="0" y="68" text-anchor="start" fill="var(--vi-on-accent, #1C1C1E)" font-weight="700" font-size="28">4</text>
+</g>
+<g transform="translate(320, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">claims read</text>
+<text x="0" y="68" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="28">4</text>
+</g>
+<g transform="translate(608, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">in engineering</text>
+<text x="0" y="68" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="28">2</text>
+</g>
+</g>
+<g transform="translate(0, 420)">
+<g transform="translate(16, 0)">
+<a href="https://danielswift1992.github.io/verification-is-identification/documentation/organization">
+<rect x="0" width="192" height="64" rx="12" fill="var(--vi-action, #336FEE)"/>
+<text x="96" y="37" text-anchor="middle" fill="var(--vi-on-action, #FFFFFF)" font-weight="700" font-size="13">walk the real company →</text>
+</a>
+</g>
+</g>
+<g transform="translate(0, 500)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">The court reads the declared company fragment. Edited page bodies have not been</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">checked by Swift.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</svg>

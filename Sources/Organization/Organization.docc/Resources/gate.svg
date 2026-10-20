@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930 280" role="img" data-vi-canvas="1" font-family="Inter, Roboto, system-ui, sans-serif" aria-label="The keypad's state graph: k0 through k3 are the digits entered so far, correct one moves to the next box, any other digit collapses to the one shared dead box, reset returns to k0, and the last correct digit at k3 is a real link to Unlocked, not another box in this picture.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930 280" role="img" data-vi-canvas="1" font-family="Inter, Roboto, system-ui, sans-serif" aria-label="The keypad&apos;s state graph: k0 through k3 are the digits entered so far, correct one moves to the next box, any other digit collapses to the one shared dead box, reset returns to k0, and the last correct digit at k3 is a real link to Unlocked, not another box in this picture.">
 <defs>
 <marker id="a" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto">
 <path d="M0,0 L6,3 L0,6 Z" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))"/>

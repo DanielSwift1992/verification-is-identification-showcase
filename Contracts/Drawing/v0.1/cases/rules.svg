@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 880" role="img" data-vi-canvas="1" font-family="Inter, Roboto, system-ui, sans-serif" aria-label="The two moves, the five forms, the law, and the names, as cards and bands.">
+<g transform="translate(0, 16)">
+<g transform="translate(16, 0)">
+<text x="0" y="29" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="21">How to write here</text>
+</g>
+</g>
+<g transform="translate(0, 64)">
+<g transform="translate(16, 0)">
+<text x="0" y="27" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">The two moves</text>
+</g>
+</g>
+<g transform="translate(0, 96)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">An axis is a slot a conformance requires of a name: Rank, Home, or Given.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 116)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">In Swift terms: the axis is an associatedtype, and your typealias fills it.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 144)">
+<g transform="translate(16, 0)">
+<rect x="0" width="232" height="80" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(264, 0)">
+<rect x="0" width="232" height="80" rx="12" fill="var(--vi-action, #336FEE)"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">expand</text>
+<text x="0" y="43" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">opens an axis</text>
+<text x="0" y="63" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">the protocols already did</text>
+</g>
+<g transform="translate(280, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-on-action, #FFFFFF)" font-weight="700" font-size="13">compress</text>
+<text x="0" y="43" text-anchor="start" fill="var(--vi-on-action, #FFFFFF)" font-weight="400" font-size="11">closes one axis</text>
+<text x="0" y="63" text-anchor="start" fill="var(--vi-on-action, #FFFFFF)" font-weight="700" font-size="11">the move you make</text>
+</g>
+</g>
+<g transform="translate(0, 236)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Employee requires Rank, Home, Given, and more: axes already open for you.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 256)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">With every typealias you close exactly one of them.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 292)">
+<g transform="translate(16, 0)">
+<text x="0" y="27" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">The five forms</text>
+</g>
+</g>
+<g transform="translate(0, 324)">
+<g transform="translate(16, 0)">
+<rect x="0" width="480" height="56" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">public enum Name: Conf {}</text>
+<text x="0" y="43" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">declares a name: Conf lists the axes it must close</text>
+</g>
+</g>
+<g transform="translate(0, 388)">
+<g transform="translate(16, 0)">
+<rect x="0" width="480" height="56" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">public typealias Axis = Value</text>
+<text x="0" y="43" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">closes one owed axis with one value: the move you repeat</text>
+</g>
+</g>
+<g transform="translate(0, 452)">
+<g transform="translate(16, 0)">
+<rect x="0" width="480" height="56" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">extension Name { typeName }</text>
+<text x="0" y="43" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">attaches the display string: the one admitted constant</text>
+</g>
+</g>
+<g transform="translate(0, 516)">
+<g transform="translate(16, 0)">
+<rect x="0" width="480" height="56" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">@StructureBuilder static var body</text>
+<text x="0" y="43" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">lists the members, one per line, each as Name.self</text>
+</g>
+</g>
+<g transform="translate(0, 580)">
+<g transform="translate(16, 0)">
+<rect x="0" width="480" height="56" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">anything else</text>
+<text x="0" y="43" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">is refused with its line number: nothing is guessed</text>
+</g>
+</g>
+<g transform="translate(0, 652)">
+<g transform="translate(16, 0)">
+<text x="0" y="27" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">The law</text>
+</g>
+</g>
+<g transform="translate(0, 684)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">Rule 0, pure types: a file declares types and nothing that runs.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 704)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Every other func, var, let, or init is refused with its line number.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 724)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Two value forms are admitted, typeName and body: both declared, never run.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 760)">
+<g transform="translate(16, 0)">
+<text x="0" y="27" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">The names</text>
+</g>
+</g>
+<g transform="translate(0, 792)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The completion popup lists every declared name as you type.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 812)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Place the caret on any name: the inspector under the editor reads it.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 844)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">Break it: type func on any line above. The law refuses it, in orange.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</svg>

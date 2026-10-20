@@ -468,62 +468,62 @@ public enum IntroArt: GrownDiagram {
         Fixed<ValueTall, SpanHosted<ValueParaRow>>.self
 
         Air<Plus<U16, U8>>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<FourthBeat>, CurveHeadRow>>>.self
+        Fixed<RowTall, SpanHosted<FrozenReveal<Seconds<FourthBeat, IntroTicksPerSecond>, CurveHeadRow>>>.self
         Air<U8>.self
-        Fixed<LegendTall, SpanHosted<FrozenReveal<Tally<FourthBeat>, LegendRow>>>.self
+        Fixed<LegendTall, SpanHosted<FrozenReveal<Seconds<FourthBeat, IntroTicksPerSecond>, LegendRow>>>.self
         Air<U16>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<FifthBeat>, Build3200Row>>>.self
+        Fixed<RowTall, SpanHosted<FrozenReveal<Seconds<FifthBeat, IntroTicksPerSecond>, Build3200Row>>>.self
         Air<U4>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<FifthBeat>, Judge3200Row>>>.self
+        Fixed<RowTall, SpanHosted<FrozenReveal<Seconds<FifthBeat, IntroTicksPerSecond>, Judge3200Row>>>.self
         Air<U8>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<SixthBeat>, Build6400Row>>>.self
+        Fixed<RowTall, SpanHosted<FrozenReveal<Seconds<SixthBeat, IntroTicksPerSecond>, Build6400Row>>>.self
         Air<U4>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<SixthBeat>, Judge6400Row>>>.self
+        Fixed<RowTall, SpanHosted<FrozenReveal<Seconds<SixthBeat, IntroTicksPerSecond>, Judge6400Row>>>.self
         Air<U8>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<SeventhBeat>, Build12800Row>>>.self
+        Fixed<RowTall, SpanHosted<FrozenReveal<Seconds<SeventhBeat, IntroTicksPerSecond>, Build12800Row>>>.self
         Air<U4>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<SeventhBeat>, Judge12800Row>>>.self
+        Fixed<RowTall, SpanHosted<FrozenReveal<Seconds<SeventhBeat, IntroTicksPerSecond>, Judge12800Row>>>.self
         Air<U8>.self
-        Fixed<CurveMoralTall, SpanHosted<FrozenReveal<Tally<U1>, MoralRow>>>.self
+        Fixed<CurveMoralTall, SpanHosted<FrozenReveal<Seconds<IntroTicksPerSecond, IntroTicksPerSecond>, MoralRow>>>.self
         Air<U4>.self
-        Fixed<CurveNoteOneTall, SpanHosted<FrozenReveal<Tally<U1>, CurveNoteOneRow>>>.self
-        Fixed<CurveNoteTwoTall, SpanHosted<FrozenReveal<Tally<U1>, CurveNoteTwoRow>>>.self
+        Fixed<CurveNoteOneTall, SpanHosted<FrozenReveal<Seconds<IntroTicksPerSecond, IntroTicksPerSecond>, CurveNoteOneRow>>>.self
+        Fixed<CurveNoteTwoTall, SpanHosted<FrozenReveal<Seconds<IntroTicksPerSecond, IntroTicksPerSecond>, CurveNoteTwoRow>>>.self
         Air<Plus<U16, U8>>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Beat>>, ExplainHeadRow>>>.self
-        Fixed<ExplainOneTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Beat>>, ExplainOneRow>>>.self
+        Fixed<RowTall, SpanHosted<FrozenReveal<Seconds<Plus<IntroTicksPerSecond, Beat>, IntroTicksPerSecond>, ExplainHeadRow>>>.self
+        Fixed<ExplainOneTall, SpanHosted<FrozenReveal<Seconds<Plus<IntroTicksPerSecond, Beat>, IntroTicksPerSecond>, ExplainOneRow>>>.self
         Air<U8>.self
-        Fixed<CompareTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Beat>>, TimelineBand>>>.self
+        Fixed<CompareTall, SpanHosted<FrozenReveal<Seconds<Plus<IntroTicksPerSecond, Beat>, IntroTicksPerSecond>, TimelineBand>>>.self
         Air<Plus<U8, U4>>.self
-        Fixed<SwiftTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Twice<Beat>>>, SwiftParaRow>>>.self
+        Fixed<SwiftTall, SpanHosted<FrozenReveal<Seconds<Plus<IntroTicksPerSecond, Twice<Beat>>, IntroTicksPerSecond>, SwiftParaRow>>>.self
         Air<U8>.self
-        Fixed<PageBuildTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Twice<Beat>>>, PageBuildParaRow>>>.self
+        Fixed<PageBuildTall, SpanHosted<FrozenReveal<Seconds<Plus<IntroTicksPerSecond, Twice<Beat>>, IntroTicksPerSecond>, PageBuildParaRow>>>.self
         Air<Plus<U16, U8>>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<ReadingsRevealAt>, ReadingsHeadRow>>>.self
-        Fixed<ReadingsIntroTall, SpanHosted<FrozenReveal<Tally<ReadingsRevealAt>, ReadingsIntroRow>>>.self
+        Fixed<RowTall, SpanHosted<FrozenReveal<Seconds<ReadingsRevealAt, IntroTicksPerSecond>, ReadingsHeadRow>>>.self
+        Fixed<ReadingsIntroTall, SpanHosted<FrozenReveal<Seconds<ReadingsRevealAt, IntroTicksPerSecond>, ReadingsIntroRow>>>.self
         Air<U8>.self
-        Fixed<LineTall, SpanHosted<FrozenReveal<Tally<ReadingsRevealAt>, PanelHeadRow>>>.self
+        Fixed<LineTall, SpanHosted<FrozenReveal<Seconds<ReadingsRevealAt, IntroTicksPerSecond>, PanelHeadRow>>>.self
         Air<U4>.self
-        Fixed<LineTall, SpanHosted<FrozenReveal<Tally<ReadingsRevealAt>, PairOneRow>>>.self
+        Fixed<LineTall, SpanHosted<FrozenReveal<Seconds<ReadingsRevealAt, IntroTicksPerSecond>, PairOneRow>>>.self
         Air<U2>.self
-        Fixed<LineTall, SpanHosted<FrozenReveal<Tally<ReadingsRevealAt>, PairTwoBand>>>.self
+        Fixed<LineTall, SpanHosted<FrozenReveal<Seconds<ReadingsRevealAt, IntroTicksPerSecond>, PairTwoBand>>>.self
         Air<U2>.self
-        Fixed<LineTall, SpanHosted<FrozenReveal<Tally<ReadingsRevealAt>, PairThreeRow>>>.self
+        Fixed<LineTall, SpanHosted<FrozenReveal<Seconds<ReadingsRevealAt, IntroTicksPerSecond>, PairThreeRow>>>.self
         Air<U8>.self
-        Fixed<ReadingsMoralTall, SpanHosted<FrozenReveal<Tally<ReadingsRevealAt>, ReadingsMoralParaRow>>>.self
-        Fixed<ReadingsBreakTall, SpanHosted<FrozenReveal<Tally<ReadingsRevealAt>, ReadingsBreakRow>>>.self
+        Fixed<ReadingsMoralTall, SpanHosted<FrozenReveal<Seconds<ReadingsRevealAt, IntroTicksPerSecond>, ReadingsMoralParaRow>>>.self
+        Fixed<ReadingsBreakTall, SpanHosted<FrozenReveal<Seconds<ReadingsRevealAt, IntroTicksPerSecond>, ReadingsBreakRow>>>.self
         Air<Plus<U16, U8>>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<TabsRevealAt>, TabsHeadRow>>>.self
-        Fixed<TabOrgTall, SpanHosted<FrozenReveal<Tally<TabsRevealAt>, TabOrgRow>>>.self
-        Fixed<TabScaleTall, SpanHosted<FrozenReveal<Tally<TabsRevealAt>, TabScaleRow>>>.self
-        Fixed<TabBasicsTall, SpanHosted<FrozenReveal<Tally<TabsRevealAt>, TabBasicsRow>>>.self
-        Fixed<TabWriterTall, SpanHosted<FrozenReveal<Tally<TabsRevealAt>, TabWriterRow>>>.self
-        Fixed<TabButtonsTall, SpanHosted<FrozenReveal<Tally<TabsRevealAt>, TabButtonsRow>>>.self
-        Fixed<TabLightTall, SpanHosted<FrozenReveal<Tally<TabsRevealAt>, TabLightRow>>>.self
-        Fixed<TabAtomTall, SpanHosted<FrozenReveal<Tally<TabsRevealAt>, TabAtomRow>>>.self
-        Fixed<TabRulesTall, SpanHosted<FrozenReveal<Tally<TabsRevealAt>, TabRulesRow>>>.self
+        Fixed<RowTall, SpanHosted<FrozenReveal<Seconds<TabsRevealAt, IntroTicksPerSecond>, TabsHeadRow>>>.self
+        Fixed<TabOrgTall, SpanHosted<FrozenReveal<Seconds<TabsRevealAt, IntroTicksPerSecond>, TabOrgRow>>>.self
+        Fixed<TabScaleTall, SpanHosted<FrozenReveal<Seconds<TabsRevealAt, IntroTicksPerSecond>, TabScaleRow>>>.self
+        Fixed<TabBasicsTall, SpanHosted<FrozenReveal<Seconds<TabsRevealAt, IntroTicksPerSecond>, TabBasicsRow>>>.self
+        Fixed<TabWriterTall, SpanHosted<FrozenReveal<Seconds<TabsRevealAt, IntroTicksPerSecond>, TabWriterRow>>>.self
+        Fixed<TabButtonsTall, SpanHosted<FrozenReveal<Seconds<TabsRevealAt, IntroTicksPerSecond>, TabButtonsRow>>>.self
+        Fixed<TabLightTall, SpanHosted<FrozenReveal<Seconds<TabsRevealAt, IntroTicksPerSecond>, TabLightRow>>>.self
+        Fixed<TabAtomTall, SpanHosted<FrozenReveal<Seconds<TabsRevealAt, IntroTicksPerSecond>, TabAtomRow>>>.self
+        Fixed<TabRulesTall, SpanHosted<FrozenReveal<Seconds<TabsRevealAt, IntroTicksPerSecond>, TabRulesRow>>>.self
         Air<Plus<U16, U8>>.self
-        Fixed<TryLieTall, SpanHosted<FrozenReveal<Tally<TabsRevealAt>, TryLieParaRow>>>.self
-        Fixed<TryTwoTall, SpanHosted<FrozenReveal<Tally<TabsRevealAt>, TryTwoRow>>>.self
+        Fixed<TryLieTall, SpanHosted<FrozenReveal<Seconds<TabsRevealAt, IntroTicksPerSecond>, TryLieParaRow>>>.self
+        Fixed<TryTwoTall, SpanHosted<FrozenReveal<Seconds<TabsRevealAt, IntroTicksPerSecond>, TryTwoRow>>>.self
         Air<EdgeMargin>.self
     }
 }

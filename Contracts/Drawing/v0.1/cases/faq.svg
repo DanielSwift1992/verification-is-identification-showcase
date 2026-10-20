@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 696" role="img" data-vi-canvas="1" font-family="Inter, Roboto, system-ui, sans-serif" aria-label="Six question cards, answered from this same file.">
+<g transform="translate(0, 16)">
+<g transform="translate(16, 0)">
+<text x="0" y="29" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="21">FAQ</text>
+<text x="0" y="51" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">six questions from this very file: edit any answer in the editor</text>
+</g>
+</g>
+<g transform="translate(0, 96)">
+<g transform="translate(16, 0)">
+<rect x="0" width="480" height="96" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">Is this real Swift?</text>
+<text x="0" y="40" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">Each world has declarations and page bodies in showcase. Swift checked the</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">pinned sources. The browser reads supported relations and guards; it does not</text>
+<text x="0" y="72" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">compile edits.</text>
+</g>
+<g transform="translate(448, 0)">
+</g>
+</g>
+<g transform="translate(0, 200)">
+<g transform="translate(16, 0)">
+<rect x="0" width="480" height="96" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">What runs when I type?</text>
+<text x="0" y="40" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">The company court looks up its declared premises. Where and count reduce</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">the supported relations. JavaScript performs those readings and draws the</text>
+<text x="0" y="72" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">page.</text>
+</g>
+<g transform="translate(448, 0)">
+</g>
+</g>
+<g transform="translate(0, 304)">
+<g transform="translate(16, 0)">
+<rect x="0" width="480" height="80" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">Why is it fast?</text>
+<text x="0" y="40" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">The company court checks the complete declared fragment. Read me</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">preserves an earlier timing chart; it is not a promise for every edit.</text>
+</g>
+<g transform="translate(448, 0)">
+</g>
+</g>
+<g transform="translate(0, 392)">
+<g transform="translate(16, 0)">
+<rect x="0" width="480" height="96" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">Who checks this checker?</text>
+<text x="0" y="40" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">The badge reports this world: no readings presented, supported readings hold,</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">refusals, or an unsupported remainder. Page bodies edited here have not been</text>
+<text x="0" y="72" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">checked by Swift.</text>
+</g>
+<g transform="translate(448, 0)">
+</g>
+</g>
+<g transform="translate(0, 496)">
+<g transform="translate(16, 0)">
+<rect x="0" width="480" height="80" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">What is the law?</text>
+<text x="0" y="40" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">Rule 0 of the linter: a file declares types and nothing that runs. func, var, let,</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">and init are refused, each with its own line number.</text>
+</g>
+<g transform="translate(448, 0)">
+</g>
+</g>
+<g transform="translate(0, 584)">
+<g transform="translate(16, 0)">
+<rect x="0" width="480" height="96" rx="12" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="23" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">What does the Table switch show?</text>
+<text x="0" y="40" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">The same file, read as rows: one row per declaration, one column per axis.</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">Nothing is stored: the table cannot differ from the file. Click a name: the editor</text>
+<text x="0" y="72" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">opens its line.</text>
+</g>
+<g transform="translate(448, 0)">
+</g>
+</g>
+</svg>

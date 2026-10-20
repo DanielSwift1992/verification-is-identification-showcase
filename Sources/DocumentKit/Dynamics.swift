@@ -59,25 +59,11 @@ where A.Slot == B.Slot {
     public typealias Slot = A.Slot
 }
 
-// ── the term reader: a slot's term spelled safely back into markup. Born here,
-//    mirrored by every port against a byte golden: a reader is born in the kit
-//    or not at all. ──
+// ── the term reader: the term's original characters. XML serialization belongs
+//    to Vector's text/attribute edge, after any measurement. ──
 
-/// A term's name, spelled safely for markup: the angles become entities, so a
-/// level-1 term like `Tick<Never>` is safe in a text node as written.
+/// A term's name as text. The SVG reader escapes it at serialization.
 public enum TermText<T>: Close {}
 extension TermText {
-    public static var typeName: String {
-        var out = ""
-        for ch in String(describing: T.self) {
-            if ch == "<" {
-                out += "&lt;"
-            } else if ch == ">" {
-                out += "&gt;"
-            } else {
-                out.append(ch)
-            }
-        }
-        return out
-    }
+    public static var typeName: String { String(describing: T.self) }
 }

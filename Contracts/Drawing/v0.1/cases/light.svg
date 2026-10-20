@@ -1,0 +1,1258 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 3684" role="img" data-vi-canvas="1" font-family="Inter, Roboto, system-ui, sans-serif" aria-label="A lesson on light: the lamp, your own mix, two beams, a wall, filters, two slits, your screen.">
+<g transform="translate(0, 16)">
+<g transform="translate(16, 0)">
+<text x="0" y="29" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="21">Light</text>
+</g>
+</g>
+<g transform="translate(0, 56)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">On a screen, a colour is three numbers: how much red, green, and blue to</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">light. A picker, a palette, a photo editor: every colour tool edits those three</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">numbers. The numbers are not the start. The start is light from a lamp. The</text>
+<text x="0" y="76" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">eye reads the light, reduces it to three numbers, and drops everything else at</text>
+<text x="0" y="96" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">that step. This page is one step earlier. The light itself is in the code on the</text>
+<text x="0" y="116" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">left, and the page computes the colour from it at the end, by the same</text>
+<text x="0" y="136" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">reduction the eye makes. The step matters: two paints can be one colour</text>
+<text x="0" y="156" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">under a shop lamp and two colours in daylight. The reason is in the light, and</text>
+<text x="0" y="176" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">it is gone from the three numbers. You can edit any number in the code. The</text>
+<text x="0" y="196" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">page computes every picture below from that code, and the judge re-checks</text>
+<text x="0" y="216" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">it as you type.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 308)">
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">The setup</text>
+</g>
+</g>
+<g transform="translate(0, 332)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The lamp is glowing hydrogen, the simplest atom there is. Sunlight through a</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">glass prism is a rainbow. The lamp’s light through the same prism is no</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">rainbow: only a few thin stripes of colour. Those stripes are called lines.</text>
+<text x="0" y="76" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Three of hydrogen’s lines are written in this file: a red one, a blue-green one,</text>
+<text x="0" y="96" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">and an infrared one that eyes cannot see: the light of TV remotes.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 448)">
+<g transform="translate(16, 0)">
+<text x="0" y="21" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">the lamp</text>
+</g>
+<g transform="translate(96, 0)">
+<rect x="0" width="264" height="32" rx="2" fill="#1C1C1E" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(364, 0)">
+<rect x="0" width="88" height="32" rx="2" fill="var(--vi-surface-track, #F6F7F8)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(452, 0)">
+</g>
+<g transform="translate(176, 0)">
+<rect x="0" width="8" height="32" rx="0" fill="color(xyz-d65 0.093 0.312 1.031)"/>
+</g>
+<g transform="translate(284, 0)">
+<rect x="0" width="8" height="32" rx="0" fill="color(xyz-d65 0.250 0.093 0.000)"/>
+</g>
+<g transform="translate(388, 0)">
+<rect x="0" width="8" height="32" rx="0" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))"/>
+</g>
+<g transform="translate(396, 0)">
+</g>
+</g>
+<g transform="translate(0, 484)">
+<g transform="translate(128, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">Hβ 486 nm</text>
+</g>
+<g transform="translate(240, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">Hα 656 nm</text>
+</g>
+<g transform="translate(328, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">infrared 1875 nm</text>
+</g>
+<g transform="translate(432, 0)">
+</g>
+</g>
+<g transform="translate(0, 504)">
+<g transform="translate(16, 0)">
+</g>
+<g transform="translate(96, 0)">
+</g>
+<g transform="translate(364, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">beyond the eye</text>
+</g>
+<g transform="translate(452, 0)">
+</g>
+</g>
+<g transform="translate(0, 532)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The three lines are the atom’s own: for hydrogen there are only these three.</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Other gases have other lines, and the three squares below are hydrogen,</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">neon, and sodium at full: the page computes each from its own list.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 604)">
+<g transform="translate(16, 0)">
+<rect x="0" width="80" height="24" rx="4" fill="color(xyz-d65 0.343 0.406 1.031)"/>
+</g>
+<g transform="translate(104, 0)">
+<rect x="0" width="80" height="24" rx="4" fill="color(xyz-d65 1.375 0.968 0.000)"/>
+</g>
+<g transform="translate(192, 0)">
+<rect x="0" width="80" height="24" rx="4" fill="color(xyz-d65 1.031 0.781 0.000)"/>
+</g>
+<g transform="translate(272, 0)">
+</g>
+</g>
+<g transform="translate(0, 630)">
+<g transform="translate(16, 0)">
+<text x="40" y="13" text-anchor="middle" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">hydrogen</text>
+</g>
+<g transform="translate(104, 0)">
+<text x="40" y="13" text-anchor="middle" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">neon</text>
+</g>
+<g transform="translate(192, 0)">
+<text x="40" y="13" text-anchor="middle" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">sodium</text>
+</g>
+<g transform="translate(272, 0)">
+</g>
+</g>
+<g transform="translate(0, 654)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The middle square is the light of a neon sign. The right one is a sodium</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">streetlight.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 706)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">In the code, each of the three lines has one brightness number.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 758)">
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">Mix your own beam</text>
+</g>
+</g>
+<g transform="translate(0, 782)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The keys set each line’s brightness, 0 to 8. The square is the computed</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">colour of your mix.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 838)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">Hα 656 nm</text>
+</g>
+<g transform="translate(112, 0)">
+<g class="vi-rule" data-vi-rules="SetAlpha&lt;Never&gt;" data-vi-slot="MixAlphaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">0</text>
+</g>
+</g>
+<g transform="translate(138, 0)">
+<g class="vi-rule" data-vi-rules="SetAlpha&lt;Unit&gt;" data-vi-slot="MixAlphaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">1</text>
+</g>
+</g>
+<g transform="translate(164, 0)">
+<g class="vi-rule" data-vi-rules="SetAlpha&lt;Plus&lt;Unit,Unit&gt;&gt;" data-vi-slot="MixAlphaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">2</text>
+</g>
+</g>
+<g transform="translate(190, 0)">
+<g class="vi-rule" data-vi-rules="SetAlpha&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;&gt;" data-vi-slot="MixAlphaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">3</text>
+</g>
+</g>
+<g transform="translate(216, 0)">
+<g class="vi-rule" data-vi-rules="SetAlpha&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;&gt;" data-vi-slot="MixAlphaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">4</text>
+</g>
+</g>
+<g transform="translate(242, 0)">
+<g class="vi-rule" data-vi-rules="SetAlpha&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;,Unit&gt;&gt;" data-vi-slot="MixAlphaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">5</text>
+</g>
+</g>
+<g transform="translate(268, 0)">
+<g class="vi-rule" data-vi-rules="SetAlpha&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;,Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;&gt;&gt;" data-vi-slot="MixAlphaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">6</text>
+</g>
+</g>
+<g transform="translate(294, 0)">
+<g class="vi-rule" data-vi-rules="SetAlpha&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;,Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;&gt;&gt;" data-vi-slot="MixAlphaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">7</text>
+</g>
+</g>
+<g transform="translate(320, 0)">
+<g class="vi-rule" data-vi-rules="SetAlpha&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;,Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;&gt;&gt;" data-vi-slot="MixAlphaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">8</text>
+</g>
+</g>
+<g transform="translate(350, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="11">4</text>
+</g>
+<g transform="translate(370, 0)">
+<rect x="0" width="16" height="16" rx="2" fill="color(xyz-d65 0.125 0.046 0.000)"/>
+</g>
+<g transform="translate(386, 0)">
+</g>
+</g>
+<g transform="translate(0, 862)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">Hβ 486 nm</text>
+</g>
+<g transform="translate(112, 0)">
+<g class="vi-rule" data-vi-rules="SetBeta&lt;Never&gt;" data-vi-slot="MixBetaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">0</text>
+</g>
+</g>
+<g transform="translate(138, 0)">
+<g class="vi-rule" data-vi-rules="SetBeta&lt;Unit&gt;" data-vi-slot="MixBetaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">1</text>
+</g>
+</g>
+<g transform="translate(164, 0)">
+<g class="vi-rule" data-vi-rules="SetBeta&lt;Plus&lt;Unit,Unit&gt;&gt;" data-vi-slot="MixBetaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">2</text>
+</g>
+</g>
+<g transform="translate(190, 0)">
+<g class="vi-rule" data-vi-rules="SetBeta&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;&gt;" data-vi-slot="MixBetaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">3</text>
+</g>
+</g>
+<g transform="translate(216, 0)">
+<g class="vi-rule" data-vi-rules="SetBeta&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;&gt;" data-vi-slot="MixBetaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">4</text>
+</g>
+</g>
+<g transform="translate(242, 0)">
+<g class="vi-rule" data-vi-rules="SetBeta&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;,Unit&gt;&gt;" data-vi-slot="MixBetaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">5</text>
+</g>
+</g>
+<g transform="translate(268, 0)">
+<g class="vi-rule" data-vi-rules="SetBeta&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;,Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;&gt;&gt;" data-vi-slot="MixBetaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">6</text>
+</g>
+</g>
+<g transform="translate(294, 0)">
+<g class="vi-rule" data-vi-rules="SetBeta&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;,Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;&gt;&gt;" data-vi-slot="MixBetaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">7</text>
+</g>
+</g>
+<g transform="translate(320, 0)">
+<g class="vi-rule" data-vi-rules="SetBeta&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;,Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;&gt;&gt;" data-vi-slot="MixBetaSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">8</text>
+</g>
+</g>
+<g transform="translate(350, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="11">4</text>
+</g>
+<g transform="translate(370, 0)">
+<rect x="0" width="16" height="16" rx="2" fill="color(xyz-d65 0.046 0.156 0.515)"/>
+</g>
+<g transform="translate(386, 0)">
+</g>
+</g>
+<g transform="translate(0, 886)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">infrared 1875 nm</text>
+</g>
+<g transform="translate(112, 0)">
+<g class="vi-rule" data-vi-rules="SetIR&lt;Never&gt;" data-vi-slot="MixIRSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">0</text>
+</g>
+</g>
+<g transform="translate(138, 0)">
+<g class="vi-rule" data-vi-rules="SetIR&lt;Unit&gt;" data-vi-slot="MixIRSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">1</text>
+</g>
+</g>
+<g transform="translate(164, 0)">
+<g class="vi-rule" data-vi-rules="SetIR&lt;Plus&lt;Unit,Unit&gt;&gt;" data-vi-slot="MixIRSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">2</text>
+</g>
+</g>
+<g transform="translate(190, 0)">
+<g class="vi-rule" data-vi-rules="SetIR&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;&gt;" data-vi-slot="MixIRSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">3</text>
+</g>
+</g>
+<g transform="translate(216, 0)">
+<g class="vi-rule" data-vi-rules="SetIR&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;&gt;" data-vi-slot="MixIRSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">4</text>
+</g>
+</g>
+<g transform="translate(242, 0)">
+<g class="vi-rule" data-vi-rules="SetIR&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;,Unit&gt;&gt;" data-vi-slot="MixIRSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">5</text>
+</g>
+</g>
+<g transform="translate(268, 0)">
+<g class="vi-rule" data-vi-rules="SetIR&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;,Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;&gt;&gt;" data-vi-slot="MixIRSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">6</text>
+</g>
+</g>
+<g transform="translate(294, 0)">
+<g class="vi-rule" data-vi-rules="SetIR&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;,Plus&lt;Plus&lt;Unit,Unit&gt;,Unit&gt;&gt;&gt;" data-vi-slot="MixIRSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">7</text>
+</g>
+</g>
+<g transform="translate(320, 0)">
+<g class="vi-rule" data-vi-rules="SetIR&lt;Plus&lt;Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;,Plus&lt;Plus&lt;Unit,Unit&gt;,Plus&lt;Unit,Unit&gt;&gt;&gt;&gt;" data-vi-slot="MixIRSlot" cursor="pointer">
+<rect x="0" width="24" height="20" rx="4" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="12" y="14" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">8</text>
+</g>
+</g>
+<g transform="translate(350, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="11">0</text>
+</g>
+<g transform="translate(370, 0)">
+<rect x="0" width="0" height="16" rx="2" fill="color(xyz-d65 0.000 0.000 0.000)"/>
+</g>
+<g transform="translate(370, 0)">
+</g>
+</g>
+<g transform="translate(0, 914)">
+<g transform="translate(16, 0)">
+<text x="0" y="28" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">your beam</text>
+</g>
+<g transform="translate(96, 0)">
+<rect x="0" width="96" height="48" rx="8" fill="color(xyz-d65 0.171 0.203 0.515)"/>
+</g>
+<g transform="translate(208, 0)">
+<text x="0" y="29" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">color(xyz-d65 0.171 0.203 0.515)</text>
+</g>
+</g>
+<g transform="translate(0, 970)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">The infrared key changes the code, and the colour is unchanged: press it and</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">see.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 1026)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The gas is one line of code: these keys rewrite it, the page redraws.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 1050)">
+<g transform="translate(16, 0)">
+<g class="vi-rule" data-vi-rules="PickHydrogen" data-vi-slot="GasSlot" cursor="pointer">
+<rect x="0" width="96" height="32" rx="10" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="48" y="20" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">hydrogen lamp</text>
+</g>
+</g>
+<g transform="translate(120, 0)">
+<g class="vi-rule" data-vi-rules="PickNeon" data-vi-slot="GasSlot" cursor="pointer">
+<rect x="0" width="80" height="32" rx="10" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="40" y="20" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">neon</text>
+</g>
+</g>
+<g transform="translate(208, 0)">
+<g class="vi-rule" data-vi-rules="PickSodium" data-vi-slot="GasSlot" cursor="pointer">
+<rect x="0" width="80" height="32" rx="10" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="40" y="20" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">sodium</text>
+</g>
+</g>
+<g transform="translate(288, 0)">
+</g>
+</g>
+<g transform="translate(0, 1102)">
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">The colour map</text>
+</g>
+</g>
+<g transform="translate(0, 1126)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">To the right the red level is higher, downward the blue-green. The ring is on</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">your mix.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 1182)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">0</text>
+</g>
+<g transform="translate(36, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.000 0.000 0.000)"/>
+</g>
+<g transform="translate(62, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.031 0.011 0.000)"/>
+</g>
+<g transform="translate(88, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.062 0.023 0.000)"/>
+</g>
+<g transform="translate(114, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.093 0.035 0.000)"/>
+</g>
+<g transform="translate(140, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.125 0.046 0.000)"/>
+</g>
+<g transform="translate(166, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.156 0.058 0.000)"/>
+</g>
+<g transform="translate(192, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.187 0.070 0.000)"/>
+</g>
+<g transform="translate(218, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.218 0.082 0.000)"/>
+</g>
+<g transform="translate(244, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.250 0.093 0.000)"/>
+</g>
+<g transform="translate(270, 0)">
+</g>
+</g>
+<g transform="translate(0, 1204)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">1</text>
+</g>
+<g transform="translate(36, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.011 0.039 0.128)"/>
+</g>
+<g transform="translate(62, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.042 0.050 0.128)"/>
+</g>
+<g transform="translate(88, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.074 0.062 0.128)"/>
+</g>
+<g transform="translate(114, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.105 0.074 0.128)"/>
+</g>
+<g transform="translate(140, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.136 0.085 0.128)"/>
+</g>
+<g transform="translate(166, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.167 0.097 0.128)"/>
+</g>
+<g transform="translate(192, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.199 0.109 0.128)"/>
+</g>
+<g transform="translate(218, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.230 0.121 0.128)"/>
+</g>
+<g transform="translate(244, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.261 0.132 0.128)"/>
+</g>
+<g transform="translate(270, 0)">
+</g>
+</g>
+<g transform="translate(0, 1226)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">2</text>
+</g>
+<g transform="translate(36, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.023 0.078 0.257)"/>
+</g>
+<g transform="translate(62, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.054 0.089 0.257)"/>
+</g>
+<g transform="translate(88, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.085 0.101 0.257)"/>
+</g>
+<g transform="translate(114, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.117 0.113 0.257)"/>
+</g>
+<g transform="translate(140, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.148 0.125 0.257)"/>
+</g>
+<g transform="translate(166, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.179 0.136 0.257)"/>
+</g>
+<g transform="translate(192, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.210 0.148 0.257)"/>
+</g>
+<g transform="translate(218, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.242 0.160 0.257)"/>
+</g>
+<g transform="translate(244, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.273 0.171 0.257)"/>
+</g>
+<g transform="translate(270, 0)">
+</g>
+</g>
+<g transform="translate(0, 1248)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">3</text>
+</g>
+<g transform="translate(36, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.035 0.117 0.386)"/>
+</g>
+<g transform="translate(62, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.066 0.128 0.386)"/>
+</g>
+<g transform="translate(88, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.097 0.140 0.386)"/>
+</g>
+<g transform="translate(114, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.128 0.152 0.386)"/>
+</g>
+<g transform="translate(140, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.160 0.164 0.386)"/>
+</g>
+<g transform="translate(166, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.191 0.175 0.386)"/>
+</g>
+<g transform="translate(192, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.222 0.187 0.386)"/>
+</g>
+<g transform="translate(218, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.253 0.199 0.386)"/>
+</g>
+<g transform="translate(244, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.285 0.210 0.386)"/>
+</g>
+<g transform="translate(270, 0)">
+</g>
+</g>
+<g transform="translate(0, 1270)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">4</text>
+</g>
+<g transform="translate(36, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.046 0.156 0.515)"/>
+</g>
+<g transform="translate(62, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.078 0.167 0.515)"/>
+</g>
+<g transform="translate(88, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.109 0.179 0.515)"/>
+</g>
+<g transform="translate(114, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.140 0.191 0.515)"/>
+</g>
+<g transform="translate(140, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.171 0.203 0.515)"/>
+<circle cx="12" cy="10" r="6" fill="#FFFFFF"/>
+<circle cx="12" cy="10" r="2" fill="#1C1C1E"/>
+</g>
+<g transform="translate(166, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.203 0.214 0.515)"/>
+</g>
+<g transform="translate(192, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.234 0.226 0.515)"/>
+</g>
+<g transform="translate(218, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.265 0.238 0.515)"/>
+</g>
+<g transform="translate(244, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.296 0.250 0.515)"/>
+</g>
+<g transform="translate(270, 0)">
+</g>
+</g>
+<g transform="translate(0, 1292)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">5</text>
+</g>
+<g transform="translate(36, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.058 0.195 0.644)"/>
+</g>
+<g transform="translate(62, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.089 0.207 0.644)"/>
+</g>
+<g transform="translate(88, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.121 0.218 0.644)"/>
+</g>
+<g transform="translate(114, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.152 0.230 0.644)"/>
+</g>
+<g transform="translate(140, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.183 0.242 0.644)"/>
+</g>
+<g transform="translate(166, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.214 0.253 0.644)"/>
+</g>
+<g transform="translate(192, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.246 0.265 0.644)"/>
+</g>
+<g transform="translate(218, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.277 0.277 0.644)"/>
+</g>
+<g transform="translate(244, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.308 0.289 0.644)"/>
+</g>
+<g transform="translate(270, 0)">
+</g>
+</g>
+<g transform="translate(0, 1314)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">6</text>
+</g>
+<g transform="translate(36, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.070 0.234 0.773)"/>
+</g>
+<g transform="translate(62, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.101 0.246 0.773)"/>
+</g>
+<g transform="translate(88, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.132 0.257 0.773)"/>
+</g>
+<g transform="translate(114, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.164 0.269 0.773)"/>
+</g>
+<g transform="translate(140, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.195 0.281 0.773)"/>
+</g>
+<g transform="translate(166, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.226 0.292 0.773)"/>
+</g>
+<g transform="translate(192, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.257 0.304 0.773)"/>
+</g>
+<g transform="translate(218, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.289 0.316 0.773)"/>
+</g>
+<g transform="translate(244, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.320 0.328 0.773)"/>
+</g>
+<g transform="translate(270, 0)">
+</g>
+</g>
+<g transform="translate(0, 1336)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">7</text>
+</g>
+<g transform="translate(36, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.082 0.273 0.902)"/>
+</g>
+<g transform="translate(62, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.113 0.285 0.902)"/>
+</g>
+<g transform="translate(88, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.144 0.296 0.902)"/>
+</g>
+<g transform="translate(114, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.175 0.308 0.902)"/>
+</g>
+<g transform="translate(140, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.207 0.320 0.902)"/>
+</g>
+<g transform="translate(166, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.238 0.332 0.902)"/>
+</g>
+<g transform="translate(192, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.269 0.343 0.902)"/>
+</g>
+<g transform="translate(218, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.300 0.355 0.902)"/>
+</g>
+<g transform="translate(244, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.332 0.367 0.902)"/>
+</g>
+<g transform="translate(270, 0)">
+</g>
+</g>
+<g transform="translate(0, 1358)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">8</text>
+</g>
+<g transform="translate(36, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.093 0.312 1.031)"/>
+</g>
+<g transform="translate(62, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.125 0.324 1.031)"/>
+</g>
+<g transform="translate(88, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.156 0.335 1.031)"/>
+</g>
+<g transform="translate(114, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.187 0.347 1.031)"/>
+</g>
+<g transform="translate(140, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.218 0.359 1.031)"/>
+</g>
+<g transform="translate(166, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.250 0.371 1.031)"/>
+</g>
+<g transform="translate(192, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.281 0.382 1.031)"/>
+</g>
+<g transform="translate(218, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.312 0.394 1.031)"/>
+</g>
+<g transform="translate(244, 0)">
+<rect x="0" width="24" height="20" rx="2" fill="color(xyz-d65 0.343 0.406 1.031)"/>
+</g>
+<g transform="translate(270, 0)">
+</g>
+</g>
+<g transform="translate(0, 1380)">
+<g transform="translate(16, 0)">
+</g>
+<g transform="translate(36, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">0</text>
+</g>
+<g transform="translate(62, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">1</text>
+</g>
+<g transform="translate(88, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">2</text>
+</g>
+<g transform="translate(114, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">3</text>
+</g>
+<g transform="translate(140, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">4</text>
+</g>
+<g transform="translate(166, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">5</text>
+</g>
+<g transform="translate(192, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">6</text>
+</g>
+<g transform="translate(218, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">7</text>
+</g>
+<g transform="translate(244, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">8</text>
+</g>
+<g transform="translate(270, 0)">
+</g>
+</g>
+<g transform="translate(0, 1404)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">The infrared has no direction on this map: raise it, and the ring is where it</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">was.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 1468)">
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">Two beams, one colour</text>
+</g>
+</g>
+<g transform="translate(0, 1492)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">BeamX is the red line alone. BeamY is the red line and the infrared one. The</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">eye adds up only what it can see, so both squares below are the same. The</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">two paints under the shop lamp are the same case: one sum from two</text>
+<text x="0" y="76" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">different lights.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 1588)">
+<g transform="translate(16, 0)">
+<text x="0" y="17" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">the eye sees</text>
+</g>
+<g transform="translate(96, 0)">
+<rect x="0" width="40" height="24" rx="4" fill="color(xyz-d65 0.250 0.093 0.000)"/>
+</g>
+<g transform="translate(144, 0)">
+<rect x="0" width="40" height="24" rx="4" fill="color(xyz-d65 0.250 0.093 0.000)"/>
+</g>
+<g transform="translate(200, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">the page computes both squares from the code on the</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">left</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 1640)">
+<g transform="translate(16, 0)">
+<text x="0" y="21" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">BeamX</text>
+</g>
+<g transform="translate(96, 0)">
+<rect x="0" width="264" height="32" rx="2" fill="#1C1C1E" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(364, 0)">
+<rect x="0" width="88" height="32" rx="2" fill="var(--vi-surface-track, #F6F7F8)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(452, 0)">
+</g>
+<g transform="translate(176, 0)">
+<rect x="0" width="0" height="32" rx="0" fill="color(xyz-d65 0.000 0.000 0.000)"/>
+</g>
+<g transform="translate(276, 0)">
+<rect x="0" width="8" height="32" rx="0" fill="color(xyz-d65 0.250 0.093 0.000)"/>
+</g>
+<g transform="translate(380, 0)">
+<rect x="0" width="0" height="32" rx="0" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))"/>
+</g>
+<g transform="translate(380, 0)">
+</g>
+</g>
+<g transform="translate(0, 1676)">
+<g transform="translate(16, 0)">
+<text x="0" y="21" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">BeamY</text>
+</g>
+<g transform="translate(96, 0)">
+<rect x="0" width="264" height="32" rx="2" fill="#1C1C1E" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(364, 0)">
+<rect x="0" width="88" height="32" rx="2" fill="var(--vi-surface-track, #F6F7F8)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(452, 0)">
+</g>
+<g transform="translate(176, 0)">
+<rect x="0" width="0" height="32" rx="0" fill="color(xyz-d65 0.000 0.000 0.000)"/>
+</g>
+<g transform="translate(276, 0)">
+<rect x="0" width="8" height="32" rx="0" fill="color(xyz-d65 0.250 0.093 0.000)"/>
+</g>
+<g transform="translate(380, 0)">
+<rect x="0" width="4" height="32" rx="0" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))"/>
+</g>
+<g transform="translate(384, 0)">
+</g>
+</g>
+<g transform="translate(0, 1712)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The black windows are a prism’s view: it spreads a beam into its lines.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 1736)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">The visible lines are the same, the difference is only in the infrared, and the</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">judge checks both sums equal: the squares must be the same. A colour</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">picker stores only the sum. This code has both beams.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 1812)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Press Raise IR: the page draws the line longer, and the squares are</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">unchanged.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 1856)">
+<g transform="translate(16, 0)">
+<g class="vi-rule" data-vi-rules="RaiseInfrared" data-vi-slot="BeamInfraredSlot" cursor="pointer">
+<rect x="0" width="80" height="32" rx="10" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="40" y="20" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">Raise IR</text>
+</g>
+</g>
+<g transform="translate(104, 0)">
+<g class="vi-rule" data-vi-rules="LowerInfrared" data-vi-slot="BeamInfraredSlot" cursor="pointer">
+<rect x="0" width="80" height="32" rx="10" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="40" y="20" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">Lower IR</text>
+</g>
+</g>
+<g transform="translate(184, 0)">
+</g>
+</g>
+<g transform="translate(0, 1900)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Break it: set AlphaLevel in BeamY to Lit2. The judge names the difference.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 1944)">
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">A wall and a mirror</text>
+</g>
+</g>
+<g transform="translate(0, 1968)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">A matte wall keeps only the total of the light and drops the side it came from.</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">A room lit from the east and the same room lit from the west are the same on</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">the wall. A mirror keeps the two sides apart.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 2040)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">The judge checks the two readings equal. The direction numbers are still in</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">the code: FromEast and FromWest are separate lines there.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 2092)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Break it: set LitFromWest’s Total to Lit2. The judge refuses the claim.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 2136)">
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">Three filters</text>
+</g>
+</g>
+<g transform="translate(0, 2160)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Light is a wave, and a wave has a direction of vibration. A polarizing filter</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">admits only the light along its own direction, so two crossed filters admit</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">nothing: try it with two pairs of sunglasses. A third filter between them at 45</text>
+<text x="0" y="76" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">degrees, and the light is back.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 2256)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="700" font-size="11">two filters, crossed</text>
+</g>
+</g>
+<g transform="translate(0, 2276)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">from the lamp</text>
+</g>
+<g transform="translate(160, 0)">
+<rect x="0" width="128" height="16" rx="2" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(296, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="11">8</text>
+</g>
+</g>
+<g transform="translate(0, 2298)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">past both filters</text>
+</g>
+<g transform="translate(160, 0)">
+<rect x="0" width="0" height="16" rx="2" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(168, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="11">0</text>
+</g>
+</g>
+<g transform="translate(0, 2326)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="700" font-size="11">with the diagonal between</text>
+</g>
+</g>
+<g transform="translate(0, 2346)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">from the lamp</text>
+</g>
+<g transform="translate(160, 0)">
+<rect x="0" width="128" height="16" rx="2" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(296, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="11">8</text>
+</g>
+</g>
+<g transform="translate(0, 2368)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">past the diagonal</text>
+</g>
+<g transform="translate(160, 0)">
+<rect x="0" width="64" height="16" rx="2" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(232, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="11">4</text>
+</g>
+</g>
+<g transform="translate(0, 2390)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">at the screen</text>
+</g>
+<g transform="translate(160, 0)">
+<rect x="0" width="32" height="16" rx="2" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(200, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="11">2</text>
+</g>
+</g>
+<g transform="translate(0, 2422)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The screen below is live. The filters are crossed: it is dark.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 2446)">
+<g transform="translate(16, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">the screen now</text>
+</g>
+<g transform="translate(160, 0)">
+<rect x="0" width="128" height="24" rx="2" fill="#1C1C1E" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(296, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="11">0</text>
+</g>
+<g transform="translate(160, 0)">
+<rect x="0" width="0" height="24" rx="2" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(160, 0)">
+</g>
+</g>
+<g transform="translate(0, 2478)">
+<g transform="translate(16, 0)">
+<g class="vi-rule" data-vi-rules="InsertDiagonal" data-vi-slot="PaneStackSlot" cursor="pointer">
+<rect x="0" width="128" height="32" rx="10" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="64" y="20" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">Insert the diagonal</text>
+</g>
+</g>
+<g transform="translate(152, 0)">
+<g class="vi-rule" data-vi-rules="RemoveDiagonal" data-vi-slot="PaneStackSlot" cursor="pointer">
+<rect x="0" width="80" height="32" rx="10" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="40" y="20" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">Remove it</text>
+</g>
+</g>
+<g transform="translate(232, 0)">
+</g>
+</g>
+<g transform="translate(0, 2522)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">You brought the light back through more glass than before.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 2550)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">The 2 on the screen is not measured: half of a half is in the code, and the</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">judge checks it. A typical simulator would get 1.9999 and round. Here the 2 is</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">exact. None of this fits in a colour: its three numbers are three brightnesses.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 2622)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Break it: set the diagonal Vertical to Lit1. The judge refuses both rows.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 2666)">
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">Two slits</text>
+</g>
+</g>
+<g transform="translate(0, 2690)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The sum of two lights can be darkness. The scene here is a lamp behind two</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">slits in a wall, and a screen in front. Each spot of the screen is lit twice by the</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">lamp, once through each slit. The two paths are different lengths, and the</text>
+<text x="0" y="76" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">difference is in half-steps. With an even gap the two arrivals are in step: the</text>
+<text x="0" y="96" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">spot is bright. With an odd gap they are opposite: the spot is dark.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 2806)">
+<g transform="translate(16, 0)">
+<rect x="0" width="48" height="24" rx="0" fill="color(xyz-d65 0.000 0.000 0.000)"/>
+</g>
+<g transform="translate(64, 0)">
+<rect x="0" width="48" height="24" rx="0" fill="color(xyz-d65 0.062 0.023 0.000)"/>
+</g>
+<g transform="translate(112, 0)">
+<rect x="0" width="48" height="24" rx="0" fill="color(xyz-d65 0.000 0.000 0.000)"/>
+</g>
+<g transform="translate(160, 0)">
+<rect x="0" width="48" height="24" rx="0" fill="color(xyz-d65 0.062 0.023 0.000)"/>
+</g>
+<g transform="translate(208, 0)">
+<rect x="0" width="48" height="24" rx="0" fill="color(xyz-d65 0.000 0.000 0.000)"/>
+</g>
+<g transform="translate(256, 0)">
+<rect x="0" width="48" height="24" rx="0" fill="color(xyz-d65 0.062 0.023 0.000)"/>
+</g>
+<g transform="translate(304, 0)">
+<rect x="0" width="48" height="24" rx="0" fill="color(xyz-d65 0.000 0.000 0.000)"/>
+</g>
+<g transform="translate(352, 0)">
+</g>
+</g>
+<g transform="translate(0, 2838)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">The stripes are the four written gaps, 0, 1, 2, and 3 half-steps, and the page</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">reads each at the edge. The judge checks each gap’s parity: the darkness is</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">arithmetic, not a measurement.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 2914)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The stripe below is live: its gap is the LiveGap line in the code.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 2938)">
+<g transform="translate(16, 0)">
+<rect x="0" width="48" height="24" rx="0" fill="color(xyz-d65 0.000 0.000 0.000)"/>
+</g>
+<g transform="translate(72, 0)">
+<text x="8" y="21" text-anchor="middle" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">1</text>
+</g>
+<g transform="translate(96, 0)">
+<g class="vi-rule" data-vi-rules="Widen01 Widen12 Widen23 Widen34" data-vi-slot="LiveGapSlot" cursor="pointer">
+<rect x="0" width="96" height="32" rx="10" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="48" y="20" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">Widen the gap</text>
+</g>
+</g>
+<g transform="translate(200, 0)">
+<g class="vi-rule" data-vi-rules="Narrow43 Narrow32 Narrow21 Narrow10" data-vi-slot="LiveGapSlot" cursor="pointer">
+<rect x="0" width="80" height="32" rx="10" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+<text x="40" y="20" text-anchor="middle" fill="var(--vi-action, #336FEE)" font-weight="700" font-size="11">Narrow it</text>
+</g>
+</g>
+<g transform="translate(280, 0)">
+</g>
+</g>
+<g transform="translate(0, 2982)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Each press of a key is one half-step of the gap. Even is bright, odd is dark.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 3006)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Break it: in NodeFirst, make Gap even. The judge refuses the stripe’s claim.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 3050)">
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">What your screen can show</text>
+</g>
+</g>
+<g transform="translate(0, 3074)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">This code has colours your screen cannot show, and you can check that on</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">this page. Every screen has a standard: sRGB is common, P3 and Rec.2020</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">are wider. Two pairs of red and one lone square are below. In each pair both</text>
+<text x="0" y="76" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">squares are equally bright, and only the purity of the red is different.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 3170)">
+<g transform="translate(16, 0)">
+<rect x="0" width="48" height="24" rx="4" fill="color(xyz-d65 0.406 0.218 0.031)"/>
+</g>
+<g transform="translate(66, 0)">
+<rect x="0" width="48" height="24" rx="4" fill="color(xyz-d65 0.500 0.218 0.000)"/>
+</g>
+<g transform="translate(138, 0)">
+<rect x="0" width="48" height="24" rx="4" fill="color(xyz-d65 0.500 0.218 0.000)"/>
+</g>
+<g transform="translate(188, 0)">
+<rect x="0" width="48" height="24" rx="4" fill="color(xyz-d65 0.546 0.218 0.000)"/>
+</g>
+<g transform="translate(260, 0)">
+<rect x="0" width="48" height="24" rx="4" fill="color(xyz-d65 0.250 0.093 0.000)"/>
+</g>
+<g transform="translate(308, 0)">
+</g>
+</g>
+<g transform="translate(0, 3196)">
+<g transform="translate(16, 0)">
+<text x="49" y="15" text-anchor="middle" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">sRGB and P3</text>
+</g>
+<g transform="translate(138, 0)">
+<text x="49" y="15" text-anchor="middle" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">P3 and Rec.2020</text>
+</g>
+<g transform="translate(260, 0)">
+<text x="24" y="15" text-anchor="middle" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">the lamp’s line</text>
+</g>
+<g transform="translate(308, 0)">
+</g>
+</g>
+<g transform="translate(0, 3220)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">On a screen too narrow for the difference, a pair is one colour. On most</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">screens the first pair is two colours. The second is two only on a very wide</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">screen.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 3292)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">The lone square is the lamp’s pure line. No screen can show that colour, so</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">what you see there is your screen’s closest colour to it.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 3348)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">You can write a screen’s limit as a rule, and a red-green screen is in this</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">code: yellow fits it, red and green lit and blue dark, and the claim is clean. A</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">pure blue does not fit: instead of clipping it, the judge refuses it and names</text>
+<text x="0" y="76" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">the blue channel.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 3440)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Break it: set YellowAtFull’s BlueChannel to Lit1. The judge names the blue</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">channel.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 3484)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">The eye tells apart only finitely many colours, so a complete list of them is</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">one file. An eye would tell every pair above apart: the limit is the screen’s.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 3556)">
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">What is different here</text>
+</g>
+</g>
+<g transform="translate(0, 3580)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">A colour picker stores three numbers, and the parts of the light are gone. A</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">simulator computes and rounds, and you check its output by eye. The light</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">itself is in this code, the judge re-checks it as you type, and the judge checks</text>
+<text x="0" y="76" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">a filter chain of your own the same way.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</svg>

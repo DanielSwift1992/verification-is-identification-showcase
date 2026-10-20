@@ -1,5 +1,32 @@
 import VerificationIsIdentification
 
+/// XML serialization reads characters only at the output edge. Measurement and type
+/// spelling keep the original text; composition keeps its already serialized markup.
+public enum XMLEscaped<Content: Structure>: Close {}
+extension XMLEscaped {
+    public static var typeName: String {
+        Content.typeName.unicodeScalars.map { character -> String in
+            switch character {
+            case "&": return "&amp;"
+            case "<": return "&lt;"
+            case ">": return "&gt;"
+            case "\"": return "&quot;"
+            case "'": return "&apos;"
+            default: return String(character)
+            }
+        }.joined()
+    }
+}
+
+/// Time is a rational reading of integer ticks, not integer lattice division.
+public enum Seconds<Ticks: Structure, Frequency: Structure>: Close {}
+extension Seconds {
+    public static var typeName: String {
+        precondition(Frequency.count > 0, "Seconds requires a positive frequency")
+        return String(Double(Ticks.count) / Double(Frequency.count))
+    }
+}
+
 // ═══════════════════════════════════════════════════════════════
 // VECTOR is SVG as DocumentKit's second medium, the same mechanism Markup.swift
 // uses for markdown: every atom is a `Close` read through `typeName`, every combinator is an
@@ -79,9 +106,9 @@ extension Diagram {
         // exactly the kind of bookkeeping this medium's `body`/`typeName` discipline exists
         // to make unnecessary, and a name missing from it renders untheme'd with no error. A
         // marker on the root the canvas ALREADY emits needs no second list at all.
-        return "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"\(Size.typeName)\" role=\"img\" "
+        return "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"\(XMLEscaped<Size>.typeName)\" role=\"img\" "
             + "data-vi-canvas=\"1\" "
-            + "font-family=\"\(FontStack.typeName)\" aria-label=\"\(AriaLabel.typeName)\">\n"
+            + "font-family=\"\(XMLEscaped<FontStack>.typeName)\" aria-label=\"\(XMLEscaped<AriaLabel>.typeName)\">\n"
             + Content.typeName + "\n</svg>\n"
     }
 }
@@ -96,8 +123,8 @@ public protocol Shape: Open {
 }
 extension Shape {
     public static var typeName: String {
-        "<rect x=\"\(X.typeName)\" y=\"\(Y.typeName)\" width=\"\(W.typeName)\" height=\"\(H.typeName)\" "
-            + "rx=\"12\" fill=\"\(Fill.typeName)\"/>\n"
+        "<rect x=\"\(XMLEscaped<X>.typeName)\" y=\"\(XMLEscaped<Y>.typeName)\" width=\"\(XMLEscaped<W>.typeName)\" height=\"\(XMLEscaped<H>.typeName)\" "
+            + "rx=\"12\" fill=\"\(XMLEscaped<Fill>.typeName)\"/>\n"
     }
 }
 
@@ -109,7 +136,7 @@ public protocol FullBleedRect: Open {
 }
 extension FullBleedRect {
     public static var typeName: String {
-        "<rect width=\"\(W.typeName)\" height=\"\(H.typeName)\" fill=\"\(Fill.typeName)\"/>\n"
+        "<rect width=\"\(XMLEscaped<W>.typeName)\" height=\"\(XMLEscaped<H>.typeName)\" fill=\"\(XMLEscaped<Fill>.typeName)\"/>\n"
     }
 }
 
@@ -123,7 +150,7 @@ public protocol RoundedFullBleedRect: Open {
 }
 extension RoundedFullBleedRect {
     public static var typeName: String {
-        "<rect width=\"\(W.typeName)\" height=\"\(H.typeName)\" rx=\"\(Radius.typeName)\" fill=\"\(Fill.typeName)\"/>\n"
+        "<rect width=\"\(XMLEscaped<W>.typeName)\" height=\"\(XMLEscaped<H>.typeName)\" rx=\"\(XMLEscaped<Radius>.typeName)\" fill=\"\(XMLEscaped<Fill>.typeName)\"/>\n"
     }
 }
 
@@ -141,8 +168,8 @@ public protocol ItalicLabel: Open {
 }
 extension ItalicLabel {
     public static var typeName: String {
-        "<text x=\"\(X.typeName)\" y=\"\(Y.typeName)\" text-anchor=\"\(Anchor.typeName)\" "
-            + "fill=\"\(TextSecondary.typeName)\" font-size=\"\(Size.typeName)\" font-style=\"italic\">\(Content.typeName)</text>\n"
+        "<text x=\"\(XMLEscaped<X>.typeName)\" y=\"\(XMLEscaped<Y>.typeName)\" text-anchor=\"\(XMLEscaped<Anchor>.typeName)\" "
+            + "fill=\"\(XMLEscaped<TextSecondary>.typeName)\" font-size=\"\(XMLEscaped<Size>.typeName)\" font-style=\"italic\">\(XMLEscaped<Content>.typeName)</text>\n"
     }
 }
 
@@ -171,7 +198,7 @@ extension StartAt: Pen {
     public typealias AtX = X
     public typealias AtY = Y
     public static var typeName: String {
-        "M\(SpanPx<X>.typeName),\(Y.count)"
+        "M\(XMLEscaped<SpanPx<X>>.typeName),\(Y.count)"
     }
 }
 
@@ -185,7 +212,7 @@ extension UntilY: Pen {
     public typealias AtX = Prev.AtX
     public typealias AtY = Line
     public static var typeName: String {
-        "\(Prev.typeName) L\(SpanPx<Prev.AtX>.typeName),\(Line.count)"
+        "\(XMLEscaped<Prev>.typeName) L\(XMLEscaped<SpanPx<Prev.AtX>>.typeName),\(Line.count)"
     }
 }
 
@@ -198,7 +225,7 @@ extension UntilX: Pen {
     public typealias AtX = Line
     public typealias AtY = Prev.AtY
     public static var typeName: String {
-        "\(Prev.typeName) L\(SpanPx<Line>.typeName),\(Prev.AtY.count)"
+        "\(XMLEscaped<Prev>.typeName) L\(XMLEscaped<SpanPx<Line>>.typeName),\(Prev.AtY.count)"
     }
 }
 
@@ -214,7 +241,7 @@ extension SlideTo: Pen {
     public typealias AtX = X
     public typealias AtY = Y
     public static var typeName: String {
-        "\(Prev.typeName) L\(SpanPx<X>.typeName),\(Y.count)"
+        "\(XMLEscaped<Prev>.typeName) L\(XMLEscaped<SpanPx<X>>.typeName),\(Y.count)"
     }
 }
 
@@ -284,9 +311,9 @@ extension SpanLabelMidFitted {
             measured <= given,
             "SpanLabelMidFitted overflow in \(Self.self): \"\(Content.typeName)\" measures \(measured)px, the slice hands \(given)px"
         )
-        return "<text x=\"\(SpanPx<MidOf<X, W>>.typeName)\" y=\"\(Y.typeName)\" text-anchor=\"middle\" "
-            + "fill=\"\(FillColor.typeName)\" font-weight=\"\(Weight.typeName)\" "
-            + "font-size=\"\(Size.typeName)\">\(Content.typeName)</text>\n"
+        return "<text x=\"\(XMLEscaped<SpanPx<MidOf<X, W>>>.typeName)\" y=\"\(XMLEscaped<Y>.typeName)\" text-anchor=\"middle\" "
+            + "fill=\"\(XMLEscaped<FillColor>.typeName)\" font-weight=\"\(XMLEscaped<Weight>.typeName)\" "
+            + "font-size=\"\(XMLEscaped<Size>.typeName)\">\(XMLEscaped<Content>.typeName)</text>\n"
     }
 }
 
@@ -365,9 +392,19 @@ extension SpanLabelMidWrapped {
         let base = Int(Y.typeName) ?? 0
         let pitch = Int(LinePitch.typeName) ?? 0
         return lines.enumerated().map { index, text in
-            "<text x=\"\(SpanPx<MidOf<X, W>>.typeName)\" y=\"\(base + pitch * index)\" text-anchor=\"middle\" "
-                + "fill=\"\(FillColor.typeName)\" font-weight=\"\(Weight.typeName)\" "
-                + "font-size=\"\(Size.typeName)\">\(text)</text>\n"
+            let escaped = text.unicodeScalars.map { character -> String in
+                switch character {
+                case "&": return "&amp;"
+                case "<": return "&lt;"
+                case ">": return "&gt;"
+                case "\"": return "&quot;"
+                case "'": return "&apos;"
+                default: return String(character)
+                }
+            }.joined()
+            return "<text x=\"\(XMLEscaped<SpanPx<MidOf<X, W>>>.typeName)\" y=\"\(base + pitch * index)\" text-anchor=\"middle\" "
+                + "fill=\"\(XMLEscaped<FillColor>.typeName)\" font-weight=\"\(XMLEscaped<Weight>.typeName)\" "
+                + "font-size=\"\(XMLEscaped<Size>.typeName)\">\(escaped)</text>\n"
         }.joined()
     }
 }
@@ -429,9 +466,19 @@ extension SpanLabelWrapped {
         let base = Int(Y.typeName) ?? 0
         let pitch = Int(LinePitch.typeName) ?? 0
         return lines.enumerated().map { index, text in
-            "<text x=\"\(SpanPx<X>.typeName)\" y=\"\(base + pitch * index)\" text-anchor=\"start\" "
-                + "fill=\"\(FillColor.typeName)\" font-weight=\"\(Weight.typeName)\" "
-                + "font-size=\"\(Size.typeName)\">\(text)</text>\n"
+            let escaped = text.unicodeScalars.map { character -> String in
+                switch character {
+                case "&": return "&amp;"
+                case "<": return "&lt;"
+                case ">": return "&gt;"
+                case "\"": return "&quot;"
+                case "'": return "&apos;"
+                default: return String(character)
+                }
+            }.joined()
+            return "<text x=\"\(XMLEscaped<SpanPx<X>>.typeName)\" y=\"\(base + pitch * index)\" text-anchor=\"start\" "
+                + "fill=\"\(XMLEscaped<FillColor>.typeName)\" font-weight=\"\(XMLEscaped<Weight>.typeName)\" "
+                + "font-size=\"\(XMLEscaped<Size>.typeName)\">\(escaped)</text>\n"
         }.joined()
     }
 }
@@ -502,8 +549,8 @@ public protocol DashedArrow: Open {
 }
 extension DashedArrow {
     public static var typeName: String {
-        "<path d=\"\(Path.typeName)\" stroke=\"\(TextSecondary.typeName)\" stroke-width=\"\(ArrowWidth.typeName)\" stroke-dasharray=\"\(DependencyDash.typeName)\" "
-            + "fill=\"none\" marker-end=\"url(#\(ArrowHeadName.typeName))\"/>\n"
+        "<path d=\"\(XMLEscaped<Path>.typeName)\" stroke=\"\(XMLEscaped<TextSecondary>.typeName)\" stroke-width=\"\(XMLEscaped<ArrowWidth>.typeName)\" stroke-dasharray=\"\(XMLEscaped<DependencyDash>.typeName)\" "
+            + "fill=\"none\" marker-end=\"url(#\(XMLEscaped<ArrowHeadName>.typeName))\"/>\n"
     }
 }
 
@@ -515,7 +562,7 @@ public protocol Dropped: Open {
 }
 extension Dropped {
     public static var typeName: String {
-        "<g transform=\"translate(0, \(Y.typeName))\">\n" + Content.typeName + "</g>\n"
+        "<g transform=\"translate(0, \(XMLEscaped<Y>.typeName))\">\n" + Content.typeName + "</g>\n"
     }
 }
 
@@ -531,7 +578,7 @@ public protocol PlacedScaled: Open {
 }
 extension PlacedScaled {
     public static var typeName: String {
-        "<g transform=\"translate(\(X.typeName),\(Y.typeName)) scale(\(Scale.typeName))\">\n" + Content.typeName + "</g>\n"
+        "<g transform=\"translate(\(XMLEscaped<X>.typeName),\(XMLEscaped<Y>.typeName)) scale(\(XMLEscaped<Scale>.typeName))\">\n" + Content.typeName + "</g>\n"
     }
 }
 
@@ -579,7 +626,7 @@ public protocol Linked: Open {
 }
 extension Linked {
     public static var typeName: String {
-        "<a href=\"\(Target.typeName)\">\n" + Content.typeName + "</a>\n"
+        "<a href=\"\(XMLEscaped<Target>.typeName)\">\n" + Content.typeName + "</a>\n"
     }
 }
 
@@ -651,7 +698,7 @@ extension HoverRevealStyle {
         .hover-pair .hover-trigger { cursor: pointer; }
         .hover-pair .hover-trigger:hover ~ .hover-panel, .hover-pair .hover-panel:hover { opacity: 1; visibility: visible; transition-delay: 0s; }
         .hover-highlight { transition: stroke 150ms ease, stroke-width 150ms ease; cursor: pointer; }
-        .hover-highlight:hover { stroke: \(AccentRole.typeName); stroke-width: 3; }
+        .hover-highlight:hover { stroke: \(XMLEscaped<AccentRole>.typeName); stroke-width: 3; }
         </style>
 
         """
@@ -688,7 +735,7 @@ public protocol GlyphRect: Open {
 }
 extension GlyphRect {
     public static var typeName: String {
-        "<rect x=\"\(X.typeName)\" y=\"\(Y.typeName)\" width=\"\(W.typeName)\" height=\"\(H.typeName)\" rx=\"\(Radius.typeName)\"/>\n"
+        "<rect x=\"\(XMLEscaped<X>.typeName)\" y=\"\(XMLEscaped<Y>.typeName)\" width=\"\(XMLEscaped<W>.typeName)\" height=\"\(XMLEscaped<H>.typeName)\" rx=\"\(XMLEscaped<Radius>.typeName)\"/>\n"
     }
 }
 
@@ -706,8 +753,8 @@ public protocol GlyphRectStroked: Open {
 }
 extension GlyphRectStroked {
     public static var typeName: String {
-        "<rect x=\"\(X.typeName)\" y=\"\(Y.typeName)\" width=\"\(W.typeName)\" height=\"\(H.typeName)\" rx=\"\(Radius.typeName)\" "
-            + "fill=\"none\" stroke=\"\(Stroke.typeName)\" stroke-width=\"\(HairlineWidth.typeName)\"/>\n"
+        "<rect x=\"\(XMLEscaped<X>.typeName)\" y=\"\(XMLEscaped<Y>.typeName)\" width=\"\(XMLEscaped<W>.typeName)\" height=\"\(XMLEscaped<H>.typeName)\" rx=\"\(XMLEscaped<Radius>.typeName)\" "
+            + "fill=\"none\" stroke=\"\(XMLEscaped<Stroke>.typeName)\" stroke-width=\"\(XMLEscaped<HairlineWidth>.typeName)\"/>\n"
     }
 }
 
@@ -719,7 +766,7 @@ public protocol GlyphCircle: Open {
 }
 extension GlyphCircle {
     public static var typeName: String {
-        "<circle cx=\"\(CX.typeName)\" cy=\"\(CY.typeName)\" r=\"\(R.typeName)\"/>\n"
+        "<circle cx=\"\(XMLEscaped<CX>.typeName)\" cy=\"\(XMLEscaped<CY>.typeName)\" r=\"\(XMLEscaped<R>.typeName)\"/>\n"
     }
 }
 
@@ -731,7 +778,7 @@ public protocol GlyphPath: Open {
 }
 extension GlyphPath {
     public static var typeName: String {
-        "<path d=\"\(D.typeName)\"/>\n"
+        "<path d=\"\(XMLEscaped<D>.typeName)\"/>\n"
     }
 }
 
@@ -742,7 +789,7 @@ public protocol GlyphPathThick: Open {
 }
 extension GlyphPathThick {
     public static var typeName: String {
-        "<path d=\"\(D.typeName)\" stroke-width=\"6\"/>\n"
+        "<path d=\"\(XMLEscaped<D>.typeName)\" stroke-width=\"6\"/>\n"
     }
 }
 
@@ -756,7 +803,7 @@ public protocol StandaloneStrokedPath: Open {
 }
 extension StandaloneStrokedPath {
     public static var typeName: String {
-        "<path d=\"\(D.typeName)\" \(GlyphStroke<Stroke>.typeName)/>\n"
+        "<path d=\"\(XMLEscaped<D>.typeName)\" \(GlyphStroke<Stroke>.typeName)/>\n"
     }
 }
 
@@ -768,7 +815,7 @@ public protocol FilledGroup: Open {
 }
 extension FilledGroup {
     public static var typeName: String {
-        "<g fill=\"\(Fill.typeName)\">\n" + Content.typeName + "</g>\n"
+        "<g fill=\"\(XMLEscaped<Fill>.typeName)\">\n" + Content.typeName + "</g>\n"
     }
 }
 
@@ -784,7 +831,7 @@ public protocol FilledGroupClassed: Open {
 }
 extension FilledGroupClassed {
     public static var typeName: String {
-        "<g class=\"\(Class.typeName)\" fill=\"\(Fill.typeName)\">\n" + Content.typeName + "</g>\n"
+        "<g class=\"\(XMLEscaped<Class>.typeName)\" fill=\"\(XMLEscaped<Fill>.typeName)\">\n" + Content.typeName + "</g>\n"
     }
 }
 
@@ -811,7 +858,7 @@ public enum GlyphStroke<
 >: Close {}
 extension GlyphStroke {
     public static var typeName: String {
-        "stroke=\"\(C.typeName)\" stroke-width=\"9\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\""
+        "stroke=\"\(XMLEscaped<C>.typeName)\" stroke-width=\"9\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\""
     }
 }
 
@@ -821,8 +868,8 @@ extension ArrowMarkers {
     public static var typeName: String {
         """
         <defs>
-        <marker id="\(ArrowHeadName.typeName)" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto">
-        <path d="M0,0 L6,3 L0,6 Z" fill="\(TextSecondary.typeName)"/>
+        <marker id="\(XMLEscaped<ArrowHeadName>.typeName)" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="\(XMLEscaped<TextSecondary>.typeName)"/>
         </marker>
         </defs>
 
@@ -849,7 +896,7 @@ public protocol StateGroup: Open {
 }
 extension StateGroup {
     public static var typeName: String {
-        "<g id=\"\(Id.typeName)\" class=\"vi-state\">\n" + Content.typeName + "</g>\n"
+        "<g id=\"\(XMLEscaped<Id>.typeName)\" class=\"vi-state\">\n" + Content.typeName + "</g>\n"
     }
 }
 
@@ -866,7 +913,7 @@ extension StateSwitchStyle {
         <style>
         .vi-state { display: none; }
         .vi-state:target { display: inline; }
-        svg:not(:has(.vi-state:target)) #\(DefaultId.typeName) { display: inline; }
+        svg:not(:has(.vi-state:target)) #\(XMLEscaped<DefaultId>.typeName) { display: inline; }
         </style>
 
         """
@@ -893,7 +940,7 @@ extension SpanVariant: Spanning {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<g class=\"vi-variant\" data-vi-owner=\"\(Owner.typeName)\" data-vi-at=\"\(Position.typeName)\""
+        "<g class=\"vi-variant\" data-vi-owner=\"\(XMLEscaped<Owner>.typeName)\" data-vi-at=\"\(XMLEscaped<Position>.typeName)\""
             + (ShownAtRest.typeName == "1" ? "" : " style=\"display:none\"")
             + ">\n" + Content.rendered(atX: x, width: w) + "</g>\n"
     }
@@ -954,7 +1001,27 @@ extension RuleKey: Spanning {
             pile.append(inner[inner.index(after: cut)...])
             pile.append(inner[inner.startIndex..<cut])
         }
-        return "<g class=\"vi-rule\" data-vi-rules=\"\(names.joined(separator: " "))\" data-vi-slot=\"\(String(describing: R.Slot.self))\" cursor=\"pointer\">\n"
+        let rules = names.joined(separator: " ").unicodeScalars.map { character -> String in
+                switch character {
+                case "&": return "&amp;"
+                case "<": return "&lt;"
+                case ">": return "&gt;"
+                case "\"": return "&quot;"
+                case "'": return "&apos;"
+                default: return String(character)
+                }
+            }.joined()
+        let slot = String(describing: R.Slot.self).unicodeScalars.map { character -> String in
+                switch character {
+                case "&": return "&amp;"
+                case "<": return "&lt;"
+                case ">": return "&gt;"
+                case "\"": return "&quot;"
+                case "'": return "&apos;"
+                default: return String(character)
+                }
+            }.joined()
+        return "<g class=\"vi-rule\" data-vi-rules=\"\(rules)\" data-vi-slot=\"\(slot)\" cursor=\"pointer\">\n"
             + Face.rendered(atX: x, width: w) + "</g>\n"
     }
 }
@@ -975,7 +1042,7 @@ extension SpanVariantKey: Spanning {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<g class=\"vi-variant-key\" data-vi-owner=\"\(Owner.typeName)\" data-vi-to=\"\(Position.typeName)\" cursor=\"pointer\">\n"
+        "<g class=\"vi-variant-key\" data-vi-owner=\"\(XMLEscaped<Owner>.typeName)\" data-vi-to=\"\(XMLEscaped<Position>.typeName)\" cursor=\"pointer\">\n"
             + Face.rendered(atX: x, width: w) + "</g>\n"
     }
 }
@@ -1098,7 +1165,7 @@ extension Fixed: Divides {
         atX x: X.Type,
         free f: Free.Type
     ) -> String {
-        "<g transform=\"translate(\(SpanPx<X>.typeName), 0)\">\n"
+        "<g transform=\"translate(\(XMLEscaped<SpanPx<X>>.typeName), 0)\">\n"
             + Content.rendered(atX: RowStart.self, width: GivenSpan<W>.self)
             + "</g>\n"
     }
@@ -1158,7 +1225,7 @@ extension Flexible: Divides {
         atX x: X.Type,
         free f: Free.Type
     ) -> String {
-        "<g transform=\"translate(\(SpanPx<X>.typeName), 0)\">\n"
+        "<g transform=\"translate(\(XMLEscaped<SpanPx<X>>.typeName), 0)\">\n"
             + Content.rendered(atX: RowStart.self, width: f)
             + "</g>\n"
     }
@@ -1230,7 +1297,7 @@ extension Fixed: DividesY {
         width w: Across.Type,
         free f: Free.Type
     ) -> String {
-        "<g transform=\"translate(0, \(SpanPx<Y>.typeName))\">\n"
+        "<g transform=\"translate(0, \(XMLEscaped<SpanPx<Y>>.typeName))\">\n"
             + Content.rendered(atX: RowStart.self, width: w)
             + "</g>\n"
     }
@@ -1256,7 +1323,7 @@ extension Flexible: DividesY {
         width w: Across.Type,
         free f: Free.Type
     ) -> String {
-        "<g transform=\"translate(0, \(SpanPx<Y>.typeName))\">\n"
+        "<g transform=\"translate(0, \(XMLEscaped<SpanPx<Y>>.typeName))\">\n"
             + Content.rendered(atX: RowStart.self, width: w)
             + "</g>\n"
     }
@@ -1326,7 +1393,7 @@ where Body: DividesY & Structure {
         )
         return "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 \(Across.count) \(Body.Taken.count)\" role=\"img\" "
             + "data-vi-canvas=\"1\" font-family=\"Inter, Roboto, system-ui, sans-serif\" "
-            + "aria-label=\"\(AriaLabel.typeName)\">\n"
+            + "aria-label=\"\(XMLEscaped<AriaLabel>.typeName)\">\n"
             + Defs.typeName
             + Backdrop.typeName
             + Body.rendered(
@@ -1459,8 +1526,8 @@ extension SpanCardFace {
         width w: W.Type
     ) -> String {
         "<g filter=\"url(#" + SurfaceCardShadowName.typeName + ")\">\n"
-            + "<rect x=\"\(SpanPx<X>.typeName)\" width=\"\(SpanPx<W>.typeName)\" height=\"\(H.typeName)\" "
-            + "rx=\"\(Radius.typeName)\" fill=\"\(Fill.typeName)\" stroke=\"\(Stroke.typeName)\" stroke-width=\"\(HairlineWidth.typeName)\"/>\n"
+            + "<rect x=\"\(XMLEscaped<SpanPx<X>>.typeName)\" width=\"\(XMLEscaped<SpanPx<W>>.typeName)\" height=\"\(XMLEscaped<H>.typeName)\" "
+            + "rx=\"\(XMLEscaped<Radius>.typeName)\" fill=\"\(XMLEscaped<Fill>.typeName)\" stroke=\"\(XMLEscaped<Stroke>.typeName)\" stroke-width=\"\(XMLEscaped<HairlineWidth>.typeName)\"/>\n"
             + "</g>\n"
     }
 }
@@ -1482,9 +1549,9 @@ extension SpanLabel {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<text x=\"\(SpanPx<X>.typeName)\" y=\"\(Y.typeName)\" text-anchor=\"start\" "
-            + "fill=\"\(FillColor.typeName)\" font-weight=\"\(Weight.typeName)\" "
-            + "font-size=\"\(Size.typeName)\">\(Content.typeName)</text>\n"
+        "<text x=\"\(XMLEscaped<SpanPx<X>>.typeName)\" y=\"\(XMLEscaped<Y>.typeName)\" text-anchor=\"start\" "
+            + "fill=\"\(XMLEscaped<FillColor>.typeName)\" font-weight=\"\(XMLEscaped<Weight>.typeName)\" "
+            + "font-size=\"\(XMLEscaped<Size>.typeName)\">\(XMLEscaped<Content>.typeName)</text>\n"
     }
 }
 
@@ -1503,8 +1570,8 @@ extension SpanDot {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<circle cx=\"\(SpanPx<MidOf<X, W>>.typeName)\" cy=\"\(CY.typeName)\" "
-            + "r=\"\(R.typeName)\" fill=\"\(Fill.typeName)\"/>\n"
+        "<circle cx=\"\(XMLEscaped<SpanPx<MidOf<X, W>>>.typeName)\" cy=\"\(XMLEscaped<CY>.typeName)\" "
+            + "r=\"\(XMLEscaped<R>.typeName)\" fill=\"\(XMLEscaped<Fill>.typeName)\"/>\n"
     }
 }
 
@@ -1520,7 +1587,7 @@ public enum TimedReveal<
 extension TimedReveal {
     public static var typeName: String {
         "<g opacity=\"0\"><set attributeName=\"opacity\" to=\"1\" "
-            + "begin=\"\(Begin.typeName)s\" dur=\"\(Dwell.typeName)s\"/>\n"
+            + "begin=\"\(XMLEscaped<Begin>.typeName)s\" dur=\"\(XMLEscaped<Dwell>.typeName)s\"/>\n"
             + Content.typeName + "</g>\n"
     }
 }
@@ -1535,7 +1602,7 @@ public enum FrozenReveal<
 extension FrozenReveal {
     public static var typeName: String {
         "<g opacity=\"0\"><set attributeName=\"opacity\" to=\"1\" "
-            + "begin=\"\(Begin.typeName)s\" fill=\"freeze\"/>\n"
+            + "begin=\"\(XMLEscaped<Begin>.typeName)s\" fill=\"freeze\"/>\n"
             + Content.typeName + "</g>\n"
     }
 }
@@ -1559,8 +1626,8 @@ extension SpanBreathingDot {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<circle cx=\"\(SpanPx<MidOf<X, W>>.typeName)\" cy=\"\(CY.typeName)\" "
-            + "r=\"\(R.typeName)\" fill=\"\(Fill.typeName)\">"
+        "<circle cx=\"\(XMLEscaped<SpanPx<MidOf<X, W>>>.typeName)\" cy=\"\(XMLEscaped<CY>.typeName)\" "
+            + "r=\"\(XMLEscaped<R>.typeName)\" fill=\"\(XMLEscaped<Fill>.typeName)\">"
             + "<animate attributeName=\"opacity\" values=\"1;0.55;1\" dur=\"4s\" "
             + "repeatCount=\"indefinite\"/></circle>\n"
     }
@@ -1579,7 +1646,7 @@ extension SpanLink: Spanning {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<a href=\"\(Target.typeName)\">\n"
+        "<a href=\"\(XMLEscaped<Target>.typeName)\">\n"
             + Content.rendered(atX: x, width: w)
             + "</a>\n"
     }
@@ -1602,8 +1669,8 @@ extension SpanTrack {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<rect x=\"\(SpanPx<X>.typeName)\" width=\"\(SpanPx<W>.typeName)\" height=\"\(H.typeName)\" "
-            + "rx=\"\(Radius.typeName)\" fill=\"\(Fill.typeName)\"/>\n"
+        "<rect x=\"\(XMLEscaped<SpanPx<X>>.typeName)\" width=\"\(XMLEscaped<SpanPx<W>>.typeName)\" height=\"\(XMLEscaped<H>.typeName)\" "
+            + "rx=\"\(XMLEscaped<Radius>.typeName)\" fill=\"\(XMLEscaped<Fill>.typeName)\"/>\n"
     }
 }
 /// This face carries the accent panel: the one hero a screen may carry. The accent never goes flat
@@ -1622,8 +1689,8 @@ extension SpanHeroFace {
         width w: W.Type
     ) -> String {
         "<g filter=\"url(#" + SoftShadowName.typeName + ")\">\n"
-            + "<rect x=\"\(SpanPx<X>.typeName)\" width=\"\(SpanPx<W>.typeName)\" height=\"\(H.typeName)\" "
-            + "rx=\"\(Radius.typeName)\" fill=\"\(Fill.typeName)\"/>\n"
+            + "<rect x=\"\(XMLEscaped<SpanPx<X>>.typeName)\" width=\"\(XMLEscaped<SpanPx<W>>.typeName)\" height=\"\(XMLEscaped<H>.typeName)\" "
+            + "rx=\"\(XMLEscaped<Radius>.typeName)\" fill=\"\(XMLEscaped<Fill>.typeName)\"/>\n"
             + "</g>\n"
     }
 }
@@ -1682,9 +1749,9 @@ extension SpanLabelBudgeted {
             text.count <= limit,
             "SpanLabelBudgeted overflow in \(Self.self): \"\(text)\" is \(text.count) characters, budget is \(limit)"
         )
-        return "<text x=\"\(SpanPx<X>.typeName)\" y=\"\(Y.typeName)\" text-anchor=\"start\" "
-            + "fill=\"\(FillColor.typeName)\" font-weight=\"\(Weight.typeName)\" "
-            + "font-size=\"\(Size.typeName)\">\(text)</text>\n"
+        return "<text x=\"\(XMLEscaped<SpanPx<X>>.typeName)\" y=\"\(XMLEscaped<Y>.typeName)\" text-anchor=\"start\" "
+            + "fill=\"\(XMLEscaped<FillColor>.typeName)\" font-weight=\"\(XMLEscaped<Weight>.typeName)\" "
+            + "font-size=\"\(XMLEscaped<Size>.typeName)\">\(XMLEscaped<Content>.typeName)</text>\n"
     }
 }
 /// This drops spanning content down by a stated token. The y axis
@@ -1698,7 +1765,7 @@ extension SpanLowered: Spanning {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<g transform=\"translate(0, \(Y.typeName))\">\n"
+        "<g transform=\"translate(0, \(XMLEscaped<Y>.typeName))\">\n"
             + Content.rendered(atX: x, width: w)
             + "</g>\n"
     }
@@ -1717,9 +1784,9 @@ extension SpanRule {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<line x1=\"\(SpanPx<X>.typeName)\" y1=\"\(Y.typeName)\" "
-            + "x2=\"\(SpanPx<Sum<X, W>>.typeName)\" y2=\"\(Y.typeName)\" "
-            + "stroke=\"\(Stroke.typeName)\" stroke-width=\"\(ArrowWidth.typeName)\"/>\n"
+        "<line x1=\"\(XMLEscaped<SpanPx<X>>.typeName)\" y1=\"\(XMLEscaped<Y>.typeName)\" "
+            + "x2=\"\(XMLEscaped<SpanPx<Sum<X, W>>>.typeName)\" y2=\"\(XMLEscaped<Y>.typeName)\" "
+            + "stroke=\"\(XMLEscaped<Stroke>.typeName)\" stroke-width=\"\(XMLEscaped<ArrowWidth>.typeName)\"/>\n"
     }
 }
 /// This wraps spanning content in the fixed soft shadow, the same filter `Shadowed` reads.
@@ -1753,8 +1820,8 @@ extension SpanTrackDashed {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<rect x=\"\(SpanPx<X>.typeName)\" width=\"\(SpanPx<W>.typeName)\" height=\"\(H.typeName)\" rx=\"\(Radius.typeName)\" "
-            + "fill=\"\(Fill.typeName)\" stroke=\"\(Stroke.typeName)\" stroke-width=\"\(HairlineWidth.typeName)\" stroke-dasharray=\"\(DependencyDash.typeName)\"/>\n"
+        "<rect x=\"\(XMLEscaped<SpanPx<X>>.typeName)\" width=\"\(XMLEscaped<SpanPx<W>>.typeName)\" height=\"\(XMLEscaped<H>.typeName)\" rx=\"\(XMLEscaped<Radius>.typeName)\" "
+            + "fill=\"\(XMLEscaped<Fill>.typeName)\" stroke=\"\(XMLEscaped<Stroke>.typeName)\" stroke-width=\"\(XMLEscaped<HairlineWidth>.typeName)\" stroke-dasharray=\"\(XMLEscaped<DependencyDash>.typeName)\"/>\n"
     }
 }
 /// This draws nothing and spans anything: the empty slot of a generic column.
@@ -1798,9 +1865,9 @@ extension SpanArrowAcross {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<line x1=\"\(SpanPx<X>.typeName)\" y1=\"\(Y.typeName)\" "
-            + "x2=\"\(SpanPx<Sum<X, W>>.typeName)\" y2=\"\(Y.typeName)\" "
-            + "stroke=\"\(TextSecondary.typeName)\" stroke-width=\"\(ArrowWidth.typeName)\" marker-end=\"url(#\(ArrowHeadName.typeName))\"/>\n"
+        "<line x1=\"\(XMLEscaped<SpanPx<X>>.typeName)\" y1=\"\(XMLEscaped<Y>.typeName)\" "
+            + "x2=\"\(XMLEscaped<SpanPx<Sum<X, W>>>.typeName)\" y2=\"\(XMLEscaped<Y>.typeName)\" "
+            + "stroke=\"\(XMLEscaped<TextSecondary>.typeName)\" stroke-width=\"\(XMLEscaped<ArrowWidth>.typeName)\" marker-end=\"url(#\(XMLEscaped<ArrowHeadName>.typeName))\"/>\n"
     }
 }
 /// The same arrow points LEFT here: head on the slice's start, for a dependency that points back.
@@ -1815,9 +1882,9 @@ extension SpanArrowBackAcross {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<line x1=\"\(SpanPx<Sum<X, W>>.typeName)\" y1=\"\(Y.typeName)\" "
-            + "x2=\"\(SpanPx<X>.typeName)\" y2=\"\(Y.typeName)\" "
-            + "stroke=\"\(TextSecondary.typeName)\" stroke-width=\"\(ArrowWidth.typeName)\" marker-end=\"url(#\(ArrowHeadName.typeName))\"/>\n"
+        "<line x1=\"\(XMLEscaped<SpanPx<Sum<X, W>>>.typeName)\" y1=\"\(XMLEscaped<Y>.typeName)\" "
+            + "x2=\"\(XMLEscaped<SpanPx<X>>.typeName)\" y2=\"\(XMLEscaped<Y>.typeName)\" "
+            + "stroke=\"\(XMLEscaped<TextSecondary>.typeName)\" stroke-width=\"\(XMLEscaped<ArrowWidth>.typeName)\" marker-end=\"url(#\(XMLEscaped<ArrowHeadName>.typeName))\"/>\n"
     }
 }
 /// This draws a solid flow arrow DOWN the page on its slice's middle, between two stated
@@ -1834,9 +1901,9 @@ extension SpanArrowDown {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<line x1=\"\(SpanPx<MidOf<X, W>>.typeName)\" y1=\"\(FromY.typeName)\" "
-            + "x2=\"\(SpanPx<MidOf<X, W>>.typeName)\" y2=\"\(ToY.typeName)\" "
-            + "stroke=\"\(TextSecondary.typeName)\" stroke-width=\"\(ArrowWidth.typeName)\" marker-end=\"url(#\(ArrowHeadName.typeName))\"/>\n"
+        "<line x1=\"\(XMLEscaped<SpanPx<MidOf<X, W>>>.typeName)\" y1=\"\(XMLEscaped<FromY>.typeName)\" "
+            + "x2=\"\(XMLEscaped<SpanPx<MidOf<X, W>>>.typeName)\" y2=\"\(XMLEscaped<ToY>.typeName)\" "
+            + "stroke=\"\(XMLEscaped<TextSecondary>.typeName)\" stroke-width=\"\(XMLEscaped<ArrowWidth>.typeName)\" marker-end=\"url(#\(XMLEscaped<ArrowHeadName>.typeName))\"/>\n"
     }
 }
 /// This draws the italic caption voice at its slice's origin: an arrow's aside, a
@@ -1854,9 +1921,9 @@ extension SpanLabelItalic {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<text x=\"\(SpanPx<X>.typeName)\" y=\"\(Y.typeName)\" text-anchor=\"start\" "
-            + "fill=\"\(TextSecondary.typeName)\" font-size=\"\(Size.typeName)\" "
-            + "font-style=\"italic\">\(Content.typeName)</text>\n"
+        "<text x=\"\(XMLEscaped<SpanPx<X>>.typeName)\" y=\"\(XMLEscaped<Y>.typeName)\" text-anchor=\"start\" "
+            + "fill=\"\(XMLEscaped<TextSecondary>.typeName)\" font-size=\"\(XMLEscaped<Size>.typeName)\" "
+            + "font-style=\"italic\">\(XMLEscaped<Content>.typeName)</text>\n"
     }
 }
 /// The italic caption voice anchors at its slice's MIDDLE here: the label of an arrow
@@ -1874,9 +1941,9 @@ extension SpanLabelItalicMid {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<text x=\"\(SpanPx<MidOf<X, W>>.typeName)\" y=\"\(Y.typeName)\" text-anchor=\"middle\" "
-            + "fill=\"\(TextSecondary.typeName)\" font-size=\"\(Size.typeName)\" "
-            + "font-style=\"italic\">\(Content.typeName)</text>\n"
+        "<text x=\"\(XMLEscaped<SpanPx<MidOf<X, W>>>.typeName)\" y=\"\(XMLEscaped<Y>.typeName)\" text-anchor=\"middle\" "
+            + "fill=\"\(XMLEscaped<TextSecondary>.typeName)\" font-size=\"\(XMLEscaped<Size>.typeName)\" "
+            + "font-style=\"italic\">\(XMLEscaped<Content>.typeName)</text>\n"
     }
 }
 /// This fills the LEADING share of its slice by the data itself: the part over the whole,
@@ -1897,9 +1964,9 @@ extension SpanDataFill {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<rect x=\"\(SpanPx<X>.typeName)\" "
-            + "width=\"\(SpanPx<Paired<Times<W.Left, Part>, Times<W.Right, Whole>>>.typeName)\" "
-            + "height=\"\(H.typeName)\" rx=\"\(Radius.typeName)\" fill=\"\(Fill.typeName)\"/>\n"
+        "<rect x=\"\(XMLEscaped<SpanPx<X>>.typeName)\" "
+            + "width=\"\(XMLEscaped<SpanPx<Paired<Times<W.Left, Part>, Times<W.Right, Whole>>>>.typeName)\" "
+            + "height=\"\(XMLEscaped<H>.typeName)\" rx=\"\(XMLEscaped<Radius>.typeName)\" fill=\"\(XMLEscaped<Fill>.typeName)\"/>\n"
     }
 }
 /// One data segment of a stacked bar starts after the parts already laid (`Prefix`)
@@ -1919,9 +1986,9 @@ extension SpanDataSegment {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<rect x=\"\(SpanPx<Sum<X, Paired<Times<W.Left, Prefix>, Times<W.Right, Whole>>>>.typeName)\" "
-            + "width=\"\(SpanPx<Paired<Times<W.Left, Part>, Times<W.Right, Whole>>>.typeName)\" "
-            + "height=\"\(H.typeName)\" rx=\"0\" fill=\"\(Fill.typeName)\"/>\n"
+        "<rect x=\"\(XMLEscaped<SpanPx<Sum<X, Paired<Times<W.Left, Prefix>, Times<W.Right, Whole>>>>>.typeName)\" "
+            + "width=\"\(XMLEscaped<SpanPx<Paired<Times<W.Left, Part>, Times<W.Right, Whole>>>>.typeName)\" "
+            + "height=\"\(XMLEscaped<H>.typeName)\" rx=\"0\" fill=\"\(XMLEscaped<Fill>.typeName)\"/>\n"
     }
 }
 /// A label whose anchor is the MIDDLE of its slice: a key's digit, a column's title.
@@ -1940,9 +2007,9 @@ extension SpanLabelMid {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<text x=\"\(SpanPx<MidOf<X, W>>.typeName)\" y=\"\(Y.typeName)\" text-anchor=\"middle\" "
-            + "fill=\"\(FillColor.typeName)\" font-weight=\"\(Weight.typeName)\" "
-            + "font-size=\"\(Size.typeName)\">\(Content.typeName)</text>\n"
+        "<text x=\"\(XMLEscaped<SpanPx<MidOf<X, W>>>.typeName)\" y=\"\(XMLEscaped<Y>.typeName)\" text-anchor=\"middle\" "
+            + "fill=\"\(XMLEscaped<FillColor>.typeName)\" font-weight=\"\(XMLEscaped<Weight>.typeName)\" "
+            + "font-size=\"\(XMLEscaped<Size>.typeName)\">\(XMLEscaped<Content>.typeName)</text>\n"
     }
 }
 /// A label whose anchor is the END of its slice.
@@ -1961,9 +2028,9 @@ extension SpanLabelEnd {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<text x=\"\(SpanPx<Sum<X, W>>.typeName)\" y=\"\(Y.typeName)\" text-anchor=\"end\" "
-            + "fill=\"\(FillColor.typeName)\" font-weight=\"\(Weight.typeName)\" "
-            + "font-size=\"\(Size.typeName)\">\(Content.typeName)</text>\n"
+        "<text x=\"\(XMLEscaped<SpanPx<Sum<X, W>>>.typeName)\" y=\"\(XMLEscaped<Y>.typeName)\" text-anchor=\"end\" "
+            + "fill=\"\(XMLEscaped<FillColor>.typeName)\" font-weight=\"\(XMLEscaped<Weight>.typeName)\" "
+            + "font-size=\"\(XMLEscaped<Size>.typeName)\">\(XMLEscaped<Content>.typeName)</text>\n"
     }
 }
 
@@ -1984,9 +2051,9 @@ extension SpanClipDef {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<clipPath id=\"\(Id.typeName)\">\n"
-            + "<rect x=\"\(SpanPx<X>.typeName)\" width=\"\(SpanPx<W>.typeName)\" "
-            + "height=\"\(H.typeName)\" rx=\"\(Radius.typeName)\"/>\n"
+        "<clipPath id=\"\(XMLEscaped<Id>.typeName)\">\n"
+            + "<rect x=\"\(XMLEscaped<SpanPx<X>>.typeName)\" width=\"\(XMLEscaped<SpanPx<W>>.typeName)\" "
+            + "height=\"\(XMLEscaped<H>.typeName)\" rx=\"\(XMLEscaped<Radius>.typeName)\"/>\n"
             + "</clipPath>\n"
     }
 }
@@ -2002,7 +2069,7 @@ extension SpanClipped: Spanning {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<g clip-path=\"url(#\(Id.typeName))\">\n"
+        "<g clip-path=\"url(#\(XMLEscaped<Id>.typeName))\">\n"
             + Content.rendered(atX: x, width: w)
             + "</g>\n"
     }
@@ -2023,8 +2090,8 @@ extension SpanTrackOutlined {
         atX x: X.Type,
         width w: W.Type
     ) -> String {
-        "<rect x=\"\(SpanPx<X>.typeName)\" width=\"\(SpanPx<W>.typeName)\" height=\"\(H.typeName)\" rx=\"\(Radius.typeName)\" "
-            + "fill=\"\(Fill.typeName)\" stroke=\"\(Stroke.typeName)\" stroke-width=\"\(HairlineWidth.typeName)\"/>\n"
+        "<rect x=\"\(XMLEscaped<SpanPx<X>>.typeName)\" width=\"\(XMLEscaped<SpanPx<W>>.typeName)\" height=\"\(XMLEscaped<H>.typeName)\" rx=\"\(XMLEscaped<Radius>.typeName)\" "
+            + "fill=\"\(XMLEscaped<Fill>.typeName)\" stroke=\"\(XMLEscaped<Stroke>.typeName)\" stroke-width=\"\(XMLEscaped<HairlineWidth>.typeName)\"/>\n"
     }
 }
 

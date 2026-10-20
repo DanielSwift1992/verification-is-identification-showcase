@@ -192,7 +192,8 @@ extension IntroAlt {
 // ── the geometry, stated as counts. A bar's width is its seconds: 34, 82, 199.
 // The judge's bars share one width, a hair: the exact seconds are in the label. ──
 
-public typealias Beat = Half<Half<Half<U1>>>
+public typealias Beat = U1
+public typealias IntroTicksPerSecond = U8
 public typealias HeadTall = Plus<U32, U8>
 public typealias LineTall = Plus<U16, U4>
 public typealias CompareTall = Plus<U64, Plus<U32, U16>>
@@ -753,11 +754,11 @@ public typealias CurveNoteTwoTall = Times<LineTally<CurveNoteTwo, IntroParaWide,
 public typealias ExplainOneTall = Times<LineTally<ExplainOneWord, IntroParaWide, TextS>, Plus<U16, U4>>
 public typealias SwiftTall = Plus<Times<LineTally<SwiftParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>
 public typealias PageBuildTall = Plus<Times<LineTally<PageBuildParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>
-public typealias ReadingsRevealAt = Plus<U1, Times<Plus<U2, U1>, Beat>>
+public typealias ReadingsRevealAt = Plus<IntroTicksPerSecond, Times<Plus<U2, U1>, Beat>>
 public typealias ReadingsIntroTall = Times<LineTally<ReadingsIntroWord, IntroParaWide, TextS>, Plus<U16, U4>>
 public typealias ReadingsMoralTall = Plus<Times<LineTally<ReadingsMoralParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>
 public typealias ReadingsBreakTall = Times<LineTally<ReadingsBreakWord, IntroParaWide, TextS>, Plus<U16, U4>>
-public typealias TabsRevealAt = Plus<U1, FourthBeat>
+public typealias TabsRevealAt = Plus<IntroTicksPerSecond, FourthBeat>
 public typealias TabOrgTall = Times<LineTally<TabOrgWord, IntroParaWide, TextS>, Plus<U16, U4>>
 public typealias TabScaleTall = Times<LineTally<TabScaleWord, IntroParaWide, TextS>, Plus<U16, U4>>
 public typealias TabBasicsTall = Times<LineTally<TabBasicsWord, IntroParaWide, TextS>, Plus<U16, U4>>

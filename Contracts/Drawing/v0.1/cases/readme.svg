@@ -1,0 +1,409 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 1536" role="img" data-vi-canvas="1" font-family="Inter, Roboto, system-ui, sans-serif" aria-label="The page&apos;s own manual: what it is, the measured curve, what to try.">
+<g transform="translate(0, 16)">
+<g transform="translate(16, 0)">
+<text x="0" y="29" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="21">The playground</text>
+</g>
+</g>
+<g transform="translate(0, 56)">
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">ReadMe.swift names the words on this page; ReadMePages.swift declares</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">their layout. Gate draws both from the pinned showcase world. Choose a</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">world in the rail, then open Drawing or Full. Atom declares Electron: a</text>
+<text x="0" y="76" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">matching key changes that alias, and the courts read the supported</text>
+<text x="0" y="96" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">declarations. Browser drafts are saved with their verdict, including refusals.</text>
+<text x="0" y="116" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">Edited page bodies have not been checked by Swift. The company chart</text>
+<text x="0" y="136" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">records an earlier run; it is not a timing promise for this browser.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+<g transform="translate(0, 228)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">One company, two checkers</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 260)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<circle cx="4" cy="8" r="4" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(28, 0)">
+<text x="0" y="13" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">swift build, the full package</text>
+</g>
+<g transform="translate(228, 0)">
+<circle cx="4" cy="8" r="4" fill="var(--vi-action, #336FEE)"/>
+</g>
+<g transform="translate(240, 0)">
+<text x="0" y="13" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">the judge, the same company file</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 292)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.625s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="17" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">N = 3 200</text>
+</g>
+<g transform="translate(112, 0)">
+<rect x="0" width="34" height="24" rx="12" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(154, 0)">
+<text x="0" y="17" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">34 s</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 320)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.625s" fill="freeze"/>
+<g transform="translate(112, 0)">
+<rect x="0" width="2" height="24" rx="1" fill="var(--vi-action, #336FEE)"/>
+</g>
+<g transform="translate(122, 0)">
+<text x="0" y="17" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">0.28 s</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 352)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.75s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="17" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">N = 6 400</text>
+</g>
+<g transform="translate(112, 0)">
+<rect x="0" width="82" height="24" rx="12" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(202, 0)">
+<text x="0" y="17" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">82 s</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 380)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.75s" fill="freeze"/>
+<g transform="translate(112, 0)">
+<rect x="0" width="2" height="24" rx="1" fill="var(--vi-action, #336FEE)"/>
+</g>
+<g transform="translate(122, 0)">
+<text x="0" y="17" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">0.55 s</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 412)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.875s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="17" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">N = 12 800</text>
+</g>
+<g transform="translate(112, 0)">
+<rect x="0" width="199" height="24" rx="12" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(319, 0)">
+<text x="0" y="17" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">199 s</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 440)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.875s" fill="freeze"/>
+<g transform="translate(112, 0)">
+<rect x="0" width="2" height="24" rx="1" fill="var(--vi-action, #336FEE)"/>
+</g>
+<g transform="translate(122, 0)">
+<text x="0" y="17" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">1.10 s</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 472)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.0s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">This chart records the earlier compiler and company-court run, with its original inputs.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 496)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.0s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">A bar&apos;s width records seconds from that run. At scale opens the generated company; it</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">does not rerun this compiler measurement.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 536)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.0s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="11">The courts read supported relations. The badge names what was read and what was not.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 580)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.125s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">What is happening</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 604)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.125s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">A program has two times: build time and run time.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 632)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.125s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<rect x="0" width="240" height="112" rx="0" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(256, 0)">
+<rect x="0" width="240" height="112" rx="0" fill="var(--vi-surface-card, #FFFFFF)" stroke="var(--vi-line, #EAECEE)" stroke-width="1"/>
+</g>
+<g transform="translate(32, 0)">
+<text x="0" y="25" text-anchor="start" fill="var(--vi-on-accent, #1C1C1E)" font-weight="700" font-size="13">Build time</text>
+<text x="0" y="51" text-anchor="start" fill="var(--vi-on-accent, #1C1C1E)" font-weight="400" font-size="11">the judge reads the text</text>
+<text x="0" y="77" text-anchor="start" fill="var(--vi-on-accent, #1C1C1E)" font-weight="400" font-size="11">nothing has run yet</text>
+<text x="0" y="99" text-anchor="start" fill="var(--vi-on-accent, #1C1C1E)" font-weight="700" font-size="11">this page is here</text>
+</g>
+<g transform="translate(264, 0)">
+<text x="0" y="25" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">Run time</text>
+<text x="0" y="51" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">the program executes</text>
+<text x="0" y="77" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">effects happen</text>
+<text x="0" y="99" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="700" font-size="11">none of this page</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 756)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.25s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Swift already works this way: the compiler builds generic types at build time,</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">from the requirements you wrote, and they are nowhere in the source. The</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">compiler checks a whole SwiftUI view tree the same way, before anything</text>
+<text x="0" y="76" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">runs.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 852)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.25s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The worlds declare types. JavaScript draws them and runs the supported</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">courts and guards; it does not compile edited page bodies.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 924)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.375s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">One file, two readings</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 948)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.375s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Bare, Table, Drawing and Full are views of the open world in this bench.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 976)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.375s" fill="freeze"/>
+<g transform="translate(24, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">Code</text>
+</g>
+<g transform="translate(304, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="13">Table</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 1000)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.375s" fill="freeze"/>
+<g transform="translate(24, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="11">public enum Emp01: Employee, Person {</text>
+</g>
+<g transform="translate(280, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">name</text>
+</g>
+<g transform="translate(336, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">Rank</text>
+</g>
+<g transform="translate(416, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="11">Home</text>
+</g>
+<g transform="translate(488, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1022)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.375s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<rect x="0" width="232" height="20" rx="4" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(408, 0)">
+<rect x="0" width="80" height="20" rx="4" fill="var(--vi-accent, #FFDD2D)"/>
+</g>
+<g transform="translate(488, 0)">
+</g>
+<g transform="translate(24, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-on-accent, #1C1C1E)" font-weight="400" font-size="11">public typealias Home = Finance</text>
+</g>
+<g transform="translate(280, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="11">Emp01</text>
+</g>
+<g transform="translate(336, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="11">Manager</text>
+</g>
+<g transform="translate(416, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-on-accent, #1C1C1E)" font-weight="400" font-size="11">Finance</text>
+</g>
+<g transform="translate(488, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1044)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.375s" fill="freeze"/>
+<g transform="translate(24, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="11">}</text>
+</g>
+<g transform="translate(280, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="11">Emp02</text>
+</g>
+<g transform="translate(336, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="11">Lead</text>
+</g>
+<g transform="translate(416, 0)">
+<text x="0" y="15" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="11">Finance</text>
+</g>
+<g transform="translate(488, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1072)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.375s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">The yellow line and the yellow cell are one fact: Emp01 works in Finance.</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">Elsewhere a table is a second copy of the data, and two copies are soon two</text>
+<text x="0" y="56" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">truths. Here the page reads the table from the file and stores nothing: the</text>
+<text x="0" y="76" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">table cannot differ from the file.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1160)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.375s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Break it: press Table, click a name: the editor opens its declaration.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1204)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="19" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="700" font-size="15">The tabs</text>
+</g>
+</g>
+</g>
+<g transform="translate(0, 1228)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The organization: four people as types. Edit their declarations in Full.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1248)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">At scale: a generated company. Projections show a portion; the court reads</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">its complete fragment.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1288)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Basics: the layout itself, in four steps.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1308)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">A typewriter: a Note literal to edit in Full; typing into the drawing is not</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">available.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1348)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Buttons: a lamp and a passcode pad, and every key is a rewrite rule.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1368)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Light: a lamp as code. You mix its lines, and the page computes the colour.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1388)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">The atom: the reason behind the lamp. One electron on a ladder of floors.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1408)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">Rules and FAQ: the grammar and six answers, and both are files too.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1452)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">In The organization, open Full and change an employee Home alias. The</text>
+<text x="0" y="36" text-anchor="start" fill="var(--vi-text-secondary, rgba(0,0,0,0.54))" font-weight="400" font-size="13">company court names a broken share claim.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+<g transform="translate(0, 1500)">
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/>
+<g transform="translate(16, 0)">
+<text x="0" y="16" text-anchor="start" fill="var(--vi-text-primary, rgba(0,0,0,0.80))" font-weight="400" font-size="13">Break it here: type func or var on any line: the linter refuses it, types only.</text>
+</g>
+<g transform="translate(496, 0)">
+</g>
+</g>
+</g>
+</svg>

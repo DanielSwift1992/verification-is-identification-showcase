@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "worlds": [
+    {
+      "id": "readme",
+      "root": "IntroArt",
+      "target": "ReadMeTab"
+    },
+    {
+      "id": "organization",
+      "root": "OrganizationArt",
+      "target": "OrganizationTab"
+    },
+    {
+      "id": "basics",
+      "root": "BasicsArt",
+      "target": "BasicsTab"
+    },
+    {
+      "id": "writer",
+      "root": "SheetArt",
+      "target": "TypewriterTab"
+    },
+    {
+      "id": "buttons",
+      "root": "WorldArt",
+      "target": "WorldTab"
+    },
+    {
+      "id": "light",
+      "root": "LightArt",
+      "target": "LightTab"
+    },
+    {
+      "id": "atom",
+      "root": "AtomArt",
+      "target": "AtomTab"
+    },
+    {
+      "id": "rules",
+      "root": "RulesArt",
+      "target": "RulesTab"
+    },
+    {
+      "id": "faq",
+      "root": "FaqArt",
+      "target": "FAQTab"
+    },
+    {
+      "id": "scale",
+      "root": "OrganizationArt",
+      "address": "gate:generated-company#OrganizationArt",
+      "status": "not-compared",
+      "expect": "not-compared",
+      "reason": "12800-person generated input is still owned by gate pending publication contract T-0038; native reading not compared. Historical 1200-second compile budget expired; no SVG claim."
+    }
+  ]
+}

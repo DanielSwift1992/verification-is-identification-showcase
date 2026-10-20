@@ -36,7 +36,7 @@ NEEDS_CLEAN="judge artifacts"
 
 # tag | what it holds | how to ask
 LAWS=(
-"build|the package builds and its tests pass|swift build && swift test"
+"build|the package builds, tests pass, drawable roots match Drawing and un-compared entries are named|swift build && swift test && ./drawing --check"
 "publication|the published claim holds and its seven mutations are refused by name|bash Checks/publication.sh"
 "rules|a rule is one substitution|swift run Tools lint Sources/DynamicsDemo/Rules.swift --strict"
 "artifacts|the committed artifacts match the types, byte for byte|swift package --allow-writing-to-package-directory generate >/dev/null && swift run OrgDemo render-doc >/dev/null && swift run DocumentKitDemo render-doc >/dev/null && swift run DocumentKitDemo claim --write >/dev/null && swift run VectorDemo all >/dev/null && git diff --exit-code"
