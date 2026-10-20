@@ -24,7 +24,7 @@ With `VI_THEORY_PATH` unset, `swift build` uses the theory revision pinned in `P
 
 [`check.sh`](check.sh) runs the package's registered checks: the build and its tests, the seven refusals of the published claim, the dynamics rules, the committed artifacts against the types that produce them, the second judge against the compiler under planted changes, the numbers on this page, the census, the voice and the grammar. The grammar check reads the theory's lexicon and the readme check reads the theory's Neighbors page, so the full check needs the theory's source tree: the sibling checkout `../verification-is-identification`, or the checkout `VI_THEORY_PATH` names.
 
-`./drawing readme` compiles and reads a declared drawing with DocumentKit, returning JSON with SVG or an addressed refusal. `./drawing request.json` reads another source with the same command. The [Drawing contract](Contracts/Drawing/v0.1/README.md) records exact input hashes and native output bytes; `./drawing --check` executes declared drawable roots as part of the build check. At scale is explicitly not compared and is reported separately.
+`./drawing readme` compiles and reads a declared drawing with DocumentKit, returning JSON with SVG or an addressed refusal. `./drawing request.json` reads another source with the same command. The [Drawing contract](Contracts/Drawing/v0.1/README.md) records exact input hashes and native output bytes. `./drawing --check` executes declared drawable roots as part of the build check. At scale is explicitly not compared and is reported separately.
 
 `swift package --allow-writing-to-package-directory generate` regenerates the checked-in roster, walk sources, font metrics and SVG artwork.
 
