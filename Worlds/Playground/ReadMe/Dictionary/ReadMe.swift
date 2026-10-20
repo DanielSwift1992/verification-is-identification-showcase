@@ -570,324 +570,6 @@ public enum TryTwoLabel: SpanLabelWrapped {
 
 // ── the rows ──
 
-public enum TitleRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Flexible<TitleLabel>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum CurveHeadRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Flexible<CurveHeadLabel>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum LegendRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<U8, BuildDot>.self
-        Air<U4>.self
-        Fixed<Plus<U128, U64>, BuildLegendLabel>.self
-        Air<U8>.self
-        Fixed<U8, JudgeDot>.self
-        Air<U4>.self
-        Flexible<JudgeLegendLabel>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum Build3200Row: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<NColumn, N3200Label>.self
-        Fixed<Build3200W, BuildBar>.self
-        Air<U8>.self
-        Flexible<Build3200Label>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum Judge3200Row: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Air<NColumn>.self
-        Fixed<U2, JudgeBar>.self
-        Air<U8>.self
-        Flexible<Judge3200Label>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum Build6400Row: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<NColumn, N6400Label>.self
-        Fixed<Build6400W, BuildBar>.self
-        Air<U8>.self
-        Flexible<Build6400Label>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum Judge6400Row: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Air<NColumn>.self
-        Fixed<U2, JudgeBar>.self
-        Air<U8>.self
-        Flexible<Judge6400Label>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum Build12800Row: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<NColumn, N12800Label>.self
-        Fixed<Build12800W, BuildBar>.self
-        Air<U8>.self
-        Flexible<Build12800Label>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum Judge12800Row: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Air<NColumn>.self
-        Fixed<U2, JudgeBar>.self
-        Air<U8>.self
-        Flexible<Judge12800Label>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum MoralRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, MoralLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum CurveNoteOneRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, CurveNoteOneLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum CurveNoteTwoRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, CurveNoteTwoLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum ExplainHeadRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Flexible<ExplainHeadLabel>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum ExplainOneRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, ExplainOneLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum TimelineRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Flexible<BuildZone>.self
-        Flexible<RunZone>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum BuildTextRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<InnerMargin>.self
-        Flexible<Layered<BuildHeadLabel, Layered<BuildOneLabel, Layered<BuildTwoLabel, BuildThreeLabel>>>>.self
-        Air<FarColumn>.self
-    }
-}
-public enum RunTextRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<Plus<U256, U8>>.self
-        Flexible<Layered<RunHeadLabel, Layered<RunOneLabel, Layered<RunTwoLabel, RunThreeLabel>>>>.self
-        Air<Plus<U32, U16>>.self
-    }
-}
-public enum TimelineBand: Group {
-    @StructureBuilder
-    public static var body: some Structure {
-        TimelineRow.self
-        BuildTextRow.self
-        RunTextRow.self
-    }
-}
-public enum ReadingsHeadRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Flexible<ReadingsHeadLabel>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum ReadingsIntroRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, ReadingsIntroLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum PanelHeadRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<CellPad>.self
-        Fixed<CodeCol, CodeHeadLabel>.self
-        Air<U64>.self
-        Flexible<TableHeadLabel>.self
-        Air<CellPad>.self
-    }
-}
-public enum PairOneRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<CellPad>.self
-        Fixed<CodeCol, CodeOneLabel>.self
-        Air<PanelGap>.self
-        Air<ColGap>.self
-        Fixed<ColName, TableColNameLabel>.self
-        Air<ColGap>.self
-        Air<ColGap>.self
-        Fixed<ColRank, TableColRankLabel>.self
-        Air<ColGap>.self
-        Air<ColGap>.self
-        Fixed<ColHome, TableColHomeLabel>.self
-        Air<ColGap>.self
-        Flexible<SpanNothing>.self
-    }
-}
-public enum PairTwoChips: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<LineChipW, HighlightChip>.self
-        Air<CellPad>.self
-        Air<Plus<U32, Plus<U16, U8>>>.self
-        Air<Plus<U64, U16>>.self
-        Fixed<Plus<U64, U16>, HighlightChip>.self
-        Flexible<SpanNothing>.self
-    }
-}
-public enum PairTwoText: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<CellPad>.self
-        Fixed<CodeCol, CodeTwoLabel>.self
-        Air<PanelGap>.self
-        Air<ColGap>.self
-        Fixed<ColName, RowOneNameLabel>.self
-        Air<ColGap>.self
-        Air<ColGap>.self
-        Fixed<ColRank, RowOneRankLabel>.self
-        Air<ColGap>.self
-        Air<ColGap>.self
-        Fixed<ColHome, RowOneHomeLabel>.self
-        Air<ColGap>.self
-        Flexible<SpanNothing>.self
-    }
-}
-public enum PairTwoBand: Group {
-    @StructureBuilder
-    public static var body: some Structure {
-        PairTwoChips.self
-        PairTwoText.self
-    }
-}
-public enum PairThreeRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<CellPad>.self
-        Fixed<CodeCol, CodeThreeLabel>.self
-        Air<PanelGap>.self
-        Air<ColGap>.self
-        Fixed<ColName, RowTwoNameLabel>.self
-        Air<ColGap>.self
-        Air<ColGap>.self
-        Fixed<ColRank, RowTwoRankLabel>.self
-        Air<ColGap>.self
-        Air<ColGap>.self
-        Fixed<ColHome, RowTwoHomeLabel>.self
-        Air<ColGap>.self
-        Flexible<SpanNothing>.self
-    }
-}
-public enum ReadingsBreakRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, ReadingsBreakLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum TryTwoRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, TryTwoLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
-
 public typealias IntroParaWide = Plus<U256, Plus<U128, Plus<U64, U32>>>
 public enum ValueParaWord: Close {}
 extension ValueParaWord {
@@ -905,16 +587,6 @@ public enum SwiftParaText: SpanLabelWrapped {
     public typealias Weight = WeightRegular
     public typealias Content = SwiftParaWord
 }
-public enum SwiftParaRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, SwiftParaText>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
 public enum PageBuildParaWord: Close {}
 extension PageBuildParaWord {
     public static var typeName: String { "This page is build time only: everything you write is a declaration, the judge checks it, the renderer draws it, and nothing ever steps through it." }
@@ -926,16 +598,6 @@ public enum PageBuildParaText: SpanLabelWrapped {
     public typealias Size = TextS
     public typealias Weight = WeightRegular
     public typealias Content = PageBuildParaWord
-}
-public enum PageBuildParaRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, PageBuildParaText>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
 }
 public enum ReadingsMoralParaWord: Close {}
 extension ReadingsMoralParaWord {
@@ -949,16 +611,6 @@ public enum ReadingsMoralParaText: SpanLabelWrapped {
     public typealias Weight = WeightRegular
     public typealias Content = ReadingsMoralParaWord
 }
-public enum ReadingsMoralParaRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, ReadingsMoralParaText>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
 public enum TryLieParaWord: Close {}
 extension TryLieParaWord {
     public static var typeName: String { "Break it: press Plant a lie on The organization: the key flips one declaration, and the judge refuses the file, naming the exact line." }
@@ -970,16 +622,6 @@ public enum TryLieParaText: SpanLabelWrapped {
     public typealias Size = TextS
     public typealias Weight = WeightRegular
     public typealias Content = TryLieParaWord
-}
-public enum TryLieParaRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, TryLieParaText>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
 }
 public enum TabsHead: Close {}
 extension TabsHead {
@@ -1024,15 +666,6 @@ public enum TabsHeadLabel: SpanLabel {
     public typealias Weight = WeightBold
     public typealias Content = TabsHead
 }
-public enum TabsHeadRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Flexible<TabsHeadLabel>.self
-        Air<EdgeMargin>.self
-    }
-}
 public enum TabOrgLabel: SpanLabelWrapped {
     public typealias Y = Tally<U16>
     public typealias LinePitch = Tally<Plus<U16, U4>>
@@ -1040,16 +673,6 @@ public enum TabOrgLabel: SpanLabelWrapped {
     public typealias Size = TextS
     public typealias Weight = WeightRegular
     public typealias Content = TabOrgWord
-}
-public enum TabOrgRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, TabOrgLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
 }
 public enum TabScaleLabel: SpanLabelWrapped {
     public typealias Y = Tally<U16>
@@ -1059,16 +682,6 @@ public enum TabScaleLabel: SpanLabelWrapped {
     public typealias Weight = WeightRegular
     public typealias Content = TabScaleWord
 }
-public enum TabScaleRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, TabScaleLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
 public enum TabBasicsLabel: SpanLabelWrapped {
     public typealias Y = Tally<U16>
     public typealias LinePitch = Tally<Plus<U16, U4>>
@@ -1076,16 +689,6 @@ public enum TabBasicsLabel: SpanLabelWrapped {
     public typealias Size = TextS
     public typealias Weight = WeightRegular
     public typealias Content = TabBasicsWord
-}
-public enum TabBasicsRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, TabBasicsLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
 }
 public enum TabWriterLabel: SpanLabelWrapped {
     public typealias Y = Tally<U16>
@@ -1095,16 +698,6 @@ public enum TabWriterLabel: SpanLabelWrapped {
     public typealias Weight = WeightRegular
     public typealias Content = TabWriterWord
 }
-public enum TabWriterRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, TabWriterLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
 public enum TabButtonsLabel: SpanLabelWrapped {
     public typealias Y = Tally<U16>
     public typealias LinePitch = Tally<Plus<U16, U4>>
@@ -1112,16 +705,6 @@ public enum TabButtonsLabel: SpanLabelWrapped {
     public typealias Size = TextS
     public typealias Weight = WeightRegular
     public typealias Content = TabButtonsWord
-}
-public enum TabButtonsRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, TabButtonsLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
 }
 public enum TabLightLabel: SpanLabelWrapped {
     public typealias Y = Tally<U16>
@@ -1131,16 +714,6 @@ public enum TabLightLabel: SpanLabelWrapped {
     public typealias Weight = WeightRegular
     public typealias Content = TabLightWord
 }
-public enum TabLightRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, TabLightLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
 public enum TabAtomLabel: SpanLabelWrapped {
     public typealias Y = Tally<U16>
     public typealias LinePitch = Tally<Plus<U16, U4>>
@@ -1148,16 +721,6 @@ public enum TabAtomLabel: SpanLabelWrapped {
     public typealias Size = TextS
     public typealias Weight = WeightRegular
     public typealias Content = TabAtomWord
-}
-public enum TabAtomRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, TabAtomLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
 }
 public enum TabRulesLabel: SpanLabelWrapped {
     public typealias Y = Tally<U16>
@@ -1167,16 +730,6 @@ public enum TabRulesLabel: SpanLabelWrapped {
     public typealias Weight = WeightRegular
     public typealias Content = TabRulesWord
 }
-public enum TabRulesRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, TabRulesLabel>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
 public enum ValueParaText: SpanLabelWrapped {
     public typealias Y = Tally<U16>
     public typealias LinePitch = Tally<Plus<U16, U4>>
@@ -1185,82 +738,33 @@ public enum ValueParaText: SpanLabelWrapped {
     public typealias Weight = WeightRegular
     public typealias Content = ValueParaWord
 }
-public enum ValueParaRow: HFlow {
-    public typealias Given = U512
-    @StructureBuilder
-    public static var body: some Structure & Divides {
-        Air<EdgeMargin>.self
-        Fixed<IntroParaWide, ValueParaText>.self
-        Flexible<SpanNothing>.self
-        Air<EdgeMargin>.self
-    }
-}
-public enum IntroArt: GrownDiagram {
-    public typealias Across = U512
-    public typealias AriaLabel = IntroAlt
-    @StructureBuilder
-    public static var body: some Structure & DividesY {
-        Air<EdgeMargin>.self
-        Fixed<HeadTall, SpanHosted<TitleRow>>.self
-        Fixed<Plus<Times<LineTally<ValueParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<ValueParaRow>>.self
 
-        Air<Plus<U16, U8>>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<Times<U4, Beat>>, CurveHeadRow>>>.self
-        Air<U8>.self
-        Fixed<LegendTall, SpanHosted<FrozenReveal<Tally<Times<U4, Beat>>, LegendRow>>>.self
-        Air<U16>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<Times<Plus<U4, U1>, Beat>>, Build3200Row>>>.self
-        Air<U4>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<Times<Plus<U4, U1>, Beat>>, Judge3200Row>>>.self
-        Air<U8>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<Times<Plus<U4, U2>, Beat>>, Build6400Row>>>.self
-        Air<U4>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<Times<Plus<U4, U2>, Beat>>, Judge6400Row>>>.self
-        Air<U8>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<Times<Plus<U4, Plus<U2, U1>>, Beat>>, Build12800Row>>>.self
-        Air<U4>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<Times<Plus<U4, Plus<U2, U1>>, Beat>>, Judge12800Row>>>.self
-        Air<U8>.self
-        Fixed<Times<LineTally<CurveMoral, IntroParaWide, TextXS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<U1>, MoralRow>>>.self
-        Air<U4>.self
-        Fixed<Times<LineTally<CurveNoteOne, IntroParaWide, TextXS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<U1>, CurveNoteOneRow>>>.self
-        Fixed<Times<LineTally<CurveNoteTwo, IntroParaWide, TextXS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<U1>, CurveNoteTwoRow>>>.self
-        Air<Plus<U16, U8>>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Beat>>, ExplainHeadRow>>>.self
-        Fixed<Times<LineTally<ExplainOneWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Beat>>, ExplainOneRow>>>.self
-        Air<U8>.self
-        Fixed<CompareTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Beat>>, TimelineBand>>>.self
-        Air<Plus<U8, U4>>.self
-        Fixed<Plus<Times<LineTally<SwiftParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<FrozenReveal<Tally<Plus<U1, Twice<Beat>>>, SwiftParaRow>>>.self
-        Air<U8>.self
-        Fixed<Plus<Times<LineTally<PageBuildParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<FrozenReveal<Tally<Plus<U1, Twice<Beat>>>, PageBuildParaRow>>>.self
-        Air<Plus<U16, U8>>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<Plus<U2, U1>, Beat>>>, ReadingsHeadRow>>>.self
-        Fixed<Times<LineTally<ReadingsIntroWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<Plus<U2, U1>, Beat>>>, ReadingsIntroRow>>>.self
-        Air<U8>.self
-        Fixed<LineTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<Plus<U2, U1>, Beat>>>, PanelHeadRow>>>.self
-        Air<U4>.self
-        Fixed<LineTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<Plus<U2, U1>, Beat>>>, PairOneRow>>>.self
-        Air<U2>.self
-        Fixed<LineTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<Plus<U2, U1>, Beat>>>, PairTwoBand>>>.self
-        Air<U2>.self
-        Fixed<LineTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<Plus<U2, U1>, Beat>>>, PairThreeRow>>>.self
-        Air<U8>.self
-        Fixed<Plus<Times<LineTally<ReadingsMoralParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<Plus<U2, U1>, Beat>>>, ReadingsMoralParaRow>>>.self
-        Fixed<Times<LineTally<ReadingsBreakWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<Plus<U2, U1>, Beat>>>, ReadingsBreakRow>>>.self
-        Air<Plus<U16, U8>>.self
-        Fixed<RowTall, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<U4, Beat>>>, TabsHeadRow>>>.self
-        Fixed<Times<LineTally<TabOrgWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<U4, Beat>>>, TabOrgRow>>>.self
-        Fixed<Times<LineTally<TabScaleWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<U4, Beat>>>, TabScaleRow>>>.self
-        Fixed<Times<LineTally<TabBasicsWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<U4, Beat>>>, TabBasicsRow>>>.self
-        Fixed<Times<LineTally<TabWriterWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<U4, Beat>>>, TabWriterRow>>>.self
-        Fixed<Times<LineTally<TabButtonsWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<U4, Beat>>>, TabButtonsRow>>>.self
-        Fixed<Times<LineTally<TabLightWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<U4, Beat>>>, TabLightRow>>>.self
-        Fixed<Times<LineTally<TabAtomWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<U4, Beat>>>, TabAtomRow>>>.self
-        Fixed<Times<LineTally<TabRulesWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<U4, Beat>>>, TabRulesRow>>>.self
-        Air<Plus<U16, U8>>.self
-        Fixed<Plus<Times<LineTally<TryLieParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<U4, Beat>>>, TryLieParaRow>>>.self
-        Fixed<Times<LineTally<TryTwoWord, IntroParaWide, TextS>, Plus<U16, U4>>, SpanHosted<FrozenReveal<Tally<Plus<U1, Times<U4, Beat>>>, TryTwoRow>>>.self
-        Air<EdgeMargin>.self
-    }
-}
+// The page speaks these geometry names; each expression has one home.
+public typealias ReadMeSurface = U512
+public typealias ReadMePanelOffset = Plus<U256, U8>
+public typealias ValueTall = Plus<Times<LineTally<ValueParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias FourthBeat = Times<U4, Beat>
+public typealias FifthBeat = Times<Plus<U4, U1>, Beat>
+public typealias SixthBeat = Times<Plus<U4, U2>, Beat>
+public typealias SeventhBeat = Times<Plus<U4, Plus<U2, U1>>, Beat>
+public typealias CurveMoralTall = Times<LineTally<CurveMoral, IntroParaWide, TextXS>, Plus<U16, U4>>
+public typealias CurveNoteOneTall = Times<LineTally<CurveNoteOne, IntroParaWide, TextXS>, Plus<U16, U4>>
+public typealias CurveNoteTwoTall = Times<LineTally<CurveNoteTwo, IntroParaWide, TextXS>, Plus<U16, U4>>
+public typealias ExplainOneTall = Times<LineTally<ExplainOneWord, IntroParaWide, TextS>, Plus<U16, U4>>
+public typealias SwiftTall = Plus<Times<LineTally<SwiftParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias PageBuildTall = Plus<Times<LineTally<PageBuildParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias ReadingsRevealAt = Plus<U1, Times<Plus<U2, U1>, Beat>>
+public typealias ReadingsIntroTall = Times<LineTally<ReadingsIntroWord, IntroParaWide, TextS>, Plus<U16, U4>>
+public typealias ReadingsMoralTall = Plus<Times<LineTally<ReadingsMoralParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias ReadingsBreakTall = Times<LineTally<ReadingsBreakWord, IntroParaWide, TextS>, Plus<U16, U4>>
+public typealias TabsRevealAt = Plus<U1, FourthBeat>
+public typealias TabOrgTall = Times<LineTally<TabOrgWord, IntroParaWide, TextS>, Plus<U16, U4>>
+public typealias TabScaleTall = Times<LineTally<TabScaleWord, IntroParaWide, TextS>, Plus<U16, U4>>
+public typealias TabBasicsTall = Times<LineTally<TabBasicsWord, IntroParaWide, TextS>, Plus<U16, U4>>
+public typealias TabWriterTall = Times<LineTally<TabWriterWord, IntroParaWide, TextS>, Plus<U16, U4>>
+public typealias TabButtonsTall = Times<LineTally<TabButtonsWord, IntroParaWide, TextS>, Plus<U16, U4>>
+public typealias TabLightTall = Times<LineTally<TabLightWord, IntroParaWide, TextS>, Plus<U16, U4>>
+public typealias TabAtomTall = Times<LineTally<TabAtomWord, IntroParaWide, TextS>, Plus<U16, U4>>
+public typealias TabRulesTall = Times<LineTally<TabRulesWord, IntroParaWide, TextS>, Plus<U16, U4>>
+public typealias TryLieTall = Plus<Times<LineTally<TryLieParaWord, IntroParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias TryTwoTall = Times<LineTally<TryTwoWord, IntroParaWide, TextS>, Plus<U16, U4>>

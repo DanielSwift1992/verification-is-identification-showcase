@@ -8,4 +8,6 @@ public protocol Mine {}
 public enum TheCompany: Mine {
     public typealias Kind = WorldFile
 }
-extension TheCompany { public static var typeName: String { "Company.swift" } }
+extension TheCompany {
+    public static var typeName: String { "Company.swift" }
+}

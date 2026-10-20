@@ -2,7 +2,7 @@ import VerificationIsIdentification
 import DocumentKit
 
 public enum AtomTitleRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -123,7 +123,7 @@ public enum Icon4pRow: HFlow {
     }
 }
 public enum ColHeadRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -137,7 +137,7 @@ public enum ColHeadRow: HFlow {
     }
 }
 public enum FloorFourRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -151,7 +151,7 @@ public enum FloorFourRow: HFlow {
     }
 }
 public enum FloorThreeRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -165,7 +165,7 @@ public enum FloorThreeRow: HFlow {
     }
 }
 public enum FloorTwoRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -179,7 +179,7 @@ public enum FloorTwoRow: HFlow {
     }
 }
 public enum FloorOneRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -197,7 +197,7 @@ public enum FloorOneRow: HFlow {
 // (TextWidth, Vector.swift), so no key width is a guessed number
 public typealias KeyPad = Plus<U16, U16>
 public enum JumpKeysRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -215,7 +215,7 @@ public enum JumpKeysRow: HFlow {
     }
 }
 public enum ShineKeysRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -227,7 +227,7 @@ public enum ShineKeysRow: HFlow {
     }
 }
 public enum FlashWindowRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -242,7 +242,7 @@ public enum FlashWindowRow: HFlow {
     }
 }
 public enum FlashLinesRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -261,7 +261,7 @@ public enum FlashLinesRow: HFlow {
     }
 }
 public enum ZoneCapsRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -280,7 +280,7 @@ public enum ZoneCapsRow: HFlow {
     }
 }
 public enum AtomThesisRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -290,7 +290,7 @@ public enum AtomThesisRow: HFlow {
     }
 }
 public enum AtomHookRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -300,7 +300,7 @@ public enum AtomHookRow: HFlow {
     }
 }
 public enum AtomJumpRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -310,7 +310,7 @@ public enum AtomJumpRow: HFlow {
     }
 }
 public enum AtomReachRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -320,7 +320,7 @@ public enum AtomReachRow: HFlow {
     }
 }
 public enum AtomShapeRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -330,7 +330,7 @@ public enum AtomShapeRow: HFlow {
     }
 }
 public enum AtomTrapRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -340,7 +340,7 @@ public enum AtomTrapRow: HFlow {
     }
 }
 public enum AtomBreakRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -350,7 +350,7 @@ public enum AtomBreakRow: HFlow {
     }
 }
 public enum AtomFinalRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -360,7 +360,7 @@ public enum AtomFinalRow: HFlow {
     }
 }
 public enum FrameLegendRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -370,7 +370,7 @@ public enum FrameLegendRow: HFlow {
     }
 }
 public enum PressJumpRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -387,7 +387,7 @@ public enum FlashBand: Group {
     }
 }
 public enum RoadsHeadRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -396,7 +396,7 @@ public enum RoadsHeadRow: HFlow {
     }
 }
 public enum ShineParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -406,7 +406,7 @@ public enum ShineParaRow: HFlow {
     }
 }
 public enum RoadsParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -416,13 +416,13 @@ public enum RoadsParaRow: HFlow {
     }
 }
 public enum RoadOneRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Fixed<Plus<U64, U8>, RoadOneLabel>.self
         Air<U8>.self
-        Fixed<Times<U16, BetaJump.Drop>, RoadBar>.self
+        Fixed<BetaRoadLength, RoadBar>.self
         Air<U8>.self
         Fixed<U16, RoadOneCount>.self
         Air<U4>.self
@@ -432,15 +432,15 @@ public enum RoadOneRow: HFlow {
     }
 }
 public enum RoadTwoRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Fixed<Plus<U64, U8>, RoadTwoLabel>.self
         Air<U8>.self
-        Fixed<Times<U16, PaschenJump.Drop>, RoadBar>.self
+        Fixed<PaschenRoadLength, RoadBar>.self
         Air<U2>.self
-        Fixed<Times<U16, BalmerJump.Drop>, RoadBar>.self
+        Fixed<BalmerRoadLength, RoadBar>.self
         Air<U8>.self
         Fixed<U16, RoadTwoCount>.self
         Air<U4>.self
@@ -450,7 +450,7 @@ public enum RoadTwoRow: HFlow {
     }
 }
 public enum RoadsBreakRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -460,7 +460,7 @@ public enum RoadsBreakRow: HFlow {
     }
 }
 public enum LawHeadRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -469,7 +469,7 @@ public enum LawHeadRow: HFlow {
     }
 }
 public enum LawParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = AtomSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -479,17 +479,17 @@ public enum LawParaRow: HFlow {
     }
 }
 public enum AtomArt: GrownDiagram {
-    public typealias Across = U512
+    public typealias Across = AtomSurface
     public typealias AriaLabel = AtomAlt
     @StructureBuilder
     public static var body: some Structure & DividesY {
         Air<EdgeMargin>.self
         Fixed<Plus<U32, U8>, SpanHosted<AtomTitleRow>>.self
-        Fixed<Plus<Times<LineTally<AtomThesisWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<AtomThesisRow>>.self
+        Fixed<AtomThesisTall, SpanHosted<AtomThesisRow>>.self
         Air<U8>.self
-        Fixed<Plus<Times<LineTally<AtomHookWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<AtomHookRow>>.self
+        Fixed<AtomHookTall, SpanHosted<AtomHookRow>>.self
         Air<U8>.self
-        Fixed<Plus<Times<LineTally<AtomJumpWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<AtomJumpRow>>.self
+        Fixed<AtomJumpTall, SpanHosted<AtomJumpRow>>.self
         Air<Plus<U8, U4>>.self
         Fixed<LineTallA, SpanHosted<ColHeadRow>>.self
         Air<U2>.self
@@ -501,41 +501,41 @@ public enum AtomArt: GrownDiagram {
         Air<U8>.self
         Fixed<U32, SpanHosted<FloorOneRow>>.self
         Air<U8>.self
-        Fixed<Times<LineTally<PressJumpWord, AtomParaWide, TextS>, Plus<U16, U4>>, SpanHosted<PressJumpRow>>.self
+        Fixed<PressJumpTall, SpanHosted<PressJumpRow>>.self
         Air<U4>.self
         Fixed<Plus<U32, U8>, SpanHosted<JumpKeysRow>>.self
         Air<U4>.self
         Fixed<Plus<U32, U8>, SpanHosted<ShineKeysRow>>.self
         Air<U2>.self
-        Fixed<Times<LineTally<FrameLegendWord, AtomParaWide, TextXS>, Plus<U16, U4>>, SpanHosted<FrameLegendRow>>.self
+        Fixed<FrameLegendTall, SpanHosted<FrameLegendRow>>.self
         Air<Plus<U8, U4>>.self
         Fixed<U32, SpanHosted<FlashBand>>.self
         Air<U2>.self
         Fixed<LineTallA, SpanHosted<ZoneCapsRow>>.self
         Air<Plus<U8, U4>>.self
-        Fixed<Plus<Times<LineTally<AtomReachWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<AtomReachRow>>.self
+        Fixed<AtomReachTall, SpanHosted<AtomReachRow>>.self
         Air<U8>.self
-        Fixed<Plus<Times<LineTally<AtomShapeWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<AtomShapeRow>>.self
+        Fixed<AtomShapeTall, SpanHosted<AtomShapeRow>>.self
         Air<U8>.self
-        Fixed<Plus<Times<LineTally<AtomTrapWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<AtomTrapRow>>.self
+        Fixed<AtomTrapTall, SpanHosted<AtomTrapRow>>.self
         Air<U8>.self
-        Fixed<Plus<Times<LineTally<ShineParaWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<ShineParaRow>>.self
+        Fixed<ShineTall, SpanHosted<ShineParaRow>>.self
         Air<U4>.self
-        Fixed<Plus<Times<LineTally<AtomBreakWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<AtomBreakRow>>.self
+        Fixed<AtomBreakTall, SpanHosted<AtomBreakRow>>.self
         Air<Plus<U16, U8>>.self
         Fixed<Plus<U16, U8>, SpanHosted<RoadsHeadRow>>.self
-        Fixed<Plus<Times<LineTally<RoadsParaWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<RoadsParaRow>>.self
+        Fixed<RoadsTall, SpanHosted<RoadsParaRow>>.self
         Air<U8>.self
         Fixed<Plus<U16, U4>, SpanHosted<RoadOneRow>>.self
         Air<U4>.self
         Fixed<Plus<U16, U4>, SpanHosted<RoadTwoRow>>.self
         Air<U8>.self
-        Fixed<Times<LineTally<RoadsBreakWord, AtomParaWide, TextS>, Plus<U16, U4>>, SpanHosted<RoadsBreakRow>>.self
+        Fixed<RoadsBreakTall, SpanHosted<RoadsBreakRow>>.self
         Air<Plus<U16, U8>>.self
         Fixed<Plus<U16, U8>, SpanHosted<LawHeadRow>>.self
-        Fixed<Plus<Times<LineTally<LawParaWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<LawParaRow>>.self
+        Fixed<LawTall, SpanHosted<LawParaRow>>.self
         Air<Plus<U8, U4>>.self
-        Fixed<Plus<Times<LineTally<AtomFinalWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<AtomFinalRow>>.self
+        Fixed<AtomFinalTall, SpanHosted<AtomFinalRow>>.self
         Air<EdgeMargin>.self
     }
 }

@@ -10,7 +10,6 @@ import Organization
 
 // ── the display strings: every text on the page is a type carrying typeName ──
 
-public typealias OrganizationParaWide = Plus<U256, Plus<U128, Plus<U64, U32>>>
 
 public enum OrganizationTitle: Close {}
 extension OrganizationTitle {
@@ -257,11 +256,11 @@ public enum KpiCardsRow: HFlow {
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
-        Fixed<Plus<U256, U16>, HeroFace>.self
+        Fixed<OrganizationCardWide, HeroFace>.self
         Air<U16>.self
-        Fixed<Plus<U256, U16>, QuietFace>.self
+        Fixed<OrganizationCardWide, QuietFace>.self
         Air<U16>.self
-        Fixed<Plus<U256, U16>, QuietFace>.self
+        Fixed<OrganizationCardWide, QuietFace>.self
         RestAir.self
     }
 }
@@ -278,7 +277,7 @@ public enum AccessTextRow: HFlow {
     public typealias Given = WideSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
-        Air<Plus<U256, U64>>.self
+        Air<OrganizationMiddleOffset>.self
         Fixed<Plus<U128, U64>, Layered<AccessCaption, AccessNumber>>.self
         RestAir.self
     }
@@ -287,7 +286,7 @@ public enum EngineeringTextRow: HFlow {
     public typealias Given = WideSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
-        Air<Plus<U512, Plus<U64, U32>>>.self
+        Air<OrganizationWalkOffset>.self
         Fixed<Plus<U128, U64>, Layered<EngineeringCaption, EngineeringNumber>>.self
         RestAir.self
     }
@@ -364,16 +363,16 @@ public enum OrganizationArt: GrownDiagram {
         Air<EdgeMargin>.self
         Fixed<HeaderTall, SpanHosted<HeaderRow>>.self
         Air<Plus<U8, U4>>.self
-        Fixed<Times<LineTally<OrgWhyOne, OrganizationParaWide, TextL>, Plus<U16, U4>>, SpanHosted<OrgWhyOneRow>>.self
-        Fixed<Times<LineTally<OrgWhyTwo, OrganizationParaWide, TextL>, Plus<U16, U4>>, SpanHosted<OrgWhyTwoRow>>.self
-        Fixed<Times<LineTally<OrgWhyThree, OrganizationParaWide, TextL>, Plus<U16, U4>>, SpanHosted<OrgWhyThreeRow>>.self
-        Fixed<Times<LineTally<OrgWhyFour, OrganizationParaWide, TextL>, Plus<U16, U4>>, SpanHosted<OrgWhyFourRow>>.self
+        Fixed<OrgWhyOneTall, SpanHosted<OrgWhyOneRow>>.self
+        Fixed<OrgWhyTwoTall, SpanHosted<OrgWhyTwoRow>>.self
+        Fixed<OrgWhyThreeTall, SpanHosted<OrgWhyThreeRow>>.self
+        Fixed<OrgWhyFourTall, SpanHosted<OrgWhyFourRow>>.self
         Air<U8>.self
-        Fixed<Times<LineTally<OrgWhyFive, OrganizationParaWide, TextL>, Plus<U16, U4>>, SpanHosted<OrgWhyFiveRow>>.self
+        Fixed<OrgWhyFiveTall, SpanHosted<OrgWhyFiveRow>>.self
         Air<U16>.self
         Banded<KpiTall, SpanHosted<KpiBand>>.self
         Banded<ChipTall, SpanHosted<ChipsBand>>.self
-        Banded<Times<LineTally<FootWord, OrganizationParaWide, TextXS>, Plus<U16, U4>>, SpanHosted<FootRow>>.self
+        Banded<OrganizationFootTextTall, SpanHosted<FootRow>>.self
         Air<EdgeMargin>.self
     }
 }

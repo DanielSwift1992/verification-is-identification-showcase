@@ -2,7 +2,7 @@ import VerificationIsIdentification
 import DocumentKit
 
 public enum TitleRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -11,7 +11,7 @@ public enum TitleRow: HFlow {
     }
 }
 public enum MixHeadRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -20,7 +20,7 @@ public enum MixHeadRow: HFlow {
     }
 }
 public enum MixIntroRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -30,7 +30,7 @@ public enum MixIntroRow: HFlow {
     }
 }
 public enum MixAlphaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -56,13 +56,13 @@ public enum MixAlphaRow: HFlow {
         Air<U4>.self
         Fixed<U16, MixAlphaCountLabel>.self
         Air<U4>.self
-        Fixed<Times<U4, MixAlpha>, MixAlphaPour>.self
+        Fixed<MixAlphaLength, MixAlphaPour>.self
         Flexible<SpanNothing>.self
         Air<EdgeMargin>.self
     }
 }
 public enum MixBetaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -88,13 +88,13 @@ public enum MixBetaRow: HFlow {
         Air<U4>.self
         Fixed<U16, MixBetaCountLabel>.self
         Air<U4>.self
-        Fixed<Times<U4, MixBeta>, MixBetaPour>.self
+        Fixed<MixBetaLength, MixBetaPour>.self
         Flexible<SpanNothing>.self
         Air<EdgeMargin>.self
     }
 }
 public enum MixIRRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -120,13 +120,13 @@ public enum MixIRRow: HFlow {
         Air<U4>.self
         Fixed<U16, MixIRCountLabel>.self
         Air<U4>.self
-        Fixed<Times<U4, MixIR>, MixIRPour>.self
+        Fixed<MixIRLength, MixIRPour>.self
         Flexible<SpanNothing>.self
         Air<EdgeMargin>.self
     }
 }
 public enum MixPatchRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -138,7 +138,7 @@ public enum MixPatchRow: HFlow {
     }
 }
 public enum MixNoteRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -148,7 +148,7 @@ public enum MixNoteRow: HFlow {
     }
 }
 public enum MapHeadRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -157,7 +157,7 @@ public enum MapHeadRow: HFlow {
     }
 }
 public enum MapIntroRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -167,7 +167,7 @@ public enum MapIntroRow: HFlow {
     }
 }
 public enum MapRowB0: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -196,7 +196,7 @@ public enum MapRowB0: HFlow {
     }
 }
 public enum MapRowB1: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -225,7 +225,7 @@ public enum MapRowB1: HFlow {
     }
 }
 public enum MapRowB2: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -254,7 +254,7 @@ public enum MapRowB2: HFlow {
     }
 }
 public enum MapRowB3: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -283,7 +283,7 @@ public enum MapRowB3: HFlow {
     }
 }
 public enum MapRowB4: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -312,7 +312,7 @@ public enum MapRowB4: HFlow {
     }
 }
 public enum MapRowB5: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -341,7 +341,7 @@ public enum MapRowB5: HFlow {
     }
 }
 public enum MapRowB6: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -370,7 +370,7 @@ public enum MapRowB6: HFlow {
     }
 }
 public enum MapRowB7: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -399,7 +399,7 @@ public enum MapRowB7: HFlow {
     }
 }
 public enum MapRowB8: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -428,7 +428,7 @@ public enum MapRowB8: HFlow {
     }
 }
 public enum MapColumnsRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -457,7 +457,7 @@ public enum MapColumnsRow: HFlow {
     }
 }
 public enum MapIRRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -467,7 +467,7 @@ public enum MapIRRow: HFlow {
     }
 }
 public enum HeadOneRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -476,12 +476,12 @@ public enum HeadOneRow: HFlow {
     }
 }
 public enum LampWindowRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Fixed<WindowCapCol, LampCapLabel>.self
-        Fixed<Plus<U256, U8>, BlackWindow>.self
+        Fixed<LightWindowWide, BlackWindow>.self
         Air<U4>.self
         Fixed<Plus<U64, Plus<U16, U8>>, GrayField>.self
         Flexible<SpanNothing>.self
@@ -489,18 +489,18 @@ public enum LampWindowRow: HFlow {
     }
 }
 public enum LampWindowLines: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Air<WindowCapCol>.self
         Air<Plus<U64, U16>>.self
-        Fixed<Times<U1, LampBeam.BetaLevel>, LampBetaGlow>.self
+        Fixed<LampBetaLineLength, LampBetaGlow>.self
         Air<Plus<U64, Plus<U32, U4>>>.self
-        Fixed<Times<U1, LampBeam.AlphaLevel>, LampAlphaGlow>.self
+        Fixed<LampAlphaLineLength, LampAlphaGlow>.self
         Air<Plus<U64, U8>>.self
         Air<Plus<U16, U8>>.self
-        Fixed<Times<U1, LampBeam.PaschenLevel>, GhostLine>.self
+        Fixed<LampPaschenLineLength, GhostLine>.self
         Flexible<SpanNothing>.self
         Air<EdgeMargin>.self
     }
@@ -513,7 +513,7 @@ public enum LampBand: Group {
     }
 }
 public enum WaveCaptionRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -528,12 +528,12 @@ public enum WaveCaptionRow: HFlow {
     }
 }
 public enum BeyondRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Fixed<WindowCapCol, SpanNothing>.self
-        Fixed<Plus<U256, U8>, SpanNothing>.self
+        Fixed<LightWindowWide, SpanNothing>.self
         Air<U4>.self
         Fixed<Plus<U64, Plus<U16, U8>>, BeyondLabel>.self
         Flexible<SpanNothing>.self
@@ -541,7 +541,7 @@ public enum BeyondRow: HFlow {
     }
 }
 public enum HeadTwoRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -550,7 +550,7 @@ public enum HeadTwoRow: HFlow {
     }
 }
 public enum PatchesRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -565,29 +565,29 @@ public enum PatchesRow: HFlow {
     }
 }
 public enum BeamXWindowLines: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Air<WindowCapCol>.self
         Air<Plus<U64, U16>>.self
-        Fixed<Times<U1, BeamX.BetaLevel>, XBetaGlow>.self
+        Fixed<XBetaLineLength, XBetaGlow>.self
         Air<Plus<U64, Plus<U32, U4>>>.self
-        Fixed<Times<U1, BeamX.AlphaLevel>, XAlphaGlow>.self
+        Fixed<XAlphaLineLength, XAlphaGlow>.self
         Air<Plus<U64, U8>>.self
         Air<Plus<U16, U8>>.self
-        Fixed<Times<U1, BeamX.PaschenLevel>, GhostLine>.self
+        Fixed<XPaschenLineLength, GhostLine>.self
         Flexible<SpanNothing>.self
         Air<EdgeMargin>.self
     }
 }
 public enum BeamXWindowRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Fixed<WindowCapCol, BeamXCapLabel>.self
-        Fixed<Plus<U256, U8>, BlackWindow>.self
+        Fixed<LightWindowWide, BlackWindow>.self
         Air<U4>.self
         Fixed<Plus<U64, Plus<U16, U8>>, GrayField>.self
         Flexible<SpanNothing>.self
@@ -602,29 +602,29 @@ public enum BeamXBand: Group {
     }
 }
 public enum BeamYWindowLines: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Air<WindowCapCol>.self
         Air<Plus<U64, U16>>.self
-        Fixed<Times<U1, BeamY.BetaLevel>, YBetaGlow>.self
+        Fixed<YBetaLineLength, YBetaGlow>.self
         Air<Plus<U64, Plus<U32, U4>>>.self
-        Fixed<Times<U1, BeamY.AlphaLevel>, YAlphaGlow>.self
+        Fixed<YAlphaLineLength, YAlphaGlow>.self
         Air<Plus<U64, U8>>.self
         Air<Plus<U16, U8>>.self
-        Fixed<Times<U1, BeamY.PaschenLevel>, GhostLine>.self
+        Fixed<YPaschenLineLength, GhostLine>.self
         Flexible<SpanNothing>.self
         Air<EdgeMargin>.self
     }
 }
 public enum BeamYWindowRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Fixed<WindowCapCol, BeamYCapLabel>.self
-        Fixed<Plus<U256, U8>, BlackWindow>.self
+        Fixed<LightWindowWide, BlackWindow>.self
         Air<U4>.self
         Fixed<Plus<U64, Plus<U16, U8>>, GrayField>.self
         Flexible<SpanNothing>.self
@@ -639,7 +639,7 @@ public enum BeamYBand: Group {
     }
 }
 public enum IRLessonRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -649,7 +649,7 @@ public enum IRLessonRow: HFlow {
     }
 }
 public enum IRKeyRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -661,7 +661,7 @@ public enum IRKeyRow: HFlow {
     }
 }
 public enum SceneOneBreakRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -671,7 +671,7 @@ public enum SceneOneBreakRow: HFlow {
     }
 }
 public enum HeadThreeRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -680,7 +680,7 @@ public enum HeadThreeRow: HFlow {
     }
 }
 public enum CrossedCapRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -689,7 +689,7 @@ public enum CrossedCapRow: HFlow {
     }
 }
 public enum ThreeCapRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -698,55 +698,55 @@ public enum ThreeCapRow: HFlow {
     }
 }
 public enum LampBarRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Fixed<FilterCapCol, LampRowCapLabel>.self
-        Fixed<Times<BarUnit, LampH.Horizontal>, FilterBar>.self
+        Fixed<HorizontalFilterLength, FilterBar>.self
         Air<U8>.self
         Flexible<LampCountLabel>.self
         Air<EdgeMargin>.self
     }
 }
 public enum CrossedOutBarRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Fixed<FilterCapCol, CrossedOutCapLabel>.self
-        Fixed<Times<BarUnit, Crossed.Vertical>, FilterBar>.self
+        Fixed<CrossedFilterLength, FilterBar>.self
         Air<U8>.self
         Flexible<CrossedOutCountLabel>.self
         Air<EdgeMargin>.self
     }
 }
 public enum DiagBarRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Fixed<FilterCapCol, DiagRowCapLabel>.self
-        Fixed<Times<BarUnit, Plus<DiagonalAfterLampH.Horizontal, DiagonalAfterLampH.Vertical>>, FilterBar>.self
+        Fixed<DiagonalFilterLength, FilterBar>.self
         Air<U8>.self
         Flexible<DiagCountLabel>.self
         Air<EdgeMargin>.self
     }
 }
 public enum ScreenBarRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Fixed<FilterCapCol, ScreenRowCapLabel>.self
-        Fixed<Times<BarUnit, ThreePanes.Vertical>, FilterBar>.self
+        Fixed<ThreePanesLength, FilterBar>.self
         Air<U8>.self
         Flexible<ScreenCountLabel>.self
         Air<EdgeMargin>.self
     }
 }
 public enum LiveOneRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -756,7 +756,7 @@ public enum LiveOneRow: HFlow {
     }
 }
 public enum ScreenTrackRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -768,12 +768,12 @@ public enum ScreenTrackRow: HFlow {
     }
 }
 public enum ScreenGlowRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
         Air<FilterCapCol>.self
-        Fixed<Times<BarUnit, PaneStack.Vertical>, ScreenGlow>.self
+        Fixed<PaneStackLength, ScreenGlow>.self
         Flexible<SpanNothing>.self
         Air<EdgeMargin>.self
     }
@@ -786,7 +786,7 @@ public enum LiveScreenBand: Group {
     }
 }
 public enum PaneKeysRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -798,7 +798,7 @@ public enum PaneKeysRow: HFlow {
     }
 }
 public enum LiveTwoRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -808,7 +808,7 @@ public enum LiveTwoRow: HFlow {
     }
 }
 public enum SceneTwoBreakRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -818,7 +818,7 @@ public enum SceneTwoBreakRow: HFlow {
     }
 }
 public enum HeadFourRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -828,7 +828,7 @@ public enum HeadFourRow: HFlow {
 }
 
 public enum HeadFiveRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -837,7 +837,7 @@ public enum HeadFiveRow: HFlow {
     }
 }
 public enum FourRedsRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -855,7 +855,7 @@ public enum FourRedsRow: HFlow {
     }
 }
 public enum RedNamesRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -869,7 +869,7 @@ public enum RedNamesRow: HFlow {
     }
 }
 public enum PrismNoteRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -879,7 +879,7 @@ public enum PrismNoteRow: HFlow {
     }
 }
 public enum HeadSlitsRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -888,7 +888,7 @@ public enum HeadSlitsRow: HFlow {
     }
 }
 public enum SlitBreakRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -898,7 +898,7 @@ public enum SlitBreakRow: HFlow {
     }
 }
 public enum ScreenRGBreakRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -908,7 +908,7 @@ public enum ScreenRGBreakRow: HFlow {
     }
 }
 public enum FringeRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -924,7 +924,7 @@ public enum FringeRow: HFlow {
     }
 }
 public enum LampsRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -938,7 +938,7 @@ public enum LampsRow: HFlow {
     }
 }
 public enum LampNamesRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -952,7 +952,7 @@ public enum LampNamesRow: HFlow {
     }
 }
 public enum HeadWallRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -961,7 +961,7 @@ public enum HeadWallRow: HFlow {
     }
 }
 public enum WallBreakRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -971,7 +971,7 @@ public enum WallBreakRow: HFlow {
     }
 }
 public enum HookParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -981,7 +981,7 @@ public enum HookParaRow: HFlow {
     }
 }
 public enum SetupParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -991,7 +991,7 @@ public enum SetupParaRow: HFlow {
     }
 }
 public enum GasesParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1001,7 +1001,7 @@ public enum GasesParaRow: HFlow {
     }
 }
 public enum GasSquaresParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1011,7 +1011,7 @@ public enum GasSquaresParaRow: HFlow {
     }
 }
 public enum SetupTailParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1021,7 +1021,7 @@ public enum SetupTailParaRow: HFlow {
     }
 }
 public enum BeamsParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1031,7 +1031,7 @@ public enum BeamsParaRow: HFlow {
     }
 }
 public enum BeamsFactParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1041,7 +1041,7 @@ public enum BeamsFactParaRow: HFlow {
     }
 }
 public enum WallParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1051,7 +1051,7 @@ public enum WallParaRow: HFlow {
     }
 }
 public enum WallFactParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1061,7 +1061,7 @@ public enum WallFactParaRow: HFlow {
     }
 }
 public enum FiltersParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1071,7 +1071,7 @@ public enum FiltersParaRow: HFlow {
     }
 }
 public enum QuarterParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1081,7 +1081,7 @@ public enum QuarterParaRow: HFlow {
     }
 }
 public enum SlitsParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1091,7 +1091,7 @@ public enum SlitsParaRow: HFlow {
     }
 }
 public enum SlitsFactParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1101,7 +1101,7 @@ public enum SlitsFactParaRow: HFlow {
     }
 }
 public enum ScreenParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1111,7 +1111,7 @@ public enum ScreenParaRow: HFlow {
     }
 }
 public enum PairsParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1121,7 +1121,7 @@ public enum PairsParaRow: HFlow {
     }
 }
 public enum LoneParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1131,7 +1131,7 @@ public enum LoneParaRow: HFlow {
     }
 }
 public enum RGParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1141,7 +1141,7 @@ public enum RGParaRow: HFlow {
     }
 }
 public enum EyeParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1151,7 +1151,7 @@ public enum EyeParaRow: HFlow {
     }
 }
 public enum DiffParaRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1161,7 +1161,7 @@ public enum DiffParaRow: HFlow {
     }
 }
 public enum GasNoteRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1174,7 +1174,7 @@ public typealias GasHydrogenKey = Layered<LightKeyTrack, GasHydrogenKeyLabel>
 public typealias GasNeonKey = Layered<LightKeyTrack, GasNeonKeyLabel>
 public typealias GasSodiumKey = Layered<LightKeyTrack, GasSodiumKeyLabel>
 public enum GasKeysRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1188,7 +1188,7 @@ public enum GasKeysRow: HFlow {
     }
 }
 public enum LiveIntroRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1200,7 +1200,7 @@ public enum LiveIntroRow: HFlow {
 public typealias WidenKey = Layered<LightKeyTrack, WidenKeyLabel>
 public typealias NarrowKey = Layered<LightKeyTrack, NarrowKeyLabel>
 public enum LiveFringeRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1216,7 +1216,7 @@ public enum LiveFringeRow: HFlow {
     }
 }
 public enum LiveFringeBRow: HFlow {
-    public typealias Given = U512
+    public typealias Given = LightSurface
     @StructureBuilder
     public static var body: some Structure & Divides {
         Air<EdgeMargin>.self
@@ -1226,34 +1226,34 @@ public enum LiveFringeBRow: HFlow {
     }
 }
 public enum LightArt: GrownDiagram {
-    public typealias Across = U512
+    public typealias Across = LightSurface
     public typealias AriaLabel = LightAlt
     @StructureBuilder
     public static var body: some Structure & DividesY {
         Air<EdgeMargin>.self
         Fixed<HeadTall, SpanHosted<TitleRow>>.self
-        Fixed<Plus<Times<LineTally<HookParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<HookParaRow>>.self
+        Fixed<HookTall, SpanHosted<HookParaRow>>.self
         Air<Plus<U16, U8>>.self
         Fixed<RowTall, SpanHosted<HeadOneRow>>.self
-        Fixed<Plus<Times<LineTally<SetupParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<SetupParaRow>>.self
+        Fixed<SetupTall, SpanHosted<SetupParaRow>>.self
         Air<U8>.self
         Fixed<U32, SpanHosted<LampBand>>.self
         Air<U4>.self
         Fixed<LineTall, SpanHosted<WaveCaptionRow>>.self
         Fixed<LineTall, SpanHosted<BeyondRow>>.self
         Air<U8>.self
-        Fixed<Plus<Times<LineTally<GasesParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<GasesParaRow>>.self
+        Fixed<GasesTall, SpanHosted<GasesParaRow>>.self
         Air<U4>.self
         Fixed<Plus<U16, U8>, SpanHosted<LampsRow>>.self
         Air<U2>.self
         Fixed<LineTall, SpanHosted<LampNamesRow>>.self
         Air<U4>.self
-        Fixed<Plus<Times<LineTally<GasSquaresParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<GasSquaresParaRow>>.self
+        Fixed<GasSquaresTall, SpanHosted<GasSquaresParaRow>>.self
         Air<U4>.self
-        Fixed<Plus<Times<LineTally<SetupTailParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<SetupTailParaRow>>.self
+        Fixed<SetupTailTall, SpanHosted<SetupTailParaRow>>.self
         Air<Plus<U16, U8>>.self
         Fixed<RowTall, SpanHosted<MixHeadRow>>.self
-        Fixed<Plus<Times<LineTally<MixIntroWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<MixIntroRow>>.self
+        Fixed<MixIntroTall, SpanHosted<MixIntroRow>>.self
         Air<U8>.self
         Fixed<LineTall, SpanHosted<MixAlphaRow>>.self
         Air<U4>.self
@@ -1263,14 +1263,14 @@ public enum LightArt: GrownDiagram {
         Air<U8>.self
         Fixed<Plus<U32, U16>, SpanHosted<MixPatchRow>>.self
         Air<U8>.self
-        Fixed<Plus<Times<LineTally<MixNoteWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<MixNoteRow>>.self
+        Fixed<MixNoteTall, SpanHosted<MixNoteRow>>.self
         Air<U8>.self
-        Fixed<Times<LineTally<GasNoteWord, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<GasNoteRow>>.self
+        Fixed<GasNoteTall, SpanHosted<GasNoteRow>>.self
         Air<U4>.self
         Fixed<Plus<U32, U8>, SpanHosted<GasKeysRow>>.self
         Air<Plus<U8, U4>>.self
         Fixed<RowTall, SpanHosted<MapHeadRow>>.self
-        Fixed<Plus<Times<LineTally<MapIntroWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<MapIntroRow>>.self
+        Fixed<MapIntroTall, SpanHosted<MapIntroRow>>.self
         Air<U8>.self
         Fixed<Plus<U16, U4>, SpanHosted<MapRowB0>>.self
         Air<U2>.self
@@ -1292,36 +1292,36 @@ public enum LightArt: GrownDiagram {
         Air<U2>.self
         Fixed<LineTall, SpanHosted<MapColumnsRow>>.self
         Air<U4>.self
-        Fixed<Times<LineTally<MapIRWord, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<MapIRRow>>.self
+        Fixed<MapIRTall, SpanHosted<MapIRRow>>.self
         Air<Plus<U16, U8>>.self
         Fixed<RowTall, SpanHosted<HeadTwoRow>>.self
-        Fixed<Plus<Times<LineTally<BeamsParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<BeamsParaRow>>.self
+        Fixed<BeamsTall, SpanHosted<BeamsParaRow>>.self
         Air<U8>.self
-        Fixed<Times<LineTally<PatchNoteWord, LightParaWide, TextXS>, Plus<U16, U4>>, SpanHosted<PatchesRow>>.self
+        Fixed<PatchNoteTall, SpanHosted<PatchesRow>>.self
         Air<Plus<U8, U4>>.self
         Fixed<U32, SpanHosted<BeamXBand>>.self
         Air<U4>.self
         Fixed<U32, SpanHosted<BeamYBand>>.self
         Air<U4>.self
-        Fixed<Times<LineTally<PrismNoteWord, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<PrismNoteRow>>.self
+        Fixed<PrismNoteTall, SpanHosted<PrismNoteRow>>.self
         Air<U4>.self
-        Fixed<Plus<Times<LineTally<BeamsFactParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<BeamsFactParaRow>>.self
+        Fixed<BeamsFactTall, SpanHosted<BeamsFactParaRow>>.self
         Air<U8>.self
-        Fixed<Times<LineTally<IRLessonWord, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<IRLessonRow>>.self
+        Fixed<IRLessonTall, SpanHosted<IRLessonRow>>.self
         Air<U4>.self
         Fixed<Plus<U32, U8>, SpanHosted<IRKeyRow>>.self
         Air<U4>.self
-        Fixed<Times<LineTally<SceneOneBreak, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<SceneOneBreakRow>>.self
+        Fixed<SceneOneBreakTall, SpanHosted<SceneOneBreakRow>>.self
         Air<Plus<U16, U8>>.self
         Fixed<RowTall, SpanHosted<HeadWallRow>>.self
-        Fixed<Plus<Times<LineTally<WallParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<WallParaRow>>.self
+        Fixed<WallTall, SpanHosted<WallParaRow>>.self
         Air<U4>.self
-        Fixed<Plus<Times<LineTally<WallFactParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<WallFactParaRow>>.self
+        Fixed<WallFactTall, SpanHosted<WallFactParaRow>>.self
         Air<U4>.self
-        Fixed<Times<LineTally<WallBreakWord, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<WallBreakRow>>.self
+        Fixed<WallBreakTall, SpanHosted<WallBreakRow>>.self
         Air<Plus<U16, U8>>.self
         Fixed<RowTall, SpanHosted<HeadThreeRow>>.self
-        Fixed<Plus<Times<LineTally<FiltersParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<FiltersParaRow>>.self
+        Fixed<FiltersTall, SpanHosted<FiltersParaRow>>.self
         Air<U8>.self
         Fixed<LineTall, SpanHosted<CrossedCapRow>>.self
         Fixed<LineTall, SpanHosted<LampBarRow>>.self
@@ -1335,52 +1335,52 @@ public enum LightArt: GrownDiagram {
         Air<U2>.self
         Fixed<LineTall, SpanHosted<ScreenBarRow>>.self
         Air<Plus<U8, U4>>.self
-        Fixed<Times<LineTally<LiveOneWord, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<LiveOneRow>>.self
+        Fixed<LiveOneTall, SpanHosted<LiveOneRow>>.self
         Air<U4>.self
         Fixed<Plus<U16, U8>, SpanHosted<LiveScreenBand>>.self
         Air<U8>.self
         Fixed<Plus<U32, U8>, SpanHosted<PaneKeysRow>>.self
         Air<U4>.self
-        Fixed<Times<LineTally<LiveTwoWord, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<LiveTwoRow>>.self
+        Fixed<LiveTwoTall, SpanHosted<LiveTwoRow>>.self
         Air<U8>.self
-        Fixed<Plus<Times<LineTally<QuarterParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<QuarterParaRow>>.self
+        Fixed<QuarterTall, SpanHosted<QuarterParaRow>>.self
         Air<U4>.self
-        Fixed<Times<LineTally<SceneTwoBreak, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<SceneTwoBreakRow>>.self
+        Fixed<SceneTwoBreakTall, SpanHosted<SceneTwoBreakRow>>.self
         Air<Plus<U16, U8>>.self
         Fixed<RowTall, SpanHosted<HeadSlitsRow>>.self
-        Fixed<Plus<Times<LineTally<SlitsParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<SlitsParaRow>>.self
+        Fixed<SlitsTall, SpanHosted<SlitsParaRow>>.self
         Air<U8>.self
         Fixed<Plus<U16, U8>, SpanHosted<FringeRow>>.self
         Air<U8>.self
-        Fixed<Plus<Times<LineTally<SlitsFactParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<SlitsFactParaRow>>.self
+        Fixed<SlitsFactTall, SpanHosted<SlitsFactParaRow>>.self
         Air<U8>.self
-        Fixed<Times<LineTally<LiveFringeWord, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<LiveIntroRow>>.self
+        Fixed<LiveFringeTall, SpanHosted<LiveIntroRow>>.self
         Air<U4>.self
         Fixed<Plus<U32, U8>, SpanHosted<LiveFringeRow>>.self
         Air<U4>.self
-        Fixed<Times<LineTally<LiveFringeBWord, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<LiveFringeBRow>>.self
+        Fixed<LiveFringeBTall, SpanHosted<LiveFringeBRow>>.self
         Air<U4>.self
-        Fixed<Times<LineTally<SlitBreakWord, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<SlitBreakRow>>.self
+        Fixed<SlitBreakTall, SpanHosted<SlitBreakRow>>.self
         Air<Plus<U16, U8>>.self
         Fixed<RowTall, SpanHosted<HeadFiveRow>>.self
-        Fixed<Plus<Times<LineTally<ScreenParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<ScreenParaRow>>.self
+        Fixed<ScreenTall, SpanHosted<ScreenParaRow>>.self
         Air<U8>.self
         Fixed<Plus<U16, U8>, SpanHosted<FourRedsRow>>.self
         Air<U2>.self
         Fixed<LineTall, SpanHosted<RedNamesRow>>.self
         Air<U4>.self
-        Fixed<Plus<Times<LineTally<PairsParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<PairsParaRow>>.self
+        Fixed<PairsTall, SpanHosted<PairsParaRow>>.self
         Air<U4>.self
-        Fixed<Plus<Times<LineTally<LoneParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<LoneParaRow>>.self
+        Fixed<LoneTall, SpanHosted<LoneParaRow>>.self
         Air<U8>.self
-        Fixed<Plus<Times<LineTally<RGParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<RGParaRow>>.self
+        Fixed<RGTall, SpanHosted<RGParaRow>>.self
         Air<U4>.self
-        Fixed<Times<LineTally<ScreenRGBreakWord, LightParaWide, TextS>, Plus<U16, U4>>, SpanHosted<ScreenRGBreakRow>>.self
+        Fixed<ScreenRGBreakTall, SpanHosted<ScreenRGBreakRow>>.self
         Air<U4>.self
-        Fixed<Plus<Times<LineTally<EyeParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<EyeParaRow>>.self
+        Fixed<EyeTall, SpanHosted<EyeParaRow>>.self
         Air<Plus<U16, U8>>.self
         Fixed<RowTall, SpanHosted<HeadFourRow>>.self
-        Fixed<Plus<Times<LineTally<DiffParaWord, LightParaWide, TextS>, Plus<U16, U4>>, U8>, SpanHosted<DiffParaRow>>.self
+        Fixed<DiffTall, SpanHosted<DiffParaRow>>.self
         Air<EdgeMargin>.self
     }
 }

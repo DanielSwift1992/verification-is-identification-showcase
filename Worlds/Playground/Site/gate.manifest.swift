@@ -8,9 +8,13 @@ public protocol Mine {}
 public enum TheManifest: Mine {
     public typealias Kind = FormsFile
 }
-extension TheManifest { public static var typeName: String { "Manifest.swift" } }
+extension TheManifest {
+    public static var typeName: String { "Manifest.swift" }
+}
 
 public enum ThePalette: Mine {
     public typealias Kind = FormsFile
 }
-extension ThePalette { public static var typeName: String { "Palette.swift" } }
+extension ThePalette {
+    public static var typeName: String { "Palette.swift" }
+}

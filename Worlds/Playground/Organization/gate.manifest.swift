@@ -8,4 +8,15 @@ public protocol Mine {}
 public enum TheOrganization: Mine {
     public typealias Kind = WorldFile
 }
-extension TheOrganization { public static var typeName: String { "Organization.swift" } }
+extension TheOrganization {
+    public static var typeName: String { "Organization.swift" }
+}
+
+// Geometry is compiled with the company page; it states no company premises.
+public enum CarriedFile: Role {}
+public enum TheGeometry: Mine {
+    public typealias Kind = CarriedFile
+}
+extension TheGeometry {
+    public static var typeName: String { "Dictionary/Design.swift" }
+}

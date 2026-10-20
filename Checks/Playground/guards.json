@@ -1,5 +1,5 @@
 {
-  "world": "Worlds/Playground/Basics/Basics.swift",
+  "world": "Basics",
   "cases": [
     {
       "id": "illegal-import",
@@ -21,5 +21,9 @@
       "suffix": "\npublic enum ProbeRow: HFlow {\n    public typealias Given = U512\n    public static var body: some Structure & Divides {\n        Air<U2>.self\n    }\n}\n",
       "expect": "states no @StructureBuilder"
     }
+  ],
+  "files": [
+    "Worlds/Playground/Basics/BasicsPages.swift",
+    "Worlds/Playground/Basics/Dictionary/Basics.swift"
   ]
 }

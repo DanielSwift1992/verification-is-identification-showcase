@@ -152,5 +152,46 @@
     "light_contains": [
       "data-vi-rules=\"SetAlpha<Rung1>\""
     ]
+  },
+  "world_sources": {
+    "Atom": [
+      "Worlds/Playground/Atom/AtomPages.swift",
+      "Worlds/Playground/Atom/Dictionary/Atom.swift"
+    ],
+    "Basics": [
+      "Worlds/Playground/Basics/BasicsPages.swift",
+      "Worlds/Playground/Basics/Dictionary/Basics.swift"
+    ],
+    "Company": [
+      "Worlds/Playground/Company/Company.swift"
+    ],
+    "FAQ": [
+      "Worlds/Playground/FAQ/Dictionary/FAQ.swift",
+      "Worlds/Playground/FAQ/FAQPages.swift"
+    ],
+    "Light": [
+      "Worlds/Playground/Light/Dictionary/Light.swift",
+      "Worlds/Playground/Light/LightPages.swift"
+    ],
+    "Organization": [
+      "Worlds/Playground/Organization/Dictionary/Design.swift",
+      "Worlds/Playground/Organization/Organization.swift"
+    ],
+    "ReadMe": [
+      "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+      "Worlds/Playground/ReadMe/ReadMePages.swift"
+    ],
+    "Rules": [
+      "Worlds/Playground/Rules/Dictionary/Rules.swift",
+      "Worlds/Playground/Rules/RulesPages.swift"
+    ],
+    "Typewriter": [
+      "Worlds/Playground/Typewriter/Dictionary/Typewriter.swift",
+      "Worlds/Playground/Typewriter/TypewriterPages.swift"
+    ],
+    "World": [
+      "Worlds/Playground/World/Dictionary/World.swift",
+      "Worlds/Playground/World/WorldPages.swift"
+    ]
   }
 }

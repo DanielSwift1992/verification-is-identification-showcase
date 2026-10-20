@@ -11,7 +11,7 @@
       "world": "Light",
       "court": "where",
       "exit": 0,
-      "prefix": "✓ THE WHERE holds: 11 equalities and 0 memberships"
+      "prefix": "\u2713 THE WHERE holds: 11 equalities and 0 memberships"
     },
     {
       "id": "light-halving",
@@ -104,7 +104,7 @@
         "encoding": "UnaryArithmeticEncoding",
         "sigma": "AtomLevels"
       },
-      "prefix": "✓ COUNT holds: 10 source-bound readings"
+      "prefix": "\u2713 COUNT holds: 10 source-bound readings"
     },
     {
       "id": "atom-count-lie",
@@ -141,5 +141,15 @@
     "light-clean",
     "atom-clean-where",
     "atom-clean-count"
-  ]
+  ],
+  "declaration_files": {
+    "Atom": "Worlds/Playground/Atom/Dictionary/Atom.swift",
+    "Basics": "Worlds/Playground/Basics/Dictionary/Basics.swift",
+    "FAQ": "Worlds/Playground/FAQ/Dictionary/FAQ.swift",
+    "Light": "Worlds/Playground/Light/Dictionary/Light.swift",
+    "ReadMe": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
+    "Rules": "Worlds/Playground/Rules/Dictionary/Rules.swift",
+    "Typewriter": "Worlds/Playground/Typewriter/Dictionary/Typewriter.swift",
+    "World": "Worlds/Playground/World/Dictionary/World.swift"
+  }
 }

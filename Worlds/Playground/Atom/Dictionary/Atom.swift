@@ -853,3 +853,23 @@ public typealias BalmerBetaBinding = LevelDrop<FloorTwoDepth, FloorFourDepth, Ba
 /// The road through floor three: 9 + (7 + 20) reads as the same recorded 36.
 public typealias ThroughFloorThreeBinding =
     LevelDrop<FloorTwoDepth, FloorFourDepth, Plus<PaschenAlphaDrop, BalmerAlphaDrop>>
+
+// The page speaks these geometry names; each expression has one home.
+public typealias AtomSurface = U512
+public typealias BetaRoadLength = Times<U16, BetaJump.Drop>
+public typealias PaschenRoadLength = Times<U16, PaschenJump.Drop>
+public typealias BalmerRoadLength = Times<U16, BalmerJump.Drop>
+public typealias AtomThesisTall = Plus<Times<LineTally<AtomThesisWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias AtomHookTall = Plus<Times<LineTally<AtomHookWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias AtomJumpTall = Plus<Times<LineTally<AtomJumpWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias PressJumpTall = Times<LineTally<PressJumpWord, AtomParaWide, TextS>, Plus<U16, U4>>
+public typealias FrameLegendTall = Times<LineTally<FrameLegendWord, AtomParaWide, TextXS>, Plus<U16, U4>>
+public typealias AtomReachTall = Plus<Times<LineTally<AtomReachWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias AtomShapeTall = Plus<Times<LineTally<AtomShapeWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias AtomTrapTall = Plus<Times<LineTally<AtomTrapWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias ShineTall = Plus<Times<LineTally<ShineParaWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias AtomBreakTall = Plus<Times<LineTally<AtomBreakWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias RoadsTall = Plus<Times<LineTally<RoadsParaWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias RoadsBreakTall = Times<LineTally<RoadsBreakWord, AtomParaWide, TextS>, Plus<U16, U4>>
+public typealias LawTall = Plus<Times<LineTally<LawParaWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>
+public typealias AtomFinalTall = Plus<Times<LineTally<AtomFinalWord, AtomParaWide, TextS>, Plus<U16, U4>>, U8>

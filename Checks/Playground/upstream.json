@@ -1,93 +1,129 @@
 {
   "source_repository": "https://github.com/DanielSwift1992/typed-playground",
   "source_revision": "400b6674d1c120bb2b86150631093f86ec4d7994",
-  "showcase_base": "6d48b55d512c3b90b2b1c5c07d223420643f90e4",
-  "compiler_theory_revision": "95513b4bd8605c2c3c0df3290c0160c0203def2c",
+  "showcase_base": "907f1e932e4869f02077e66bcf985bea501a78f5",
+  "compiler_theory_revision": "b61433abffaca19f5fd6bcdce00f27b47b49d40f",
   "gate_role_reference": "61422112396ff7e3406c2cf1c1c6fe3bc9da213e",
   "files": [
-    {
-      "source": "corpus/worlds/Atom.swift",
-      "target": "Worlds/Playground/Atom/Atom.swift",
-      "source_sha256": "3d7c9d5e85de483339c1f1a028e1807257fcf5eeab106c139863e932f628dbda",
-      "sha256": "3d7c9d5e85de483339c1f1a028e1807257fcf5eeab106c139863e932f628dbda",
-      "byte_for_byte": true
-    },
     {
       "source": "corpus/worlds/AtomPages.swift",
       "target": "Worlds/Playground/Atom/AtomPages.swift",
       "source_sha256": "da766db6cc0714dcc62fa8ed4fa2d9dc13f1c4e5fc5f7a46c60bc7432b4d1d5d",
-      "sha256": "da766db6cc0714dcc62fa8ed4fa2d9dc13f1c4e5fc5f7a46c60bc7432b4d1d5d",
-      "byte_for_byte": true
+      "sha256": "98e5bb236a96bf5e45a357f7adeac1b27d903320bf5957773dbf108bb2f70898",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+    },
+    {
+      "source": "corpus/worlds/Atom.swift",
+      "target": "Worlds/Playground/Atom/Dictionary/Atom.swift",
+      "source_sha256": "3d7c9d5e85de483339c1f1a028e1807257fcf5eeab106c139863e932f628dbda",
+      "sha256": "ff50043a7cd079eaf1a5756ef3ae6be4a6acc69ce62565280614e9f114c255c6",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
     },
     {
       "source": "corpus/worlds/Basics.swift",
-      "target": "Worlds/Playground/Basics/Basics.swift",
+      "target": "Worlds/Playground/Basics/BasicsPages.swift",
       "source_sha256": "6bb923d2b5e07befe63bf0681880eaa7ef3f85ecb2750a9d11aa6e4cfdd909ec",
-      "sha256": "6bb923d2b5e07befe63bf0681880eaa7ef3f85ecb2750a9d11aa6e4cfdd909ec",
-      "byte_for_byte": true
+      "sha256": "533b968abadbf9a927432fb338e3fb988f83b852b007a497d10e2313383b179f",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+    },
+    {
+      "source": "corpus/worlds/Basics.swift",
+      "target": "Worlds/Playground/Basics/Dictionary/Basics.swift",
+      "source_sha256": "6bb923d2b5e07befe63bf0681880eaa7ef3f85ecb2750a9d11aa6e4cfdd909ec",
+      "sha256": "f30af4e0e0aa4068c08a64664c9c0ffe6b0de9e8bb6de720bff308a72083e1cf",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
     },
     {
       "source": "corpus/worlds/Company.swift",
       "target": "Worlds/Playground/Company/Company.swift",
       "source_sha256": "e2570be76c11add181cfe034b984a96fac93c895de3f94d5855e8238e84ead72",
       "sha256": "e2570be76c11add181cfe034b984a96fac93c895de3f94d5855e8238e84ead72",
-      "byte_for_byte": true
+      "byte_for_byte": true,
+      "transformation": null
     },
     {
       "source": "corpus/worlds/FAQ.swift",
-      "target": "Worlds/Playground/FAQ/FAQ.swift",
+      "target": "Worlds/Playground/FAQ/Dictionary/FAQ.swift",
       "source_sha256": "bc8e4e6f1c092837ef25a8cc9c24570604740b1057290ecb565872de59a43f97",
-      "sha256": "bc8e4e6f1c092837ef25a8cc9c24570604740b1057290ecb565872de59a43f97",
-      "byte_for_byte": true
+      "sha256": "6c668c47cb3b730aabd74757a044e04db686ff402e18a40d7d3466c993d66848",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+    },
+    {
+      "source": "corpus/worlds/FAQ.swift",
+      "target": "Worlds/Playground/FAQ/FAQPages.swift",
+      "source_sha256": "bc8e4e6f1c092837ef25a8cc9c24570604740b1057290ecb565872de59a43f97",
+      "sha256": "a6cf9723c9254f08cc26f560677591dbb0682b88fac9926b50279a4f6fe308b5",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
     },
     {
       "source": "corpus/worlds/Light.swift",
-      "target": "Worlds/Playground/Light/Light.swift",
+      "target": "Worlds/Playground/Light/Dictionary/Light.swift",
       "source_sha256": "b3ff0796dfad01004d39c0e6b0092ba3691646ae29493c1f10cb34dabe83988d",
-      "sha256": "b3ff0796dfad01004d39c0e6b0092ba3691646ae29493c1f10cb34dabe83988d",
-      "byte_for_byte": true
+      "sha256": "a394da0bf59c7d7d0b3855804c93e27c30b544221ee43ef3698de23402beade8",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
     },
     {
       "source": "corpus/worlds/LightPages.swift",
       "target": "Worlds/Playground/Light/LightPages.swift",
       "source_sha256": "8a513832878c9921b76e4b410fb4047caf8e32d6ea92d4270150dbdcff4036a8",
-      "sha256": "8a513832878c9921b76e4b410fb4047caf8e32d6ea92d4270150dbdcff4036a8",
-      "byte_for_byte": true
+      "sha256": "d37a346e3a155dc05fa2b87c00a81b4ab692127d1b6255548da224af86f1adee",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+    },
+    {
+      "source": "corpus/worlds/Organization.swift",
+      "target": "Worlds/Playground/Organization/Dictionary/Design.swift",
+      "source_sha256": "fb0928e281e1593e2c346a8937f663a8333439a1e6cfa5fa242c1a23c69edcd0",
+      "sha256": "5c590ba2f550273cf76c51d9847a10cd18c15eb03e9d61471297855aefbbfab0",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
     },
     {
       "source": "corpus/worlds/Organization.swift",
       "target": "Worlds/Playground/Organization/Organization.swift",
       "source_sha256": "fb0928e281e1593e2c346a8937f663a8333439a1e6cfa5fa242c1a23c69edcd0",
-      "sha256": "fb0928e281e1593e2c346a8937f663a8333439a1e6cfa5fa242c1a23c69edcd0",
-      "byte_for_byte": true
+      "sha256": "0ac96729f9730f0c1185adbdef45d1000d46d37aaded149bf6539491f5079e5b",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
     },
     {
       "source": "corpus/worlds/ReadMe.swift",
-      "target": "Worlds/Playground/ReadMe/ReadMe.swift",
+      "target": "Worlds/Playground/ReadMe/Dictionary/ReadMe.swift",
       "source_sha256": "4b2ad8d82e83e04825d5761e95b9d23ec108d657f7f7a4d7422086f8591b793f",
-      "sha256": "4b2ad8d82e83e04825d5761e95b9d23ec108d657f7f7a4d7422086f8591b793f",
-      "byte_for_byte": true
+      "sha256": "b7251a542519d544ec54ca16a7d74731affaa6af85a8d60578573e7d6ecec5c4",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+    },
+    {
+      "source": "corpus/worlds/ReadMe.swift",
+      "target": "Worlds/Playground/ReadMe/ReadMePages.swift",
+      "source_sha256": "4b2ad8d82e83e04825d5761e95b9d23ec108d657f7f7a4d7422086f8591b793f",
+      "sha256": "d4e03f493887220dacc68850b919a32bc2b7c653291a538dc150cebc0a1f7dd7",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
     },
     {
       "source": "corpus/worlds/Rules.swift",
-      "target": "Worlds/Playground/Rules/Rules.swift",
+      "target": "Worlds/Playground/Rules/Dictionary/Rules.swift",
       "source_sha256": "d56c0373a8a321d87a735044a6e5002853f974df265a03b8502fd3173a9b9ec9",
-      "sha256": "d56c0373a8a321d87a735044a6e5002853f974df265a03b8502fd3173a9b9ec9",
-      "byte_for_byte": true
+      "sha256": "5ed6b8580183550868575ccc7f9fb86e1b5ecfd3e193e5969e4f2f6df7363cb4",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
     },
     {
-      "source": "corpus/worlds/Typewriter.swift",
-      "target": "Worlds/Playground/Typewriter/Typewriter.swift",
-      "source_sha256": "a756761596b50d838d489e9869b01bcbb3d522036b025286c6e4dbb2df0d37ea",
-      "sha256": "a756761596b50d838d489e9869b01bcbb3d522036b025286c6e4dbb2df0d37ea",
-      "byte_for_byte": true
-    },
-    {
-      "source": "corpus/worlds/World.swift",
-      "target": "Worlds/Playground/World/World.swift",
-      "source_sha256": "ab9c11f30d33a6565d2d880861527fea89c05264c1a69db5c179b91eaceb6ba2",
-      "sha256": "ab9c11f30d33a6565d2d880861527fea89c05264c1a69db5c179b91eaceb6ba2",
-      "byte_for_byte": true
+      "source": "corpus/worlds/Rules.swift",
+      "target": "Worlds/Playground/Rules/RulesPages.swift",
+      "source_sha256": "d56c0373a8a321d87a735044a6e5002853f974df265a03b8502fd3173a9b9ec9",
+      "sha256": "9a847ddea2c36dc2fb21647dfef167b1b40277e3e1be8179630749cf6d441cdb",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
     },
     {
       "source": "corpus/Manifest.swift",
@@ -103,7 +139,39 @@
       "source_sha256": "edfe1b1dd287cdfbbc09af9a544d677c0aad0e5b3084655370cb5d475edf6534",
       "sha256": "bd34b48fcfa94631c72696685ebab2c9e0dce48365783bd6d0f1eb441ee462a0",
       "byte_for_byte": false,
-      "transformation": "17 unsupported comments only"
+      "transformation": "preserved Legible residue comments"
+    },
+    {
+      "source": "corpus/worlds/Typewriter.swift",
+      "target": "Worlds/Playground/Typewriter/Dictionary/Typewriter.swift",
+      "source_sha256": "a756761596b50d838d489e9869b01bcbb3d522036b025286c6e4dbb2df0d37ea",
+      "sha256": "d720b00b6b82b9eb2aaee3184ea3d6e4c5df8ff241cb37e18394a290bd5c0645",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+    },
+    {
+      "source": "corpus/worlds/Typewriter.swift",
+      "target": "Worlds/Playground/Typewriter/TypewriterPages.swift",
+      "source_sha256": "a756761596b50d838d489e9869b01bcbb3d522036b025286c6e4dbb2df0d37ea",
+      "sha256": "08a641e35bd94e191b6a32c87f993854eb373c5140f921d9996a389091d5018b",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+    },
+    {
+      "source": "corpus/worlds/World.swift",
+      "target": "Worlds/Playground/World/Dictionary/World.swift",
+      "source_sha256": "ab9c11f30d33a6565d2d880861527fea89c05264c1a69db5c179b91eaceb6ba2",
+      "sha256": "93734dc2b4c6aa6197594db3f9cc66dbe5b6ac9a2c4fdab2ca077338f821de19",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
+    },
+    {
+      "source": "corpus/worlds/World.swift",
+      "target": "Worlds/Playground/World/WorldPages.swift",
+      "source_sha256": "ab9c11f30d33a6565d2d880861527fea89c05264c1a69db5c179b91eaceb6ba2",
+      "sha256": "881274c68e2d44996d918c1c2f48d33ca31b6c2a2299ae062316582937e95e9d",
+      "byte_for_byte": false,
+      "transformation": "model/page split and named page geometry; rendering and court answers compared in r2-preservation.json"
     },
     {
       "source": "goldens/dynamics-world.swift",
@@ -150,7 +218,7 @@
   "court_definitions": {
     "Primitive.swift": {
       "repository": "verification-is-identification",
-      "revision": "95513b4bd8605c2c3c0df3290c0160c0203def2c",
+      "revision": "b61433abffaca19f5fd6bcdce00f27b47b49d40f",
       "source": "Sources/VerificationIsIdentification/Primitive.swift",
       "sha256": "c2700f5d176d4f30159b9996cbe41d33fc2f14dfb6e7ad355e081014f8c4482a"
     },
@@ -160,5 +228,6 @@
       "source": "Sources/DocumentKit/Spectrum.swift",
       "sha256": "59c6404a0deec3248d6dc9bce2e5bbd17b95f491017998b1873461f54213789e"
     }
-  }
+  },
+  "initial_import_showcase_base": "6d48b55d512c3b90b2b1c5c07d223420643f90e4"
 }
