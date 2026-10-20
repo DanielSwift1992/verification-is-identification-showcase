@@ -270,6 +270,19 @@ def main():
                     raise ValueError('unescaped XML twin was accepted')
         if args.freeze and not failed:
             (CONTRACT / 'manifest.json').write_text(json.dumps({'format': 1, 'owner': owner, 'cases': records}, indent=2) + '\n')
+        if not failed:
+            portable = {'format': 'drawing/1', 'owner': owner, 'cases': []}
+            for record in records:
+                item = dict(record)
+                item['sourceSHA256'] = [sha((ROOT / name).read_bytes()) for name in record['sources']]
+                if record.get('output'):
+                    item['svg'] = (CONTRACT / record['output']).read_text()
+                portable['cases'].append(item)
+            data = json.dumps(portable, indent=2) + '\n'
+            if args.freeze:
+                (CONTRACT / 'contract.json').write_text(data)
+            elif (CONTRACT / 'contract.json').read_text() != data:
+                raise ValueError('portable Drawing contract differs from native cases')
         print('Drawing outcomes: ' + ', '.join(str(sum(r['status'] == status for r in records)) + ' ' + status for status in ['svg', 'refused', 'not-compared', 'failed']), flush=True)
         return int(failed)
 

@@ -3,7 +3,7 @@
   "owner": {
     "theoryRevision": "b61433abffaca19f5fd6bcdce00f27b47b49d40f",
     "files": {
-      "showcase/Package.swift": "9c6fcf9af543c1198ecaa7acde2bdcffe4b522bf8b38cc28627846391d66bb31",
+      "showcase/Package.swift": "969c2399f7a57a533f1513237da60aca6624eef886035caefbec18f940c7aaba",
       "showcase/Sources/DocumentKit/Alphabet.swift": "99382d24f496cf5cab36ee55942f1c7cb7c3a05bd9a5cf923602528661a7686d",
       "showcase/Sources/DocumentKit/Claim.swift": "800f442b92b692758216c8d5b75d742f8bd5d5d4253bcc55ebd53eb5334d6911",
       "showcase/Sources/DocumentKit/Design.swift": "8b6338891c9299888e53c707789edb0feb4838041bf77c467c38fde5889c4083",

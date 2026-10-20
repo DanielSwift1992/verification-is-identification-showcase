@@ -21,3 +21,5 @@ An external request needs only a root, its address and the source files (relativ
 ```
 
 Optional `dependencies` lists native module names to link; the default is VerificationIsIdentification, Alphabet and DocumentKit. A request may instead name a `target` in this package and a `root`; SwiftPM then owns its source selection. The command uses Python 3 and the package's Swift toolchain.
+
+`contract.json` is the portable input generated and checked by the same native reading. It carries source-byte hashes and exact SVG bytes alongside the manifest outcomes. DrawingProfile.Contract names its ordinary taken row in record format 2. The profile consumer verifies that row before comparing a current reading; editing bytes or adding semantic input removes an exact-case match.

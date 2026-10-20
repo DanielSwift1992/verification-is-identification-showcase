@@ -7,10 +7,6 @@ public enum Port: Word {}
 extension Port {
     public static var typeName: String { "gate/documentkit-drawing" }
 }
-public enum NoContract: Word {}
-extension NoContract {
-    public static var typeName: String { "" }
-}
 public enum FaceFamily: Word {}
 extension FaceFamily {
     public static var typeName: String { "Inter" }
@@ -48,7 +44,7 @@ public enum MeasuredTable: DrawingMetrics {
 }
 public enum TheDrawingProfile: DrawingProfile {
     public typealias Reader = Port
-    public typealias Contract = NoContract
+    public typealias Contract = TheContract
     public typealias Palette = ThePalette
     public typealias Bindings = (BindingReference0, BindingReference1, BindingReference2, BindingReference3, BindingReference4, BindingReference5, BindingReference6, BindingReference7, BindingReference8, BindingReference9, BindingReference10, BindingReference11, BindingReference12, BindingReference13, BindingReference14, BindingReference15, BindingReference16, BindingReference17, BindingReference18, BindingReference19, BindingReference20, BindingReference21, BindingReference22, BindingReference23, BindingReference24, BindingReference25, BindingReference26, BindingReference27, BindingReference28, BindingReference29, BindingReference30, BindingReference31, BindingReference32, BindingReference33, BindingReference34, BindingReference35, BindingReference36, BindingReference37)
     public typealias Font = MeasuredFace
