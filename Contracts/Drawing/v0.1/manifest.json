@@ -1,9 +1,9 @@
 {
   "format": 1,
   "owner": {
-    "theoryRevision": "b61433abffaca19f5fd6bcdce00f27b47b49d40f",
+    "theoryRevision": "05dced31ea82faad7a04c9a9f28df98759839c0c",
     "files": {
-      "showcase/Package.swift": "969c2399f7a57a533f1513237da60aca6624eef886035caefbec18f940c7aaba",
+      "showcase/Package.swift": "f0ca4bbf2a9093d4f59b2a7bed40f544ac8871157f53cddbe3e325439b4b6970",
       "showcase/Sources/DocumentKit/Alphabet.swift": "99382d24f496cf5cab36ee55942f1c7cb7c3a05bd9a5cf923602528661a7686d",
       "showcase/Sources/DocumentKit/Claim.swift": "800f442b92b692758216c8d5b75d742f8bd5d5d4253bcc55ebd53eb5334d6911",
       "showcase/Sources/DocumentKit/Design.swift": "8b6338891c9299888e53c707789edb0feb4838041bf77c467c38fde5889c4083",
