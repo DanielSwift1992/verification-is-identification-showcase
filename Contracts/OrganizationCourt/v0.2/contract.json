@@ -1,0 +1,939 @@
+{
+  "schema": "showcase.organization.conformance/1",
+  "suite": "showcase.organization.questions/0.2",
+  "scope": "Finite observations of the pinned company court on foreign forms and ordered file sequences. A zero exit with zero company premises does not validate a foreign domain. Passing establishes neither general equivalence nor complete syntax coverage. The inspection parse door is outside this contract. v0.1 remains an independent required suite.",
+  "reference": {
+    "command": "ShowcaseTools judge",
+    "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+    "revision": "65a73c6b9c7f0128f4b4526a3fc99f5a29890d93",
+    "source": "Sources/Court/OrganizationJudge.swift",
+    "sha256": "e4787f58c8d1fb944e7ddcc1f21d901d2fd782e6459a1646aec674f43beee2c6"
+  },
+  "versions": {
+    "question": "showcase.organization.policy-premises/1",
+    "input": "showcase.organization.fragment-boundaries/2",
+    "response": "showcase.organization.cli-text/1"
+  },
+  "ownership": {
+    "organization": "showcase",
+    "where": "vi (Contracts/Court)",
+    "count": "vi (Contracts/Court)",
+    "delivery": "gate"
+  },
+  "missing_files": [],
+  "files": {
+    "fixtures/bench-atoms.swift": {
+      "sha256": "c8b64e560c1f061e00561fa24121cbd2d5405b10ff50b4ef75870644c8bcbac2",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/bench-atoms.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/bench-metrics.swift": {
+      "sha256": "825d963d0b026383589c6ba8719a9b2f547d6201cfc569f9cd7d3fa2ef91365f",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/bench-metrics.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/bench-palette.swift": {
+      "sha256": "7bab233cea9cc5dcd12aac5a2384a62653c3010697d7665a80388514492b120b",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/bench-palette.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/bench-registers.swift": {
+      "sha256": "c3278902fd8251598334508423efffcde11a73c0c34e3f1e653f238814b588de",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/bench-registers.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/courts.swift": {
+      "sha256": "8ba9f61f7a97e35516c85d959c5610a9ae55e54e5c33424579dd14f06abb29ed",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/courts.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/declare.swift": {
+      "sha256": "e27fc663889eeb0fadb9b647e2f5bc2163300127400946582bebacdeba4f711e",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/declare.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/forms-contract.swift": {
+      "sha256": "cbe1cfc956c071988ec9046a08b31512d57af09192a4f11f911980168738a6f5",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/forms-contract.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/forms-grants.swift": {
+      "sha256": "09a8e0ac4a0461019d61145f2af10a9b4a8fd9e2101887f1788e8de2e2ba109e",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/forms-grants.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/forms-organization.swift": {
+      "sha256": "25eec2626e3fd2e61bc7279fa17655d0cb8845994ad14b159f7507cf3bbb2155",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/forms-organization.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/forms-reference.swift": {
+      "sha256": "4a6b6129d7dd703655b653818a96f17131322dc94952f7b81f710378b0abf6e1",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/forms-reference.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/forms-tool.swift": {
+      "sha256": "2c5486d84ca7ae18c86d6e9d10482e192cc469047a2ee82dbacbec78d12f6d76",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/forms-tool.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/git-atoms.swift": {
+      "sha256": "5143f18e616863c85beca4bd7f1981ec9b308db67e988c32f0e1bd69be983cb0",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/git-atoms.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/grammar.swift": {
+      "sha256": "5528350fee126a195b56dc8c594316e3444214da34d2d8b1c90761220185e1cd",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/grammar.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/manifest.swift": {
+      "sha256": "bdbd2c07166a4969034836eed43a3c30934193c7204e28147d7f1f907a895279",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/manifest.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/readme.swift": {
+      "sha256": "9654ba4e9fbf2c8537b7eec31b51e17a93df0f03c7f1c9d7e450fadd3ac25f83",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/readme.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/verbs.swift": {
+      "sha256": "21d3c155d8f84bf6d1239a1c056847e00ad55ef9ad8ffa4a45b79dd2d4d1dacc",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/gate",
+        "revision": "1bd69def34727b8be50ebc20772a21febb88f901",
+        "path": "stdlib/verbs.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/Light.swift": {
+      "sha256": "b3ff0796dfad01004d39c0e6b0092ba3691646ae29493c1f10cb34dabe83988d",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/typed-playground",
+        "revision": "400b6674d1c120bb2b86150631093f86ec4d7994",
+        "path": "corpus/worlds/Light.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/Atom.swift": {
+      "sha256": "3d7c9d5e85de483339c1f1a028e1807257fcf5eeab106c139863e932f628dbda",
+      "origin": {
+        "repository": "https://github.com/DanielSwift1992/typed-playground",
+        "revision": "400b6674d1c120bb2b86150631093f86ec4d7994",
+        "path": "corpus/worlds/Atom.swift",
+        "transformation": "none"
+      }
+    },
+    "fixtures/domain-outside.swift": {
+      "sha256": "ec6c792865f105c378fcd791c90d7b6c307cd2eea4b189023e0979ab37d1405e",
+      "origin": {
+        "task": "T-0034",
+        "construction": "Minimal boundary witness authored for v0.2. No transformation of an external source."
+      }
+    },
+    "fixtures/vocabulary-outside.swift": {
+      "sha256": "cda77039ed2eba7bcbc8e0806a392a66fd8a0b7af3d9b33cc1db1da3c23e2859",
+      "origin": {
+        "task": "T-0034",
+        "construction": "Minimal boundary witness authored for v0.2. No transformation of an external source."
+      }
+    },
+    "fixtures/foreign-enum.swift": {
+      "sha256": "e4e0dfaeed136a3031cd9e7c3c22ba4f997f230ec48647f3edf5d9bcba5c8a65",
+      "origin": {
+        "task": "T-0034",
+        "construction": "Minimal boundary witness authored for v0.2. No transformation of an external source."
+      }
+    },
+    "fixtures/part-a.swift": {
+      "sha256": "54e6a5f5e8bc4512105b4f2ccc5d65ba33b68f376e2af1a06ff38ae71ccbe582",
+      "origin": {
+        "task": "T-0034",
+        "construction": "Minimal boundary witness authored for v0.2. No transformation of an external source."
+      }
+    },
+    "fixtures/part-b.swift": {
+      "sha256": "51f0ac168421563b47437c3322d9bb719b426c6cd773633f6de43264307fb223",
+      "origin": {
+        "task": "T-0034",
+        "construction": "Minimal boundary witness authored for v0.2. No transformation of an external source."
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "bench-atoms",
+      "pass": "plain",
+      "files": [
+        "fixtures/bench-atoms.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 8 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    bench\\-atoms\\.swift:10  outside the fragment: `public protocol BenchTheme \\{\\}`",
+            "    bench\\-atoms\\.swift:19  outside the fragment: `public protocol Bench \\{`",
+            "    bench\\-atoms\\.swift:20  outside the fragment: `associatedtype Theme: BenchTheme`",
+            "    bench\\-atoms\\.swift:25  outside the fragment: `public protocol JournalScope \\{\\}`",
+            "    bench\\-atoms\\.swift:30  outside the fragment: `public protocol JournalAuthor \\{\\}`",
+            "    bench\\-atoms\\.swift:39  outside the fragment: `public protocol Journal \\{`",
+            "    bench\\-atoms\\.swift:40  outside the fragment: `associatedtype Scope: JournalScope`",
+            "    bench\\-atoms\\.swift:41  outside the fragment: `associatedtype Author: JournalAuthor`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "bench-metrics",
+      "pass": "plain",
+      "files": [
+        "fixtures/bench-metrics.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 17 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    bench\\-metrics\\.swift:19  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:20  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:21  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:22  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:23  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:26  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:27  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:28  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:29  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:30  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:31  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:32  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:33  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:34  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:37  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:38  a typealias stands outside every declaration",
+            "    bench\\-metrics\\.swift:39  a typealias stands outside every declaration"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "bench-palette",
+      "pass": "plain",
+      "files": [
+        "fixtures/bench-palette.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 28 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    bench\\-palette\\.swift:37  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:38  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:39  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:40  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:41  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:42  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:43  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:44  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:45  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:46  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:47  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:48  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:49  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:50  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:51  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:52  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:53  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:55  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:56  a typealias stands outside every declaration",
+            "    bench\\-palette\\.swift:57  a typealias stands outside every declaration"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "bench-registers",
+      "pass": "plain",
+      "files": [
+        "fixtures/bench-registers.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 16 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    bench\\-registers\\.swift:16  a typealias stands outside every declaration",
+            "    bench\\-registers\\.swift:17  a typealias stands outside every declaration",
+            "    bench\\-registers\\.swift:18  a typealias stands outside every declaration",
+            "    bench\\-registers\\.swift:19  a typealias stands outside every declaration",
+            "    bench\\-registers\\.swift:20  a typealias stands outside every declaration",
+            "    bench\\-registers\\.swift:21  a typealias stands outside every declaration",
+            "    bench\\-registers\\.swift:22  a typealias stands outside every declaration",
+            "    bench\\-registers\\.swift:23  a typealias stands outside every declaration",
+            "    bench\\-registers\\.swift:24  a typealias stands outside every declaration",
+            "    bench\\-registers\\.swift:25  a typealias stands outside every declaration",
+            "    bench\\-registers\\.swift:26  a typealias stands outside every declaration",
+            "    bench\\-registers\\.swift:46  outside the fragment: `public protocol Face \\{\\}`",
+            "    bench\\-registers\\.swift:56  outside the fragment: `public protocol Stress \\{\\}`",
+            "    bench\\-registers\\.swift:60  outside the fragment: `public protocol Register \\{`",
+            "    bench\\-registers\\.swift:61  outside the fragment: `associatedtype On: Face`",
+            "    bench\\-registers\\.swift:62  outside the fragment: `associatedtype Set: Stress`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "courts",
+      "pass": "plain",
+      "files": [
+        "fixtures/courts.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 12 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    courts\\.swift:27  outside the fragment: `public protocol VerdictCanon \\{\\}`",
+            "    courts\\.swift:37  outside the fragment: `public protocol CourtSpoken \\{`",
+            "    courts\\.swift:38  outside the fragment: `associatedtype Canon: VerdictCanon`",
+            "    courts\\.swift:51  outside the fragment: `public protocol CourtCarrier \\{\\}`",
+            "    courts\\.swift:53  outside the fragment: `extension BinaryJudge \\{ public static var typeName: String \\{`",
+            "    courts\\.swift:58  outside the fragment: `extension OrganizationBinary \\{ public static var typeName: S`",
+            "    courts\\.swift:60  outside the fragment: `extension PortPlain \\{ public static var typeName: String \\{ \"`",
+            "    courts\\.swift:67  outside the fragment: `extension WasmCourt \\{ public static var typeName: String \\{ \"`",
+            "    courts\\.swift:76  outside the fragment: `extension SwiftVein \\{ public static var typeName: String \\{ \"`",
+            "    courts\\.swift:79  outside the fragment: `public protocol CourtCarried \\{\\}`",
+            "    courts\\.swift:81  outside the fragment: `extension Carry: CourtCarried`",
+            "    courts\\.swift:82  outside the fragment: `where What\\.Canon == As \\{\\}`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "declare",
+      "pass": "plain",
+      "files": [
+        "fixtures/declare.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 0,
+        "stdout": {
+          "line_patterns": [
+            "✓ THE JUDGE holds: 0 declarations · 0 lookups · 0 premises · [0-9]+\\.[0-9] ms"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "forms-contract",
+      "pass": "plain",
+      "files": [
+        "fixtures/forms-contract.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 13 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    forms\\-contract\\.swift:34  outside the fragment: `public protocol Shape \\{\\}`",
+            "    forms\\-contract\\.swift:41  outside the fragment: `public protocol Declared \\{`",
+            "    forms\\-contract\\.swift:42  outside the fragment: `associatedtype Of: Shape`",
+            "    forms\\-contract\\.swift:44  outside the fragment: `public protocol Carrier \\{\\}`",
+            "    forms\\-contract\\.swift:46  outside the fragment: `public protocol Carried \\{\\}`",
+            "    forms\\-contract\\.swift:48  outside the fragment: `extension Carries: Carried`",
+            "    forms\\-contract\\.swift:49  outside the fragment: `where What\\.Of == As \\{\\}`",
+            "    forms\\-contract\\.swift:57  outside the fragment: `public protocol Standing \\{\\}`",
+            "    forms\\-contract\\.swift:59  outside the fragment: `public protocol Operation \\{`",
+            "    forms\\-contract\\.swift:60  outside the fragment: `associatedtype Stands: Standing`",
+            "    forms\\-contract\\.swift:62  outside the fragment: `public protocol Called \\{\\}`",
+            "    forms\\-contract\\.swift:64  outside the fragment: `extension Calls: Called`",
+            "    forms\\-contract\\.swift:65  outside the fragment: `where What\\.Stands == InTheContract \\{\\}`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "forms-grants",
+      "pass": "plain",
+      "files": [
+        "fixtures/forms-grants.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 21 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    forms\\-grants\\.swift:14  outside the fragment: `public protocol Reads \\{\\}`",
+            "    forms\\-grants\\.swift:15  outside the fragment: `public protocol Writes: Reads \\{\\}`",
+            "    forms\\-grants\\.swift:16  outside the fragment: `public protocol Administers: Writes \\{\\}`",
+            "    forms\\-grants\\.swift:21  outside the fragment: `public protocol Realm \\{\\}`",
+            "    forms\\-grants\\.swift:22  outside the fragment: `public protocol Keeper \\{`",
+            "    forms\\-grants\\.swift:23  outside the fragment: `associatedtype Post: Realm`",
+            "    forms\\-grants\\.swift:24  outside the fragment: `associatedtype Key: Reads`",
+            "    forms\\-grants\\.swift:26  outside the fragment: `public protocol Room \\{`",
+            "    forms\\-grants\\.swift:27  outside the fragment: `associatedtype Place: Realm`",
+            "    forms\\-grants\\.swift:30  outside the fragment: `public protocol Entered \\{\\}`",
+            "    forms\\-grants\\.swift:32  outside the fragment: `Who: Keeper,`",
+            "    forms\\-grants\\.swift:33  outside the fragment: `Into: Room`",
+            "    forms\\-grants\\.swift:34  outside the fragment: `> \\{\\}`",
+            "    forms\\-grants\\.swift:35  outside the fragment: `extension Enter: Entered`",
+            "    forms\\-grants\\.swift:36  outside the fragment: `where Who\\.Key: Writes, Who\\.Post == Into\\.Place \\{\\}`",
+            "    forms\\-grants\\.swift:43  outside the fragment: `public protocol Owned \\{\\}`",
+            "    forms\\-grants\\.swift:45  outside the fragment: `Who: Keeper,`",
+            "    forms\\-grants\\.swift:46  outside the fragment: `What: Room`",
+            "    forms\\-grants\\.swift:47  outside the fragment: `> \\{\\}`",
+            "    forms\\-grants\\.swift:48  outside the fragment: `extension Owns: Owned`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "forms-organization",
+      "pass": "plain",
+      "files": [
+        "fixtures/forms-organization.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 41 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    forms\\-organization\\.swift:12  outside the fragment: `public protocol Department \\{\\}`",
+            "    forms\\-organization\\.swift:19  outside the fragment: `public protocol Ranked \\{\\}`",
+            "    forms\\-organization\\.swift:25  outside the fragment: `public protocol Workplace \\{\\}`",
+            "    forms\\-organization\\.swift:32  outside the fragment: `public protocol Document \\{`",
+            "    forms\\-organization\\.swift:33  outside the fragment: `associatedtype Home: Department`",
+            "    forms\\-organization\\.swift:42  outside the fragment: `public protocol Employee \\{`",
+            "    forms\\-organization\\.swift:43  outside the fragment: `associatedtype Home: Department`",
+            "    forms\\-organization\\.swift:44  outside the fragment: `associatedtype Rank: Ranked`",
+            "    forms\\-organization\\.swift:45  outside the fragment: `associatedtype Site: Workplace`",
+            "    forms\\-organization\\.swift:51  outside the fragment: `public protocol Person \\{`",
+            "    forms\\-organization\\.swift:52  outside the fragment: `associatedtype Given: GivenNameCycle`",
+            "    forms\\-organization\\.swift:53  outside the fragment: `associatedtype Family: FamilyNameCycle`",
+            "    forms\\-organization\\.swift:54  outside the fragment: `associatedtype Born: BirthYearCycle`",
+            "    forms\\-organization\\.swift:55  outside the fragment: `associatedtype Sex: Sexed`",
+            "    forms\\-organization\\.swift:57  outside the fragment: `public protocol GivenNameCycle \\{`",
+            "    forms\\-organization\\.swift:58  outside the fragment: `associatedtype Next: GivenNameCycle`",
+            "    forms\\-organization\\.swift:59  outside the fragment: `associatedtype Sex: Sexed`",
+            "    forms\\-organization\\.swift:61  outside the fragment: `public protocol FamilyNameCycle \\{`",
+            "    forms\\-organization\\.swift:62  outside the fragment: `associatedtype Next: FamilyNameCycle`",
+            "    forms\\-organization\\.swift:64  outside the fragment: `public protocol BirthYearCycle \\{`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "forms-reference",
+      "pass": "plain",
+      "files": [
+        "fixtures/forms-reference.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 7 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    forms\\-reference\\.swift:22  outside the fragment: `public protocol Standing \\{\\}`",
+            "    forms\\-reference\\.swift:26  outside the fragment: `public protocol Tracked \\{`",
+            "    forms\\-reference\\.swift:27  outside the fragment: `associatedtype State: Standing`",
+            "    forms\\-reference\\.swift:32  outside the fragment: `public protocol Site \\{\\}`",
+            "    forms\\-reference\\.swift:34  outside the fragment: `public protocol Cited \\{\\}`",
+            "    forms\\-reference\\.swift:36  outside the fragment: `extension Cites: Cited`",
+            "    forms\\-reference\\.swift:37  outside the fragment: `where What\\.State == Open \\{\\}`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "forms-tool",
+      "pass": "plain",
+      "files": [
+        "fixtures/forms-tool.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 10 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    forms\\-tool\\.swift:13  outside the fragment: `public protocol Court \\{\\}`",
+            "    forms\\-tool\\.swift:25  outside the fragment: `public protocol Touch \\{\\}`",
+            "    forms\\-tool\\.swift:30  outside the fragment: `public protocol Verb \\{`",
+            "    forms\\-tool\\.swift:31  outside the fragment: `associatedtype Does: Touch`",
+            "    forms\\-tool\\.swift:32  outside the fragment: `associatedtype Under: Court`",
+            "    forms\\-tool\\.swift:38  outside the fragment: `public protocol Spelling \\{`",
+            "    forms\\-tool\\.swift:39  outside the fragment: `associatedtype Means: Verb`",
+            "    forms\\-tool\\.swift:43  outside the fragment: `public protocol Safe \\{\\}`",
+            "    forms\\-tool\\.swift:47  outside the fragment: `extension Run: Safe`",
+            "    forms\\-tool\\.swift:48  outside the fragment: `where Act\\.Does == Looks \\{\\}`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "git-atoms",
+      "pass": "plain",
+      "files": [
+        "fixtures/git-atoms.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 3 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    git\\-atoms\\.swift:8  outside the fragment: `public protocol Identity \\{\\}`",
+            "    git\\-atoms\\.swift:12  outside the fragment: `public protocol Scope \\{\\}`",
+            "    git\\-atoms\\.swift:19  outside the fragment: `public protocol GitPlace \\{\\}`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "grammar",
+      "pass": "plain",
+      "files": [
+        "fixtures/grammar.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 26 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    grammar\\.swift:17  outside the fragment: `public protocol Glyph \\{\\}`",
+            "    grammar\\.swift:19  outside the fragment: `extension SlashSlash \\{ public static var typeName: String \\{ `",
+            "    grammar\\.swift:21  outside the fragment: `extension BraceOpen \\{ public static var typeName: String \\{ \"`",
+            "    grammar\\.swift:23  outside the fragment: `extension BraceClose \\{ public static var typeName: String \\{ `",
+            "    grammar\\.swift:25  outside the fragment: `extension AngleOpen \\{ public static var typeName: String \\{ \"`",
+            "    grammar\\.swift:27  outside the fragment: `extension AngleClose \\{ public static var typeName: String \\{ `",
+            "    grammar\\.swift:31  outside the fragment: `public protocol Walked \\{`",
+            "    grammar\\.swift:32  outside the fragment: `associatedtype Opens: Glyph`",
+            "    grammar\\.swift:33  outside the fragment: `associatedtype Closes: Glyph`",
+            "    grammar\\.swift:66  outside the fragment: `public protocol ScopedAtom \\{`",
+            "    grammar\\.swift:67  outside the fragment: `associatedtype Home: Walked`",
+            "    grammar\\.swift:72  outside the fragment: `extension Mark \\{ public static var typeName: String \\{ \"==\" \\}`",
+            "    grammar\\.swift:80  outside the fragment: `public protocol Word \\{\\}`",
+            "    grammar\\.swift:83  outside the fragment: `public protocol LineModifier \\{\\}`",
+            "    grammar\\.swift:85  outside the fragment: `extension PublicWord \\{ public static var typeName: String \\{ `",
+            "    grammar\\.swift:87  outside the fragment: `extension EnumWord \\{ public static var typeName: String \\{ \"e`",
+            "    grammar\\.swift:89  outside the fragment: `extension TypealiasWord \\{ public static var typeName: String`",
+            "    grammar\\.swift:91  outside the fragment: `extension ExtensionWord \\{ public static var typeName: String`",
+            "    grammar\\.swift:109  outside the fragment: `public protocol LineSlot \\{\\}`",
+            "    grammar\\.swift:114  outside the fragment: `extension EqualsSlot \\{ public static var typeName: String \\{ `"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "manifest",
+      "pass": "plain",
+      "files": [
+        "fixtures/manifest.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 2 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    manifest\\.swift:32  outside the fragment: `public protocol Role \\{\\}`",
+            "    manifest\\.swift:40  outside the fragment: `public protocol Theirs \\{\\}`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "readme",
+      "pass": "plain",
+      "files": [
+        "fixtures/readme.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 0,
+        "stdout": {
+          "line_patterns": [
+            "✓ THE JUDGE holds: 0 declarations · 0 lookups · 0 premises · [0-9]+\\.[0-9] ms"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "verbs",
+      "pass": "plain",
+      "files": [
+        "fixtures/verbs.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 45 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    verbs\\.swift:26  outside the fragment: `extension Status \\{ public static var typeName: String \\{ \"sta`",
+            "    verbs\\.swift:32  outside the fragment: `extension Fsck \\{ public static var typeName: String \\{ \"fsck\"`",
+            "    verbs\\.swift:39  outside the fragment: `extension Demo \\{ public static var typeName: String \\{ \"demo\"`",
+            "    verbs\\.swift:46  outside the fragment: `extension Init \\{ public static var typeName: String \\{ \"init\"`",
+            "    verbs\\.swift:53  outside the fragment: `extension Serve \\{ public static var typeName: String \\{ \"serv`",
+            "    verbs\\.swift:62  outside the fragment: `extension Findings \\{ public static var typeName: String \\{ \"f`",
+            "    verbs\\.swift:70  outside the fragment: `extension Bare \\{ public static var typeName: String \\{ \"bare\"`",
+            "    verbs\\.swift:77  outside the fragment: `extension Log \\{ public static var typeName: String \\{ \"log\" \\}`",
+            "    verbs\\.swift:84  outside the fragment: `extension Survey \\{ public static var typeName: String \\{ \"sur`",
+            "    verbs\\.swift:91  outside the fragment: `extension Drift \\{ public static var typeName: String \\{ \"drif`",
+            "    verbs\\.swift:100  outside the fragment: `extension Check \\{ public static var typeName: String \\{ \"chec`",
+            "    verbs\\.swift:106  outside the fragment: `extension Ask \\{ public static var typeName: String \\{ \"ask\" \\}`",
+            "    verbs\\.swift:113  outside the fragment: `extension Diff \\{ public static var typeName: String \\{ \"diff\"`",
+            "    verbs\\.swift:119  outside the fragment: `extension Change \\{ public static var typeName: String \\{ \"cha`",
+            "    verbs\\.swift:126  outside the fragment: `extension Apply \\{ public static var typeName: String \\{ \"appl`",
+            "    verbs\\.swift:133  outside the fragment: `extension Guard \\{ public static var typeName: String \\{ \"guar`",
+            "    verbs\\.swift:140  outside the fragment: `extension Library \\{ public static var typeName: String \\{ \"li`",
+            "    verbs\\.swift:149  outside the fragment: `extension MineVerb \\{ public static var typeName: String \\{ \"m`",
+            "    verbs\\.swift:156  outside the fragment: `extension TheirsVerb \\{ public static var typeName: String \\{ `",
+            "    verbs\\.swift:163  outside the fragment: `extension My \\{ public static var typeName: String \\{ \"my\" \\} \\}`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "Light",
+      "pass": "plain",
+      "files": [
+        "fixtures/Light.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 219 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    Light\\.swift:12  outside the fragment: `extension LightTitle \\{`",
+            "    Light\\.swift:13  outside the fragment: `public static var typeName: String \\{ \"Light\" \\}`",
+            "    Light\\.swift:16  outside the fragment: `extension MixHeadWord \\{`",
+            "    Light\\.swift:17  outside the fragment: `public static var typeName: String \\{ \"Mix your own beam\" \\}`",
+            "    Light\\.swift:20  outside the fragment: `extension MixIntroWord \\{`",
+            "    Light\\.swift:21  outside the fragment: `public static var typeName: String \\{ \"The keys set each line`",
+            "    Light\\.swift:24  outside the fragment: `extension MixNoteWord \\{`",
+            "    Light\\.swift:25  outside the fragment: `public static var typeName: String \\{ \"The infrared key chang`",
+            "    Light\\.swift:28  outside the fragment: `extension MixPatchCapWord \\{`",
+            "    Light\\.swift:29  outside the fragment: `public static var typeName: String \\{ \"your beam\" \\}`",
+            "    Light\\.swift:32  outside the fragment: `extension MapHeadWord \\{`",
+            "    Light\\.swift:33  outside the fragment: `public static var typeName: String \\{ \"The colour map\" \\}`",
+            "    Light\\.swift:36  outside the fragment: `extension MapIntroWord \\{`",
+            "    Light\\.swift:37  outside the fragment: `public static var typeName: String \\{ \"To the right the red l`",
+            "    Light\\.swift:40  outside the fragment: `extension MapIRWord \\{`",
+            "    Light\\.swift:41  outside the fragment: `public static var typeName: String \\{ \"The infrared has no di`",
+            "    Light\\.swift:44  outside the fragment: `extension HeadOne \\{`",
+            "    Light\\.swift:45  outside the fragment: `public static var typeName: String \\{ \"The setup\" \\}`",
+            "    Light\\.swift:48  outside the fragment: `extension LampCapWord \\{`",
+            "    Light\\.swift:49  outside the fragment: `public static var typeName: String \\{ \"the lamp\" \\}`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "Atom",
+      "pass": "plain",
+      "files": [
+        "fixtures/Atom.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 95 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    Atom\\.swift:12  outside the fragment: `extension AtomTitle \\{`",
+            "    Atom\\.swift:13  outside the fragment: `public static var typeName: String \\{ \"The atom\" \\}`",
+            "    Atom\\.swift:16  outside the fragment: `extension AtomThesisWord \\{`",
+            "    Atom\\.swift:17  outside the fragment: `public static var typeName: String \\{ \"An atom is the sort of`",
+            "    Atom\\.swift:20  outside the fragment: `extension AtomHookWord \\{`",
+            "    Atom\\.swift:21  outside the fragment: `public static var typeName: String \\{ \"The lamp on the Light `",
+            "    Atom\\.swift:24  outside the fragment: `extension AtomJumpWord \\{`",
+            "    Atom\\.swift:25  outside the fragment: `public static var typeName: String \\{ \"A jump down is one fla`",
+            "    Atom\\.swift:28  outside the fragment: `extension LadderCapWord \\{`",
+            "    Atom\\.swift:29  outside the fragment: `public static var typeName: String \\{ \"the ladder\" \\}`",
+            "    Atom\\.swift:32  outside the fragment: `extension ShapeSWord \\{`",
+            "    Atom\\.swift:33  outside the fragment: `public static var typeName: String \\{ \"s\" \\}`",
+            "    Atom\\.swift:36  outside the fragment: `extension ShapePWord \\{`",
+            "    Atom\\.swift:37  outside the fragment: `public static var typeName: String \\{ \"p\" \\}`",
+            "    Atom\\.swift:40  outside the fragment: `extension PressJumpWord \\{`",
+            "    Atom\\.swift:41  outside the fragment: `public static var typeName: String \\{ \"Press a jump: the key `",
+            "    Atom\\.swift:44  outside the fragment: `extension FrameLegendWord \\{`",
+            "    Atom\\.swift:45  outside the fragment: `public static var typeName: String \\{ \"Framed keys are the op`",
+            "    Atom\\.swift:48  outside the fragment: `extension KeyBetaWord \\{`",
+            "    Atom\\.swift:49  outside the fragment: `public static var typeName: String \\{ \"486 nm\" \\}`"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "domain-outside",
+      "pass": "plain",
+      "files": [
+        "fixtures/domain-outside.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 3 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    domain\\-outside\\.swift:1  outside the fragment: `public protocol Asset \\{`",
+            "    domain\\-outside\\.swift:2  outside the fragment: `associatedtype Unit: Measure`",
+            "    domain\\-outside\\.swift:3  a closing brace with nothing open"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "vocabulary-outside",
+      "pass": "plain",
+      "files": [
+        "fixtures/vocabulary-outside.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 2 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    vocabulary\\-outside\\.swift:4  the entry Canvas resolves to nothing",
+            "    vocabulary\\-outside\\.swift:5  an unknown gate: Picture"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "foreign-enum",
+      "pass": "plain",
+      "files": [
+        "fixtures/foreign-enum.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 0,
+        "stdout": {
+          "line_patterns": [
+            "✓ THE JUDGE holds: 1 declarations · 0 lookups · 0 premises · [0-9]+\\.[0-9] ms"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "part-a",
+      "pass": "plain",
+      "files": [
+        "fixtures/part-a.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 0,
+        "stdout": {
+          "line_patterns": [
+            "✓ THE JUDGE holds: 1 declarations · 2 lookups · 2 premises · [0-9]+\\.[0-9] ms"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "part-b",
+      "pass": "plain",
+      "files": [
+        "fixtures/part-b.swift"
+      ],
+      "what": "Pinned input read by the company court, including its fragment boundary.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 1 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    part\\-b\\.swift:4  VerifiedInDepartment: Alice\\.Home resolves to nothing"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "files-in-order",
+      "pass": "plain",
+      "files": [
+        "fixtures/part-a.swift",
+        "fixtures/part-b.swift"
+      ],
+      "what": "Shared dictionary and memo, accumulated declarations checked after each file.",
+      "expected": {
+        "exit": 0,
+        "stdout": {
+          "line_patterns": [
+            "✓ THE JUDGE holds: 2 declarations · 2 lookups · 5 premises · [0-9]+\\.[0-9] ms"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    },
+    {
+      "id": "files-reversed",
+      "pass": "plain",
+      "files": [
+        "fixtures/part-b.swift",
+        "fixtures/part-a.swift"
+      ],
+      "what": "Earlier unresolved slots remain refused in the shared memo, as in the pinned reference.",
+      "expected": {
+        "exit": 1,
+        "stdout": {
+          "line_patterns": [
+            "✗ THE JUDGE refuses 3 claim\\(s\\) in [0-9]+\\.[0-9] ms:",
+            "    part\\-b\\.swift:4  VerifiedInDepartment: Alice\\.Home resolves to nothing",
+            "    part\\-a\\.swift:4  VerifiedInDepartment: Alice\\.Home resolves to nothing",
+            "    part\\-a\\.swift:3  Alice\\.Home: Alice resolves to nothing"
+          ]
+        },
+        "stderr": {
+          "lines": []
+        }
+      }
+    }
+  ]
+}

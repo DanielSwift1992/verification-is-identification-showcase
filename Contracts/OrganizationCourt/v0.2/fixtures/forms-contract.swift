@@ -1,0 +1,65 @@
+// gate stdlib forms-contract v1: an API contract and the clients that carry it
+// role: forms
+// speaks-for: a-domain
+//
+// A contract is written once and copied into a server and into every client
+// library, and the copies drift apart quietly. Types do not prevent it: they
+// make each side self-consistent and say nothing at all about the other, so a
+// hand-written client can lag a contract for releases while its own type
+// checker stays perfectly happy. The one thing that ties the copies today is a
+// code generator, which means owning a pipeline per language and letting it
+// dictate the shape of the client. This domain ties them the other way, with a
+// seam that refuses, leaving the client hand-written.
+//
+// A field the contract declares becomes a record whose shape is an axis. A
+// client library becomes a carrier, and carrying is the claim. What is judged here
+// is agreement of shape: a client that carries `waitFor` as text where the
+// contract calls it a number is refused, and the judge names both shapes.
+//
+// What is NOT judged here, and is said plainly rather than hidden: ABSENCE. A
+// field a client does not carry states no claim at all, and a claim that was
+// never made cannot be refused, so absence is reported beside the judgement,
+// at the address in the contract that declares the field. The same division the
+// ownership door already draws: a rule reaching outside its zone is judged, a
+// pattern matching no file is named beside it.
+//
+// Both sides are declared, never read. This grammar needs an act of
+// entry: somebody says, in these words, what their library carries. It was once
+// fed by a reader that went out and inferred the client's side from its source,
+// and that was a court reasoning about a world nobody had spoken for: honest
+// certificates over invented premises. Judgement has no jurisdiction outside the
+// gate. What can be had from outside is observation, and `gate drift` prints
+// that with no verdict at all.
+
+public protocol Shape {}
+public enum Text: Shape {}
+public enum Count: Shape {}
+public enum Flag: Shape {}
+public enum Many: Shape {}
+public enum Nested: Shape {}
+
+public protocol Declared {
+    associatedtype Of: Shape
+}
+public protocol Carrier {}
+
+public protocol Carried {}
+public enum Carries<Who: Carrier, What: Declared, As: Shape>: Close {}
+extension Carries: Carried
+where What.Of == As {}
+
+// An operation the contract declares is a record too, and calling is the
+// claim. The pin below is existence spelled as an equality: an operation
+// the contract declares stands in the contract, so a carrier's call to it
+// resolves, and a call to an operation the contract never declared has
+// nothing to stand on and is refused at its certificate. A call a carrier
+// never made states no claim, the same absence law the fields above keep.
+public protocol Standing {}
+public enum InTheContract: Standing {}
+public protocol Operation {
+    associatedtype Stands: Standing
+}
+public protocol Called {}
+public enum Calls<Who: Carrier, What: Operation>: Close {}
+extension Calls: Called
+where What.Stands == InTheContract {}
