@@ -16,6 +16,6 @@ python3 Checks/organization-contract.py --command-json '["/path/to/ShowcaseTools
 
 The four lies are the ones `ShowcaseTools judge diff` plants: a cross-department access, a rank spelled to nothing, a site pointing at a department, and a team claiming a foreign rank. The fixtures carry their origins and SHA-256 in `contract.json`, and the driver refuses a changed manifest under this suite name. A semantic change requires a new version.
 
-At this version the reference answers 8/8, the theory's copy of the court (kept until gate takes the court from here) answers 8/8, and gate's node port `bin/judge.js` answers 7/8: on a file that is not there it stops with a stack trace and exit 1 where the court says `✗ THE JUDGE cannot read the corpus` and exits 2.
+The reference is `ShowcaseTools judge` at showcase 8b69d9f, where this suite and the court's file `Sources/Court/OrganizationJudge.swift` (SHA-256 e4787f58c8d1fb944e7ddcc1f21d901d2fd782e6459a1646aec674f43beee2c6) were published together. At this version the reference answers 8/8, the theory's copy of the court (kept until gate takes the court from here) answers 8/8, and gate's node port `bin/judge.js` answers 7/8: on a file that is not there it stops with a stack trace and exit 1 where the court says `✗ THE JUDGE cannot read the corpus` and exits 2.
 
 The parse door prints what the reader read in a shape each carrier chooses for its consumer, so it is inspection, not a verdict, and is outside the suite. Passing does not establish general implementation equivalence.
