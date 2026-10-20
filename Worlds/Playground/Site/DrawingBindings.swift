@@ -23,7 +23,7 @@ extension DrawingRole0 {
 public enum YPaperLight: DrawingLuminance {
     public typealias Value = PaperLitY
     public typealias Colour = PaperColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, PaperLitY, Never, CoordinateScale>
 }
 
 public enum BindPaperLight: DrawingBinding {
@@ -36,7 +36,7 @@ public enum BindPaperLight: DrawingBinding {
 public enum YPaperDark: DrawingLuminance {
     public typealias Value = PaperDimY
     public typealias Colour = PaperColour.Dim
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, PaperDimY, Never, CoordinateScale>
 }
 
 public enum BindPaperDark: DrawingBinding {
@@ -54,7 +54,7 @@ extension DrawingRole1 {
 public enum YMistLight: DrawingLuminance {
     public typealias Value = MistLitY
     public typealias Colour = MistColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, MistLitY, Never, CoordinateScale>
 }
 
 public enum BindMistLight: DrawingBinding {
@@ -67,7 +67,7 @@ public enum BindMistLight: DrawingBinding {
 public enum YMistDark: DrawingLuminance {
     public typealias Value = MistLitY
     public typealias Colour = MistColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, MistLitY, Never, CoordinateScale>
 }
 
 public enum BindMistDark: DrawingBinding {
@@ -85,7 +85,7 @@ extension DrawingRole2 {
 public enum YInkLight: DrawingLuminance {
     public typealias Value = InkLitY
     public typealias Colour = InkColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, InkLitY, Never, CoordinateScale>
 }
 
 public enum BindInkLight: DrawingBinding {
@@ -98,7 +98,7 @@ public enum BindInkLight: DrawingBinding {
 public enum YInkDark: DrawingLuminance {
     public typealias Value = InkDimY
     public typealias Colour = InkColour.Dim
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, InkDimY, Never, CoordinateScale>
 }
 
 public enum BindInkDark: DrawingBinding {
@@ -116,7 +116,7 @@ extension DrawingRole3 {
 public enum YTextLight: DrawingLuminance {
     public typealias Value = TextLitY
     public typealias Colour = TextColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, TextLitY, Never, CoordinateScale>
 }
 
 public enum BindTextLight: DrawingBinding {
@@ -129,7 +129,7 @@ public enum BindTextLight: DrawingBinding {
 public enum YTextDark: DrawingLuminance {
     public typealias Value = TextDimY
     public typealias Colour = TextColour.Dim
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, TextDimY, Never, CoordinateScale>
 }
 
 public enum BindTextDark: DrawingBinding {
@@ -147,7 +147,7 @@ extension DrawingRole4 {
 public enum YMutedLight: DrawingLuminance {
     public typealias Value = MutedLitY
     public typealias Colour = MutedColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, MutedLitY, Never, CoordinateScale>
 }
 
 public enum BindMutedLight: DrawingBinding {
@@ -160,7 +160,7 @@ public enum BindMutedLight: DrawingBinding {
 public enum YMutedDark: DrawingLuminance {
     public typealias Value = MutedDimY
     public typealias Colour = MutedColour.Dim
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, MutedDimY, Never, CoordinateScale>
 }
 
 public enum BindMutedDark: DrawingBinding {
@@ -178,7 +178,7 @@ extension DrawingRole5 {
 public enum YLineLight: DrawingLuminance {
     public typealias Value = LineLitY
     public typealias Colour = LineColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, LineLitY, Never, CoordinateScale>
 }
 
 public enum BindLineLight: DrawingBinding {
@@ -191,7 +191,7 @@ public enum BindLineLight: DrawingBinding {
 public enum YLineDark: DrawingLuminance {
     public typealias Value = LineDimY
     public typealias Colour = LineColour.Dim
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, LineDimY, Never, CoordinateScale>
 }
 
 public enum BindLineDark: DrawingBinding {
@@ -209,7 +209,7 @@ extension DrawingRole6 {
 public enum YAccentLight: DrawingLuminance {
     public typealias Value = AccentLitY
     public typealias Colour = AccentColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, AccentLitY, Never, CoordinateScale>
 }
 
 public enum BindAccentLight: DrawingBinding {
@@ -222,7 +222,7 @@ public enum BindAccentLight: DrawingBinding {
 public enum YAccentDark: DrawingLuminance {
     public typealias Value = AccentDimY
     public typealias Colour = AccentColour.Dim
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, AccentDimY, Never, CoordinateScale>
 }
 
 public enum BindAccentDark: DrawingBinding {
@@ -240,7 +240,7 @@ extension DrawingRole7 {
 public enum YActionLight: DrawingLuminance {
     public typealias Value = ActionLitY
     public typealias Colour = ActionColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, ActionLitY, Never, CoordinateScale>
 }
 
 public enum BindActionLight: DrawingBinding {
@@ -253,7 +253,7 @@ public enum BindActionLight: DrawingBinding {
 public enum YActionDark: DrawingLuminance {
     public typealias Value = ActionDimY
     public typealias Colour = ActionColour.Dim
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, ActionDimY, Never, CoordinateScale>
 }
 
 public enum BindActionDark: DrawingBinding {
@@ -271,7 +271,7 @@ extension DrawingRole8 {
 public enum YRefusalLight: DrawingLuminance {
     public typealias Value = RefusalLitY
     public typealias Colour = RefusalColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, RefusalLitY, Never, CoordinateScale>
 }
 
 public enum BindRefusalLight: DrawingBinding {
@@ -284,7 +284,7 @@ public enum BindRefusalLight: DrawingBinding {
 public enum YRefusalDark: DrawingLuminance {
     public typealias Value = RefusalLitY
     public typealias Colour = RefusalColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, RefusalLitY, Never, CoordinateScale>
 }
 
 public enum BindRefusalDark: DrawingBinding {
@@ -302,7 +302,7 @@ extension DrawingRole9 {
 public enum YLawLight: DrawingLuminance {
     public typealias Value = LawLitY
     public typealias Colour = LawColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, LawLitY, Never, CoordinateScale>
 }
 
 public enum BindLawLight: DrawingBinding {
@@ -315,7 +315,7 @@ public enum BindLawLight: DrawingBinding {
 public enum YLawDark: DrawingLuminance {
     public typealias Value = LawLitY
     public typealias Colour = LawColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, LawLitY, Never, CoordinateScale>
 }
 
 public enum BindLawDark: DrawingBinding {
@@ -333,7 +333,7 @@ extension DrawingRole10 {
 public enum YOkLight: DrawingLuminance {
     public typealias Value = OkLitY
     public typealias Colour = OkColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, OkLitY, Never, CoordinateScale>
 }
 
 public enum BindOkLight: DrawingBinding {
@@ -346,7 +346,7 @@ public enum BindOkLight: DrawingBinding {
 public enum YOkDark: DrawingLuminance {
     public typealias Value = OkLitY
     public typealias Colour = OkColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, OkLitY, Never, CoordinateScale>
 }
 
 public enum BindOkDark: DrawingBinding {
@@ -364,7 +364,7 @@ extension DrawingRole11 {
 public enum YKeywordLight: DrawingLuminance {
     public typealias Value = KeywordLitY
     public typealias Colour = KeywordColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, KeywordLitY, Never, CoordinateScale>
 }
 
 public enum BindKeywordLight: DrawingBinding {
@@ -377,7 +377,7 @@ public enum BindKeywordLight: DrawingBinding {
 public enum YKeywordDark: DrawingLuminance {
     public typealias Value = KeywordLitY
     public typealias Colour = KeywordColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, KeywordLitY, Never, CoordinateScale>
 }
 
 public enum BindKeywordDark: DrawingBinding {
@@ -395,7 +395,7 @@ extension DrawingRole12 {
 public enum YLiteralLight: DrawingLuminance {
     public typealias Value = LiteralLitY
     public typealias Colour = LiteralColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, LiteralLitY, Never, CoordinateScale>
 }
 
 public enum BindLiteralLight: DrawingBinding {
@@ -408,7 +408,7 @@ public enum BindLiteralLight: DrawingBinding {
 public enum YLiteralDark: DrawingLuminance {
     public typealias Value = LiteralLitY
     public typealias Colour = LiteralColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, LiteralLitY, Never, CoordinateScale>
 }
 
 public enum BindLiteralDark: DrawingBinding {
@@ -426,7 +426,7 @@ extension DrawingRole13 {
 public enum YCommentLight: DrawingLuminance {
     public typealias Value = CommentLitY
     public typealias Colour = CommentColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, CommentLitY, Never, CoordinateScale>
 }
 
 public enum BindCommentLight: DrawingBinding {
@@ -439,7 +439,7 @@ public enum BindCommentLight: DrawingBinding {
 public enum YCommentDark: DrawingLuminance {
     public typealias Value = CommentLitY
     public typealias Colour = CommentColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, CommentLitY, Never, CoordinateScale>
 }
 
 public enum BindCommentDark: DrawingBinding {
@@ -457,7 +457,7 @@ extension DrawingRole14 {
 public enum YAttributeLight: DrawingLuminance {
     public typealias Value = AttributeLitY
     public typealias Colour = AttributeColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, AttributeLitY, Never, CoordinateScale>
 }
 
 public enum BindAttributeLight: DrawingBinding {
@@ -470,7 +470,7 @@ public enum BindAttributeLight: DrawingBinding {
 public enum YAttributeDark: DrawingLuminance {
     public typealias Value = AttributeLitY
     public typealias Colour = AttributeColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, AttributeLitY, Never, CoordinateScale>
 }
 
 public enum BindAttributeDark: DrawingBinding {
@@ -488,7 +488,7 @@ extension DrawingRole15 {
 public enum YLocalTypeLight: DrawingLuminance {
     public typealias Value = LocalTypeLitY
     public typealias Colour = LocalTypeColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, LocalTypeLitY, Never, CoordinateScale>
 }
 
 public enum BindLocalTypeLight: DrawingBinding {
@@ -501,7 +501,7 @@ public enum BindLocalTypeLight: DrawingBinding {
 public enum YLocalTypeDark: DrawingLuminance {
     public typealias Value = LocalTypeLitY
     public typealias Colour = LocalTypeColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, LocalTypeLitY, Never, CoordinateScale>
 }
 
 public enum BindLocalTypeDark: DrawingBinding {
@@ -519,7 +519,7 @@ extension DrawingRole16 {
 public enum YKnownNameLight: DrawingLuminance {
     public typealias Value = KnownNameLitY
     public typealias Colour = KnownNameColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, KnownNameLitY, Never, CoordinateScale>
 }
 
 public enum BindKnownNameLight: DrawingBinding {
@@ -532,7 +532,7 @@ public enum BindKnownNameLight: DrawingBinding {
 public enum YKnownNameDark: DrawingLuminance {
     public typealias Value = KnownNameLitY
     public typealias Colour = KnownNameColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, KnownNameLitY, Never, CoordinateScale>
 }
 
 public enum BindKnownNameDark: DrawingBinding {
@@ -550,7 +550,7 @@ extension DrawingRole17 {
 public enum YSurfaceCardLight: DrawingLuminance {
     public typealias Value = SurfaceCardLitY
     public typealias Colour = SurfaceCardColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, SurfaceCardLitY, Never, CoordinateScale>
 }
 
 public enum BindSurfaceCardLight: DrawingBinding {
@@ -563,7 +563,7 @@ public enum BindSurfaceCardLight: DrawingBinding {
 public enum YSurfaceCardDark: DrawingLuminance {
     public typealias Value = SurfaceCardDimY
     public typealias Colour = SurfaceCardColour.Dim
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, SurfaceCardDimY, Never, CoordinateScale>
 }
 
 public enum BindSurfaceCardDark: DrawingBinding {
@@ -581,7 +581,7 @@ extension DrawingRole18 {
 public enum YSurfaceTrackLight: DrawingLuminance {
     public typealias Value = SurfaceTrackLitY
     public typealias Colour = SurfaceTrackColour.Lit
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, SurfaceTrackLitY, Never, CoordinateScale>
 }
 
 public enum BindSurfaceTrackLight: DrawingBinding {
@@ -594,7 +594,7 @@ public enum BindSurfaceTrackLight: DrawingBinding {
 public enum YSurfaceTrackDark: DrawingLuminance {
     public typealias Value = SurfaceTrackDimY
     public typealias Colour = SurfaceTrackColour.Dim
-    public typealias Projection = Step
+    public typealias Projection = XYZRatioWrite<Never, SurfaceTrackDimY, Never, CoordinateScale>
 }
 
 public enum BindSurfaceTrackDark: DrawingBinding {

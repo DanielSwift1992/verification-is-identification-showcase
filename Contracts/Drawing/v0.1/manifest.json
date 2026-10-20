@@ -12,7 +12,7 @@
       "showcase/Sources/DocumentKit/Landing.swift": "65bc8a2b06fe75a2f7f91e1da4cee634269171ccc0e2fac5ca0f625f736b8b02",
       "showcase/Sources/DocumentKit/LayoutCertificate.swift": "e6dc21777efcb76c73baa4e966b751a81903418763c15aa013a948c7f71ecd72",
       "showcase/Sources/DocumentKit/Markup.swift": "a30dec83256625b9667bf05d5cd53cf0177cf6c8141b84f6ebd750ac2b598eb8",
-      "showcase/Sources/DocumentKit/Spectrum.swift": "59c6404a0deec3248d6dc9bce2e5bbd17b95f491017998b1873461f54213789e",
+      "showcase/Sources/DocumentKit/Spectrum.swift": "9e1efba56c40c8fa7b8cd3833ae30ec6d9f1f64de08917ed31b8fdf2707f6be5",
       "showcase/Sources/DocumentKit/SurfaceLaw.swift": "d5660d184fc7f1f4ecf86f3e114cdc6f703d08062bb0905035311963a716a95a",
       "showcase/Sources/DocumentKit/Vector.swift": "b61eea9c279db510d66cca5119a2b11b1069be5dce9a2b1981d1ba4b075dfcf3",
       "showcase/Sources/DocumentKit/Walk.swift": "5d4391509b2d831fb94883246d8d248c187b4a656475e95ddb5f320ddc3f2654",
@@ -357,6 +357,19 @@
       "sources": [
         "Contracts/Drawing/v0.1/cases/text-overflow.swift"
       ]
+    },
+    {
+      "address": "Contracts/Drawing/v0.1/cases/palette-projection.swift#FixtureArt",
+      "inputSHA256": "75091baeccebf422c9150b7616a9aa0fe497ffd0860a30faf52da19ef8027237",
+      "status": "svg",
+      "svgSHA256": "f3c3e3c5fc5bb9ea355b9ee65c85c0b0003436b793cd1203fee3a513ed48565b",
+      "id": "palette",
+      "root": "FixtureArt",
+      "sources": [
+        "Worlds/Playground/Site/Palette.swift",
+        "Contracts/Drawing/v0.1/cases/palette-projection.swift"
+      ],
+      "output": "cases/palette.svg"
     }
   ]
 }

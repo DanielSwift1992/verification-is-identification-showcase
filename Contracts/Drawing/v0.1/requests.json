@@ -95,5 +95,14 @@
       "Contracts/Drawing/v0.1/cases/text-overflow.swift"
     ],
     "expect": "refused"
+  },
+  {
+    "id": "palette",
+    "root": "FixtureArt",
+    "address": "Contracts/Drawing/v0.1/cases/palette-projection.swift#FixtureArt",
+    "sources": [
+      "Worlds/Playground/Site/Palette.swift",
+      "Contracts/Drawing/v0.1/cases/palette-projection.swift"
+    ]
   }
 ]

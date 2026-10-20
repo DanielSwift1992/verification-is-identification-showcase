@@ -12,7 +12,7 @@
       "showcase/Sources/DocumentKit/Landing.swift": "65bc8a2b06fe75a2f7f91e1da4cee634269171ccc0e2fac5ca0f625f736b8b02",
       "showcase/Sources/DocumentKit/LayoutCertificate.swift": "e6dc21777efcb76c73baa4e966b751a81903418763c15aa013a948c7f71ecd72",
       "showcase/Sources/DocumentKit/Markup.swift": "a30dec83256625b9667bf05d5cd53cf0177cf6c8141b84f6ebd750ac2b598eb8",
-      "showcase/Sources/DocumentKit/Spectrum.swift": "59c6404a0deec3248d6dc9bce2e5bbd17b95f491017998b1873461f54213789e",
+      "showcase/Sources/DocumentKit/Spectrum.swift": "9e1efba56c40c8fa7b8cd3833ae30ec6d9f1f64de08917ed31b8fdf2707f6be5",
       "showcase/Sources/DocumentKit/SurfaceLaw.swift": "d5660d184fc7f1f4ecf86f3e114cdc6f703d08062bb0905035311963a716a95a",
       "showcase/Sources/DocumentKit/Vector.swift": "b61eea9c279db510d66cca5119a2b11b1069be5dce9a2b1981d1ba4b075dfcf3",
       "showcase/Sources/DocumentKit/Walk.swift": "5d4391509b2d831fb94883246d8d248c187b4a656475e95ddb5f320ddc3f2654",
@@ -93,6 +93,16 @@
       "theory/Sources/VerificationIsIdentification/Wave.swift": "3cbee49e3275b4f6b9fd08a92f525dd30a4d68f1b9db812ec24a510c9af62937",
       "theory/Sources/Alphabet/Alphabet.swift": "ebbcb98e46c8b5c2e7b21e8973a706eb1497953f94072a2ba1a5cc445b8d1c48"
     }
+  },
+  "profile": {
+    "profileSHA256": "db59159587189df75c94a3c417562dbb92582eaed5a3af46b1446bdc90b4bd08",
+    "inputSHA256": [
+      "c3a28b82fd9d14ac409c5dedba24d53158df00f9e67b7c53f9adc8c5e37d3fa5",
+      "82ac340400ee61a8b20e5a444409a3aa00f2749ec92715da92524d84755223f7",
+      "4989b125924991b90d05b2d16e0e388c48f7d5bb8b30539bbf9c755278d0ccaf",
+      "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "44cc532765c2be7e4069513387db74c7db66d0986449375dae53a570226eb1d9"
+    ]
   },
   "cases": [
     {
@@ -443,6 +453,24 @@
       "sourceSHA256": [
         "b217e9cdc2f13bf65c7f4bf1cdfed4518b37fcf5b3eb63b92ffe9bef3dae68b2"
       ]
+    },
+    {
+      "address": "Contracts/Drawing/v0.1/cases/palette-projection.swift#FixtureArt",
+      "inputSHA256": "75091baeccebf422c9150b7616a9aa0fe497ffd0860a30faf52da19ef8027237",
+      "status": "svg",
+      "svgSHA256": "f3c3e3c5fc5bb9ea355b9ee65c85c0b0003436b793cd1203fee3a513ed48565b",
+      "id": "palette",
+      "root": "FixtureArt",
+      "sources": [
+        "Worlds/Playground/Site/Palette.swift",
+        "Contracts/Drawing/v0.1/cases/palette-projection.swift"
+      ],
+      "output": "cases/palette.svg",
+      "sourceSHA256": [
+        "c3a28b82fd9d14ac409c5dedba24d53158df00f9e67b7c53f9adc8c5e37d3fa5",
+        "5151e4a0d24ffc5463f9f428b8a917b1a330915be3683c75dbb012388a06d672"
+      ],
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 32\" role=\"img\" data-vi-canvas=\"1\" font-family=\"Inter, Roboto, system-ui, sans-serif\" aria-label=\"color(xyz-d65 0.010 0.011 0.012)\">\n<g transform=\"translate(0, 0)\">\n<g transform=\"translate(0, 0)\">\n<text x=\"0\" y=\"16\" text-anchor=\"start\" fill=\"color(xyz-d65 0.937 1.000 1.093)\" font-weight=\"400\" font-size=\"11\">plain text</text>\n</g>\n</g>\n</svg>\n"
     }
   ]
 }

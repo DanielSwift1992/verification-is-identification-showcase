@@ -134,9 +134,19 @@ def main():
     for field, value in (("Predicate", "PaletteContrastQuestion"),
                          ("Encoding", "UnaryArithmeticEncoding"), ("Sigma", "PaletteLight")):
         assert fields[field] == term(value)
-    # Neither the rendering expression nor the browser-facing labels change.
+    # The output door now takes an explicit integer scale. Its rational
+    # coordinates and browser-facing labels retain their original values.
     screen = r"public typealias ScreenLight<[\s\S]+?(?=\n\n)"
-    assert re.search(screen, original)[0] == re.search(screen, body)[0]
+    old_screen = re.search(screen, original)[0]
+    expected_screen = old_screen.replace("= XYZWrite<", "= XYZRatioWrite<")
+    for channel in "RGB":
+        expected_screen = expected_screen.replace("Times<" + channel + ", Step>", channel)
+    expected_screen = expected_screen.replace("SRGBBluePrimary.ZShare>>", "SRGBBluePrimary.ZShare>, CoordinateScale>")
+    assert re.search(screen, body)[0] == expected_screen
+    assert before["Step"] == ((), term("Half<Half<Half<Half<Half<Unit>>>>>"))
+    assert sum_value(term("CoordinateScale")) == 32
+    # The old step is 1/32. Every channel numerator is unchanged, so moving
+    # that denominator to the output door preserves all printed thousandths.
     def labels(text):
         return dict(re.findall(r'extension (\w+) \{\s*public static var typeName: String \{ "([^"]*)" \}', text))
     # Keep every original browser-facing label at its own declaration. Profile

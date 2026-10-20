@@ -281,9 +281,19 @@ public enum XYZWrite<
     Z: Structure
 >: Close {}
 extension XYZWrite {
+    public static var typeName: String { XYZRatioWrite<X, Y, Z, Unit>.typeName }
+}
+
+/// Prints integer coordinates at an explicitly stated positive scale. Scaling
+/// belongs to this textual door, so a fractional coordinate never asks Half
+/// to divide an odd count. Unit keeps the original XYZWrite reading.
+public enum XYZRatioWrite<X: Structure, Y: Structure, Z: Structure, Scale: Structure>: Close {}
+extension XYZRatioWrite {
     public static var typeName: String {
+        let divisor = Scale.count
+        precondition(divisor > 0, "XYZRatioWrite requires a positive scale")
         let thousandths: (Int) -> String = { value in
-            let scaled = value * 1000 / 256
+            let scaled = value * 1000 / (256 * divisor)
             let whole = scaled / 1000
             let rest = scaled % 1000
             let padded = rest < 10 ? "00\(rest)" : rest < 100 ? "0\(rest)" : "\(rest)"

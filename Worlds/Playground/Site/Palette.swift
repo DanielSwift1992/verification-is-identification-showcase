@@ -20,7 +20,7 @@ import DocumentKit
 // are what this file states. The coordinates the browser reads fall out of the
 // levels through the kit's own weights, so no colour here is copied from a
 // device's spelling of it. A level is stated in thirty-seconds of a primary's
-// full light, five halvings of a unit, and the depth is stated once below.
+// full light. The output door divides by the stated coordinate scale.
 // A level is never negative, so every colour here is one the screen can make.
 //
 // Two mounts, not two palettes: Lit is the theme the page wears, Dim the one
@@ -34,12 +34,12 @@ import DocumentKit
 // and names a changed pair. Nominal equality and Swift conformance are separate.
 // Checks/Playground/palette-count.py compares the numbers with the pinned page.
 
-public typealias Step = Half<Half<Half<Half<Half<Unit>>>>>
+public typealias CoordinateScale = U32
 
-public typealias ScreenLight<R: Structure, G: Structure, B: Structure> = XYZWrite<
-    PouredCoordinate<Times<R, Step>, SRGBRedPrimary.XShare, Times<G, Step>, SRGBGreenPrimary.XShare, Times<B, Step>, SRGBBluePrimary.XShare>,
-    PouredCoordinate<Times<R, Step>, SRGBRedPrimary.YShare, Times<G, Step>, SRGBGreenPrimary.YShare, Times<B, Step>, SRGBBluePrimary.YShare>,
-    PouredCoordinate<Times<R, Step>, SRGBRedPrimary.ZShare, Times<G, Step>, SRGBGreenPrimary.ZShare, Times<B, Step>, SRGBBluePrimary.ZShare>>
+public typealias ScreenLight<R: Structure, G: Structure, B: Structure> = XYZRatioWrite<
+    PouredCoordinate<R, SRGBRedPrimary.XShare, G, SRGBGreenPrimary.XShare, B, SRGBBluePrimary.XShare>,
+    PouredCoordinate<R, SRGBRedPrimary.YShare, G, SRGBGreenPrimary.YShare, B, SRGBBluePrimary.YShare>,
+    PouredCoordinate<R, SRGBRedPrimary.ZShare, G, SRGBGreenPrimary.ZShare, B, SRGBBluePrimary.ZShare>, CoordinateScale>
 
 // what the eye takes from a mix: the Y weights of the three primaries, in the
 // same thirty-seconds the levels are stated in

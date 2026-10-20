@@ -30,6 +30,13 @@ def input_bytes(request, base=ROOT):
     return b'\n'.join((base / name).read_bytes() for name in request['sources'])
 
 
+def profile_environment():
+    inputs = ['Worlds/Playground/Site/Palette.swift', 'Worlds/Playground/Site/DrawingBindings.swift',
+              'Assets/InterVariable.ttf', 'Assets/InterLicense.txt', 'Sources/DocumentKit/GeneratedFontMetrics.swift']
+    return {'profileSHA256': sha((ROOT / 'Worlds/Playground/Site/DrawingProfile.swift').read_bytes()),
+            'inputSHA256': [sha((ROOT / name).read_bytes()) for name in inputs]}
+
+
 def owner_environment():
     theory = Path(os.environ.get('VI_THEORY_PATH', ROOT / '.build/checkouts/verification-is-identification'))
     files = {'showcase/Package.swift': sha((ROOT / 'Package.swift').read_bytes())}
@@ -271,7 +278,7 @@ def main():
         if args.freeze and not failed:
             (CONTRACT / 'manifest.json').write_text(json.dumps({'format': 1, 'owner': owner, 'cases': records}, indent=2) + '\n')
         if not failed:
-            portable = {'format': 'drawing/1', 'owner': owner, 'cases': []}
+            portable = {'format': 'drawing/1', 'owner': owner, 'profile': profile_environment(), 'cases': []}
             for record in records:
                 item = dict(record)
                 item['sourceSHA256'] = [sha((ROOT / name).read_bytes()) for name in record['sources']]
