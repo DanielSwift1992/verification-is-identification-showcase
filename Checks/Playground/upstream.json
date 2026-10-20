@@ -129,9 +129,9 @@
       "source": "corpus/Manifest.swift",
       "target": "Worlds/Playground/Site/Manifest.swift",
       "source_sha256": "8a4cbc32e4cc14de901520a2da13cdbc6996fb99217dce4b2cab468ade6daa4c",
-      "sha256": "a9d26f353a0ed0988baef8dd7c7e38ad03724162b2eb2c3b391ab8b0970410c5",
+      "sha256": "75a16e90f654f55a2de3b710ef403b12285a4efb6d3a560b444d3a7902475b35",
       "byte_for_byte": false,
-      "transformation": "original source; available-bench copy repair, exact phrases in copy-r3.json"
+      "transformation": "original source; available-bench copy repair, exact phrases in copy-r3.json; shared read-only catalog and explicit source records, catalog-r4.json"
     },
     {
       "source": "corpus/Palette.swift",

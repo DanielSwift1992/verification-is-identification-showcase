@@ -1,7 +1,7 @@
 import VerificationIsIdentification
 import DocumentKit
 
-// Gate reads these declarations to order and label the worlds in its bench rail.
+// Each world reads this pinned file in THEIRS. Its records name the other worlds.
 // File names the world directory; SwiftPM and gate.manifest.swift name its paths.
 // Swift compiles dictionaries and bodies. Browser courts read the declared roles.
 // Reads and Seeds retain the original associations; copy changes are recorded in
@@ -202,7 +202,7 @@ extension ReferenceGroupWord {
     public static var typeName: String { "reference" }
 }
 
-// ── the tabs, in the order the bar shows them. A tab reads a world declared
+// ── the catalog, in declaration order. A record reads a world declared
 //    above, or GeneratedText when the page writes its own text; the file it
 //    shows is the file a reader downloads. ──
 
@@ -457,4 +457,68 @@ extension FAQShownWord {
 public enum FAQCaptionWord: Close {}
 extension FAQCaptionWord {
     public static var typeName: String { "FAQ.swift contains the questions and answers drawn by FAQPages.swift. Edit the words in Full." }
+}
+
+// The two source worlds are records here too, not a second list in the publisher.
+public enum SiteWorld: Close {
+    public typealias File = SiteFileWord
+    public typealias Name = SiteNameWord
+}
+public enum SiteFileWord: Close {}
+extension SiteFileWord {
+    public static var typeName: String { "Site" }
+}
+public enum SiteNameWord: Close {}
+extension SiteNameWord {
+    public static var typeName: String { "siteFile" }
+}
+
+public enum CompanyTab: Close {
+    public typealias Id = CompanyIdWord
+    public typealias Group = ReferenceGroup
+    public typealias Title = CompanyTitleWord
+    public typealias Shown = CompanyShownWord
+    public typealias Reads = CompanyWorld
+    public typealias Caption = CompanyCaptionWord
+}
+public enum CompanyIdWord: Close {}
+extension CompanyIdWord {
+    public static var typeName: String { "company" }
+}
+public enum CompanyTitleWord: Close {}
+extension CompanyTitleWord {
+    public static var typeName: String { "Company template" }
+}
+public enum CompanyShownWord: Close {}
+extension CompanyShownWord {
+    public static var typeName: String { "Company.swift" }
+}
+public enum CompanyCaptionWord: Close {}
+extension CompanyCaptionWord {
+    public static var typeName: String { "Company.swift and the generated world manifest" }
+}
+
+public enum SiteTab: Close {
+    public typealias Id = SiteIdWord
+    public typealias Group = ReferenceGroup
+    public typealias Title = SiteTitleWord
+    public typealias Shown = SiteShownWord
+    public typealias Reads = SiteWorld
+    public typealias Caption = SiteCaptionWord
+}
+public enum SiteIdWord: Close {}
+extension SiteIdWord {
+    public static var typeName: String { "site" }
+}
+public enum SiteTitleWord: Close {}
+extension SiteTitleWord {
+    public static var typeName: String { "Site" }
+}
+public enum SiteShownWord: Close {}
+extension SiteShownWord {
+    public static var typeName: String { "Palette.swift" }
+}
+public enum SiteCaptionWord: Close {}
+extension SiteCaptionWord {
+    public static var typeName: String { "Palette declares seventeen contrast readings. The shared Manifest is read-only in THEIRS." }
 }

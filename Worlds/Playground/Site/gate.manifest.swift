@@ -5,13 +5,7 @@ public protocol Role {}
 public enum FormsFile: Role {}
 public protocol Mine {}
 
-public enum TheManifest: Mine {
-    public typealias Kind = FormsFile
-}
-extension TheManifest {
-    public static var typeName: String { "Manifest.swift" }
-}
-
+// Site/Manifest.swift is a shared pinned input in THEIRS, not a reader draft.
 public enum ThePalette: Mine {
     public typealias Kind = FormsFile
 }

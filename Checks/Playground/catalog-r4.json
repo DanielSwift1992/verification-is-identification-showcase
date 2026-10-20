@@ -1,0 +1,39 @@
+{
+  "base_showcase_revision": "cbbfc3e2f050cf757616961e6d76f49e9e9f25e7",
+  "reason": "The catalog is one pinned readable input, not a third rail category. Source worlds must be records in the same file.",
+  "path": "Worlds/Playground/Site/Manifest.swift",
+  "original_declarations_unchanged": true,
+  "added_declarations": [
+    "SiteWorld",
+    "SiteFileWord",
+    "SiteNameWord",
+    "CompanyTab",
+    "CompanyIdWord",
+    "CompanyTitleWord",
+    "CompanyShownWord",
+    "CompanyCaptionWord",
+    "SiteTab",
+    "SiteIdWord",
+    "SiteTitleWord",
+    "SiteShownWord",
+    "SiteCaptionWord"
+  ],
+  "ordered_ids": [
+    "readme",
+    "organization",
+    "scale",
+    "basics",
+    "writer",
+    "buttons",
+    "light",
+    "atom",
+    "rules",
+    "faq",
+    "company",
+    "site"
+  ],
+  "site_mine": [
+    "Palette.swift"
+  ],
+  "shared_input": "Site/Manifest.swift"
+}
