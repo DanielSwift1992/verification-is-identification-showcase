@@ -137,8 +137,12 @@ def main():
     # Neither the rendering expression nor the browser-facing labels change.
     screen = r"public typealias ScreenLight<[\s\S]+?(?=\n\n)"
     assert re.search(screen, original)[0] == re.search(screen, body)[0]
-    assert re.findall(r'public static var typeName: String \{ "[^"]*" \}', original) == re.findall(
-        r'public static var typeName: String \{ "[^"]*" \}', body)
+    def labels(text):
+        return dict(re.findall(r'extension (\w+) \{\s*public static var typeName: String \{ "([^"]*)" \}', text))
+    # Keep every original browser-facing label at its own declaration. Profile
+    # role/theme/witness words are new inputs, not changes to those labels.
+    old_labels, new_labels = labels(original), labels(body)
+    assert old_labels and all(new_labels.get(name) == value for name, value in old_labels.items())
     for name in before:
         if re.fullmatch(r".+(?:Lit|Dim)(?:Red|Green|Blue|Y)", name) or name.endswith("Slack"):
             assert sum_value(term(name)) == old_value(term(name)), name
