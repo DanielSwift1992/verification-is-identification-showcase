@@ -125,6 +125,11 @@ extension TheCatalog {
     public static var typeName: String { ".gate/inputs/Catalog.swift" }
 }
 
+public enum ResolvedDrawingSource: Role {}
+extension ResolvedDrawingSource {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@1ee05563938902c6d27d6390fe322dcd48f32327" }
+}
+
 public enum TheCompanyPart001: Mine {
     public typealias Kind = WorldFile
 }
@@ -609,9 +614,4 @@ public enum TheGeometry: Mine {
 }
 extension TheGeometry {
     public static var typeName: String { "Dictionary/Design.swift" }
-}
-
-public enum ResolvedDrawingSource: Role {}
-extension ResolvedDrawingSource {
-    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@1ee05563938902c6d27d6390fe322dcd48f32327" }
 }

@@ -8,28 +8,28 @@
   "inputs": [
     {
       "path": "Tools/Playground/company-seed.json",
-      "revision": "cb7b908fd36f9b812d80a7b0e63f4fc495e55424",
-      "sha256": "aeac252280fbfc55c940da12d0178d89b44396571c39fce819ca1bcd1c60e265"
+      "revision": "f5d13d53aeb332c189414a28ab4915c0343e9079",
+      "sha256": "fa9f58dfb72714ace11946b779d75bee354fcd98e09e66b7a8ee5e07f03e7667"
     },
     {
       "path": "Worlds/Playground/Organization/OrganizationPages.swift",
-      "revision": "6ff9208891eebcb3e2ff6e73314bbb314c74c9ac",
+      "revision": "3973af4af88a324dfa2f33509fe06f84ab569f24",
       "sha256": "a20827789ece93dc2bf68451fae648a8cf1cc7df4c16f94d480f4630cf610600"
     },
     {
       "path": "Worlds/Playground/Organization/Dictionary/Design.swift",
-      "revision": "6ff9208891eebcb3e2ff6e73314bbb314c74c9ac",
+      "revision": "3973af4af88a324dfa2f33509fe06f84ab569f24",
       "sha256": "5c590ba2f550273cf76c51d9847a10cd18c15eb03e9d61471297855aefbbfab0"
     },
     {
       "path": "Worlds/Playground/Company/gate.manifest.swift",
-      "revision": "6ff9208891eebcb3e2ff6e73314bbb314c74c9ac",
-      "sha256": "ce141bf5b5abc474e5f8801c2afa0768f57b13049ef66909deed620bfc02eb38"
+      "revision": "3973af4af88a324dfa2f33509fe06f84ab569f24",
+      "sha256": "9d2f07a7278a88b72593da407d0486b9036641d3133788c798fc023969057377"
     },
     {
       "path": "Worlds/Playground/Company/.gate/forms-definitions.json",
-      "revision": "6ff9208891eebcb3e2ff6e73314bbb314c74c9ac",
-      "sha256": "0d64bccb68d77924f5c3a3c0781ea5648dbf08e92107d5d7eef2620a7d9b8e19"
+      "revision": "3973af4af88a324dfa2f33509fe06f84ab569f24",
+      "sha256": "5331332c92ab1df0438e7d2aeaa3f198a7dbf7b471f6f716918c7a99b8d69012"
     }
   ],
   "parameters": {
@@ -460,13 +460,13 @@
     },
     {
       "path": "Worlds/Playground/Scale/gate.manifest.swift",
-      "sha256": "109a3cdbc2427870fd14ffbcd42a14bb4257a117379882cd96925eab74c3fde3",
-      "bytes": 17599
+      "sha256": "d093e8a2549e8bb8f831612555a4f5caaf703fadf7ffb0d8cb0aa5fb581934a4",
+      "bytes": 18304
     },
     {
       "path": "Worlds/Playground/Scale/.gate/forms-definitions.json",
-      "sha256": "0d64bccb68d77924f5c3a3c0781ea5648dbf08e92107d5d7eef2620a7d9b8e19",
-      "bytes": 4521
+      "sha256": "5331332c92ab1df0438e7d2aeaa3f198a7dbf7b471f6f716918c7a99b8d69012",
+      "bytes": 5303
     }
   ],
   "command": "node Tools/Playground/generate-company.js --count 12800 --seed 0 --part-size 200",
