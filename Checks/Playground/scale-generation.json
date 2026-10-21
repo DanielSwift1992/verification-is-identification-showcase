@@ -2,34 +2,34 @@
   "format": "scale-generation/1",
   "tool": {
     "path": "Tools/Playground/generate-company.js",
-    "revision": "6d3a7f57604cebb038c232ce8c458dbcfdb7b817",
-    "sha256": "5b869f3e3c908c79c3355f3f6b8957aa0f4f2e14610ee366bcc157b9b1b85e59"
+    "revision": "bd2d1570f9a538db1c5e2b15e5a1fe7c8c7e9945",
+    "sha256": "6bce95284bac42b5544bb0dde7b141d799789b89c135cec30e3ea2a49f943e2a"
   },
   "inputs": [
     {
       "path": "Tools/Playground/company-seed.json",
-      "revision": "adafd3f2f3f47ebc88800b1528ccb48ca0c753b5",
-      "sha256": "73314cf2b16942a9000aedc87925791bd02a96306c0af4633bc121b596f304c7"
+      "revision": "2793b001221ffe135bec1cb04ff4859d17b5b0f5",
+      "sha256": "58aaa8c57d6046f603ec14e99a85476855f52da91d37ffd54e265330844fddb2"
     },
     {
       "path": "Worlds/Playground/Organization/Organization.swift",
-      "revision": "8b144558b63f5e880d28c3aca03d62bb0b3218ba",
+      "revision": "bd2d1570f9a538db1c5e2b15e5a1fe7c8c7e9945",
       "sha256": "ed17f77580890cbff0aeb049ff36e48cd25a92abe23f7230a9538a16f8816b7b"
     },
     {
       "path": "Worlds/Playground/Organization/Dictionary/Design.swift",
-      "revision": "8b144558b63f5e880d28c3aca03d62bb0b3218ba",
+      "revision": "bd2d1570f9a538db1c5e2b15e5a1fe7c8c7e9945",
       "sha256": "5c590ba2f550273cf76c51d9847a10cd18c15eb03e9d61471297855aefbbfab0"
     },
     {
       "path": "Worlds/Playground/Company/gate.manifest.swift",
-      "revision": "8b144558b63f5e880d28c3aca03d62bb0b3218ba",
-      "sha256": "d3c8e510f6ea63ebc0c934c355352690899b70a05d18c6ac879cca5c130e2c5f"
+      "revision": "bd2d1570f9a538db1c5e2b15e5a1fe7c8c7e9945",
+      "sha256": "652a278c7c1116862de28cb9cf06349ecbc738151685343c3d82cfb1a4193b9c"
     },
     {
       "path": "Worlds/Playground/Company/.gate/forms-definitions.json",
-      "revision": "8b144558b63f5e880d28c3aca03d62bb0b3218ba",
-      "sha256": "c1c9a6fc024315cb55aabb588b7f227754ae846e962f20103c81834cab06b3cc"
+      "revision": "bd2d1570f9a538db1c5e2b15e5a1fe7c8c7e9945",
+      "sha256": "bbd051c81b2499e6b5b49715dfe50ba2815d1fb54833d350ed3054ddd6c966fa"
     }
   ],
   "parameters": {
@@ -460,13 +460,13 @@
     },
     {
       "path": "Worlds/Playground/Scale/gate.manifest.swift",
-      "sha256": "98f58132d729b61b50411bd5afa7721f6151f590eeee4bb844513ada6d0f6875",
-      "bytes": 15481
+      "sha256": "ca3ba01f5973665616e026735764e5b143ae25f7094cc88398aaac88461d5ff7",
+      "bytes": 29199
     },
     {
       "path": "Worlds/Playground/Scale/.gate/forms-definitions.json",
-      "sha256": "c1c9a6fc024315cb55aabb588b7f227754ae846e962f20103c81834cab06b3cc",
-      "bytes": 4132
+      "sha256": "bbd051c81b2499e6b5b49715dfe50ba2815d1fb54833d350ed3054ddd6c966fa",
+      "bytes": 4521
     }
   ],
   "command": "node Tools/Playground/generate-company.js --count 12800 --seed 0 --part-size 200",
