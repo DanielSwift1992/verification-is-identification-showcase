@@ -1,0 +1,36 @@
+{
+  "profile": {
+    "row": "TheProfileSource"
+  },
+  "css_row": "TheDrawingCSS",
+  "roles": [
+    "accent",
+    "action",
+    "attribute",
+    "comment",
+    "keyword",
+    "knownname",
+    "law",
+    "line",
+    "literal",
+    "localtype",
+    "mist",
+    "ok",
+    "on-accent",
+    "on-action",
+    "refusal",
+    "surface-card",
+    "surface-track",
+    "text-primary",
+    "text-secondary"
+  ],
+  "inputs": {
+    "TheProfileSource": "Worlds/Playground/Site/DrawingProfile.swift",
+    "ThePalette": "Worlds/Playground/Site/Palette.swift",
+    "TheBindings": "Worlds/Playground/Site/DrawingBindings.swift",
+    "TheMetrics": "Sources/DocumentKit/GeneratedFontMetrics.swift",
+    "TheFont": "Assets/InterVariable.ttf",
+    "TheLicense": "Assets/InterLicense.txt",
+    "TheContract": "Contracts/Drawing/v0.1/contract.json"
+  }
+}

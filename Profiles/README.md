@@ -1,0 +1,9 @@
+# Resolved drawing profiles
+
+`./drawing-profile` reads `Playground/request.json` with the native DocumentKit and writes `drawing.css` and `receipt.json` beside it. `./drawing-profile --check` repeats that reading and compares the resulting bytes; the build law runs it and the external input controls. Palette arithmetic and colour expressions are compiled from their actual Swift sources. The receipt binds the profile, explicit bindings, font, metrics, license and Drawing contract by SHA-256, and names the reader and its source inputs. All seventeen Legible readings are evaluated by that Swift process.
+
+An external request uses the same schema and command: `./drawing-profile request.json -o output`. Its input paths are relative to the request, and its roles name both required themes. The command does not install gate or call a JS interpreter. Gate carries this output as declared inputs; changing a palette or binding requires another owner reading. A live MINE palette may instead use the separately labelled browser port while the owner receipt is stale.
+
+The receipt certifies this reading of these inputs. It does not compare an arbitrary canvas with a Drawing contract case, accept a new contract, or establish a new font metric profile in a browser renderer. Those capabilities and comparison statuses remain separate. Missing inputs, unbound roles, false witness endpoints and a false native count stop output; they cannot reuse the previous CSS as a current result.
+
+Version 1 reads colours represented by DocumentKit's `XYZRatioWrite` and a matching luminance projection. A Swift generic reading checks the actual colour's Y count and coordinate scale against that projection. Witness endpoints must use the same scale. Other colour representations need a reading at the owner before they enter this profile format.

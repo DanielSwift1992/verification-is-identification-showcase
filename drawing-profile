@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+"""Read a profile with its owner's DocumentKit. See Profiles/README.md."""
+from pathlib import Path
+import runpy
+runpy.run_path(str(Path(__file__).resolve().parent / 'Tools/drawing_profile.py'), run_name='__main__')
