@@ -129,7 +129,10 @@ def build():
 def read(request, binary, base=ROOT):
     address = request['address']
     if request.get('status') == 'not-compared':
-        return {'status': 'not-compared', 'address': address, 'reason': request['reason']}
+        result = {'status': 'not-compared', 'address': address, 'reason': request['reason']}
+        if request.get('sources'):
+            result['inputSHA256'] = sha(input_bytes(request, base))
+        return result
     root = request['root']
     if not re.fullmatch(r'[A-Za-z_][A-Za-z_0-9]*', root):
         raise ValueError('root must name a declared Swift type')
@@ -230,7 +233,7 @@ def main():
         for path in (ROOT / 'Worlds/Playground').rglob('*.swift'):
             for match in re.finditer(r'public enum (\w+): (?:GrownDiagram|Diagram)\b', path.read_text()):
                 declared.add(str(path.relative_to(ROOT)) + '#' + match[1])
-        registered = {r['address'] for r in registry['worlds'] if r.get('status') != 'not-compared'}
+        registered = {r['address'] for r in registry['worlds']}
         if declared != registered:
             raise ValueError('drawing registry does not match declared canvases: ' + repr(declared ^ registered))
         if len({r['id'] for r in cases}) != len(cases):

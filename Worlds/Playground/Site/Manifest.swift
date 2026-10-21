@@ -4,7 +4,7 @@ import DocumentKit
 // Each world reads this pinned file in THEIRS. Its records name the other worlds.
 // File names the world directory; SwiftPM and gate.manifest.swift name its paths.
 // Swift compiles dictionaries and bodies. Browser courts read the declared roles.
-// Reads and Seeds retain the original associations; copy changes are recorded in
+// Reads names each materialized world; copy changes are recorded in
 // Checks/Playground/copy-r3.json, beside the original source hashes.
 
 public enum ReadMeWorld: Close {
@@ -33,7 +33,7 @@ extension OrganizationNameWord {
     public static var typeName: String { "organizationFile" }
 }
 
-// the seed the At scale tab generates its company from: a world with no tab
+// The four-person company has its own door; Scale has its own materialized files.
 public enum CompanyWorld: Close {
     public typealias File = CompanyFileWord
     public typealias Name = CompanyNameWord
@@ -45,6 +45,19 @@ extension CompanyFileWord {
 public enum CompanyNameWord: Close {}
 extension CompanyNameWord {
     public static var typeName: String { "companyFile" }
+}
+
+public enum ScaleWorld: Close {
+    public typealias File = ScaleFileWord
+    public typealias Name = ScaleNameWord
+}
+public enum ScaleFileWord: Close {}
+extension ScaleFileWord {
+    public static var typeName: String { "Scale" }
+}
+public enum ScaleNameWord: Close {}
+extension ScaleNameWord {
+    public static var typeName: String { "scaleFile" }
 }
 
 public enum BasicsWorld: Close {
@@ -260,11 +273,10 @@ extension OrganizationCaptionWord {
 
 public enum ScaleTab: Close {
     public typealias Id = ScaleIdWord
-    public typealias Seeds = CompanyWorld
     public typealias Group = CompanyGroup
     public typealias Title = ScaleTitleWord
     public typealias Shown = ScaleShownWord
-    public typealias Reads = GeneratedText
+    public typealias Reads = ScaleWorld
     public typealias Caption = ScaleCaptionWord
 }
 public enum ScaleIdWord: Close {}

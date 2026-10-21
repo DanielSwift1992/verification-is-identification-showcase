@@ -1,0 +1,105 @@
+{
+  "format": 2,
+  "files": [
+    {
+      "row": "TheDrawing",
+      "path": ".gate/inputs/DrawingProfile.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
+      "source_path": "Worlds/Playground/Site/DrawingProfile.swift",
+      "sha256": "db59159587189df75c94a3c417562dbb92582eaed5a3af46b1446bdc90b4bd08"
+    },
+    {
+      "row": "ThePalette",
+      "path": ".gate/inputs/Palette.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
+      "source_path": "Worlds/Playground/Site/Palette.swift",
+      "sha256": "c3a28b82fd9d14ac409c5dedba24d53158df00f9e67b7c53f9adc8c5e37d3fa5"
+    },
+    {
+      "row": "TheFont",
+      "path": ".gate/inputs/font.ttf",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
+      "source_path": "Assets/InterVariable.ttf",
+      "sha256": "4989b125924991b90d05b2d16e0e388c48f7d5bb8b30539bbf9c755278d0ccaf"
+    },
+    {
+      "row": "TheMetrics",
+      "path": ".gate/inputs/metrics.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
+      "source_path": "Sources/DocumentKit/GeneratedFontMetrics.swift",
+      "sha256": "44cc532765c2be7e4069513387db74c7db66d0986449375dae53a570226eb1d9"
+    },
+    {
+      "row": "TheLicense",
+      "path": ".gate/inputs/license.txt",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
+      "source_path": "Assets/InterLicense.txt",
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    {
+      "row": "ThePrimitive",
+      "path": ".gate/inputs/Primitive.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification",
+      "revision": "b61433abffaca19f5fd6bcdce00f27b47b49d40f",
+      "source_path": "Sources/VerificationIsIdentification/Primitive.swift",
+      "sha256": "c2700f5d176d4f30159b9996cbe41d33fc2f14dfb6e7ad355e081014f8c4482a"
+    },
+    {
+      "row": "TheSpectrum",
+      "path": ".gate/inputs/Spectrum.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
+      "source_path": "Sources/DocumentKit/Spectrum.swift",
+      "sha256": "9e1efba56c40c8fa7b8cd3833ae30ec6d9f1f64de08917ed31b8fdf2707f6be5"
+    },
+    {
+      "row": "TheBindings",
+      "path": ".gate/inputs/DrawingBindings.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
+      "source_path": "Worlds/Playground/Site/DrawingBindings.swift",
+      "sha256": "82ac340400ee61a8b20e5a444409a3aa00f2749ec92715da92524d84755223f7"
+    },
+    {
+      "row": "TheContract",
+      "path": ".gate/inputs/DrawingContract.json",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "4ab5dcda82710756cc6b596979f55fe9768c6a3d",
+      "source_path": "Contracts/Drawing/v0.1/contract.json",
+      "sha256": "c970aaa030212cc2188523adedcc90a57518c8bcfd0052ab92699e3e5ae55664"
+    }
+  ],
+  "languages": {
+    "DrawingPalette": {
+      "namespace": "DrawingPalette",
+      "definitions": [
+        "ThePrimitive",
+        "TheSpectrum"
+      ],
+      "imports": [
+        {
+          "module": "VerificationIsIdentification",
+          "inputs": [
+            "ThePrimitive"
+          ],
+          "namespace": "VI"
+        },
+        {
+          "module": "DocumentKit",
+          "inputs": [
+            "TheSpectrum"
+          ],
+          "namespace": "Kit"
+        }
+      ],
+      "scope_map": null
+    }
+  },
+  "shelf_overrides": false,
+  "plain_fragments": []
+}

@@ -223,11 +223,16 @@
     },
     {
       "status": "not-compared",
-      "address": "gate:generated-company#OrganizationArt",
-      "reason": "12800-person generated input is still owned by gate pending publication contract T-0038; native reading not compared. Historical 1200-second compile budget expired; no SVG claim.",
+      "address": "Worlds/Playground/Scale/ScalePages.swift#OrganizationArt",
+      "reason": "The owner materialized the 12800-person Scale world (Checks/Playground/scale-generation.json). Its full company data is judged separately. Native Drawing has not read these sources; the historical 1200-second compile budget expired. No native SVG or port parity is claimed.",
       "id": "scale",
       "root": "OrganizationArt",
-      "sources": []
+      "sources": [
+        "Worlds/Playground/Scale/Company.swift",
+        "Worlds/Playground/Scale/ScalePages.swift",
+        "Worlds/Playground/Scale/Dictionary/Design.swift"
+      ],
+      "inputSHA256": "16bc7056b5734b65591e2017296bc68a7985f8269198ee72f0875e57b1b32d4f"
     },
     {
       "address": "Contracts/Drawing/v0.1/cases/half-even.swift#FixtureArt",

@@ -1,0 +1,76 @@
+{
+  "format": "scale-generation/1",
+  "tool": {
+    "path": "Tools/Playground/generate-company.js",
+    "revision": "083c1ba81c74f61a68fab11b35d10c917cfbf9e3",
+    "sha256": "f596f3c4648cd80f58891ba26d66a27ec4003e5818919ef532170d0be0958747"
+  },
+  "inputs": [
+    {
+      "path": "Tools/Playground/company-seed.json",
+      "revision": "083c1ba81c74f61a68fab11b35d10c917cfbf9e3",
+      "sha256": "fd55d90bb6e563cd0777b6485b5c17f85e9d47b82befbc8e68fc31deef88be3c"
+    },
+    {
+      "path": "Worlds/Playground/Organization/Organization.swift",
+      "revision": "8b144558b63f5e880d28c3aca03d62bb0b3218ba",
+      "sha256": "ed17f77580890cbff0aeb049ff36e48cd25a92abe23f7230a9538a16f8816b7b"
+    },
+    {
+      "path": "Worlds/Playground/Organization/Dictionary/Design.swift",
+      "revision": "8b144558b63f5e880d28c3aca03d62bb0b3218ba",
+      "sha256": "5c590ba2f550273cf76c51d9847a10cd18c15eb03e9d61471297855aefbbfab0"
+    },
+    {
+      "path": "Worlds/Playground/Company/gate.manifest.swift",
+      "revision": "8b144558b63f5e880d28c3aca03d62bb0b3218ba",
+      "sha256": "d3c8e510f6ea63ebc0c934c355352690899b70a05d18c6ac879cca5c130e2c5f"
+    },
+    {
+      "path": "Worlds/Playground/Company/.gate/forms-definitions.json",
+      "revision": "8b144558b63f5e880d28c3aca03d62bb0b3218ba",
+      "sha256": "c1c9a6fc024315cb55aabb588b7f227754ae846e962f20103c81834cab06b3cc"
+    }
+  ],
+  "parameters": {
+    "count": 12800,
+    "seed": 0
+  },
+  "outputs": [
+    {
+      "path": "Worlds/Playground/Scale/Company.swift",
+      "sha256": "0f8c2e19e446c2a4518f85f783d6a2c82d78f35e98fd11c9d8d79c45d4fdf86c",
+      "bytes": 5034836
+    },
+    {
+      "path": "Worlds/Playground/Scale/ScalePages.swift",
+      "sha256": "b78f066593899ecaeee5b9bc130d90ff9523bb7fc038121aabef4500fe8d1a42",
+      "bytes": 13095
+    },
+    {
+      "path": "Worlds/Playground/Scale/Dictionary/Design.swift",
+      "sha256": "5c590ba2f550273cf76c51d9847a10cd18c15eb03e9d61471297855aefbbfab0",
+      "bytes": 1047
+    },
+    {
+      "path": "Worlds/Playground/Scale/gate.manifest.swift",
+      "sha256": "fc8459861e9c6b11da78f73fda297ca6b80f0ede4fccadbbab74a6a70d2aadba",
+      "bytes": 3622
+    },
+    {
+      "path": "Worlds/Playground/Scale/.gate/forms-definitions.json",
+      "sha256": "c1c9a6fc024315cb55aabb588b7f227754ae846e962f20103c81834cab06b3cc",
+      "bytes": 4132
+    }
+  ],
+  "command": "node Tools/Playground/generate-company.js --count 12800 --seed 0",
+  "storage": "versioned",
+  "compilation": "Company.swift is read whole by the company court. The Scale page has not been compiled or compared by Drawing.",
+  "address_map": {
+    "legacy": "gate@8886973: generated Company.swift",
+    "file": "Worlds/Playground/Scale/Company.swift",
+    "legacy_data_start_line": 380,
+    "data_start_line": 6,
+    "rule": "The data suffix is byte-identical; add the difference of these start lines to map an old data line."
+  }
+}

@@ -278,12 +278,21 @@
     },
     {
       "status": "not-compared",
-      "address": "gate:generated-company#OrganizationArt",
-      "reason": "12800-person generated input is still owned by gate pending publication contract T-0038; native reading not compared. Historical 1200-second compile budget expired; no SVG claim.",
+      "address": "Worlds/Playground/Scale/ScalePages.swift#OrganizationArt",
+      "reason": "The owner materialized the 12800-person Scale world (Checks/Playground/scale-generation.json). Its full company data is judged separately. Native Drawing has not read these sources; the historical 1200-second compile budget expired. No native SVG or port parity is claimed.",
       "id": "scale",
       "root": "OrganizationArt",
-      "sources": [],
-      "sourceSHA256": []
+      "sources": [
+        "Worlds/Playground/Scale/Company.swift",
+        "Worlds/Playground/Scale/ScalePages.swift",
+        "Worlds/Playground/Scale/Dictionary/Design.swift"
+      ],
+      "sourceSHA256": [
+        "0f8c2e19e446c2a4518f85f783d6a2c82d78f35e98fd11c9d8d79c45d4fdf86c",
+        "b78f066593899ecaeee5b9bc130d90ff9523bb7fc038121aabef4500fe8d1a42",
+        "5c590ba2f550273cf76c51d9847a10cd18c15eb03e9d61471297855aefbbfab0"
+      ],
+      "inputSHA256": "16bc7056b5734b65591e2017296bc68a7985f8269198ee72f0875e57b1b32d4f"
     },
     {
       "address": "Contracts/Drawing/v0.1/cases/half-even.swift#FixtureArt",

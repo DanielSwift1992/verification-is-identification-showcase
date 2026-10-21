@@ -49,10 +49,15 @@
     {
       "id": "scale",
       "root": "OrganizationArt",
-      "address": "gate:generated-company#OrganizationArt",
+      "address": "Worlds/Playground/Scale/ScalePages.swift#OrganizationArt",
       "status": "not-compared",
       "expect": "not-compared",
-      "reason": "12800-person generated input is still owned by gate pending publication contract T-0038; native reading not compared. Historical 1200-second compile budget expired; no SVG claim."
+      "reason": "The owner materialized the 12800-person Scale world (Checks/Playground/scale-generation.json). Its full company data is judged separately. Native Drawing has not read these sources; the historical 1200-second compile budget expired. No native SVG or port parity is claimed.",
+      "sources": [
+        "Worlds/Playground/Scale/Company.swift",
+        "Worlds/Playground/Scale/ScalePages.swift",
+        "Worlds/Playground/Scale/Dictionary/Design.swift"
+      ]
     }
   ]
 }

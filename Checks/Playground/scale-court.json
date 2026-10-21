@@ -1,0 +1,55 @@
+{
+  "company": "Worlds/Playground/Scale/Company.swift",
+  "people": 12800,
+  "clean": {
+    "declarations": 12836,
+    "lookups": 115244,
+    "premises": 108844
+  },
+  "cases": [
+    {
+      "id": "deep-department",
+      "anchor": "VerifiedInDepartment<Emp12796, Finance>",
+      "replacement": "VerifiedInDepartment<Emp12796, Sales>",
+      "refusals": [
+        {
+          "line": 120123,
+          "premise": "VerifiedInDepartment requires Emp12796.Home == Sales: Finance against Sales"
+        }
+      ]
+    },
+    {
+      "id": "last-access",
+      "anchor": "VerifiedView<Emp12799, PeopleShare>",
+      "replacement": "VerifiedView<Emp12799, FinanceShare>",
+      "refusals": [
+        {
+          "line": 136135,
+          "premise": "VerifiedView requires Emp12799.Home == FinanceShare.Home: People against Finance"
+        }
+      ]
+    },
+    {
+      "id": "last-home",
+      "anchor": "public enum Emp12799: Employee, Person {\n    public typealias Rank = Lead\n    public typealias Home = People\n    public typealias Given = Donald\n    public typealias Family = Allen\n    public typealias Born = Y1815\n    public typealias Site = Hybrid\n    public typealias Sex = Given.Sex\n}",
+      "replacement": "public enum Emp12799: Employee, Person {\n    public typealias Rank = Lead\n    public typealias Home = Finance\n    public typealias Given = Donald\n    public typealias Family = Allen\n    public typealias Born = Y1815\n    public typealias Site = Hybrid\n    public typealias Sex = Given.Sex\n}",
+      "refusals": [
+        {
+          "line": 136135,
+          "premise": "VerifiedView requires Emp12799.Home == PeopleShare.Home: Finance against People"
+        }
+      ]
+    },
+    {
+      "id": "last-rank",
+      "anchor": "public enum Emp12799: Employee, Person {\n    public typealias Rank = Lead\n    public typealias Home = People\n    public typealias Given = Donald\n    public typealias Family = Allen\n    public typealias Born = Y1815\n    public typealias Site = Hybrid\n    public typealias Sex = Given.Sex\n}",
+      "replacement": "public enum Emp12799: Employee, Person {\n    public typealias Rank = Finance\n    public typealias Home = People\n    public typealias Given = Donald\n    public typealias Family = Allen\n    public typealias Born = Y1815\n    public typealias Site = Hybrid\n    public typealias Sex = Given.Sex\n}",
+      "refusals": [
+        {
+          "line": 115307,
+          "premise": "Employee requires Rank in rank: Emp12799.Rank = Finance lands in department"
+        }
+      ]
+    }
+  ]
+}
