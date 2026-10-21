@@ -1,19 +1,20 @@
-// Declarations are read by where/count; page bodies are compiled by SwiftPM.
-// CarriedFile accounts for our page source without sending it to the company court.
+// DocumentFile names the complete source input read by DocumentKit.
+// WorldFile, when also declared, keeps the independent company reading.
 public protocol Role {}
 public enum FormsFile: Role {}
 public enum CarriedFile: Role {}
+public enum DocumentFile: Role {}
 public protocol Mine {}
 
 public enum TheDeclarations: Mine {
-    public typealias Kind = FormsFile
+    public typealias Kind = DocumentFile
 }
 extension TheDeclarations {
     public static var typeName: String { "Dictionary/Atom.swift" }
 }
 
 public enum ThePages: Mine {
-    public typealias Kind = CarriedFile
+    public typealias Kind = DocumentFile
 }
 extension ThePages {
     public static var typeName: String { "AtomPages.swift" }
@@ -24,11 +25,11 @@ public protocol Theirs {}
 public enum DrawingProfileFile: Role {}
 public enum DrawingSource: Role {}
 extension DrawingSource {
-    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@4ab5dcda82710756cc6b596979f55fe9768c6a3d" }
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@ecca861cf8696cc246b93d436ede2f56b76b1b4e" }
 }
 public enum FontSource: Role {}
 extension FontSource {
-    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@4ab5dcda82710756cc6b596979f55fe9768c6a3d" }
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@ecca861cf8696cc246b93d436ede2f56b76b1b4e" }
 }
 public enum TheorySource: Role {}
 extension TheorySource {
@@ -98,4 +99,17 @@ public enum TheContract: Theirs {
 }
 extension TheContract {
     public static var typeName: String { ".gate/inputs/DrawingContract.json" }
+}
+
+// The catalog is a pinned input, not an editable second table of doors.
+public enum CatalogSource: Role {}
+extension CatalogSource {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@ecca861cf8696cc246b93d436ede2f56b76b1b4e" }
+}
+public enum TheCatalog: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = CatalogSource
+}
+extension TheCatalog {
+    public static var typeName: String { ".gate/inputs/Catalog.swift" }
 }

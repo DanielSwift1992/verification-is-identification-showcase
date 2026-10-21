@@ -157,9 +157,18 @@ function materialize(count, seed, config) {
         manifest += "\npublic enum The" + name.slice(0, -6) + ": Mine {\n    public typealias Kind = WorldFile\n}\nextension The" + name.slice(0, -6)
             + " {\n    public static var typeName: String { \"" + name + "\" }\n}\n";
     }
+    manifest += "\npublic enum DocumentFile: Role {}\n";
+    // A single source can be read by two consumers. Keep the company court
+    // above and declare the complete native drawing input independently.
+    for (const file of Object.keys(company)) {
+        const name = path.basename(file);
+        const row = "The" + name.slice(0, -6) + "Drawing";
+        manifest += "\npublic enum " + row + ": Mine {\n    public typealias Kind = DocumentFile\n}\nextension " + row
+            + " {\n    public static var typeName: String { \"" + name + "\" }\n}\n";
+    }
     manifest += "\n// The owner supplies the page and geometry; neither states company premises.\n";
     for (const [name, file] of [["ThePages", "ScalePages.swift"], ["TheGeometry", "Dictionary/Design.swift"]]) {
-        manifest += "public enum " + name + ": Mine {\n    public typealias Kind = CarriedFile\n}\nextension " + name
+        manifest += "public enum " + name + ": Mine {\n    public typealias Kind = DocumentFile\n}\nextension " + name
             + " {\n    public static var typeName: String { \"" + file + "\" }\n}\n";
     }
     return {

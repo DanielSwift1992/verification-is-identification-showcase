@@ -199,6 +199,37 @@ def show_request(request, base):
     return 0 if result['status'] == 'svg' else 1
 
 
+def document_sources(manifest):
+    """The manifest selects source identities; no page-name convention does."""
+    text = manifest.read_text()
+    selected = []
+    for name, body in re.findall(r'public enum (\w+): (?:Mine|Theirs)\s*\{([^{}]*)\}', text):
+        if not re.search(r'\btypealias Kind\s*=\s*DocumentFile\b', body):
+            continue
+        names = re.findall(r'extension ' + name + r'\s*\{\s*public static var typeName:\s*String\s*\{\s*("(?:\\.|[^"\\])*")\s*\}', text)
+        if len(names) != 1:
+            raise ValueError(str(manifest) + ': DocumentFile ' + name + ' needs one path')
+        path = json.loads(names[0])
+        if path.startswith('/') or '..' in Path(path).parts or path in selected:
+            raise ValueError(str(manifest) + ': repeated or unsafe DocumentFile path ' + path)
+        selected.append(path)
+    return sorted(selected)
+
+
+def check_document_inputs(requests, root=ROOT):
+    for request in requests:
+        sources = request['sources']
+        worlds = {tuple(Path(p).parts[:3]) for p in sources}
+        if len(worlds) != 1 or next(iter(worlds))[:2] != ('Worlds', 'Playground'):
+            raise ValueError(request['id'] + ': drawing sources need one declared world')
+        world = Path(*next(iter(worlds)))
+        manifest = root / world / 'gate.manifest.swift'
+        declared = [str(world / p) for p in document_sources(manifest)]
+        if sorted(sources) != declared:
+            raise ValueError(str(manifest) + ': DocumentFile input differs from native drawing ' + request['id']
+                             + ': ' + repr(sorted(set(sources) ^ set(declared))))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('request', nargs='?', help='world id, or a JSON request with paths relative to its directory')
@@ -218,6 +249,7 @@ def main():
             parser.error('name a declared world or a JSON request')
         return show_request(request, ROOT)
     registry['worlds'] = target_requests(registry['worlds'])
+    check_document_inputs(registry['worlds'])
     cases = registry['worlds'] + controls
     binary = build()
     if args.check or args.freeze:
