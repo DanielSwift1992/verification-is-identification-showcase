@@ -86,9 +86,13 @@ extension TheBindings {
     public static var typeName: String { ".gate/inputs/DrawingBindings.swift" }
 }
 
+public enum DrawingContractSource: Role {}
+extension DrawingContractSource {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@1cb65d4113011131fa1afcdf54ea2ee94deecda4" }
+}
 public enum TheContract: Theirs {
     public typealias Kind = CarriedFile
-    public typealias At = DrawingSource
+    public typealias At = DrawingContractSource
 }
 extension TheContract {
     public static var typeName: String { ".gate/inputs/DrawingContract.json" }

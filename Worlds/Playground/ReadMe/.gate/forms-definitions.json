@@ -69,9 +69,9 @@
       "row": "TheContract",
       "path": ".gate/inputs/DrawingContract.json",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "ecca861cf8696cc246b93d436ede2f56b76b1b4e",
+      "revision": "1cb65d4113011131fa1afcdf54ea2ee94deecda4",
       "source_path": "Contracts/Drawing/v0.1/contract.json",
-      "sha256": "5df18d01c4e960335f0755d2bd162ed0041255c98e7e885eb5c24d2f0971f977"
+      "sha256": "bcc5c7ac15215466cdec803384c238f871f2df26190cfc7c71ab94f7398b565e"
     },
     {
       "row": "TheCatalog",
