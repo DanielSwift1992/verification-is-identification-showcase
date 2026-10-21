@@ -2,7 +2,7 @@
   "format": 2,
   "files": [
     {
-      "row": "TheDrawing",
+      "row": "TheProfileSource",
       "path": "DrawingProfile.swift",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
       "revision": "ecca861cf8696cc246b93d436ede2f56b76b1b4e",
@@ -72,6 +72,22 @@
       "revision": "ecca861cf8696cc246b93d436ede2f56b76b1b4e",
       "source_path": "Worlds/Playground/Site/Manifest.swift",
       "sha256": "f45ad874382cfadd1c00a91f052e2fd753eb4c90eb03a6b0bf5377a4151952f4"
+    },
+    {
+      "row": "TheDrawing",
+      "path": ".gate/inputs/resolved-profile.json",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "1ee05563938902c6d27d6390fe322dcd48f32327",
+      "source_path": "Profiles/Playground/receipt.json",
+      "sha256": "5b2684796cf3d32f524ffc652464662c17fdcd18043336c1efab25bc6a76d247"
+    },
+    {
+      "row": "TheDrawingCSS",
+      "path": ".gate/inputs/drawing.css",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "1ee05563938902c6d27d6390fe322dcd48f32327",
+      "source_path": "Profiles/Playground/drawing.css",
+      "sha256": "46ae65f529fb306319ebe1c85269f4f495e406888b8af77bbd43bed51deeec41"
     }
   ],
   "languages": {

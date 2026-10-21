@@ -30,10 +30,24 @@ extension TheorySource {
 }
 public enum TheDrawing: Theirs {
     public typealias Kind = DrawingProfileFile
-    public typealias At = DrawingSource
+    public typealias At = ResolvedDrawingSource
 }
 extension TheDrawing {
+    public static var typeName: String { ".gate/inputs/resolved-profile.json" }
+}
+public enum TheProfileSource: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = DrawingSource
+}
+extension TheProfileSource {
     public static var typeName: String { ".gate/inputs/DrawingProfile.swift" }
+}
+public enum TheDrawingCSS: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = ResolvedDrawingSource
+}
+extension TheDrawingCSS {
+    public static var typeName: String { ".gate/inputs/drawing.css" }
 }
 public enum ThePalette: Theirs {
     public typealias Kind = CarriedFile
@@ -595,4 +609,9 @@ public enum TheGeometry: Mine {
 }
 extension TheGeometry {
     public static var typeName: String { "Dictionary/Design.swift" }
+}
+
+public enum ResolvedDrawingSource: Role {}
+extension ResolvedDrawingSource {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@1ee05563938902c6d27d6390fe322dcd48f32327" }
 }
