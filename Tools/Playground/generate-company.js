@@ -11,6 +11,31 @@ function mustReplace(view, from, to) {
     return view.replace(from, to);
 }
 
+function readRecipeInput(repository, row, address) {
+    const label = address + " (" + row.path + "@" + row.revision + ")";
+    const refuse = message => { throw Error(label + ": " + message); };
+    if (typeof row.path !== "string" || path.isAbsolute(row.path) || row.path.includes("\\")
+        || row.path.split("/").some(part => !part || part === "." || part === "..")) refuse("input needs a repository-relative path");
+    if (!/^[0-9a-f]{40}$/.test(row.revision)) refuse("input needs a full commit pin");
+    if (!/^[0-9a-f]{64}$/.test(row.sha256)) refuse("input needs a SHA-256 digest");
+    const git = args => cp.spawnSync("git", args, {cwd:repository, maxBuffer:16 * 1024 * 1024});
+    const present = () => git(["cat-file", "-e", row.revision + "^{commit}"]).status === 0;
+    if (!present()) {
+        const fetched = git(["fetch", "--no-tags", "--depth", "1", "origin", row.revision]);
+        if (fetched.status !== 0 || !present()) refuse("pinned revision unavailable after fetch from origin");
+    }
+    const pinned = git(["show", row.revision + ":" + row.path]);
+    if (pinned.status !== 0) refuse("input is absent or unreadable at the pinned revision");
+    const digest = sha(pinned.stdout);
+    if (digest !== row.sha256) refuse("pinned SHA-256 mismatch: expected " + row.sha256 + ", read " + digest);
+    let current;
+    try { current = fs.readFileSync(path.join(repository, row.path)); }
+    catch (error) { refuse("working input is unreadable: " + error.code); }
+    const workingDigest = sha(current);
+    if (workingDigest !== row.sha256) refuse("working SHA-256 mismatch: expected " + row.sha256 + ", read " + workingDigest);
+    return pinned.stdout;
+}
+
 function makeBigCompany(count, organizationFile, seed, pools) {
     const {givenPool, familyPool, bornPool, rankPool, departmentPool, sitePool} = pools;
     const organizationView = organizationFile.slice(0, organizationFile.indexOf("// ── the data the page reads"));
@@ -161,15 +186,25 @@ function run(args) {
     if (!Number.isSafeInteger(config.part_size) || config.part_size < 1) throw Error("part-size must be a positive integer");
     const git = args => cp.execFileSync("git", args, {cwd:root, encoding:"utf8"}).trim();
     const toolPath = "Tools/Playground/generate-company.js";
-    const toolRevision = git(["log", "-1", "--format=%H", "--", toolPath]);
+    const recordPath = "Checks/Playground/scale-generation.json";
+    const declared = check ? JSON.parse(fs.readFileSync(path.join(root, recordPath))) : null;
+    const declaredRow = file => {
+        const rows = file === toolPath ? [declared.tool] : declared.inputs.filter(row => row && row.path === file);
+        if (rows.length !== 1 || !rows[0] || rows[0].path !== file) throw Error(recordPath + ": expected one input row for " + file);
+        return rows[0];
+    };
+    if (check && (declared.format !== "scale-generation/1" || !Array.isArray(declared.inputs) || declared.inputs.length !== 5))
+        throw Error(recordPath + ": expected scale-generation/1 with five inputs");
+    const toolRevision = check ? declaredRow(toolPath).revision : git(["log", "-1", "--format=%H", "--", toolPath]);
     const input = (file, revision) => {
-        const bytes = fs.readFileSync(path.join(root, file));
-        const committed = cp.execFileSync("git", ["show", revision + ":" + file], {cwd:root});
-        if (!bytes.equals(committed)) throw Error(file + ": commit the recipe/input before recording its provenance");
-        return {path:file, revision, sha256:sha(bytes)};
+        const row = check ? declaredRow(file) : {path:file, revision, sha256:sha(fs.readFileSync(path.join(root, file)))};
+        const address = recordPath + (file === toolPath ? "#tool" : "#inputs:" + file);
+        if (row.revision !== revision) throw Error(address + " (" + file + "): revision differs from the declared source pin " + revision);
+        readRecipeInput(root, row, address);
+        return {path:file, revision, sha256:row.sha256};
     };
     const tool = input(toolPath, toolRevision);
-    const inputs = [input(configPath, git(["log", "-1", "--format=%H", "--", configPath])),
+    const inputs = [input(configPath, check ? declaredRow(configPath).revision : git(["log", "-1", "--format=%H", "--", configPath])),
         ...["Worlds/Playground/Organization/Organization.swift", "Worlds/Playground/Organization/Dictionary/Design.swift",
             "Worlds/Playground/Company/gate.manifest.swift", "Worlds/Playground/Company/.gate/forms-definitions.json"]
             .map(file => input(file, config.source_revision))];
@@ -206,5 +241,5 @@ function run(args) {
     console.log((check ? "SCALE RECIPE GREEN: " : "materialized Scale: ") + count + " people, seed " + seed
         + ", " + record.outputs.reduce((n, f) => n + f.bytes, 0) + " output bytes");
 }
-module.exports = {makeBigCompany, materialize};
+module.exports = {makeBigCompany, materialize, readRecipeInput};
 if (require.main === module) { try { run(process.argv.slice(2)); } catch (e) { console.error(e.message); process.exitCode = 1; } }

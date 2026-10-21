@@ -3,6 +3,7 @@
 from pathlib import Path
 import hashlib,json,re,subprocess,sys,tempfile
 root=Path(__file__).resolve().parents[2]
+subprocess.run(['node','Checks/Playground/recipe-inputs-test.js'],cwd=root,check=True)
 subprocess.run(['node','Tools/Playground/generate-company.js','--check'],cwd=root,check=True)
 record=json.loads((root/'Checks/Playground/scale-generation.json').read_text())
 expected=json.loads((root/'Checks/Playground/scale-court.json').read_text())
