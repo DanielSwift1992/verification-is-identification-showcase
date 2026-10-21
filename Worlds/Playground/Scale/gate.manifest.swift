@@ -535,6 +535,34 @@ extension TheCompanyPart063 {
     public static var typeName: String { "CompanyPart063.swift" }
 }
 
+public enum TheCompanyPart064: Mine {
+    public typealias Kind = WorldFile
+}
+extension TheCompanyPart064 {
+    public static var typeName: String { "CompanyPart064.swift" }
+}
+
+public enum TheCompanyPart065: Mine {
+    public typealias Kind = WorldFile
+}
+extension TheCompanyPart065 {
+    public static var typeName: String { "CompanyPart065.swift" }
+}
+
+public enum TheCompanyPart066: Mine {
+    public typealias Kind = WorldFile
+}
+extension TheCompanyPart066 {
+    public static var typeName: String { "CompanyPart066.swift" }
+}
+
+public enum TheCompanyPart067: Mine {
+    public typealias Kind = WorldFile
+}
+extension TheCompanyPart067 {
+    public static var typeName: String { "CompanyPart067.swift" }
+}
+
 // The owner supplies the page and geometry; neither states company premises.
 public enum ThePages: Mine {
     public typealias Kind = CarriedFile

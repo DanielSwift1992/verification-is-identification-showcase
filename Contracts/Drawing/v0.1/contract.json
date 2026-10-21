@@ -280,7 +280,7 @@
       "status": "not-compared",
       "address": "Worlds/Playground/Scale/ScalePages.swift#OrganizationArt",
       "reason": "The owner materialized the 12800-person Scale world (Checks/Playground/scale-generation.json). Its full company data is judged separately. Native Drawing has not read these sources; the historical 1200-second compile budget expired. No native SVG or port parity is claimed.",
-      "inputSHA256": "d69d302f51ad55ba387ea56b4fb9d151879810209faf8323f52a57bb4f9d72bc",
+      "inputSHA256": "b4117db0eef331da850832ae1cb0d7c41dd198f921871da1ce4e341c52b222d9",
       "id": "scale",
       "root": "OrganizationArt",
       "sources": [
@@ -348,6 +348,10 @@
         "Worlds/Playground/Scale/CompanyPart061.swift",
         "Worlds/Playground/Scale/CompanyPart062.swift",
         "Worlds/Playground/Scale/CompanyPart063.swift",
+        "Worlds/Playground/Scale/CompanyPart064.swift",
+        "Worlds/Playground/Scale/CompanyPart065.swift",
+        "Worlds/Playground/Scale/CompanyPart066.swift",
+        "Worlds/Playground/Scale/CompanyPart067.swift",
         "Worlds/Playground/Scale/ScalePages.swift",
         "Worlds/Playground/Scale/Dictionary/Design.swift"
       ],
@@ -415,8 +419,12 @@
         "8bb23971b5fa106a9ae0652bd8a4bfaf31a77e830989246c2da3f9fbaba3529f",
         "3157ef0fa6739570b4987bb0e87e1b6c9c53d21b2e865f49093274d2efa006a9",
         "1a9bf6ae79dfb5e5b785f1db2fc5f6f6a9ee1c5a9e6bd156e0496f2ffd2d1a55",
-        "44bdc5c3f5e11733e13ca7790693c0d81eaecde8ea26e71195271a8b74b9dbca",
-        "7ad95af4e59f1c7c598e412ba1041c956c1933fddd99a9fa559cc9bfe8b27b65",
+        "dfdc7b7fa961f87a8e53dea62a12aed8724950ac7e18b5946f087f2b5c248a68",
+        "5c142a4ebe4c7da85f179d2a4bd1a244741e00c7ea881fb9f7b0f87ae3420021",
+        "fd898a061556990ccecb0eaffc9d02c5d1985d7286dcd5e1d05ce9e7e1800a2f",
+        "0cc8c402810287a404f316d4d2b25f2ca9516caf40a3f5ab41e9415235332ef0",
+        "4f7725c01ec50968fe8e4316bf48401edf593bd18fb6bff76f6a67a282f66b1b",
+        "8267f83804b1596da652f2c940deaca5de3d47e1ce3e9cc97ad46cbff29551a1",
         "5c590ba2f550273cf76c51d9847a10cd18c15eb03e9d61471297855aefbbfab0"
       ]
     },

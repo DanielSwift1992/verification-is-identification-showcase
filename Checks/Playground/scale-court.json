@@ -13,12 +13,12 @@
       "replacement": "VerifiedInDepartment<Emp12796, Sales>",
       "refusals": [
         {
-          "file": "CompanyPart063.swift",
-          "line": 6614,
+          "file": "CompanyPart065.swift",
+          "line": 3207,
           "premise": "VerifiedInDepartment requires Emp12796.Home == Sales: Finance against Sales"
         }
       ],
-      "path": "Worlds/Playground/Scale/CompanyPart063.swift",
+      "path": "Worlds/Playground/Scale/CompanyPart065.swift",
       "canonical_refusals": [
         {
           "line": 120123,
@@ -32,12 +32,12 @@
       "replacement": "VerifiedView<Emp12799, FinanceShare>",
       "refusals": [
         {
-          "file": "CompanyPart063.swift",
-          "line": 22626,
+          "file": "CompanyPart067.swift",
+          "line": 12807,
           "premise": "VerifiedView requires Emp12799.Home == FinanceShare.Home: People against Finance"
         }
       ],
-      "path": "Worlds/Playground/Scale/CompanyPart063.swift",
+      "path": "Worlds/Playground/Scale/CompanyPart067.swift",
       "canonical_refusals": [
         {
           "line": 136135,
@@ -51,8 +51,8 @@
       "replacement": "public enum Emp12799: Employee, Person {\n    public typealias Rank = Lead\n    public typealias Home = Finance\n    public typealias Given = Donald\n    public typealias Family = Allen\n    public typealias Born = Y1815\n    public typealias Site = Hybrid\n    public typealias Sex = Given.Sex\n}",
       "refusals": [
         {
-          "file": "CompanyPart063.swift",
-          "line": 22626,
+          "file": "CompanyPart067.swift",
+          "line": 12807,
           "premise": "VerifiedView requires Emp12799.Home == PeopleShare.Home: Finance against People"
         }
       ],
@@ -148,7 +148,11 @@
     "Worlds/Playground/Scale/CompanyPart060.swift",
     "Worlds/Playground/Scale/CompanyPart061.swift",
     "Worlds/Playground/Scale/CompanyPart062.swift",
-    "Worlds/Playground/Scale/CompanyPart063.swift"
+    "Worlds/Playground/Scale/CompanyPart063.swift",
+    "Worlds/Playground/Scale/CompanyPart064.swift",
+    "Worlds/Playground/Scale/CompanyPart065.swift",
+    "Worlds/Playground/Scale/CompanyPart066.swift",
+    "Worlds/Playground/Scale/CompanyPart067.swift"
   ],
   "canonical_company_sha256": "0f8c2e19e446c2a4518f85f783d6a2c82d78f35e98fd11c9d8d79c45d4fdf86c"
 }

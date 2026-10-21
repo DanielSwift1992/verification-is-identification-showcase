@@ -225,7 +225,7 @@
       "status": "not-compared",
       "address": "Worlds/Playground/Scale/ScalePages.swift#OrganizationArt",
       "reason": "The owner materialized the 12800-person Scale world (Checks/Playground/scale-generation.json). Its full company data is judged separately. Native Drawing has not read these sources; the historical 1200-second compile budget expired. No native SVG or port parity is claimed.",
-      "inputSHA256": "d69d302f51ad55ba387ea56b4fb9d151879810209faf8323f52a57bb4f9d72bc",
+      "inputSHA256": "b4117db0eef331da850832ae1cb0d7c41dd198f921871da1ce4e341c52b222d9",
       "id": "scale",
       "root": "OrganizationArt",
       "sources": [
@@ -293,6 +293,10 @@
         "Worlds/Playground/Scale/CompanyPart061.swift",
         "Worlds/Playground/Scale/CompanyPart062.swift",
         "Worlds/Playground/Scale/CompanyPart063.swift",
+        "Worlds/Playground/Scale/CompanyPart064.swift",
+        "Worlds/Playground/Scale/CompanyPart065.swift",
+        "Worlds/Playground/Scale/CompanyPart066.swift",
+        "Worlds/Playground/Scale/CompanyPart067.swift",
         "Worlds/Playground/Scale/ScalePages.swift",
         "Worlds/Playground/Scale/Dictionary/Design.swift"
       ]

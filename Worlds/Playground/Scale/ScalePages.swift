@@ -15,7 +15,7 @@ extension OrganizationTitle {
 }
 public enum OrgWhyOne: Close {}
 extension OrgWhyOne {
-    public static var typeName: String { "This world keeps 12 800 people in 64 declared source files." }
+    public static var typeName: String { "This world keeps 12 800 people in 68 declared source files." }
 }
 public enum OrgWhyTwo: Close {}
 extension OrgWhyTwo {
@@ -55,7 +55,7 @@ extension WalkWord {
 }
 public enum FootWord: Close {}
 extension FootWord {
-    public static var typeName: String { "The company has 64 source files. The judge reads their complete set." }
+    public static var typeName: String { "The company has 68 source files. The judge reads their complete set." }
 }
 public enum OrganizationAlt: Close {}
 extension OrganizationAlt {
