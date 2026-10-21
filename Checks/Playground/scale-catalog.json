@@ -1,0 +1,32 @@
+{
+  "base_showcase_revision": "8b144558b63f5e880d28c3aca03d62bb0b3218ba",
+  "path": "Worlds/Playground/Site/Manifest.swift",
+  "added_declarations": {
+    "ScaleWorld": {
+      "File": "ScaleFileWord",
+      "Name": "ScaleNameWord"
+    },
+    "ScaleFileWord": {},
+    "ScaleNameWord": {}
+  },
+  "words": {
+    "ScaleFileWord": "Scale",
+    "ScaleNameWord": "scaleFile"
+  },
+  "changes": [
+    {
+      "record": "ScaleTab",
+      "before": {
+        "Seeds": "CompanyWorld",
+        "Reads": "GeneratedText"
+      },
+      "after": {
+        "Reads": "ScaleWorld"
+      },
+      "removed": [
+        "Seeds"
+      ]
+    }
+  ],
+  "reason": "The generator is an explicit owner action; the catalog Reads its materialized world."
+}
