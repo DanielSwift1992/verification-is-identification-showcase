@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "count": 12800,
+  "seed": 0,
+  "source_revision": "8b144558b63f5e880d28c3aca03d62bb0b3218ba",
+  "pools": {
+    "givenPool": [
+      [
+        "Ada",
+        "Female"
+      ],
+      [
+        "Grace",
+        "Female"
+      ],
+      [
+        "Alan",
+        "Male"
+      ],
+      [
+        "Edsger",
+        "Male"
+      ],
+      [
+        "Barbara",
+        "Female"
+      ],
+      [
+        "John",
+        "Male"
+      ],
+      [
+        "Margaret",
+        "Female"
+      ],
+      [
+        "Donald",
+        "Male"
+      ],
+      [
+        "Radia",
+        "Female"
+      ],
+      [
+        "Ken",
+        "Male"
+      ],
+      [
+        "Frances",
+        "Female"
+      ],
+      [
+        "Niklaus",
+        "Male"
+      ]
+    ],
+    "familyPool": [
+      "Lovelace",
+      "Hopper",
+      "Turing",
+      "Dijkstra",
+      "Liskov",
+      "Backus",
+      "Hamilton",
+      "Knuth",
+      "Perlman",
+      "Thompson",
+      "Allen",
+      "Wirth"
+    ],
+    "bornPool": [
+      "Y1815",
+      "Y1906",
+      "Y1912",
+      "Y1930",
+      "Y1936",
+      "Y1938",
+      "Y1939",
+      "Y1943"
+    ],
+    "rankPool": [
+      "IndividualContributor",
+      "Lead",
+      "Manager"
+    ],
+    "departmentPool": [
+      "Finance",
+      "Engineering",
+      "Sales",
+      "People"
+    ],
+    "sitePool": [
+      "OnSite",
+      "Hybrid",
+      "Remote"
+    ]
+  }
+}
