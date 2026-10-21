@@ -202,18 +202,36 @@ def show_request(request, base):
 def document_sources(manifest):
     """The manifest selects source identities; no page-name convention does."""
     text = manifest.read_text()
-    selected = []
+    rows, edges = {}, {}
     for name, body in re.findall(r'public enum (\w+): (?:Mine|Theirs)\s*\{([^{}]*)\}', text):
-        if not re.search(r'\btypealias Kind\s*=\s*DocumentFile\b', body):
-            continue
         names = re.findall(r'extension ' + name + r'\s*\{\s*public static var typeName:\s*String\s*\{\s*("(?:\\.|[^"\\])*")\s*\}', text)
         if len(names) != 1:
-            raise ValueError(str(manifest) + ': DocumentFile ' + name + ' needs one path')
+            raise ValueError(str(manifest) + ': ' + name + ' needs one path')
         path = json.loads(names[0])
-        if path.startswith('/') or '..' in Path(path).parts or path in selected:
-            raise ValueError(str(manifest) + ': repeated or unsafe DocumentFile path ' + path)
-        selected.append(path)
-    return sorted(selected)
+        if path.startswith('/') or '..' in Path(path).parts or name in rows or path in [r[0] for r in rows.values()]:
+            raise ValueError(str(manifest) + ': repeated or unsafe input ' + path)
+        kind = re.search(r'\btypealias Kind\s*=\s*(\w+)', body)
+        rows[name] = (path, kind[1] if kind else None)
+        values = re.findall(r'typealias DrawingInputs\s*=\s*([^\n}]+)', body)
+        if len(values) > 1:
+            raise ValueError(str(manifest) + ': repeated DrawingInputs at ' + name)
+        if values:
+            raw = values[0].strip()
+            if not re.fullmatch(r'\w+|\(\s*\w+(?:\s*,\s*\w+)+\s*\)', raw):
+                raise ValueError(str(manifest) + ': DrawingInputs needs a row or tuple at ' + name)
+            refs = re.findall(r'\w+', raw)
+            if len(refs) != len(set(refs)):
+                raise ValueError(str(manifest) + ': DrawingInputs repeats a row at ' + name)
+            edges[name] = refs
+    def walk(name, stack=()):
+        if name not in rows or name in stack:
+            raise ValueError(str(manifest) + ': missing or cyclic DrawingInputs row ' + name)
+        return {name}.union(*(walk(ref, (*stack, name)) for ref in edges.get(name, [])))
+    for name in edges:
+        walk(name)
+    reached = set().union(*(walk(name) for name, (_, kind) in rows.items() if kind == 'DocumentFile'))
+    return sorted(rows[name][0] for name in reached)
+
 
 
 def check_document_inputs(requests, root=ROOT):

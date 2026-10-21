@@ -104,11 +104,12 @@ extension TheContract {
 }
 
 // The same source, read as a document as well as a company.
-public enum TheOrganizationDrawing: Mine {
+public enum ThePages: Mine {
     public typealias Kind = DocumentFile
+    public typealias DrawingInputs = TheOrganization
 }
-extension TheOrganizationDrawing {
-    public static var typeName: String { "Organization.swift" }
+extension ThePages {
+    public static var typeName: String { "OrganizationPages.swift" }
 }
 
 // The catalog is a pinned input, not an editable second table of doors.

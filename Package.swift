@@ -143,7 +143,7 @@ let package = Package(
             "DocumentKit", "Organization",
             .product(name: "VerificationIsIdentification", package: "verification-is-identification"),
         ], path: "Worlds/Playground/Organization", exclude: ["gate.manifest.swift"],
-           sources: ["Dictionary/Design.swift", "Organization.swift"]),
+           sources: ["Dictionary/Design.swift", "Organization.swift", "OrganizationPages.swift"]),
         .target(name: "ReadMeTab", dependencies: [
             "DocumentKit",
             .product(name: "VerificationIsIdentification", package: "verification-is-identification"),

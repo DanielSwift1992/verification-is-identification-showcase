@@ -38,7 +38,7 @@ function readRecipeInput(repository, row, address) {
 
 function makeBigCompany(count, organizationFile, seed, pools) {
     const {givenPool, familyPool, bornPool, rankPool, departmentPool, sitePool} = pools;
-    const organizationView = organizationFile.slice(0, organizationFile.indexOf("// ── the data the page reads"));
+    const organizationView = organizationFile;
     const lines = [];
     // the same three modules the seed names: the people below are the domain's
     // own types, so the generated file builds where the seed builds
@@ -127,7 +127,7 @@ function makeBigCompany(count, organizationFile, seed, pools) {
 
 
 function materialize(count, seed, config) {
-    const organization = fs.readFileSync(path.join(root, "Worlds/Playground/Organization/Organization.swift"), "utf8");
+    const organization = fs.readFileSync(path.join(root, "Worlds/Playground/Organization/OrganizationPages.swift"), "utf8");
     const mixed = makeBigCompany(count, organization, seed, config.pools);
     const marker = "// gate-company-data\n", boundary = mixed.indexOf(marker);
     if (boundary < 0 || boundary !== mixed.lastIndexOf(marker)) throw Error("one company boundary is required");
@@ -158,17 +158,10 @@ function materialize(count, seed, config) {
             + " {\n    public static var typeName: String { \"" + name + "\" }\n}\n";
     }
     manifest += "\npublic enum DocumentFile: Role {}\n";
-    // A single source can be read by two consumers. Keep the company court
-    // above and declare the complete native drawing input independently.
-    for (const file of Object.keys(company)) {
-        const name = path.basename(file);
-        const row = "The" + name.slice(0, -6) + "Drawing";
-        manifest += "\npublic enum " + row + ": Mine {\n    public typealias Kind = DocumentFile\n}\nextension " + row
-            + " {\n    public static var typeName: String { \"" + name + "\" }\n}\n";
-    }
+    const drawingDependencies = Object.keys(company).map(file => "The" + path.basename(file, ".swift"));
     manifest += "\n// The owner supplies the page and geometry; neither states company premises.\n";
     for (const [name, file] of [["ThePages", "ScalePages.swift"], ["TheGeometry", "Dictionary/Design.swift"]]) {
-        manifest += "public enum " + name + ": Mine {\n    public typealias Kind = DocumentFile\n}\nextension " + name
+        manifest += "public enum " + name + ": Mine {\n    public typealias Kind = DocumentFile\n" + (name === "ThePages" ? "    public typealias DrawingInputs = (" + drawingDependencies.join(", ") + ")\n" : "") + "}\nextension " + name
             + " {\n    public static var typeName: String { \"" + file + "\" }\n}\n";
     }
     return {
@@ -214,7 +207,7 @@ function run(args) {
     };
     const tool = input(toolPath, toolRevision);
     const inputs = [input(configPath, check ? declaredRow(configPath).revision : git(["log", "-1", "--format=%H", "--", configPath])),
-        ...["Worlds/Playground/Organization/Organization.swift", "Worlds/Playground/Organization/Dictionary/Design.swift",
+        ...["Worlds/Playground/Organization/OrganizationPages.swift", "Worlds/Playground/Organization/Dictionary/Design.swift",
             "Worlds/Playground/Company/gate.manifest.swift", "Worlds/Playground/Company/.gate/forms-definitions.json"]
             .map(file => input(file, config.source_revision))];
     const files = materialize(count, seed, config);
@@ -223,7 +216,7 @@ function run(args) {
         outputs:Object.entries(files).map(([file, bytes]) => ({path:file, sha256:sha(bytes), bytes:bytes.length})),
         command:"node Tools/Playground/generate-company.js --count " + count + " --seed " + seed + " --part-size " + config.part_size,
         storage:"versioned", compilation:"WorldFile parts present one complete company. The Scale page has not been compiled or compared by Drawing."};
-    const source = fs.readFileSync(path.join(root, "Worlds/Playground/Organization/Organization.swift"), "utf8");
+    const source = fs.readFileSync(path.join(root, "Worlds/Playground/Organization/OrganizationPages.swift"), "utf8");
     const legacy = makeBigCompany(count, source, seed, config.pools);
     record.address_map = {legacy:"gate@8886973: generated Company.swift",
         legacy_data_start_line:legacy.slice(0, legacy.indexOf("// gate-company-data\n") + "// gate-company-data\n".length).split("\n").length,

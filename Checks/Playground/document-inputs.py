@@ -23,6 +23,10 @@ with tempfile.TemporaryDirectory(prefix='drawing-input-controls-') as temp:
         ('missing source', original.replace('Dictionary/ReadMe.swift', 'Dictionary/Missing.swift')),
         ('repeated source', original.replace('ReadMePages.swift', 'Dictionary/ReadMe.swift')),
         ('extra source', original + '\npublic enum Extra: Mine { public typealias Kind = DocumentFile }\nextension Extra { public static var typeName: String { "Extra.swift" } }\n'),
+        ('missing dependency', original.replace('public enum ThePages: Mine {', 'public enum ThePages: Mine {\n    public typealias DrawingInputs = Missing')),
+        ('repeated dependency', original.replace('public enum ThePages: Mine {', 'public enum ThePages: Mine {\n    public typealias DrawingInputs = (TheDeclarations, TheDeclarations)')),
+        ('dependency cycle', original.replace('public enum ThePages: Mine {', 'public enum ThePages: Mine {\n    public typealias DrawingInputs = ThePages')),
+        ('unread dependency expression', original.replace('public enum ThePages: Mine {', 'public enum ThePages: Mine {\n    public typealias DrawingInputs = Guess<TheDeclarations>')),
     ]:
         at.write_text(text)
         try:
@@ -32,4 +36,8 @@ with tempfile.TemporaryDirectory(prefix='drawing-input-controls-') as temp:
             print('DOCUMENT INPUT REFUSED: ' + name)
         else:
             raise AssertionError(name + ' unexpectedly accepted')
-print('DOCUMENT INPUTS GREEN: ten real source sets, four addressed negative controls')
+    # A dependency enters the reading without becoming a DocumentFile.
+    at.write_text(original.replace('public enum ThePages: Mine {', 'public enum ThePages: Mine {\n    public typealias DrawingInputs = Data') + '\npublic enum Data: Mine { public typealias Kind = WorldFile }\nextension Data { public static var typeName: String { "Data.swift" } }\n')
+    assert 'Data.swift' in drawing.document_sources(at)
+    assert 'Kind = WorldFile' in at.read_text()
+print('DOCUMENT INPUTS GREEN: ten real source sets, eight addressed negative controls, dependency Kind preserved')

@@ -3,7 +3,7 @@
   "owner": {
     "theoryRevision": "1966abc0464081a3dbe1e31414f3bc683b2c41dc",
     "files": {
-      "showcase/Package.swift": "bad0ce024545092a347e29396bc6074111f4a28e42f81da85e8a2d6c90de1dde",
+      "showcase/Package.swift": "afba11c7e3d7a0351b188db63f1a06971b3de63a470dcbe1afd6001aa6869028",
       "showcase/Sources/DocumentKit/Alphabet.swift": "99382d24f496cf5cab36ee55942f1c7cb7c3a05bd9a5cf923602528661a7686d",
       "showcase/Sources/DocumentKit/Claim.swift": "800f442b92b692758216c8d5b75d742f8bd5d5d4253bcc55ebd53eb5334d6911",
       "showcase/Sources/DocumentKit/Design.swift": "8b6338891c9299888e53c707789edb0feb4838041bf77c467c38fde5889c4083",
@@ -110,15 +110,16 @@
       "output": "cases/readme.svg"
     },
     {
-      "address": "Worlds/Playground/Organization/Organization.swift#OrganizationArt",
-      "inputSHA256": "fd82cfe33daaf21964f34894099d0ce67ca29204bd9b1bb5584f8bfb6e06f4c4",
+      "address": "Worlds/Playground/Organization/OrganizationPages.swift#OrganizationArt",
+      "inputSHA256": "00ea251b1ad991fbf34608b180b37989281f410643ed8abadb341803430554df",
       "status": "svg",
       "svgSHA256": "46dbffc4efea07884add45d14bee218209c3bb3e56acef814fd0823e293d8ae1",
       "id": "organization",
       "root": "OrganizationArt",
       "sources": [
         "Worlds/Playground/Organization/Dictionary/Design.swift",
-        "Worlds/Playground/Organization/Organization.swift"
+        "Worlds/Playground/Organization/Organization.swift",
+        "Worlds/Playground/Organization/OrganizationPages.swift"
       ],
       "target": "OrganizationTab",
       "output": "cases/organization.svg"
@@ -225,7 +226,7 @@
       "status": "not-compared",
       "address": "Worlds/Playground/Scale/ScalePages.swift#OrganizationArt",
       "reason": "The owner materialized the 12800-person Scale world (Checks/Playground/scale-generation.json). Its full company data is judged separately. Native Drawing has not read these sources; the historical 1200-second compile budget expired. No native SVG or port parity is claimed.",
-      "inputSHA256": "b4117db0eef331da850832ae1cb0d7c41dd198f921871da1ce4e341c52b222d9",
+      "inputSHA256": "d6b0a4b16361ad025092e21b224569c62ec558bf044bdb60d1feddaab0d519f7",
       "id": "scale",
       "root": "OrganizationArt",
       "sources": [

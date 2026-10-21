@@ -109,10 +109,5 @@
     }
   },
   "shelf_overrides": false,
-  "plain_fragments": [
-    {
-      "path": "Organization.swift",
-      "marker": "// \u2500\u2500 the data the page reads"
-    }
-  ]
+  "plain_fragments": []
 }
