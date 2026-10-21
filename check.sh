@@ -36,6 +36,7 @@ NEEDS_CLEAN="judge artifacts"
 
 # tag | what it holds | how to ask
 LAWS=(
+"ci|CI diagnostics preserve failed laws and quote their output safely|python3 Checks/ci-law-test.py"
 "build|the package builds, tests pass, drawable roots match Drawing and un-compared entries are named|swift build && swift test && ./drawing --check"
 "publication|the published claim holds and its seven mutations are refused by name|bash Checks/publication.sh"
 "rules|a rule is one substitution|swift run Tools lint Sources/DynamicsDemo/Rules.swift --strict"
@@ -84,7 +85,7 @@ for entry in "${LAWS[@]}"; do
         continue
     fi
     echo "── $tag: $said"
-    if ! eval "$cmd"; then
+    if ! python3 Checks/ci-law.py "$tag" -- bash -uo pipefail -c "$cmd"; then
         failed+=("$tag")
     fi
 done
