@@ -284,11 +284,10 @@ public typealias BalmerAlphaDrop = Plus<U16, U4>
 public typealias BalmerBetaDrop = Plus<U16, Plus<U8, Plus<U2, U1>>>
 public typealias LymanAlphaDrop = Plus<U64, Plus<U32, Plus<U8, U4>>>
 
-// a whole that must be the sum of its two parts, judged as arithmetic
-public protocol EnergyClosed {}
-public enum EnergySum<Whole, Left, Right>: Close {}
-extension EnergySum: EnergyClosed
-where Whole == Plus<Left, Right> {}
+// A whole and its two parts ask the same count question as a level and its
+// drop below. Whole keeps its recorded tree; count compares the two readings.
+public typealias EnergySum<Whole: Structure, Left: Structure, Right: Structure> =
+    LevelDrop<Whole, Left, Right>
 
 // the stitches: every drop against its two floors, and the two roads one drop
 public typealias ThirdFloorStitch = EnergySum<FloorThreeDepth, FloorFourDepth, PaschenAlphaDrop>

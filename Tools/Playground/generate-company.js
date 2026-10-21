@@ -151,25 +151,12 @@ function materialize(count, seed, config) {
             "Full keeps each file's complete source; the manifest names every part.")
         .replace("The editor shows this file in pages. The judge reads all pages at once.",
             "The company has " + parts + " source files. The judge reads their complete set.");
-    let manifest = fs.readFileSync(path.join(root, "Worlds/Playground/Company/gate.manifest.swift"), "utf8");
-    for (const file of Object.keys(company).slice(1)) {
-        const name = path.basename(file);
-        manifest += "\npublic enum The" + name.slice(0, -6) + ": Mine {\n    public typealias Kind = WorldFile\n}\nextension The" + name.slice(0, -6)
-            + " {\n    public static var typeName: String { \"" + name + "\" }\n}\n";
-    }
-    manifest += "\npublic enum DocumentFile: Role {}\n";
-    const drawingDependencies = Object.keys(company).map(file => "The" + path.basename(file, ".swift"));
-    manifest += "\n// The owner supplies the page and geometry; neither states company premises.\n";
-    for (const [name, file] of [["ThePages", "ScalePages.swift"], ["TheGeometry", "Dictionary/Design.swift"]]) {
-        manifest += "public enum " + name + ": Mine {\n    public typealias Kind = DocumentFile\n" + (name === "ThePages" ? "    public typealias DrawingInputs = (" + drawingDependencies.join(", ") + ")\n" : "") + "}\nextension " + name
-            + " {\n    public static var typeName: String { \"" + file + "\" }\n}\n";
-    }
+    // The owner declares Scale's manifest and Language independently. A data
+    // materialization cannot replace those inputs with Company's context.
     return {
         ...company,
         "Worlds/Playground/Scale/ScalePages.swift": Buffer.from(pages),
-        "Worlds/Playground/Scale/Dictionary/Design.swift": fs.readFileSync(path.join(root, "Worlds/Playground/Organization/Dictionary/Design.swift")),
-        "Worlds/Playground/Scale/gate.manifest.swift": Buffer.from(manifest),
-        "Worlds/Playground/Scale/.gate/forms-definitions.json": fs.readFileSync(path.join(root, "Worlds/Playground/Company/.gate/forms-definitions.json"))
+        "Worlds/Playground/Scale/Dictionary/Design.swift": fs.readFileSync(path.join(root, "Worlds/Playground/Organization/Dictionary/Design.swift"))
     };
 }
 function run(args) {
@@ -195,8 +182,8 @@ function run(args) {
         if (rows.length !== 1 || !rows[0] || rows[0].path !== file) throw Error(recordPath + ": expected one input row for " + file);
         return rows[0];
     };
-    if (check && (declared.format !== "scale-generation/1" || !Array.isArray(declared.inputs) || declared.inputs.length !== 5))
-        throw Error(recordPath + ": expected scale-generation/1 with five inputs");
+    if (check && (declared.format !== "scale-generation/1" || !Array.isArray(declared.inputs) || declared.inputs.length !== 3))
+        throw Error(recordPath + ": expected scale-generation/1 with three inputs");
     const toolRevision = check ? declaredRow(toolPath).revision : git(["log", "-1", "--format=%H", "--", toolPath]);
     const input = (file, revision) => {
         const row = check ? declaredRow(file) : {path:file, revision, sha256:sha(fs.readFileSync(path.join(root, file)))};
@@ -207,8 +194,7 @@ function run(args) {
     };
     const tool = input(toolPath, toolRevision);
     const inputs = [input(configPath, check ? declaredRow(configPath).revision : git(["log", "-1", "--format=%H", "--", configPath])),
-        ...["Worlds/Playground/Organization/OrganizationPages.swift", "Worlds/Playground/Organization/Dictionary/Design.swift",
-            "Worlds/Playground/Company/gate.manifest.swift", "Worlds/Playground/Company/.gate/forms-definitions.json"]
+        ...["Worlds/Playground/Organization/OrganizationPages.swift", "Worlds/Playground/Organization/Dictionary/Design.swift"]
             .map(file => input(file, config.source_revision))];
     const files = materialize(count, seed, config);
     const companyFiles = Object.keys(files).filter(file => /\/Company(?:Part[0-9]+)?\.swift$/.test(file));
