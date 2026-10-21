@@ -3,6 +3,7 @@ public enum GrammarScopes {
     public static let format = "vi-scope-map/1"
     public static let entries: [(String, String)] = [
         ("Worlds/Playground/Organization/Dictionary", "SurfaceScope"),
+        ("Worlds/Playground/Scale/Dictionary", "SurfaceScope"),
         ("Worlds/Playground/Typewriter/Dictionary", "SurfaceScope"),
         ("Worlds/Playground/Basics/Dictionary", "SurfaceScope"),
         ("Worlds/Playground/ReadMe/Dictionary", "SurfaceScope"),

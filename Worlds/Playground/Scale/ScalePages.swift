@@ -15,11 +15,11 @@ extension OrganizationTitle {
 }
 public enum OrgWhyOne: Close {}
 extension OrgWhyOne {
-    public static var typeName: String { "This file is the same organization, written out for 12 800 people." }
+    public static var typeName: String { "This world keeps 12 800 people in 64 declared source files." }
 }
 public enum OrgWhyTwo: Close {}
 extension OrgWhyTwo {
-    public static var typeName: String { "The editor shows a portion of this file; Full keeps the complete source." }
+    public static var typeName: String { "Full keeps each file's complete source; the manifest names every part." }
 }
 public enum OrgWhyThree: Close {}
 extension OrgWhyThree {
@@ -55,7 +55,7 @@ extension WalkWord {
 }
 public enum FootWord: Close {}
 extension FootWord {
-    public static var typeName: String { "The editor shows this file in pages. The judge reads all pages at once." }
+    public static var typeName: String { "The company has 64 source files. The judge reads their complete set." }
 }
 public enum OrganizationAlt: Close {}
 extension OrganizationAlt {

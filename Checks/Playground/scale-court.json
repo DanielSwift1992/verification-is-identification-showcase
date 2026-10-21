@@ -13,6 +13,14 @@
       "replacement": "VerifiedInDepartment<Emp12796, Sales>",
       "refusals": [
         {
+          "file": "CompanyPart063.swift",
+          "line": 6614,
+          "premise": "VerifiedInDepartment requires Emp12796.Home == Sales: Finance against Sales"
+        }
+      ],
+      "path": "Worlds/Playground/Scale/CompanyPart063.swift",
+      "canonical_refusals": [
+        {
           "line": 120123,
           "premise": "VerifiedInDepartment requires Emp12796.Home == Sales: Finance against Sales"
         }
@@ -23,6 +31,14 @@
       "anchor": "VerifiedView<Emp12799, PeopleShare>",
       "replacement": "VerifiedView<Emp12799, FinanceShare>",
       "refusals": [
+        {
+          "file": "CompanyPart063.swift",
+          "line": 22626,
+          "premise": "VerifiedView requires Emp12799.Home == FinanceShare.Home: People against Finance"
+        }
+      ],
+      "path": "Worlds/Playground/Scale/CompanyPart063.swift",
+      "canonical_refusals": [
         {
           "line": 136135,
           "premise": "VerifiedView requires Emp12799.Home == FinanceShare.Home: People against Finance"
@@ -35,6 +51,14 @@
       "replacement": "public enum Emp12799: Employee, Person {\n    public typealias Rank = Lead\n    public typealias Home = Finance\n    public typealias Given = Donald\n    public typealias Family = Allen\n    public typealias Born = Y1815\n    public typealias Site = Hybrid\n    public typealias Sex = Given.Sex\n}",
       "refusals": [
         {
+          "file": "CompanyPart063.swift",
+          "line": 22626,
+          "premise": "VerifiedView requires Emp12799.Home == PeopleShare.Home: Finance against People"
+        }
+      ],
+      "path": "Worlds/Playground/Scale/CompanyPart063.swift",
+      "canonical_refusals": [
+        {
           "line": 136135,
           "premise": "VerifiedView requires Emp12799.Home == PeopleShare.Home: Finance against People"
         }
@@ -46,10 +70,85 @@
       "replacement": "public enum Emp12799: Employee, Person {\n    public typealias Rank = Finance\n    public typealias Home = People\n    public typealias Given = Donald\n    public typealias Family = Allen\n    public typealias Born = Y1815\n    public typealias Site = Hybrid\n    public typealias Sex = Given.Sex\n}",
       "refusals": [
         {
+          "file": "CompanyPart063.swift",
+          "line": 1798,
+          "premise": "Employee requires Rank in rank: Emp12799.Rank = Finance lands in department"
+        }
+      ],
+      "path": "Worlds/Playground/Scale/CompanyPart063.swift",
+      "canonical_refusals": [
+        {
           "line": 115307,
           "premise": "Employee requires Rank in rank: Emp12799.Rank = Finance lands in department"
         }
       ]
     }
-  ]
+  ],
+  "company_files": [
+    "Worlds/Playground/Scale/Company.swift",
+    "Worlds/Playground/Scale/CompanyPart001.swift",
+    "Worlds/Playground/Scale/CompanyPart002.swift",
+    "Worlds/Playground/Scale/CompanyPart003.swift",
+    "Worlds/Playground/Scale/CompanyPart004.swift",
+    "Worlds/Playground/Scale/CompanyPart005.swift",
+    "Worlds/Playground/Scale/CompanyPart006.swift",
+    "Worlds/Playground/Scale/CompanyPart007.swift",
+    "Worlds/Playground/Scale/CompanyPart008.swift",
+    "Worlds/Playground/Scale/CompanyPart009.swift",
+    "Worlds/Playground/Scale/CompanyPart010.swift",
+    "Worlds/Playground/Scale/CompanyPart011.swift",
+    "Worlds/Playground/Scale/CompanyPart012.swift",
+    "Worlds/Playground/Scale/CompanyPart013.swift",
+    "Worlds/Playground/Scale/CompanyPart014.swift",
+    "Worlds/Playground/Scale/CompanyPart015.swift",
+    "Worlds/Playground/Scale/CompanyPart016.swift",
+    "Worlds/Playground/Scale/CompanyPart017.swift",
+    "Worlds/Playground/Scale/CompanyPart018.swift",
+    "Worlds/Playground/Scale/CompanyPart019.swift",
+    "Worlds/Playground/Scale/CompanyPart020.swift",
+    "Worlds/Playground/Scale/CompanyPart021.swift",
+    "Worlds/Playground/Scale/CompanyPart022.swift",
+    "Worlds/Playground/Scale/CompanyPart023.swift",
+    "Worlds/Playground/Scale/CompanyPart024.swift",
+    "Worlds/Playground/Scale/CompanyPart025.swift",
+    "Worlds/Playground/Scale/CompanyPart026.swift",
+    "Worlds/Playground/Scale/CompanyPart027.swift",
+    "Worlds/Playground/Scale/CompanyPart028.swift",
+    "Worlds/Playground/Scale/CompanyPart029.swift",
+    "Worlds/Playground/Scale/CompanyPart030.swift",
+    "Worlds/Playground/Scale/CompanyPart031.swift",
+    "Worlds/Playground/Scale/CompanyPart032.swift",
+    "Worlds/Playground/Scale/CompanyPart033.swift",
+    "Worlds/Playground/Scale/CompanyPart034.swift",
+    "Worlds/Playground/Scale/CompanyPart035.swift",
+    "Worlds/Playground/Scale/CompanyPart036.swift",
+    "Worlds/Playground/Scale/CompanyPart037.swift",
+    "Worlds/Playground/Scale/CompanyPart038.swift",
+    "Worlds/Playground/Scale/CompanyPart039.swift",
+    "Worlds/Playground/Scale/CompanyPart040.swift",
+    "Worlds/Playground/Scale/CompanyPart041.swift",
+    "Worlds/Playground/Scale/CompanyPart042.swift",
+    "Worlds/Playground/Scale/CompanyPart043.swift",
+    "Worlds/Playground/Scale/CompanyPart044.swift",
+    "Worlds/Playground/Scale/CompanyPart045.swift",
+    "Worlds/Playground/Scale/CompanyPart046.swift",
+    "Worlds/Playground/Scale/CompanyPart047.swift",
+    "Worlds/Playground/Scale/CompanyPart048.swift",
+    "Worlds/Playground/Scale/CompanyPart049.swift",
+    "Worlds/Playground/Scale/CompanyPart050.swift",
+    "Worlds/Playground/Scale/CompanyPart051.swift",
+    "Worlds/Playground/Scale/CompanyPart052.swift",
+    "Worlds/Playground/Scale/CompanyPart053.swift",
+    "Worlds/Playground/Scale/CompanyPart054.swift",
+    "Worlds/Playground/Scale/CompanyPart055.swift",
+    "Worlds/Playground/Scale/CompanyPart056.swift",
+    "Worlds/Playground/Scale/CompanyPart057.swift",
+    "Worlds/Playground/Scale/CompanyPart058.swift",
+    "Worlds/Playground/Scale/CompanyPart059.swift",
+    "Worlds/Playground/Scale/CompanyPart060.swift",
+    "Worlds/Playground/Scale/CompanyPart061.swift",
+    "Worlds/Playground/Scale/CompanyPart062.swift",
+    "Worlds/Playground/Scale/CompanyPart063.swift"
+  ],
+  "canonical_company_sha256": "0f8c2e19e446c2a4518f85f783d6a2c82d78f35e98fd11c9d8d79c45d4fdf86c"
 }

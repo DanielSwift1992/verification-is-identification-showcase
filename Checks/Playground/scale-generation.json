@@ -2,14 +2,14 @@
   "format": "scale-generation/1",
   "tool": {
     "path": "Tools/Playground/generate-company.js",
-    "revision": "083c1ba81c74f61a68fab11b35d10c917cfbf9e3",
-    "sha256": "f596f3c4648cd80f58891ba26d66a27ec4003e5818919ef532170d0be0958747"
+    "revision": "adafd3f2f3f47ebc88800b1528ccb48ca0c753b5",
+    "sha256": "95ebc7e677032aa8542ff63cba394b9f4c80fa5757fe044bba9fe28f23e0e90f"
   },
   "inputs": [
     {
       "path": "Tools/Playground/company-seed.json",
-      "revision": "083c1ba81c74f61a68fab11b35d10c917cfbf9e3",
-      "sha256": "fd55d90bb6e563cd0777b6485b5c17f85e9d47b82befbc8e68fc31deef88be3c"
+      "revision": "adafd3f2f3f47ebc88800b1528ccb48ca0c753b5",
+      "sha256": "73314cf2b16942a9000aedc87925791bd02a96306c0af4633bc121b596f304c7"
     },
     {
       "path": "Worlds/Playground/Organization/Organization.swift",
@@ -34,18 +34,400 @@
   ],
   "parameters": {
     "count": 12800,
-    "seed": 0
+    "seed": 0,
+    "part_size": 200
   },
+  "company_files": [
+    "Worlds/Playground/Scale/Company.swift",
+    "Worlds/Playground/Scale/CompanyPart001.swift",
+    "Worlds/Playground/Scale/CompanyPart002.swift",
+    "Worlds/Playground/Scale/CompanyPart003.swift",
+    "Worlds/Playground/Scale/CompanyPart004.swift",
+    "Worlds/Playground/Scale/CompanyPart005.swift",
+    "Worlds/Playground/Scale/CompanyPart006.swift",
+    "Worlds/Playground/Scale/CompanyPart007.swift",
+    "Worlds/Playground/Scale/CompanyPart008.swift",
+    "Worlds/Playground/Scale/CompanyPart009.swift",
+    "Worlds/Playground/Scale/CompanyPart010.swift",
+    "Worlds/Playground/Scale/CompanyPart011.swift",
+    "Worlds/Playground/Scale/CompanyPart012.swift",
+    "Worlds/Playground/Scale/CompanyPart013.swift",
+    "Worlds/Playground/Scale/CompanyPart014.swift",
+    "Worlds/Playground/Scale/CompanyPart015.swift",
+    "Worlds/Playground/Scale/CompanyPart016.swift",
+    "Worlds/Playground/Scale/CompanyPart017.swift",
+    "Worlds/Playground/Scale/CompanyPart018.swift",
+    "Worlds/Playground/Scale/CompanyPart019.swift",
+    "Worlds/Playground/Scale/CompanyPart020.swift",
+    "Worlds/Playground/Scale/CompanyPart021.swift",
+    "Worlds/Playground/Scale/CompanyPart022.swift",
+    "Worlds/Playground/Scale/CompanyPart023.swift",
+    "Worlds/Playground/Scale/CompanyPart024.swift",
+    "Worlds/Playground/Scale/CompanyPart025.swift",
+    "Worlds/Playground/Scale/CompanyPart026.swift",
+    "Worlds/Playground/Scale/CompanyPart027.swift",
+    "Worlds/Playground/Scale/CompanyPart028.swift",
+    "Worlds/Playground/Scale/CompanyPart029.swift",
+    "Worlds/Playground/Scale/CompanyPart030.swift",
+    "Worlds/Playground/Scale/CompanyPart031.swift",
+    "Worlds/Playground/Scale/CompanyPart032.swift",
+    "Worlds/Playground/Scale/CompanyPart033.swift",
+    "Worlds/Playground/Scale/CompanyPart034.swift",
+    "Worlds/Playground/Scale/CompanyPart035.swift",
+    "Worlds/Playground/Scale/CompanyPart036.swift",
+    "Worlds/Playground/Scale/CompanyPart037.swift",
+    "Worlds/Playground/Scale/CompanyPart038.swift",
+    "Worlds/Playground/Scale/CompanyPart039.swift",
+    "Worlds/Playground/Scale/CompanyPart040.swift",
+    "Worlds/Playground/Scale/CompanyPart041.swift",
+    "Worlds/Playground/Scale/CompanyPart042.swift",
+    "Worlds/Playground/Scale/CompanyPart043.swift",
+    "Worlds/Playground/Scale/CompanyPart044.swift",
+    "Worlds/Playground/Scale/CompanyPart045.swift",
+    "Worlds/Playground/Scale/CompanyPart046.swift",
+    "Worlds/Playground/Scale/CompanyPart047.swift",
+    "Worlds/Playground/Scale/CompanyPart048.swift",
+    "Worlds/Playground/Scale/CompanyPart049.swift",
+    "Worlds/Playground/Scale/CompanyPart050.swift",
+    "Worlds/Playground/Scale/CompanyPart051.swift",
+    "Worlds/Playground/Scale/CompanyPart052.swift",
+    "Worlds/Playground/Scale/CompanyPart053.swift",
+    "Worlds/Playground/Scale/CompanyPart054.swift",
+    "Worlds/Playground/Scale/CompanyPart055.swift",
+    "Worlds/Playground/Scale/CompanyPart056.swift",
+    "Worlds/Playground/Scale/CompanyPart057.swift",
+    "Worlds/Playground/Scale/CompanyPart058.swift",
+    "Worlds/Playground/Scale/CompanyPart059.swift",
+    "Worlds/Playground/Scale/CompanyPart060.swift",
+    "Worlds/Playground/Scale/CompanyPart061.swift",
+    "Worlds/Playground/Scale/CompanyPart062.swift",
+    "Worlds/Playground/Scale/CompanyPart063.swift"
+  ],
   "outputs": [
     {
       "path": "Worlds/Playground/Scale/Company.swift",
-      "sha256": "0f8c2e19e446c2a4518f85f783d6a2c82d78f35e98fd11c9d8d79c45d4fdf86c",
-      "bytes": 5034836
+      "sha256": "61c209337e5b368864ef51429edaae10a82f10025bf39ab0f59e3298766b5dba",
+      "bytes": 62490
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart001.swift",
+      "sha256": "debd65050490560c1142fedf662209ec9d1f086c6e302934a36abf9047ccfe41",
+      "bytes": 59715
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart002.swift",
+      "sha256": "7e01e52282698e8f10bbf2c6e9459ec00f1a8b61691f82008277e964095608a1",
+      "bytes": 59689
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart003.swift",
+      "sha256": "229fcb69924c70bb0d460cf60687c20e6641c2a5bcb27d8fa258bee1dff57dd8",
+      "bytes": 59723
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart004.swift",
+      "sha256": "1fdfb174e831a3f6221ebe91cdff42bfc4629d8df5c139324e33c6fc1901540d",
+      "bytes": 59699
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart005.swift",
+      "sha256": "6ee302bf4d7b3491e48276432b83ddd627692c5cd954bd823d566d14860ceb78",
+      "bytes": 59713
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart006.swift",
+      "sha256": "86fee0932fa92c22a164deeabae94bc060e8ce3ae6498dd5417d33bfbedb1496",
+      "bytes": 59703
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart007.swift",
+      "sha256": "e48b2dc8d2ccbf41b8ef2339126b24bc8d62483394563a84c9a3c791e79cab05",
+      "bytes": 59711
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart008.swift",
+      "sha256": "7a9bcc61f8cdeb7acc10e0b87637f803a9d5edcb432db6f23d8995f9ba07b917",
+      "bytes": 59697
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart009.swift",
+      "sha256": "cbde966a2493daf6f0999dfcecd8fa7cbd936681ca2c98a9f1f618c1f8508dc8",
+      "bytes": 59723
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart010.swift",
+      "sha256": "0fd09401262db33289e6e41251852f472e12d5804f9d28d435e9199c8d7ede8f",
+      "bytes": 59699
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart011.swift",
+      "sha256": "8a54c3502c80115cba4cdbc3847ef44453c335940dbbb91e2f540c998f343186",
+      "bytes": 59701
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart012.swift",
+      "sha256": "afdfd18d3ea1c68da03b9de4d742e346794700b2a4e818406043ce6856bc7d7e",
+      "bytes": 59711
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart013.swift",
+      "sha256": "43df27b3033ee3f831237e0f48a05547cb638a99f089203c26f07e30e1208d73",
+      "bytes": 59715
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart014.swift",
+      "sha256": "0062d0665d9569c8bf572e661ae46710a7cf612e6fd5f6f5c3cacd798f00e1ff",
+      "bytes": 59721
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart015.swift",
+      "sha256": "9fc6d9aed2b1085a18ffb5de5cc6f1b0c0c961c81da3cccf9eb59458abd025ce",
+      "bytes": 59683
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart016.swift",
+      "sha256": "8e3fd166f05be484df46953b4009fd3d2955fc73bcd4adf407075e23adf2d332",
+      "bytes": 59727
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart017.swift",
+      "sha256": "99934c6bc7ec733e8575a777e8d282f7d23297ba1d00b3f2093b067fef31f69b",
+      "bytes": 59677
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart018.swift",
+      "sha256": "a47518227a88ae3b9c82b29fd916593a8854c7b868dcb8bc9ea6c648e7237e99",
+      "bytes": 59731
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart019.swift",
+      "sha256": "296d196982e01fa5206e25a39300318ec2a61eae6c3867894106e230146f4d27",
+      "bytes": 59715
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart020.swift",
+      "sha256": "a9be9a05cac822f67385882f3a02506aaad690c409033112075847a472ec8be8",
+      "bytes": 59689
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart021.swift",
+      "sha256": "488e40c3604af1685ff4a0efbf13de477f87799ec92e514f1010383d85f4f29a",
+      "bytes": 59723
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart022.swift",
+      "sha256": "4fb4a8518f3ab0168fe8c82fd3f33ed268e6f30b8cd084e3d39e85e180a8b409",
+      "bytes": 59699
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart023.swift",
+      "sha256": "83c7a63af558fd647ff5775273190f4f01b22875af2698724b86cfe963573c28",
+      "bytes": 59713
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart024.swift",
+      "sha256": "f5c14eee551102563bb642302d0e8e42ed8057b92a263f4b8300c558fa85dead",
+      "bytes": 59703
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart025.swift",
+      "sha256": "18db9de76e49443d2ec5d09aaabd44d2b70b13093c9a1c702188cb4bca1021b0",
+      "bytes": 59711
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart026.swift",
+      "sha256": "2adbc798cbfee461ae78f83214557fb57e77fb5ee41ba209f194d28c175c7b7a",
+      "bytes": 59697
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart027.swift",
+      "sha256": "c6fd1eae3d975b272ef6239c42426ff41c5c005419b77f34026dba83cf81f233",
+      "bytes": 59723
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart028.swift",
+      "sha256": "062e8a5d4d8317f69e3baa982f238712bc91973b8519991267b669d127cd9d98",
+      "bytes": 59699
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart029.swift",
+      "sha256": "b42844e57fd733953203b75e8c88d69086cacc09a381df0ead9c20d6b309b493",
+      "bytes": 59701
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart030.swift",
+      "sha256": "191939bab43c06a7469770652b05ee80c67dde28191751e50994870943a02478",
+      "bytes": 59711
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart031.swift",
+      "sha256": "e144abc0a0cba82e74f9f43ee261bf4d5fb6da3c5d1c892e845091a341f2f957",
+      "bytes": 59715
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart032.swift",
+      "sha256": "3dc0e390396646b00627f30b135c6b6374d6b781c0bbadfb2ddfbd4a941d9e02",
+      "bytes": 59721
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart033.swift",
+      "sha256": "19b06d31aac667b8017bc09841a1f7b000efbca9ff278949bb51c26a7c912336",
+      "bytes": 59683
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart034.swift",
+      "sha256": "d74a35fbc606a40aea2aa0aa6b09a0ffcd8ebbb05f96ccbcb7d1ac8762b72b04",
+      "bytes": 59727
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart035.swift",
+      "sha256": "6d4a10470a9fc42e5358263806e5f9ed76e52340ea3909a6dd7f20a8f244352e",
+      "bytes": 59677
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart036.swift",
+      "sha256": "7ea478108107124c60cbc56ed1abe6c18ff5976c27d1e644ae00a4454e4db1d4",
+      "bytes": 59731
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart037.swift",
+      "sha256": "f80ee37ed3bb204fa6c120641f38b69cccfc9f2a0a01df1375bcdfd429f22f93",
+      "bytes": 59715
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart038.swift",
+      "sha256": "2526cc0045460795bbea2a3ae49681618110b974940fac3f9003860e10647c5f",
+      "bytes": 59689
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart039.swift",
+      "sha256": "f7379a7cb41ee0dd3dcc75be44b93338da4966443b99f20dcead71761f4f35f4",
+      "bytes": 59723
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart040.swift",
+      "sha256": "66e736431e3861d1822a7d51d6fe00f09a15d53efd35ce1ee48f13eb756f4aee",
+      "bytes": 59699
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart041.swift",
+      "sha256": "1502429facbe3ebe3b8eb64b3c0861026e19e292741e18ad2a814dcefeefdc3e",
+      "bytes": 59713
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart042.swift",
+      "sha256": "812fe44fc3731203749ad599f196b32d6342814641628f57ebfc682ee5b45440",
+      "bytes": 59703
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart043.swift",
+      "sha256": "dd4d4c699c1f5198926f501d22cbf3083bd52782e6120cad25bd22ad4d7fb857",
+      "bytes": 59711
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart044.swift",
+      "sha256": "007fed2c8be7f52984980f010b1e1df2d79430c45b29d6700f86ff3f951b8767",
+      "bytes": 59697
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart045.swift",
+      "sha256": "4157bf0c3119f228ba5ac692cfdead5cbfe4cda0b7aecac63346a20a74812cc1",
+      "bytes": 59723
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart046.swift",
+      "sha256": "2dfff39498faa09af2cb7c36c91d23cb784020e43bca03fc5119922aef31fa55",
+      "bytes": 59699
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart047.swift",
+      "sha256": "3d5ae9ae8fb49b4e0a57679f5e3a8e10a05f72e697985a296a1e5cd6cc0657bb",
+      "bytes": 59701
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart048.swift",
+      "sha256": "1fcdb43d970943db955f5410f44bb5c9143b1bb912d6cc9e4dc60fae2779359a",
+      "bytes": 59711
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart049.swift",
+      "sha256": "41722ad50183fa37fd63051c462f7e3e710d180db942193f64da34262714e705",
+      "bytes": 59715
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart050.swift",
+      "sha256": "a7a75d2b55cf43755227beae24185e710f0204561b334a95717e448012d14a0f",
+      "bytes": 59721
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart051.swift",
+      "sha256": "af694928580be929360cbba97862cb13705390a5c69eadb16f2795e0e6aeb9eb",
+      "bytes": 59683
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart052.swift",
+      "sha256": "4983596328a969ba5bcf43ba7ecb002a084db1866e2e8daa1fe0a2504a7bb793",
+      "bytes": 59727
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart053.swift",
+      "sha256": "22ae2d02f5e309fda93a54f30d474c2e686ccca046ab3a138035f631b8d32d8a",
+      "bytes": 59677
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart054.swift",
+      "sha256": "9567a59e63ea46c5ad9e5c957dd5fbd21f1239776cea2a525d757f319aa81d6c",
+      "bytes": 59731
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart055.swift",
+      "sha256": "7b4490afe9ee44837606049092fb3db16ea09a3aeeae0799908bb9f8bf770c57",
+      "bytes": 59715
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart056.swift",
+      "sha256": "80c4d33c6e04084eae9f77f4e0a6cb7c791b8e32cd406da0af24da16652bb587",
+      "bytes": 59689
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart057.swift",
+      "sha256": "755857a8507082891d7a950ee67f1f3c2a3f505be557ce8592804fa6f564673e",
+      "bytes": 59723
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart058.swift",
+      "sha256": "59d4a47e80bace5e3a65ad97d9f552e061b81ddb8d16e2160d6b88df45fd3c4a",
+      "bytes": 59699
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart059.swift",
+      "sha256": "c701a892e1ecfa6ace621977d9211ef5783d0d20813d0cbe54f5dbb0d92b1252",
+      "bytes": 59713
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart060.swift",
+      "sha256": "8bb23971b5fa106a9ae0652bd8a4bfaf31a77e830989246c2da3f9fbaba3529f",
+      "bytes": 59703
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart061.swift",
+      "sha256": "3157ef0fa6739570b4987bb0e87e1b6c9c53d21b2e865f49093274d2efa006a9",
+      "bytes": 59711
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart062.swift",
+      "sha256": "1a9bf6ae79dfb5e5b785f1db2fc5f6f6a9ee1c5a9e6bd156e0496f2ffd2d1a55",
+      "bytes": 59697
+    },
+    {
+      "path": "Worlds/Playground/Scale/CompanyPart063.swift",
+      "sha256": "44bdc5c3f5e11733e13ca7790693c0d81eaecde8ea26e71195271a8b74b9dbca",
+      "bytes": 1279365
     },
     {
       "path": "Worlds/Playground/Scale/ScalePages.swift",
-      "sha256": "b78f066593899ecaeee5b9bc130d90ff9523bb7fc038121aabef4500fe8d1a42",
-      "bytes": 13095
+      "sha256": "7ad95af4e59f1c7c598e412ba1041c956c1933fddd99a9fa559cc9bfe8b27b65",
+      "bytes": 13083
     },
     {
       "path": "Worlds/Playground/Scale/Dictionary/Design.swift",
@@ -54,8 +436,8 @@
     },
     {
       "path": "Worlds/Playground/Scale/gate.manifest.swift",
-      "sha256": "fc8459861e9c6b11da78f73fda297ca6b80f0ede4fccadbbab74a6a70d2aadba",
-      "bytes": 3622
+      "sha256": "004be8d9886e444a967200c488f7baac2c2a8b3c9cae0449a86df6bf2d06cd51",
+      "bytes": 14773
     },
     {
       "path": "Worlds/Playground/Scale/.gate/forms-definitions.json",
@@ -63,14 +445,400 @@
       "bytes": 4132
     }
   ],
-  "command": "node Tools/Playground/generate-company.js --count 12800 --seed 0",
+  "command": "node Tools/Playground/generate-company.js --count 12800 --seed 0 --part-size 200",
   "storage": "versioned",
-  "compilation": "Company.swift is read whole by the company court. The Scale page has not been compiled or compared by Drawing.",
+  "compilation": "WorldFile parts present one complete company. The Scale page has not been compiled or compared by Drawing.",
   "address_map": {
     "legacy": "gate@8886973: generated Company.swift",
-    "file": "Worlds/Playground/Scale/Company.swift",
     "legacy_data_start_line": 380,
     "data_start_line": 6,
-    "rule": "The data suffix is byte-identical; add the difference of these start lines to map an old data line."
+    "rule": "Remove the repeated five-line import header from parts after the first, then concatenate in company_files order to recover the former materialized Company.swift byte for byte.",
+    "parts": [
+      {
+        "path": "Worlds/Playground/Scale/Company.swift",
+        "canonical_start_line": 1,
+        "canonical_end_line": 1914,
+        "source_start_line": 1
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart001.swift",
+        "canonical_start_line": 1915,
+        "canonical_end_line": 3714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart002.swift",
+        "canonical_start_line": 3715,
+        "canonical_end_line": 5514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart003.swift",
+        "canonical_start_line": 5515,
+        "canonical_end_line": 7314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart004.swift",
+        "canonical_start_line": 7315,
+        "canonical_end_line": 9114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart005.swift",
+        "canonical_start_line": 9115,
+        "canonical_end_line": 10914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart006.swift",
+        "canonical_start_line": 10915,
+        "canonical_end_line": 12714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart007.swift",
+        "canonical_start_line": 12715,
+        "canonical_end_line": 14514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart008.swift",
+        "canonical_start_line": 14515,
+        "canonical_end_line": 16314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart009.swift",
+        "canonical_start_line": 16315,
+        "canonical_end_line": 18114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart010.swift",
+        "canonical_start_line": 18115,
+        "canonical_end_line": 19914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart011.swift",
+        "canonical_start_line": 19915,
+        "canonical_end_line": 21714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart012.swift",
+        "canonical_start_line": 21715,
+        "canonical_end_line": 23514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart013.swift",
+        "canonical_start_line": 23515,
+        "canonical_end_line": 25314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart014.swift",
+        "canonical_start_line": 25315,
+        "canonical_end_line": 27114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart015.swift",
+        "canonical_start_line": 27115,
+        "canonical_end_line": 28914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart016.swift",
+        "canonical_start_line": 28915,
+        "canonical_end_line": 30714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart017.swift",
+        "canonical_start_line": 30715,
+        "canonical_end_line": 32514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart018.swift",
+        "canonical_start_line": 32515,
+        "canonical_end_line": 34314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart019.swift",
+        "canonical_start_line": 34315,
+        "canonical_end_line": 36114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart020.swift",
+        "canonical_start_line": 36115,
+        "canonical_end_line": 37914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart021.swift",
+        "canonical_start_line": 37915,
+        "canonical_end_line": 39714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart022.swift",
+        "canonical_start_line": 39715,
+        "canonical_end_line": 41514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart023.swift",
+        "canonical_start_line": 41515,
+        "canonical_end_line": 43314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart024.swift",
+        "canonical_start_line": 43315,
+        "canonical_end_line": 45114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart025.swift",
+        "canonical_start_line": 45115,
+        "canonical_end_line": 46914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart026.swift",
+        "canonical_start_line": 46915,
+        "canonical_end_line": 48714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart027.swift",
+        "canonical_start_line": 48715,
+        "canonical_end_line": 50514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart028.swift",
+        "canonical_start_line": 50515,
+        "canonical_end_line": 52314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart029.swift",
+        "canonical_start_line": 52315,
+        "canonical_end_line": 54114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart030.swift",
+        "canonical_start_line": 54115,
+        "canonical_end_line": 55914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart031.swift",
+        "canonical_start_line": 55915,
+        "canonical_end_line": 57714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart032.swift",
+        "canonical_start_line": 57715,
+        "canonical_end_line": 59514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart033.swift",
+        "canonical_start_line": 59515,
+        "canonical_end_line": 61314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart034.swift",
+        "canonical_start_line": 61315,
+        "canonical_end_line": 63114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart035.swift",
+        "canonical_start_line": 63115,
+        "canonical_end_line": 64914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart036.swift",
+        "canonical_start_line": 64915,
+        "canonical_end_line": 66714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart037.swift",
+        "canonical_start_line": 66715,
+        "canonical_end_line": 68514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart038.swift",
+        "canonical_start_line": 68515,
+        "canonical_end_line": 70314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart039.swift",
+        "canonical_start_line": 70315,
+        "canonical_end_line": 72114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart040.swift",
+        "canonical_start_line": 72115,
+        "canonical_end_line": 73914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart041.swift",
+        "canonical_start_line": 73915,
+        "canonical_end_line": 75714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart042.swift",
+        "canonical_start_line": 75715,
+        "canonical_end_line": 77514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart043.swift",
+        "canonical_start_line": 77515,
+        "canonical_end_line": 79314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart044.swift",
+        "canonical_start_line": 79315,
+        "canonical_end_line": 81114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart045.swift",
+        "canonical_start_line": 81115,
+        "canonical_end_line": 82914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart046.swift",
+        "canonical_start_line": 82915,
+        "canonical_end_line": 84714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart047.swift",
+        "canonical_start_line": 84715,
+        "canonical_end_line": 86514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart048.swift",
+        "canonical_start_line": 86515,
+        "canonical_end_line": 88314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart049.swift",
+        "canonical_start_line": 88315,
+        "canonical_end_line": 90114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart050.swift",
+        "canonical_start_line": 90115,
+        "canonical_end_line": 91914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart051.swift",
+        "canonical_start_line": 91915,
+        "canonical_end_line": 93714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart052.swift",
+        "canonical_start_line": 93715,
+        "canonical_end_line": 95514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart053.swift",
+        "canonical_start_line": 95515,
+        "canonical_end_line": 97314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart054.swift",
+        "canonical_start_line": 97315,
+        "canonical_end_line": 99114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart055.swift",
+        "canonical_start_line": 99115,
+        "canonical_end_line": 100914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart056.swift",
+        "canonical_start_line": 100915,
+        "canonical_end_line": 102714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart057.swift",
+        "canonical_start_line": 102715,
+        "canonical_end_line": 104514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart058.swift",
+        "canonical_start_line": 104515,
+        "canonical_end_line": 106314,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart059.swift",
+        "canonical_start_line": 106315,
+        "canonical_end_line": 108114,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart060.swift",
+        "canonical_start_line": 108115,
+        "canonical_end_line": 109914,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart061.swift",
+        "canonical_start_line": 109915,
+        "canonical_end_line": 111714,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart062.swift",
+        "canonical_start_line": 111715,
+        "canonical_end_line": 113514,
+        "source_start_line": 6
+      },
+      {
+        "path": "Worlds/Playground/Scale/CompanyPart063.swift",
+        "canonical_start_line": 113515,
+        "canonical_end_line": 136138,
+        "source_start_line": 6
+      }
+    ],
+    "canonical_sha256": "0f8c2e19e446c2a4518f85f783d6a2c82d78f35e98fd11c9d8d79c45d4fdf86c"
   }
 }
