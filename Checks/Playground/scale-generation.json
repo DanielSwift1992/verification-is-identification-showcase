@@ -2,34 +2,34 @@
   "format": "scale-generation/1",
   "tool": {
     "path": "Tools/Playground/generate-company.js",
-    "revision": "bd2d1570f9a538db1c5e2b15e5a1fe7c8c7e9945",
-    "sha256": "6bce95284bac42b5544bb0dde7b141d799789b89c135cec30e3ea2a49f943e2a"
+    "revision": "1cb65d4113011131fa1afcdf54ea2ee94deecda4",
+    "sha256": "12f589e9a4061e6ea138e46800fcb2086f1a40640c6d4e96e9e20ee673f8e166"
   },
   "inputs": [
     {
       "path": "Tools/Playground/company-seed.json",
-      "revision": "2793b001221ffe135bec1cb04ff4859d17b5b0f5",
-      "sha256": "58aaa8c57d6046f603ec14e99a85476855f52da91d37ffd54e265330844fddb2"
+      "revision": "cb7b908fd36f9b812d80a7b0e63f4fc495e55424",
+      "sha256": "aeac252280fbfc55c940da12d0178d89b44396571c39fce819ca1bcd1c60e265"
     },
     {
-      "path": "Worlds/Playground/Organization/Organization.swift",
-      "revision": "bd2d1570f9a538db1c5e2b15e5a1fe7c8c7e9945",
-      "sha256": "ed17f77580890cbff0aeb049ff36e48cd25a92abe23f7230a9538a16f8816b7b"
+      "path": "Worlds/Playground/Organization/OrganizationPages.swift",
+      "revision": "6ff9208891eebcb3e2ff6e73314bbb314c74c9ac",
+      "sha256": "a20827789ece93dc2bf68451fae648a8cf1cc7df4c16f94d480f4630cf610600"
     },
     {
       "path": "Worlds/Playground/Organization/Dictionary/Design.swift",
-      "revision": "bd2d1570f9a538db1c5e2b15e5a1fe7c8c7e9945",
+      "revision": "6ff9208891eebcb3e2ff6e73314bbb314c74c9ac",
       "sha256": "5c590ba2f550273cf76c51d9847a10cd18c15eb03e9d61471297855aefbbfab0"
     },
     {
       "path": "Worlds/Playground/Company/gate.manifest.swift",
-      "revision": "bd2d1570f9a538db1c5e2b15e5a1fe7c8c7e9945",
-      "sha256": "652a278c7c1116862de28cb9cf06349ecbc738151685343c3d82cfb1a4193b9c"
+      "revision": "6ff9208891eebcb3e2ff6e73314bbb314c74c9ac",
+      "sha256": "ce141bf5b5abc474e5f8801c2afa0768f57b13049ef66909deed620bfc02eb38"
     },
     {
       "path": "Worlds/Playground/Company/.gate/forms-definitions.json",
-      "revision": "bd2d1570f9a538db1c5e2b15e5a1fe7c8c7e9945",
-      "sha256": "bbd051c81b2499e6b5b49715dfe50ba2815d1fb54833d350ed3054ddd6c966fa"
+      "revision": "6ff9208891eebcb3e2ff6e73314bbb314c74c9ac",
+      "sha256": "0d64bccb68d77924f5c3a3c0781ea5648dbf08e92107d5d7eef2620a7d9b8e19"
     }
   ],
   "parameters": {
@@ -450,8 +450,8 @@
     },
     {
       "path": "Worlds/Playground/Scale/ScalePages.swift",
-      "sha256": "8267f83804b1596da652f2c940deaca5de3d47e1ce3e9cc97ad46cbff29551a1",
-      "bytes": 13083
+      "sha256": "a1b4ccd86ffc1f7952885452d21f7de2e7794f7f585e660fe7f302802ac0f4b8",
+      "bytes": 13119
     },
     {
       "path": "Worlds/Playground/Scale/Dictionary/Design.swift",
@@ -460,12 +460,12 @@
     },
     {
       "path": "Worlds/Playground/Scale/gate.manifest.swift",
-      "sha256": "ca3ba01f5973665616e026735764e5b143ae25f7094cc88398aaac88461d5ff7",
-      "bytes": 29199
+      "sha256": "109a3cdbc2427870fd14ffbcd42a14bb4257a117379882cd96925eab74c3fde3",
+      "bytes": 17599
     },
     {
       "path": "Worlds/Playground/Scale/.gate/forms-definitions.json",
-      "sha256": "bbd051c81b2499e6b5b49715dfe50ba2815d1fb54833d350ed3054ddd6c966fa",
+      "sha256": "0d64bccb68d77924f5c3a3c0781ea5648dbf08e92107d5d7eef2620a7d9b8e19",
       "bytes": 4521
     }
   ],

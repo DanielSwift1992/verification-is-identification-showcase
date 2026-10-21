@@ -73,7 +73,7 @@ extension SitePage {
 public typealias Banded<Tall: Structure, Content: Spanning> =
     Paired<Air<Breath>, Fixed<Tall, Content>>
 
-public typealias HeaderTall = Plus<U32, U8>
+public typealias OrganizationHeaderTall = Plus<U32, U8>
 public typealias KpiTall = Plus<U64, U32>
 public typealias ChipTall = U64
 public typealias FootTall = Plus<U16, U8>
@@ -81,7 +81,7 @@ public typealias FootTall = Plus<U16, U8>
 // ── the header: a breathing status, the name, the claim ──
 
 public enum StatusDot: SpanBreathingDot {
-    public typealias CY = Halfway<HeaderTall, Never>
+    public typealias CY = Halfway<OrganizationHeaderTall, Never>
     public typealias R = Tally<Plus<U4, U1>>
     public typealias Fill = AccentRole
 }
@@ -359,7 +359,7 @@ public enum OrganizationArt: GrownDiagram {
     @StructureBuilder
     public static var body: some Structure & DividesY {
         Air<EdgeMargin>.self
-        Fixed<HeaderTall, SpanHosted<HeaderRow>>.self
+        Fixed<OrganizationHeaderTall, SpanHosted<HeaderRow>>.self
         Air<Plus<U8, U4>>.self
         Fixed<OrgWhyOneTall, SpanHosted<OrgWhyOneRow>>.self
         Fixed<OrgWhyTwoTall, SpanHosted<OrgWhyTwoRow>>.self
