@@ -94,5 +94,6 @@
       "Hybrid",
       "Remote"
     ]
-  }
+  },
+  "part_size": 200
 }

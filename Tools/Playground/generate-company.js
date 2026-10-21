@@ -109,15 +109,35 @@ function materialize(count, seed, config) {
     const header = "import VerificationIsIdentification\nimport DocumentKit\nimport Organization\n\n";
     const data = header + "// Materialized by Tools/Playground/generate-company.js; seed " + seed + ".\n"
         + mixed.slice(boundary + marker.length);
-    const pages = mixed.slice(0, boundary).replace(/complete company fragment, [^"]+ lines/, "complete company fragment, " + thousands(data.split("\n").length) + " lines");
+    let pages = mixed.slice(0, boundary).replace(/complete company fragment, [^"]+ lines/, "complete company fragment, " + thousands(data.split("\n").length) + " lines");
+    const starts = [...data.matchAll(/^public enum Emp[0-9]+:/gm)].map(m => m.index);
+    const company = {};
+    for (let i = 0; i < starts.length; i += config.part_size) {
+        const from = i === 0 ? 0 : starts[i];
+        const to = i + config.part_size < starts.length ? starts[i + config.part_size] : data.length;
+        const name = i === 0 ? "Company.swift" : "CompanyPart" + String(i / config.part_size).padStart(3, "0") + ".swift";
+        company["Worlds/Playground/Scale/" + name] = Buffer.from((i === 0 ? "" : data.slice(0, data.indexOf("\n", data.indexOf("// Materialized")) + 1)) + data.slice(from, to));
+    }
+    const parts = Object.keys(company).length;
+    pages = pages.replace("This file is the same organization, written out for " + thousands(count) + " people.",
+        "This world keeps " + thousands(count) + " people in " + parts + " declared source files.")
+        .replace("The editor shows a portion of this file; Full keeps the complete source.",
+            "Full keeps each file's complete source; the manifest names every part.")
+        .replace("The editor shows this file in pages. The judge reads all pages at once.",
+            "The company has " + parts + " source files. The judge reads their complete set.");
     let manifest = fs.readFileSync(path.join(root, "Worlds/Playground/Company/gate.manifest.swift"), "utf8");
+    for (const file of Object.keys(company).slice(1)) {
+        const name = path.basename(file);
+        manifest += "\npublic enum The" + name.slice(0, -6) + ": Mine {\n    public typealias Kind = WorldFile\n}\nextension The" + name.slice(0, -6)
+            + " {\n    public static var typeName: String { \"" + name + "\" }\n}\n";
+    }
     manifest += "\n// The owner supplies the page and geometry; neither states company premises.\n";
     for (const [name, file] of [["ThePages", "ScalePages.swift"], ["TheGeometry", "Dictionary/Design.swift"]]) {
         manifest += "public enum " + name + ": Mine {\n    public typealias Kind = CarriedFile\n}\nextension " + name
             + " {\n    public static var typeName: String { \"" + file + "\" }\n}\n";
     }
     return {
-        "Worlds/Playground/Scale/Company.swift": Buffer.from(data),
+        ...company,
         "Worlds/Playground/Scale/ScalePages.swift": Buffer.from(pages),
         "Worlds/Playground/Scale/Dictionary/Design.swift": fs.readFileSync(path.join(root, "Worlds/Playground/Organization/Dictionary/Design.swift")),
         "Worlds/Playground/Scale/gate.manifest.swift": Buffer.from(manifest),
@@ -132,10 +152,12 @@ function run(args) {
         if (flag === "--check") check = true;
         else if (flag === "--count") count = Number(args.shift());
         else if (flag === "--seed") seed = Number(args.shift());
-        else throw Error("usage: node Tools/Playground/generate-company.js [--count N] [--seed N] [--check]");
+        else if (flag === "--part-size") config.part_size = Number(args.shift());
+        else throw Error("usage: node Tools/Playground/generate-company.js [--count N] [--seed N] [--part-size N] [--check]");
     }
     if (!Number.isSafeInteger(count) || count < 8 || !Number.isSafeInteger(seed) || seed < 0 || seed + count > 2 ** 31)
         throw Error("count and seed must be bounded integers; count >= 8, seed >= 0");
+    if (!Number.isSafeInteger(config.part_size) || config.part_size < 1) throw Error("part-size must be a positive integer");
     const git = args => cp.execFileSync("git", args, {cwd:root, encoding:"utf8"}).trim();
     const toolPath = "Tools/Playground/generate-company.js";
     const toolRevision = git(["log", "-1", "--format=%H", "--", toolPath]);
@@ -151,15 +173,26 @@ function run(args) {
             "Worlds/Playground/Company/gate.manifest.swift", "Worlds/Playground/Company/.gate/forms-definitions.json"]
             .map(file => input(file, config.source_revision))];
     const files = materialize(count, seed, config);
-    const record = {format:"scale-generation/1", tool, inputs, parameters:{count, seed},
+    const companyFiles = Object.keys(files).filter(file => /\/Company(?:Part[0-9]+)?\.swift$/.test(file));
+    const record = {format:"scale-generation/1", tool, inputs, parameters:{count, seed, part_size:config.part_size}, company_files:companyFiles,
         outputs:Object.entries(files).map(([file, bytes]) => ({path:file, sha256:sha(bytes), bytes:bytes.length})),
-        command:"node Tools/Playground/generate-company.js --count " + count + " --seed " + seed,
-        storage:"versioned", compilation:"Company.swift is read whole by the company court. The Scale page has not been compiled or compared by Drawing."};
+        command:"node Tools/Playground/generate-company.js --count " + count + " --seed " + seed + " --part-size " + config.part_size,
+        storage:"versioned", compilation:"WorldFile parts present one complete company. The Scale page has not been compiled or compared by Drawing."};
     const source = fs.readFileSync(path.join(root, "Worlds/Playground/Organization/Organization.swift"), "utf8");
     const legacy = makeBigCompany(count, source, seed, config.pools);
-    record.address_map = {legacy:"gate@8886973: generated Company.swift", file:"Worlds/Playground/Scale/Company.swift",
+    record.address_map = {legacy:"gate@8886973: generated Company.swift",
         legacy_data_start_line:legacy.slice(0, legacy.indexOf("// gate-company-data\n") + "// gate-company-data\n".length).split("\n").length,
-        data_start_line:6, rule:"The data suffix is byte-identical; add the difference of these start lines to map an old data line."};
+        data_start_line:6, rule:"Remove the repeated five-line import header from parts after the first, then concatenate in company_files order to recover the former materialized Company.swift byte for byte.", parts:[]};
+    let canonicalLine = 1;
+    const original = [];
+    for (const [index, file] of companyFiles.entries()) {
+        const text = files[file].toString(), sourceStart = index === 0 ? 1 : 6;
+        const body = index === 0 ? text : text.split("\n").slice(5).join("\n");
+        const lines = body.split("\n").length - (body.endsWith("\n") ? 1 : 0);
+        record.address_map.parts.push({path:file, canonical_start_line:canonicalLine, canonical_end_line:canonicalLine + lines - 1, source_start_line:sourceStart});
+        canonicalLine += lines; original.push(body);
+    }
+    record.address_map.canonical_sha256 = sha(Buffer.from(original.join("")));
     files["Checks/Playground/scale-generation.json"] = Buffer.from(JSON.stringify(record, null, 2) + "\n");
     for (const [file, bytes] of Object.entries(files)) {
         const target = path.join(root, file);
