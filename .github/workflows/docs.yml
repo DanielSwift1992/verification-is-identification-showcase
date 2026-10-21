@@ -49,7 +49,19 @@ jobs:
       - name: Every law of this package
         env:
           VI_THEORY_PATH: ${{ github.workspace }}/verification-is-identification
-        run: ./check.sh
+        shell: bash
+        run: |
+          ./check.sh 2>&1 | tee "$RUNNER_TEMP/check-out.txt"
+          exit ${PIPESTATUS[0]}
+
+      # The job log needs a token to read; an annotation does not. A red or
+      # partial run carries its law headers, its refusals and the work a
+      # clean-tree law found, so the next repair starts from what CI saw.
+      - if: failure()
+        shell: bash
+        run: |
+          python3 -c 'import sys; t=open(sys.argv[1],encoding="utf-8",errors="replace").read().splitlines(); k=[l for l in t if l.startswith(("── ","   not asked","     ","✗","◐","FAIL"))][-80:]
+          print("::error title=what the laws said::"+"\n".join(k or t[-40:]).replace("%","%25").replace("\r","%0D").replace("\n","%0A"))' "$RUNNER_TEMP/check-out.txt"
 
       - name: Generate the combined documentation site
         env:

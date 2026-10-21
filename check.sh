@@ -81,6 +81,8 @@ for entry in "${LAWS[@]}"; do
     if [[ " $NEEDS_CLEAN " == *" $tag "* ]] && [ -n "$(git status --porcelain)" ]; then
         echo "── $tag: $said"
         echo "   not asked: this law reads a committed tree, and yours has work in it"
+        # the work is named, so a runner nobody can sit at says which law left it
+        git status --porcelain | head -20 | sed 's/^/     /'
         skipped+=("$tag")
         continue
     fi
