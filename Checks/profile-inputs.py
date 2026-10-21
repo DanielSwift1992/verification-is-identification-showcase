@@ -1,33 +1,81 @@
 #!/usr/bin/env python3
 """Changing an input requires a new native profile, not an old certificate."""
+import argparse
 import copy
+import hashlib
 import json
 import re
 from pathlib import Path
-import shutil
 import sys
 import tempfile
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'Tools'))
 import drawing_profile as reader
 
 
+VARIANTS=reader.ROOT/'Profiles/Playground/Controls/variants.json'
+
+
+def sha(data):return hashlib.sha256(data).hexdigest()
+
+
+def transform(declared,inputs,spec):
+    """Text changes only; DocumentKit still owns every colour and count."""
+    request=copy.deepcopy(declared);result=dict(inputs)
+    for row,replacements in spec.get('replacements',{}).items():
+        text=result[row].decode()
+        for old,new in replacements.items():
+            assert old in text,(row,old,'rename has no source')
+            text=text.replace(old,new)
+        result[row]=text.encode()
+    for row,values in spec.get('values',{}).items():
+        text=result[row].decode()
+        for name,value in values.items():
+            text,count=re.subn(r'^(public typealias '+re.escape(name)+r' = ).+$',lambda m:m[1]+value,text,flags=re.M)
+            assert count==1,(row,name,'value needs one declaration')
+        result[row]=text.encode()
+    request['inputs']={row:Path(path).name for row,path in request['inputs'].items()}
+    for old,new in spec.get('input_rows',{}).items():
+        assert new not in request['inputs'],(new,'row already exists')
+        request['inputs'][new]=request['inputs'].pop(old);result[new]=result.pop(old)
+    return request,result
+
+
+def reading(declared,inputs,spec,binary):
+    request,values=transform(declared,inputs,spec)
+    with tempfile.TemporaryDirectory(prefix='profile-variant-') as temp:
+        root=Path(temp)
+        for row,path in request['inputs'].items():(root/path).write_bytes(values[row])
+        css,receipt=reader.resolve(request,root,binary)
+    return request,values,css,receipt
+
+
+def check_digest(name,spec,receipt):
+    assert sha(receipt)==spec['receipt_sha256'],name+': native profile receipt changed'
+
+
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--export',type=Path,help='write temporary owner readings for an external consumer test')
+    args=parser.parse_args()
     declared=json.loads(reader.DEFAULT.read_text());binary=reader.drawing.build()
-    output=reader.ROOT/'Profiles/Playground/Controls'
-    def keep(name,request,root,css,receipt):
-        target=output/name
-        files={'drawing.css':css,'receipt.json':receipt}
-        for row in ['TheProfileSource','TheBindings','ThePalette','PaintInput']:
-            if row in request['inputs']:files[Path(request['inputs'][row]).name]=(root/request['inputs'][row]).read_bytes()
-        for path,data in files.items():
-            if '--write' in sys.argv:
-                target.mkdir(parents=True,exist_ok=True);(target/path).write_bytes(data)
-            else:
-                assert (target/path).read_bytes()==data,str(target/path)+': native profile control changed'
+    inputs={row:(reader.ROOT/path).read_bytes() for row,path in declared['inputs'].items()}
+    control=json.loads(VARIANTS.read_text());assert control['format']==1
+    variants=control['variants']
+    results={}
+    for name,spec in variants.items():
+        request,values,css,receipt=reading(declared,inputs,spec,binary)
+        check_digest(name,spec,receipt);results[name]=(request,values,css,receipt)
+        if args.export:
+            target=args.export/name;target.mkdir(parents=True,exist_ok=True)
+            for row,path in request['inputs'].items():(target/path).write_bytes(values[row])
+            (target/'drawing.css').write_bytes(css);(target/'receipt.json').write_bytes(receipt)
+    if args.export:
+        print('PROFILE VARIANTS GREEN: current owner inputs, declared transformations, native receipt digests')
+        return
     with tempfile.TemporaryDirectory(prefix='profile-inputs-') as temp:
         root=Path(temp);request=copy.deepcopy(declared)
         for row,path in declared['inputs'].items():
-            name=Path(path).name;shutil.copy2(reader.ROOT/path,root/name);request['inputs'][row]=name
+            name=Path(path).name;(root/name).write_bytes(inputs[row]);request['inputs'][row]=name
         def path(row):return root/request['inputs'][row]
         originals={n:p.read_bytes() for n in request['inputs'] for p in [path(n)]}
         def reset():
@@ -45,20 +93,26 @@ def main():
         refused('different coordinate scale',lambda:bindings.write_text(bindings.read_text().replace('Never, CoordinateScale>', 'Never, Twice<CoordinateScale>>',1)), 'luminance')
         refused('false native count',lambda:palette.write_text(re.sub(r'^public typealias TextOnPaperSlack = .+$', 'public typealias TextOnPaperSlack = Never', palette.read_text(), flags=re.M)), 'Legible')
         reset();before,old=reader.resolve(request,root,binary)
-        palette.write_text(palette.read_text().replace('SurfaceCardColour','HarborPaper'))
-        bindings.write_text(bindings.read_text().replace('SurfaceCardColour','HarborPaper').replace('BindSurfaceCard','MooringPaper').replace('ThePalette::','PaintInput::'))
-        source.write_text(source.read_text().replace('BindSurfaceCard','MooringPaper').replace('Palette = ThePalette','Palette = PaintInput').replace('"Inter"','"Harbor Face"'))
-        renamed=copy.deepcopy(request);renamed['inputs']['PaintInput']=renamed['inputs'].pop('ThePalette')
-        after,receipt=reader.resolve(renamed,root,binary)
+        _,_,after,receipt=results['renamed']
         assert after==before and json.loads(receipt)['inputs']!=json.loads(old)['inputs']
-        keep('renamed',renamed,root,after,receipt)
-        reset()
-        for channel in ['Red','Green','Blue']:
-            palette.write_text(re.sub(r'^public typealias SurfaceTrackLit'+channel+r' = .+$', 'public typealias SurfaceTrackLit'+channel+' = U1', palette.read_text(), flags=re.M))
-        after,receipt=reader.resolve(request,root,binary)
+        _,_,after,receipt=results['other-palette']
         assert after!=before and json.loads(receipt)['css']['sha256']!=json.loads(old)['css']['sha256']
-        keep('other-palette',request,root,after,receipt)
-    print('PROFILE INPUTS GREEN: four delivery controls, false native count, A3 rename and A4 new palette')
+    # Change an owner value outside either variant's delta. Both readings must
+    # inherit it, including their certificate, without editing the control table.
+    changed=dict(inputs)
+    changed['ThePalette'],count=re.subn(rb'^(public typealias SurfaceTrackDimRed = ).+$',rb'\g<1>U1',changed['ThePalette'],flags=re.M)
+    assert count==1 and changed['ThePalette']!=inputs['ThePalette']
+    for name,spec in variants.items():
+        _,values,css,receipt=reading(declared,changed,spec,binary)
+        row=spec.get('input_rows',{}).get('ThePalette','ThePalette')
+        assert b'public typealias SurfaceTrackDimRed = U1\n' in values[row],name+': owner edit was lost'
+        assert values[row]!=results[name][1][row] and css!=results[name][2] and sha(receipt)!=sha(results[name][3]),name+': variant stayed frozen'
+        assert json.loads(receipt)['inputs'][row]['sha256']==sha(values[row])
+        try:check_digest(name,spec,receipt)
+        except AssertionError:pass
+        else:raise AssertionError(name+': old expected digest accepted a changed owner input')
+    assert not list((VARIANTS.parent).glob('*/*.swift')) and not list(VARIANTS.parent.glob('*/receipt.json')),'full owner controls must not return'
+    print('PROFILE INPUTS GREEN: delivery refusals, native count, A3/A4 deltas and owner-edit propagation in both variants')
 
 
 if __name__=='__main__':main()

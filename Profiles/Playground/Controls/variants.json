@@ -1,0 +1,20 @@
+{
+  "format": 1,
+  "variants": {
+    "renamed": {
+      "replacements": {
+        "ThePalette": {"SurfaceCardColour": "HarborPaper"},
+        "TheBindings": {"SurfaceCardColour": "HarborPaper", "BindSurfaceCard": "MooringPaper", "ThePalette::": "PaintInput::"},
+        "TheProfileSource": {"BindSurfaceCard": "MooringPaper", "Palette = ThePalette": "Palette = PaintInput", "\"Inter\"": "\"Harbor Face\""}
+      },
+      "input_rows": {"ThePalette": "PaintInput"},
+      "receipt_sha256": "ca03cbe85694e574ce697a91fbe0ffd44da9a53de22e37ff33e3400001f68287"
+    },
+    "other-palette": {
+      "values": {
+        "ThePalette": {"SurfaceTrackLitRed": "U1", "SurfaceTrackLitGreen": "U1", "SurfaceTrackLitBlue": "U1"}
+      },
+      "receipt_sha256": "301c2346da258aecbaa6a52e44213c6769fc8840a799de5ab0b7731675fb8d98"
+    }
+  }
+}
