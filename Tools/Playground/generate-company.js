@@ -111,11 +111,12 @@ function materialize(count, seed, config) {
         + mixed.slice(boundary + marker.length);
     let pages = mixed.slice(0, boundary).replace(/complete company fragment, [^"]+ lines/, "complete company fragment, " + thousands(data.split("\n").length) + " lines");
     const starts = [...data.matchAll(/^public enum Emp[0-9]+:/gm)].map(m => m.index);
+    const boundaries = [0, ...starts.filter((_, i) => i > 0 && i % config.part_size === 0),
+        ...[...data.matchAll(/^public enum (?:Company|FinanceTeam|EngineeringTeam|AllAccesses):/gm)].map(m => m.index), data.length];
     const company = {};
-    for (let i = 0; i < starts.length; i += config.part_size) {
-        const from = i === 0 ? 0 : starts[i];
-        const to = i + config.part_size < starts.length ? starts[i + config.part_size] : data.length;
-        const name = i === 0 ? "Company.swift" : "CompanyPart" + String(i / config.part_size).padStart(3, "0") + ".swift";
+    for (let i = 0; i + 1 < boundaries.length; i += 1) {
+        const from = boundaries[i], to = boundaries[i + 1];
+        const name = i === 0 ? "Company.swift" : "CompanyPart" + String(i).padStart(3, "0") + ".swift";
         company["Worlds/Playground/Scale/" + name] = Buffer.from((i === 0 ? "" : data.slice(0, data.indexOf("\n", data.indexOf("// Materialized")) + 1)) + data.slice(from, to));
     }
     const parts = Object.keys(company).length;
