@@ -2,8 +2,8 @@
   "format": "scale-generation/1",
   "tool": {
     "path": "Tools/Playground/generate-company.js",
-    "revision": "8043a7e41f0d6cc5961d82ad6ba60659e98793a1",
-    "sha256": "64ead38c68e3cec4225178faadd50e41f25762f452f5e9c679c30b72a7115576"
+    "revision": "6d3a7f57604cebb038c232ce8c458dbcfdb7b817",
+    "sha256": "5b869f3e3c908c79c3355f3f6b8957aa0f4f2e14610ee366bcc157b9b1b85e59"
   },
   "inputs": [
     {
