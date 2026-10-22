@@ -5,7 +5,7 @@
     "version": 1,
     "files": {
       "Tools/drawing_profile.py": "e1b42eeeb5e017176bbc119e2c95f0f836bae6af5e66b75ec243ba1b0d4b37dd",
-      "Tools/drawing.py": "12344bb220e600b22cad758ad9281993270f7d4ea40496c3d80d6ccd232e1332",
+      "Tools/drawing.py": "35b1e0d85e03cae3468d3f802ce19216a80ef8735b523e68ef3b1df316fba312",
       "showcase/Package.swift": "afba11c7e3d7a0351b188db63f1a06971b3de63a470dcbe1afd6001aa6869028",
       "showcase/Sources/DocumentKit/Alphabet.swift": "99382d24f496cf5cab36ee55942f1c7cb7c3a05bd9a5cf923602528661a7686d",
       "showcase/Sources/DocumentKit/Claim.swift": "800f442b92b692758216c8d5b75d742f8bd5d5d4253bcc55ebd53eb5334d6911",

@@ -99,10 +99,12 @@ def main():
         with tempfile.TemporaryDirectory(prefix='profile-flat-modules-') as directory:
             flat=Path(directory)
             for module in ['VerificationIsIdentification','Alphabet','DocumentKit']:
-                emitted=next(binary.rglob(module+'.swiftmodule'))
-                objects=next(p for p in binary.rglob(module+'.build') if p.is_dir())
+                flags,objects=reader.drawing.link_inputs(binary,[module],reader.drawing.BUILD_ROOT)
+                emitted=Path(flags[1])/(module+'.swiftmodule')
                 (flat/(module+'.swiftmodule')).symlink_to(emitted,target_is_directory=emitted.is_dir())
-                (flat/(module+'.build')).symlink_to(objects,target_is_directory=True)
+                target=flat/(module+'.build');target.mkdir()
+                for index,object_path in enumerate(objects):
+                    (target/(str(index)+'.o')).symlink_to(object_path)
             (flat/'ModuleCache').symlink_to(binary/'ModuleCache',target_is_directory=True)
             flat_css,flat_receipt=reader.resolve(request,root,flat)
             assert (flat_css,flat_receipt)==(before,old),'SwiftPM artifact layout changed the native reading'

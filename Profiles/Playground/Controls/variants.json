@@ -3,18 +3,34 @@
   "variants": {
     "renamed": {
       "replacements": {
-        "ThePalette": {"SurfaceCardColour": "HarborPaper"},
-        "TheBindings": {"SurfaceCardColour": "HarborPaper", "BindSurfaceCard": "MooringPaper", "ThePalette::": "PaintInput::"},
-        "TheProfileSource": {"BindSurfaceCard": "MooringPaper", "Palette = ThePalette": "Palette = PaintInput", "\"Inter\"": "\"Harbor Face\""}
+        "ThePalette": {
+          "SurfaceCardColour": "HarborPaper"
+        },
+        "TheBindings": {
+          "SurfaceCardColour": "HarborPaper",
+          "BindSurfaceCard": "MooringPaper",
+          "ThePalette::": "PaintInput::"
+        },
+        "TheProfileSource": {
+          "BindSurfaceCard": "MooringPaper",
+          "Palette = ThePalette": "Palette = PaintInput",
+          "\"Inter\"": "\"Harbor Face\""
+        }
       },
-      "input_rows": {"ThePalette": "PaintInput"},
-      "receipt_sha256": "2418954cee35a3145b8501d660fbd91e3013758c5be10721710f45c01c7a9a60"
+      "input_rows": {
+        "ThePalette": "PaintInput"
+      },
+      "receipt_sha256": "ea566036f3410940ea6de51f1fe22badbaa84cec1fb34775dfb890de3d91bcb0"
     },
     "other-palette": {
       "values": {
-        "ThePalette": {"SurfaceTrackLitRed": "U1", "SurfaceTrackLitGreen": "U1", "SurfaceTrackLitBlue": "U1"}
+        "ThePalette": {
+          "SurfaceTrackLitRed": "U1",
+          "SurfaceTrackLitGreen": "U1",
+          "SurfaceTrackLitBlue": "U1"
+        }
       },
-      "receipt_sha256": "3b47b33a080cd208a6bd0dac6b6cd1c8cb7119c80c0732dc0d5868e21388e7e7"
+      "receipt_sha256": "a495e450f924237499d2eff6a03910dffa56dcc2af94dfb29e9b0a386f41c2f3"
     }
   }
 }

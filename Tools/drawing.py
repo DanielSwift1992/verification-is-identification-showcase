@@ -18,6 +18,7 @@ import tempfile
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
+BUILD_ROOT = ROOT / '.build'
 REGISTRY = ROOT / 'Worlds/Playground/drawing.json'
 CONTRACT = ROOT / 'Contracts/Drawing/v0.1'
 
@@ -117,26 +118,74 @@ def target_requests(requests):
 
 
 def build():
-    result = run(['swift', 'build', '--target', 'DocumentKit'], 600, cwd=ROOT)
+    result = run(['swift', 'build', '--scratch-path', str(BUILD_ROOT), '--target', 'DocumentKit'], 600, cwd=ROOT)
     if result.returncode:
         raise RuntimeError(result.stderr.decode(errors='replace') + result.stdout.decode(errors='replace'))
-    result = run(['swift', 'build', '--show-bin-path'], 60, cwd=ROOT)
+    result = run(['swift', 'build', '--scratch-path', str(BUILD_ROOT), '--show-bin-path'], 60, cwd=ROOT)
     if result.returncode:
         raise RuntimeError(result.stderr.decode(errors='replace'))
     return Path(result.stdout.decode().strip()).resolve()
 
 
-def link_inputs(binary, dependencies):
+def swiftbuild_inputs(binary, module, build_root):
+    """Pair the build service's compilation and module requirements by inputs.
+
+    SwiftPM selects this scratch root explicitly. The plan supplies every
+    object and module path; Products need not contain the intermediates.
+    Repeated plans may describe identical outputs, but competing sets refuse.
+    """
+    candidates = set()
+    for path in Path(build_root).rglob('manifest.json'):
+        commands = json.loads(path.read_text()).get('commands', {})
+        if not isinstance(commands, dict):
+            continue
+        # Only a plan delivering this module to the selected --show-bin-path
+        # belongs to this configuration. Do not select a host or Release plan.
+        if not any(str(output).startswith(str(binary) + os.sep)
+                   and (Path(output).name == module + '.o' or module + '.swiftmodule' in Path(output).parts)
+                   for command in commands.values() for output in command.get('outputs', [])):
+            continue
+        compilations = [c for c in commands.values() if c.get('tool') == 'swift-driver-compilation']
+        for requirement in commands.values():
+            if requirement.get('tool') != 'swift-driver-compilation-requirement':
+                continue
+            modules = [Path(p).resolve() for p in requirement.get('outputs', []) if Path(p).name == module + '.swiftmodule']
+            for emitted in modules:
+                for command in compilations:
+                    # Ordering edges (<target-...>) differ between phases;
+                    # their presented files and compiler file maps must agree.
+                    files = lambda c: {p for p in c.get('inputs', []) if not p.startswith('<')}
+                    if files(command) != files(requirement):
+                        continue
+                    objects = tuple(sorted(str(Path(p).resolve()) for p in command.get('outputs', []) if str(p).endswith('.o')))
+                    if objects:
+                        candidates.add((str(emitted), objects))
+    if len(candidates) != 1:
+        raise ValueError(str(build_root) + ': expected one SwiftPM compilation/module pair for '
+                         + module + ' at ' + str(binary) + ', found ' + str(len(candidates)))
+    emitted, objects = next(iter(candidates))
+    for path in [emitted, *objects]:
+        if not Path(path).is_file():
+            raise ValueError(path + ': missing SwiftPM output for ' + module)
+    return Path(emitted), list(objects)
+
+
+def link_inputs(binary, dependencies, build_root=None):
     """Find SwiftPM's emitted modules and objects under its own bin path.
 
-    Toolchains differ on whether a .swiftmodule lives beside the objects or
-    in a Modules directory. Neither layout is the owner's declaration.
+    Native SwiftPM puts object directories under the bin path. The build
+    service supplies compilation outputs in its plan under the scratch root.
     """
     binary = Path(binary)
     includes, objects, commands = set(), [], None
     for module in dependencies:
         modules = sorted(binary.rglob(module + '.swiftmodule'))
         folders = sorted(p for p in binary.rglob(module + '.build') if p.is_dir())
+        if not folders:
+            emitted, compiled = swiftbuild_inputs(binary, module, build_root or binary)
+            includes.add(emitted.parent)
+            objects.extend(compiled)
+            continue
         if len(folders) != 1:
             raise ValueError(str(binary) + ': expected one SwiftPM module and object directory for '
                              + module + ', found ' + str(len(modules)) + '/' + str(len(folders)))
@@ -166,7 +215,7 @@ def link_inputs(binary, dependencies):
 
 
 def compile_probe(binary, dependencies, sources, main, executable, budget):
-    includes, objects = link_inputs(binary, dependencies)
+    includes, objects = link_inputs(binary, dependencies, BUILD_ROOT)
     # The compiler validates this cache against its toolchain and imported
     # headers. A fresh cache per probe rebuilt the same Foundation imports for
     # every reading. Presented Swift is still compiled and executed every time.
@@ -202,7 +251,7 @@ def read(request, binary, base=ROOT):
             modules = [request['target']] if request.get('target') else [
                 m for m in dependencies if m not in ['VerificationIsIdentification', 'Alphabet', 'DocumentKit']]
             for module in modules:
-                prepared = run(['swift', 'build', '--target', module], request.get('compileSeconds', 120), cwd=ROOT)
+                prepared = run(['swift', 'build', '--scratch-path', str(BUILD_ROOT), '--target', module], request.get('compileSeconds', 120), cwd=ROOT)
                 if prepared.returncode:
                     return dict(result, status='failed', reason='compile',
                                 diagnostic=(prepared.stderr + prepared.stdout).decode(errors='replace'))
