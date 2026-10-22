@@ -3,15 +3,16 @@
     "Primitive.swift",
     "Spectrum.swift"
   ],
-  "definition_revisions": "Primitive from Package.swift theoryRevision; Spectrum from this showcase revision",
-  "recorded_by": "typed-playground 400b667/check.js and check-theory.sh, except palette-count checked by Checks/Playground/palette-count.py; native/wasm replay belongs to gate step 3c",
+  "definition_revisions": "Whole-file definitions and their revisions are declared by each world Language record; historical two-file vectors retain their separate receipts.",
+  "recorded_by": "Historical vectors originate in typed-playground 400b667/check.js and check-theory.sh. T0053 asks the current complete declared Language contexts with Court v0.5; the owner replays these cases in Tools/Playground/court-receipts.py and gate compares native/wasm outputs.",
   "cases": [
     {
       "id": "light-clean",
       "world": "Light",
       "court": "where",
       "exit": 0,
-      "prefix": "\u2713 THE WHERE holds: 11 equalities and 0 memberships"
+      "equalities": 11,
+      "memberships": 0
     },
     {
       "id": "light-halving",
@@ -46,14 +47,11 @@
       "id": "atom-clean-where",
       "world": "Atom",
       "court": "where",
-      "exit": 1,
-      "refused": [
-        "GroundFloorStitch",
-        "SecondFloorStitch",
-        "ThirdFloorStitch",
-        "TwoRoadsOneDrop"
-      ],
-      "refusal_count": 4
+      "exit": 0,
+      "refused": [],
+      "refusal_count": 0,
+      "equalities": 20,
+      "memberships": 8
     },
     {
       "id": "atom-forbidden-emission",
@@ -104,7 +102,7 @@
         "encoding": "UnaryArithmeticEncoding",
         "sigma": "AtomLevels"
       },
-      "prefix": "\u2713 COUNT holds: 10 source-bound readings"
+      "readings": 8
     },
     {
       "id": "atom-count-lie",
@@ -121,12 +119,25 @@
         "public typealias BalmerAlphaDrop = Plus<U16, Plus<U4, U1>>"
       ],
       "refused_readings": [
-        "BalmerAlphaBinding.Right",
-        "ThroughFloorThreeBinding.Right"
+        "SecondFloorStitch.Right",
+        "TwoRoadsOneDrop.Right"
       ],
-      "left": 37,
-      "answer": 36,
-      "refusal_count": 2
+      "refusal_count": 2,
+      "reading_counts": {
+        "SecondFloorStitch.Right": {
+          "left": 37,
+          "answer": 36
+        },
+        "TwoRoadsOneDrop.Right": {
+          "left": 28,
+          "answer": 27
+        }
+      },
+      "stitch_refusals": [
+        "SecondFloorStitch.Right",
+        "TwoRoadsOneDrop.Right"
+      ],
+      "scope": "The four original EnergySum triples are the count applications. Exactly SecondFloorStitch.Right and TwoRoadsOneDrop.Right refuse; no duplicate LevelDrop application roster remains."
     },
     {
       "id": "palette-count",
@@ -138,8 +149,8 @@
         "encoding": "UnaryArithmeticEncoding",
         "sigma": "PaletteLight"
       },
-      "prefix": "\u2713 COUNT holds: 17 source-bound readings",
-      "residue_fixture": "palette-residue.json"
+      "residue_fixture": "palette-residue.json",
+      "readings": 17
     }
   ],
   "native_wasm_parity": [

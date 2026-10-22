@@ -841,17 +841,9 @@ public enum LevelDrop<Lower: Structure, Upper: Structure, Drop: Structure>: Enco
     public typealias SharedImage = Lower
 }
 
-/// Paschen-α binds floor four to floor three: 9 + 7 reads as the recorded 16.
-public typealias PaschenAlphaBinding = LevelDrop<FloorThreeDepth, FloorFourDepth, PaschenAlphaDrop>
-/// Balmer-α binds floor three to floor two: 16 + 20 reads as the recorded 36.
-public typealias BalmerAlphaBinding = LevelDrop<FloorTwoDepth, FloorThreeDepth, BalmerAlphaDrop>
-/// Lyman-α binds floor two to the ground: 36 + 108 reads as the recorded 144.
-public typealias LymanAlphaBinding = LevelDrop<FloorOneDepth, FloorTwoDepth, LymanAlphaDrop>
-/// Balmer-β binds floor four directly to floor two: 9 + 27 reads as the recorded 36.
-public typealias BalmerBetaBinding = LevelDrop<FloorTwoDepth, FloorFourDepth, BalmerBetaDrop>
-/// The road through floor three: 9 + (7 + 20) reads as the same recorded 36.
-public typealias ThroughFloorThreeBinding =
-    LevelDrop<FloorTwoDepth, FloorFourDepth, Plus<PaschenAlphaDrop, BalmerAlphaDrop>>
+// The four EnergySum stitches above are the uses of this count reading.
+// They bind each recorded drop once; TwoRoadsOneDrop holds the two routes.
+// A second list of LevelDrop aliases would ask the same arithmetic again.
 
 // The page speaks these geometry names; each expression has one home.
 public typealias AtomSurface = U512
