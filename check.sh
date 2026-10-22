@@ -82,7 +82,7 @@ for entry in "${LAWS[@]}"; do
         echo "── $tag: $said"
         echo "   not asked: this law reads a committed tree, and yours has work in it"
         # the work is named, so a runner nobody can sit at says which law left it
-        git status --porcelain | head -20 | sed 's/^/     /'
+        git status --porcelain | head -20 | sed 's/^/   work: /'
         skipped+=("$tag")
         continue
     fi
