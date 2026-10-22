@@ -284,11 +284,10 @@ public typealias BalmerAlphaDrop = Plus<U16, U4>
 public typealias BalmerBetaDrop = Plus<U16, Plus<U8, Plus<U2, U1>>>
 public typealias LymanAlphaDrop = Plus<U64, Plus<U32, Plus<U8, U4>>>
 
-// a whole that must be the sum of its two parts, judged as arithmetic
-public protocol EnergyClosed {}
-public enum EnergySum<Whole, Left, Right>: Close {}
-extension EnergySum: EnergyClosed
-where Whole == Plus<Left, Right> {}
+// A whole and its two parts ask the same count question as a level and its
+// drop below. Whole keeps its recorded tree; count compares the two readings.
+public typealias EnergySum<Whole: Structure, Left: Structure, Right: Structure> =
+    LevelDrop<Whole, Left, Right>
 
 // the stitches: every drop against its two floors, and the two roads one drop
 public typealias ThirdFloorStitch = EnergySum<FloorThreeDepth, FloorFourDepth, PaschenAlphaDrop>
@@ -842,17 +841,9 @@ public enum LevelDrop<Lower: Structure, Upper: Structure, Drop: Structure>: Enco
     public typealias SharedImage = Lower
 }
 
-/// Paschen-α binds floor four to floor three: 9 + 7 reads as the recorded 16.
-public typealias PaschenAlphaBinding = LevelDrop<FloorThreeDepth, FloorFourDepth, PaschenAlphaDrop>
-/// Balmer-α binds floor three to floor two: 16 + 20 reads as the recorded 36.
-public typealias BalmerAlphaBinding = LevelDrop<FloorTwoDepth, FloorThreeDepth, BalmerAlphaDrop>
-/// Lyman-α binds floor two to the ground: 36 + 108 reads as the recorded 144.
-public typealias LymanAlphaBinding = LevelDrop<FloorOneDepth, FloorTwoDepth, LymanAlphaDrop>
-/// Balmer-β binds floor four directly to floor two: 9 + 27 reads as the recorded 36.
-public typealias BalmerBetaBinding = LevelDrop<FloorTwoDepth, FloorFourDepth, BalmerBetaDrop>
-/// The road through floor three: 9 + (7 + 20) reads as the same recorded 36.
-public typealias ThroughFloorThreeBinding =
-    LevelDrop<FloorTwoDepth, FloorFourDepth, Plus<PaschenAlphaDrop, BalmerAlphaDrop>>
+// The four EnergySum stitches above are the uses of this count reading.
+// They bind each recorded drop once; TwoRoadsOneDrop holds the two routes.
+// A second list of LevelDrop aliases would ask the same arithmetic again.
 
 // The page speaks these geometry names; each expression has one home.
 public typealias AtomSurface = U512

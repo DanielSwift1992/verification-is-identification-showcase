@@ -1,0 +1,14 @@
+{
+  "schema": "gate.court.receipts/1",
+  "receipts": [
+    {
+      "schema": "gate.court.receipt/1",
+      "request_sha256": "56d30ee88fda290f3418da441c43ff1ee0cbdf9e022d7602e0133b49f4481b92",
+      "response": {
+        "exit": 2,
+        "stdout": "{\"diagnostics\":[],\"inputs\":[{\"path\":\".gate/court/WorldLanguage.json\",\"sha256\":\"89bda5a015f4beefec7247b79758cca289113f84415849fecf5ea73826fb0006\"},{\"path\":\".gate/inputs/Primitive.swift\",\"sha256\":\"c2700f5d176d4f30159b9996cbe41d33fc2f14dfb6e7ad355e081014f8c4482a\"},{\"path\":\".gate/inputs/Spectrum.swift\",\"sha256\":\"9e1efba56c40c8fa7b8cd3833ae30ec6d9f1f64de08917ed31b8fdf2707f6be5\"},{\"path\":\".gate/inputs/language/Sources/Alphabet/Alphabet.swift\",\"sha256\":\"ebbcb98e46c8b5c2e7b21e8973a706eb1497953f94072a2ba1a5cc445b8d1c48\"},{\"path\":\".gate/inputs/language/Sources/DocumentKit/Design.swift\",\"sha256\":\"8b6338891c9299888e53c707789edb0feb4838041bf77c467c38fde5889c4083\"},{\"path\":\".gate/inputs/language/Sources/DocumentKit/Dynamics.swift\",\"sha256\":\"56b3cca623833cbbdc9c27b1d1a4f9f668d973b9d9da48a52537c965fca2ca57\"},{\"path\":\".gate/inputs/language/Sources/DocumentKit/Vector.swift\",\"sha256\":\"b61eea9c279db510d66cca5119a2b11b1069be5dce9a2b1981d1ba4b075dfcf3\"},{\"path\":\".gate/inputs/metrics.swift\",\"sha256\":\"44cc532765c2be7e4069513387db74c7db66d0986449375dae53a570226eb1d9\"},{\"path\":\"Dictionary/Typewriter.swift\",\"sha256\":\"841732eda090c59e482c907fbf2c5d536cd4001ecbf52bb7e735e9ba2659f038\"},{\"path\":\"TypewriterPages.swift\",\"sha256\":\"08a641e35bd94e191b6a32c87f993854eb373c5140f921d9996a389091d5018b\"}],\"outcome\":\"empty\",\"question\":\"where\",\"results\":[{\"diagnostics\":[],\"equalities\":0,\"memberships\":0,\"outcome\":\"empty\",\"path\":\"Dictionary/Typewriter.swift\",\"readings\":0,\"source\":\"Dictionary/Typewriter.swift\",\"unchecked\":[\"Dictionary/Typewriter.swift:21\",\"Sources/Alphabet/Alphabet.swift:24\",\"Sources/DocumentKit/Design.swift:75\",\"Sources/DocumentKit/Dynamics.swift:68\",\"Sources/DocumentKit/GeneratedFontMetrics.swift:9\",\"Sources/DocumentKit/Spectrum.swift:32\",\"Sources/DocumentKit/Vector.swift:7\",\"Sources/VerificationIsIdentification/Primitive.swift:49\",\"TypewriterPages.swift:7\"]},{\"diagnostics\":[],\"equalities\":0,\"memberships\":0,\"outcome\":\"empty\",\"path\":\"TypewriterPages.swift\",\"readings\":0,\"source\":\"TypewriterPages.swift\",\"unchecked\":[\"Dictionary/Typewriter.swift:21\",\"Sources/Alphabet/Alphabet.swift:24\",\"Sources/DocumentKit/Design.swift:75\",\"Sources/DocumentKit/Dynamics.swift:68\",\"Sources/DocumentKit/GeneratedFontMetrics.swift:9\",\"Sources/DocumentKit/Spectrum.swift:32\",\"Sources/DocumentKit/Vector.swift:7\",\"Sources/VerificationIsIdentification/Primitive.swift:49\",\"TypewriterPages.swift:7\"]}],\"schema\":\"vi.court.sources/1\"}\n",
+        "stderr": ""
+      }
+    }
+  ]
+}

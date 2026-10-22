@@ -20,7 +20,7 @@
       "input_rows": {
         "ThePalette": "PaintInput"
       },
-      "receipt_sha256": "ea566036f3410940ea6de51f1fe22badbaa84cec1fb34775dfb890de3d91bcb0"
+      "receipt_sha256": "7fd51f3cc2cbec5e012313e608fb2991d298cf0445c086fbcb275d53c085bf7e"
     },
     "other-palette": {
       "values": {
@@ -30,7 +30,7 @@
           "SurfaceTrackLitBlue": "U1"
         }
       },
-      "receipt_sha256": "a495e450f924237499d2eff6a03910dffa56dcc2af94dfb29e9b0a386f41c2f3"
+      "receipt_sha256": "29556d87399a1fe12d3e8160f43399ab2be6e15839f791ba8cb382bb3d9f1997"
     }
   }
 }

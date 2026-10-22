@@ -55,7 +55,9 @@ def check_digest(name,spec,receipt):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--export',type=Path,help='write temporary owner readings for an external consumer test')
+    mode=parser.add_mutually_exclusive_group()
+    mode.add_argument('--export',type=Path,help='write temporary owner readings for an external consumer test')
+    mode.add_argument('--update',action='store_true',help='recompute variant receipt digests with the native owner; does not qualify the controls')
     args=parser.parse_args()
     declared=json.loads(reader.DEFAULT.read_text());binary=reader.drawing.build()
     inputs={row:(reader.ROOT/path).read_bytes() for row,path in declared['inputs'].items()}
@@ -64,11 +66,25 @@ def main():
     results={}
     for name,spec in variants.items():
         request,values,css,receipt=reading(declared,inputs,spec,binary)
-        check_digest(name,spec,receipt);results[name]=(request,values,css,receipt)
+        if not args.update:
+            check_digest(name,spec,receipt)
+        results[name]=(request,values,css,receipt)
         if args.export:
             target=args.export/name;target.mkdir(parents=True,exist_ok=True)
             for row,path in request['inputs'].items():(target/path).write_bytes(values[row])
             (target/'drawing.css').write_bytes(css);(target/'receipt.json').write_bytes(receipt)
+    if args.update:
+        # Every native reading must succeed before any expected value changes.
+        # Checks and --export remain read-only comparisons; only this explicit
+        # authoring mode can refresh a stale receipt after a source merge.
+        updated=copy.deepcopy(control)
+        for name,(_,_,_,receipt) in results.items():
+            updated['variants'][name]['receipt_sha256']=sha(receipt)
+        VARIANTS.write_text(json.dumps(updated,ensure_ascii=False,indent=2)+'\n')
+        for name,spec in updated['variants'].items():
+            print(name+': '+spec['receipt_sha256'])
+        print('PROFILE DIGESTS UPDATED: native owner readings; run the default check to qualify controls')
+        return
     if args.export:
         print('PROFILE VARIANTS GREEN: current owner inputs, declared transformations, native receipt digests')
         return

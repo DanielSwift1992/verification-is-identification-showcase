@@ -1,0 +1,27 @@
+{
+  "format": "showcase.court.reader/1",
+  "repository": "https://github.com/DanielSwift1992/verification-is-identification",
+  "revision": "0e8b26362c6ae7be65d305bf1c63909eefc46320",
+  "sources": {
+    "Sources/Court/ApplicationCourt.swift": "588e8fa2ef128200911082ae5a317ee0aa88a670c1626e513fe424142b1e3b42",
+    "Sources/Court/ContinuationCourt.swift": "a73d19ddb69fc19d04f57e7f2ba4c567aef0dee3c0fed609fd44a93dd0db6615",
+    "Sources/Court/CountCourt.swift": "5a3b9982e374ec9ad4163801a9489fd97e287ec4a8d7ca28c5daac5fac10d8c2",
+    "Sources/Court/CountDAG.swift": "8c4b6babc122481ddbbb937b86be390aaa8550af49142ab561757d71d9c81b66",
+    "Sources/Court/CourtContext.swift": "729cd9cafbe8e540267420fa64daf795df4e2cc994441d66a11f57a24ed497d6",
+    "Sources/Court/CourtNotation.swift": "9024cd7be38d0781e50327d5dc27d429c4a71517432e0f1f61d439be91645bfb",
+    "Sources/Court/CourtSHA256.swift": "0f2a86dd30ffde7a7115b36480d831788506ba10e74c84dc66e9101227acb8c7",
+    "Sources/Court/CourtSourcesReport.swift": "d2f8f80fe1d96b1dc4b8d0812d91b8852178d44ff063c9eaa38efe2b95a83e61",
+    "Sources/Court/DefinitionDAG.swift": "86f924c909e35bb88762784aba8a820dc59ba73ca15a4b60bb325d5b1f989ac7",
+    "Sources/Court/DefinitionReduction.swift": "9aa21243f0449c667d77ee07698100b2e9aa3f952948ce294a5cabaf25ae2388",
+    "Sources/Court/DefinitionView.swift": "00ab57548a547aaa50d97f9d4fab4d8bf860096de2fc5d3f93850bf767c1a541",
+    "Sources/Court/FiniteCoverageCourt.swift": "0056adc30a208bfc2ef79533b4f5e72133899e5048dc5a3c3b8f2460439ab780",
+    "Sources/Court/GenericMembership.swift": "478dd1fe4040b8eef577fd1cf4729516c11d70da45f8524b590b6239a1abe300",
+    "Sources/Court/Judge.swift": "670f6608980041ef4febf37a83235afc8f5bf0199f61c62ae03330d31d43e262",
+    "Sources/Court/NotationScope.swift": "45062e8d56fd5c3679976196d9ef07b2dad2500b2b0078d97dfedbd8c4d87b74",
+    "Sources/Court/Press.swift": "09c13263c3e0a254dd4cd41ac016f248ee5718687847948e12af3eed2de961c4",
+    "Sources/Court/StructuralSource.swift": "f4c37b3f1dfdc6aa87b92d44f1052d0120cf705bc6c28b5771777b1f0cd99ef3",
+    "Sources/Court/WhereContext.swift": "2a82a98cf2ccbcf3034a34954fa1cb9f07ddf3bcea40e8cfee2d9691793b4742",
+    "Sources/Court/WhereJudge.swift": "4eae09d7d04387625f62906ed81eed53a261b2816b69817b7f4e7c1a25876290",
+    "Sources/Court/WhereResponse.swift": "03ae9d821cf828ad065df271d977b757a8a4126a6a4b2dbffdcd416ab70e6fe3"
+  }
+}

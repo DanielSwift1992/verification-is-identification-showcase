@@ -69,9 +69,9 @@
       "row": "TheContract",
       "path": ".gate/inputs/DrawingContract.json",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "1cb65d4113011131fa1afcdf54ea2ee94deecda4",
+      "revision": "965da471124a051b7989cd4880375df3a4eb2aa1",
       "source_path": "Contracts/Drawing/v0.1/contract.json",
-      "sha256": "bcc5c7ac15215466cdec803384c238f871f2df26190cfc7c71ab94f7398b565e"
+      "sha256": "6d210aacee8fa5ecdfbf16c48d242eb6ebd3171e40feb66bbcd23c4010d4d1e4"
     },
     {
       "row": "TheCatalog",
@@ -85,43 +85,168 @@
       "row": "TheDrawing",
       "path": ".gate/inputs/resolved-profile.json",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "1ee05563938902c6d27d6390fe322dcd48f32327",
+      "revision": "965da471124a051b7989cd4880375df3a4eb2aa1",
       "source_path": "Profiles/Playground/receipt.json",
-      "sha256": "5b2684796cf3d32f524ffc652464662c17fdcd18043336c1efab25bc6a76d247"
+      "sha256": "25ee55df7164b097e9ee43e09a0f9368464077ff11db2d5ae707f9256f56f127"
     },
     {
       "row": "TheDrawingCSS",
       "path": ".gate/inputs/drawing.css",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "1ee05563938902c6d27d6390fe322dcd48f32327",
+      "revision": "965da471124a051b7989cd4880375df3a4eb2aa1",
       "source_path": "Profiles/Playground/drawing.css",
       "sha256": "46ae65f529fb306319ebe1c85269f4f495e406888b8af77bbd43bed51deeec41"
+    },
+    {
+      "row": "ContextScopes",
+      "path": ".gate/inputs/language/Checks/Grammar/scopes.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "243e2b53ef91814f8f28762ddab4601bf226059b",
+      "source_path": "Checks/Grammar/scopes.swift",
+      "sha256": "c09a281948675b101ee962e898845d3315a1ea52d811d3a59f4735b2cad68fd9"
+    },
+    {
+      "row": "ContextAlphabet",
+      "path": ".gate/inputs/language/Sources/Alphabet/Alphabet.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification",
+      "revision": "1966abc0464081a3dbe1e31414f3bc683b2c41dc",
+      "source_path": "Sources/Alphabet/Alphabet.swift",
+      "sha256": "ebbcb98e46c8b5c2e7b21e8973a706eb1497953f94072a2ba1a5cc445b8d1c48"
+    },
+    {
+      "row": "ContextKitVector",
+      "path": ".gate/inputs/language/Sources/DocumentKit/Vector.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "243e2b53ef91814f8f28762ddab4601bf226059b",
+      "source_path": "Sources/DocumentKit/Vector.swift",
+      "sha256": "b61eea9c279db510d66cca5119a2b11b1069be5dce9a2b1981d1ba4b075dfcf3"
+    },
+    {
+      "row": "ContextKitDesign",
+      "path": ".gate/inputs/language/Sources/DocumentKit/Design.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "243e2b53ef91814f8f28762ddab4601bf226059b",
+      "source_path": "Sources/DocumentKit/Design.swift",
+      "sha256": "8b6338891c9299888e53c707789edb0feb4838041bf77c467c38fde5889c4083"
+    },
+    {
+      "row": "ContextKitDynamics",
+      "path": ".gate/inputs/language/Sources/DocumentKit/Dynamics.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "243e2b53ef91814f8f28762ddab4601bf226059b",
+      "source_path": "Sources/DocumentKit/Dynamics.swift",
+      "sha256": "56b3cca623833cbbdc9c27b1d1a4f9f668d973b9d9da48a52537c965fca2ca57"
+    },
+    {
+      "row": "ContextCore",
+      "path": ".gate/inputs/language/Sources/VerificationIsIdentification/Core.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification",
+      "revision": "1966abc0464081a3dbe1e31414f3bc683b2c41dc",
+      "source_path": "Sources/VerificationIsIdentification/Core.swift",
+      "sha256": "02c210b2ad60179484cdca994a71cc9155afd9d2d513fb13fae3742c34306911"
+    },
+    {
+      "row": "ContextVerdict",
+      "path": ".gate/inputs/language/Sources/VerificationIsIdentification/Verdict.swift",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification",
+      "revision": "1966abc0464081a3dbe1e31414f3bc683b2c41dc",
+      "source_path": "Sources/VerificationIsIdentification/Verdict.swift",
+      "sha256": "e61b545adea928694a81079518ab1d6785a49d2dd7fcf6672056ce04946cc4f0"
+    },
+    {
+      "row": "CourtReceiptWorldLanguage",
+      "path": ".gate/receipts/WorldLanguage.json",
+      "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
+      "revision": "179f5ae7caa08d0d46a3e83a30bf30cff195c659",
+      "source_path": "Contracts/CourtReceipts/v0.5/Rules/WorldLanguage.json",
+      "sha256": "feedd204c4a8cbaf3f91d6ed15a1f230e39d6bff7726f23ece51edc3a398cda0"
     }
   ],
   "languages": {
-    "DrawingPalette": {
-      "namespace": "DrawingPalette",
-      "definitions": [
-        "ThePrimitive",
-        "TheSpectrum"
+    "WorldLanguage": {
+      "module": "WorldRules",
+      "namespace": "WorldRules",
+      "intrinsics": [
+        {
+          "namespace": "Swift",
+          "version": "vi.court.intrinsic-swift/2",
+          "exports": [
+            "Never",
+            "String"
+          ]
+        }
       ],
+      "definitions": [],
       "imports": [
         {
           "module": "VerificationIsIdentification",
           "inputs": [
             "ThePrimitive"
           ],
-          "namespace": "VI"
+          "namespace": "VerificationIsIdentification"
+        },
+        {
+          "module": "Alphabet",
+          "inputs": [
+            "ContextAlphabet"
+          ],
+          "namespace": "Alphabet"
+        },
+        {
+          "module": "DocumentKit",
+          "inputs": [
+            "ContextKitVector",
+            "ContextKitDesign",
+            "TheSpectrum",
+            "TheMetrics",
+            "ContextKitDynamics"
+          ],
+          "namespace": "DocumentKit"
+        }
+      ],
+      "scope_map": "ContextScopes",
+      "receipts": [
+        "CourtReceiptWorldLanguage"
+      ]
+    },
+    "DrawingPalette": {
+      "module": "DrawingPalette",
+      "namespace": "DrawingPalette",
+      "intrinsics": [
+        {
+          "namespace": "Swift",
+          "version": "vi.court.intrinsic-swift/2",
+          "exports": [
+            "Never",
+            "String"
+          ]
+        }
+      ],
+      "definitions": [
+        "ThePrimitive",
+        "ContextCore",
+        "ContextVerdict",
+        "TheSpectrum"
+      ],
+      "imports": [
+        {
+          "module": "VerificationIsIdentification",
+          "inputs": [
+            "ThePrimitive",
+            "ContextCore",
+            "ContextVerdict"
+          ],
+          "namespace": "VerificationIsIdentification"
         },
         {
           "module": "DocumentKit",
           "inputs": [
             "TheSpectrum"
           ],
-          "namespace": "Kit"
+          "namespace": "DocumentKit"
         }
       ],
-      "scope_map": null
+      "scope_map": "ContextScopes"
     }
   },
   "shelf_overrides": false,
