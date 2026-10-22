@@ -1,0 +1,14 @@
+{
+  "schema": "gate.court.receipts/1",
+  "receipts": [
+    {
+      "schema": "gate.court.receipt/1",
+      "request_sha256": "236e9a313ad8ebb99da28c3fe32e28979d57cbd29f85f29ca7b51961f5db4148",
+      "response": {
+        "exit": 2,
+        "stdout": "{\"diagnostics\":[],\"inputs\":[{\"path\":\".gate/court/WorldLanguage.json\",\"sha256\":\"abc1e62f13049ad07c0eae8ea507efaaefbbd8f9e32c145a6a7a2bf9016e9c11\"},{\"path\":\".gate/inputs/Primitive.swift\",\"sha256\":\"c2700f5d176d4f30159b9996cbe41d33fc2f14dfb6e7ad355e081014f8c4482a\"},{\"path\":\".gate/inputs/Spectrum.swift\",\"sha256\":\"9e1efba56c40c8fa7b8cd3833ae30ec6d9f1f64de08917ed31b8fdf2707f6be5\"},{\"path\":\".gate/inputs/language/Sources/Alphabet/Alphabet.swift\",\"sha256\":\"ebbcb98e46c8b5c2e7b21e8973a706eb1497953f94072a2ba1a5cc445b8d1c48\"},{\"path\":\".gate/inputs/language/Sources/DocumentKit/Design.swift\",\"sha256\":\"8b6338891c9299888e53c707789edb0feb4838041bf77c467c38fde5889c4083\"},{\"path\":\".gate/inputs/language/Sources/DocumentKit/Dynamics.swift\",\"sha256\":\"56b3cca623833cbbdc9c27b1d1a4f9f668d973b9d9da48a52537c965fca2ca57\"},{\"path\":\".gate/inputs/language/Sources/DocumentKit/Vector.swift\",\"sha256\":\"b61eea9c279db510d66cca5119a2b11b1069be5dce9a2b1981d1ba4b075dfcf3\"},{\"path\":\".gate/inputs/metrics.swift\",\"sha256\":\"44cc532765c2be7e4069513387db74c7db66d0986449375dae53a570226eb1d9\"},{\"path\":\"Dictionary/FAQ.swift\",\"sha256\":\"e26ff06ab1ebb0e1d58634e4a97289fc80e735d01557764712f55ce3c33088ac\"},{\"path\":\"FAQPages.swift\",\"sha256\":\"a6cf9723c9254f08cc26f560677591dbb0682b88fac9926b50279a4f6fe308b5\"}],\"outcome\":\"empty\",\"question\":\"where\",\"results\":[{\"diagnostics\":[],\"equalities\":0,\"memberships\":0,\"outcome\":\"empty\",\"path\":\"Dictionary/FAQ.swift\",\"readings\":0,\"source\":\"Dictionary/FAQ.swift\",\"unchecked\":[\"Dictionary/FAQ.swift:12\",\"FAQPages.swift:7\",\"Sources/Alphabet/Alphabet.swift:24\",\"Sources/DocumentKit/Design.swift:75\",\"Sources/DocumentKit/Dynamics.swift:68\",\"Sources/DocumentKit/GeneratedFontMetrics.swift:9\",\"Sources/DocumentKit/Spectrum.swift:32\",\"Sources/DocumentKit/Vector.swift:7\",\"Sources/VerificationIsIdentification/Primitive.swift:49\"]},{\"diagnostics\":[],\"equalities\":0,\"memberships\":0,\"outcome\":\"empty\",\"path\":\"FAQPages.swift\",\"readings\":0,\"source\":\"FAQPages.swift\",\"unchecked\":[\"Dictionary/FAQ.swift:12\",\"FAQPages.swift:7\",\"Sources/Alphabet/Alphabet.swift:24\",\"Sources/DocumentKit/Design.swift:75\",\"Sources/DocumentKit/Dynamics.swift:68\",\"Sources/DocumentKit/GeneratedFontMetrics.swift:9\",\"Sources/DocumentKit/Spectrum.swift:32\",\"Sources/DocumentKit/Vector.swift:7\",\"Sources/VerificationIsIdentification/Primitive.swift:49\"]}],\"schema\":\"vi.court.sources/1\"}\n",
+        "stderr": ""
+      }
+    }
+  ]
+}
