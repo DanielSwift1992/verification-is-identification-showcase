@@ -210,10 +210,14 @@ extension ContextVerdict {
 // End owner-declared Language inputs.
 // Owner Court receipt inputs.
 public enum CourtReceiptWorldLanguageOrigin: Role {}
-extension CourtReceiptWorldLanguageOrigin { public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@179f5ae7caa08d0d46a3e83a30bf30cff195c659" } }
+extension CourtReceiptWorldLanguageOrigin {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@179f5ae7caa08d0d46a3e83a30bf30cff195c659" }
+}
 public enum CourtReceiptWorldLanguage: Theirs {
     public typealias Kind = CarriedFile
     public typealias At = CourtReceiptWorldLanguageOrigin
 }
-extension CourtReceiptWorldLanguage { public static var typeName: String { ".gate/receipts/WorldLanguage.json" } }
+extension CourtReceiptWorldLanguage {
+    public static var typeName: String { ".gate/receipts/WorldLanguage.json" }
+}
 // End owner Court receipt inputs.

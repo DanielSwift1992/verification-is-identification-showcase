@@ -134,8 +134,8 @@ def take(revision):
         for language,reading in entry['languages'].items():
             row='CourtReceipt'+language;origin=row+'Origin';source=reading['path'];path='.gate/receipts/'+language+'.json'
             raw=subprocess.check_output(['git','show',revision+':'+source],cwd=ROOT)
-            block+='public enum '+origin+': Role {}\nextension '+origin+' { public static var typeName: String { "'+OWNER+'@'+revision+'" } }\n'
-            block+='public enum '+row+': Theirs {\n    public typealias Kind = CarriedFile\n    public typealias At = '+origin+'\n}\nextension '+row+' { public static var typeName: String { "'+path+'" } }\n'
+            block+='public enum '+origin+': Role {}\nextension '+origin+' {\n    public static var typeName: String { "'+OWNER+'@'+revision+'" }\n}\n'
+            block+='public enum '+row+': Theirs {\n    public typealias Kind = CarriedFile\n    public typealias At = '+origin+'\n}\nextension '+row+' {\n    public static var typeName: String { "'+path+'" }\n}\n'
             data['files'].append(dict(row=row,path=path,repository=OWNER,revision=revision,source_path=source,sha256=sha(raw)))
             data['languages'][language]['receipts']=[row]
         manifest.write_text(text+block+END+'\n');stored(record,data)
