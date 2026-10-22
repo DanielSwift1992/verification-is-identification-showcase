@@ -15,6 +15,15 @@ text='\n'.join(texts.values())
 assert len(re.findall(r'^public enum Emp[0-9]+: Employee, Person \{',text,re.M))==expected['people']
 assert '// gate-company-data' not in text
 assert json.loads((root/'Worlds/Playground/Scale/.gate/forms-definitions.json').read_text())['plain_fragments']==[]
+# The owner catalog is independent of the data recipe. Every generated part
+# must still be declared, and the page must name all of its data dependencies.
+manifest=(root/'Worlds/Playground/Scale/gate.manifest.swift').read_text()
+rows={name: (body,path) for name,body,path in re.findall(r'public enum (\w+): Mine \{([^{}]*)\}\s*extension \1 \{\s*public static var typeName: String \{ "([^"]+)" \}\s*\}',manifest)}
+parts={name for name,(body,path) in rows.items() if 'typealias Kind = WorldFile' in body}
+assert {rows[name][1] for name in parts}=={Path(name).name for name in names}, 'Scale manifest does not declare exactly the materialized company parts'
+page=next(body for body,path in rows.values() if path=='ScalePages.swift')
+match=re.search(r'typealias DrawingInputs = \(([^)]+)\)',page)
+assert match and set(re.findall(r'\w+',match[1]))==parts, 'Scale page loses a declared company dependency'
 command=[sys.argv[1],'judge']
 def judge(parts):
  with tempfile.TemporaryDirectory(prefix='scale-control-') as tmp:

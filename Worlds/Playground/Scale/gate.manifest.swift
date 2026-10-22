@@ -7,6 +7,8 @@ public protocol Mine {}
 
 public enum TheCompany: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompany {
     public static var typeName: String { "Company.swift" }
@@ -52,6 +54,8 @@ extension TheDrawingCSS {
 public enum ThePalette: Theirs {
     public typealias Kind = CarriedFile
     public typealias At = DrawingSource
+
+    public typealias Language = DrawingPalette
 }
 extension ThePalette {
     public static var typeName: String { ".gate/inputs/Palette.swift" }
@@ -102,7 +106,7 @@ extension TheBindings {
 
 public enum DrawingContractSource: Role {}
 extension DrawingContractSource {
-    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@1cb65d4113011131fa1afcdf54ea2ee94deecda4" }
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@965da471124a051b7989cd4880375df3a4eb2aa1" }
 }
 public enum TheContract: Theirs {
     public typealias Kind = CarriedFile
@@ -127,11 +131,13 @@ extension TheCatalog {
 
 public enum ResolvedDrawingSource: Role {}
 extension ResolvedDrawingSource {
-    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@1ee05563938902c6d27d6390fe322dcd48f32327" }
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@965da471124a051b7989cd4880375df3a4eb2aa1" }
 }
 
 public enum TheCompanyPart001: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart001 {
     public static var typeName: String { "CompanyPart001.swift" }
@@ -139,6 +145,8 @@ extension TheCompanyPart001 {
 
 public enum TheCompanyPart002: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart002 {
     public static var typeName: String { "CompanyPart002.swift" }
@@ -146,6 +154,8 @@ extension TheCompanyPart002 {
 
 public enum TheCompanyPart003: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart003 {
     public static var typeName: String { "CompanyPart003.swift" }
@@ -153,6 +163,8 @@ extension TheCompanyPart003 {
 
 public enum TheCompanyPart004: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart004 {
     public static var typeName: String { "CompanyPart004.swift" }
@@ -160,6 +172,8 @@ extension TheCompanyPart004 {
 
 public enum TheCompanyPart005: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart005 {
     public static var typeName: String { "CompanyPart005.swift" }
@@ -167,6 +181,8 @@ extension TheCompanyPart005 {
 
 public enum TheCompanyPart006: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart006 {
     public static var typeName: String { "CompanyPart006.swift" }
@@ -174,6 +190,8 @@ extension TheCompanyPart006 {
 
 public enum TheCompanyPart007: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart007 {
     public static var typeName: String { "CompanyPart007.swift" }
@@ -181,6 +199,8 @@ extension TheCompanyPart007 {
 
 public enum TheCompanyPart008: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart008 {
     public static var typeName: String { "CompanyPart008.swift" }
@@ -188,6 +208,8 @@ extension TheCompanyPart008 {
 
 public enum TheCompanyPart009: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart009 {
     public static var typeName: String { "CompanyPart009.swift" }
@@ -195,6 +217,8 @@ extension TheCompanyPart009 {
 
 public enum TheCompanyPart010: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart010 {
     public static var typeName: String { "CompanyPart010.swift" }
@@ -202,6 +226,8 @@ extension TheCompanyPart010 {
 
 public enum TheCompanyPart011: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart011 {
     public static var typeName: String { "CompanyPart011.swift" }
@@ -209,6 +235,8 @@ extension TheCompanyPart011 {
 
 public enum TheCompanyPart012: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart012 {
     public static var typeName: String { "CompanyPart012.swift" }
@@ -216,6 +244,8 @@ extension TheCompanyPart012 {
 
 public enum TheCompanyPart013: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart013 {
     public static var typeName: String { "CompanyPart013.swift" }
@@ -223,6 +253,8 @@ extension TheCompanyPart013 {
 
 public enum TheCompanyPart014: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart014 {
     public static var typeName: String { "CompanyPart014.swift" }
@@ -230,6 +262,8 @@ extension TheCompanyPart014 {
 
 public enum TheCompanyPart015: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart015 {
     public static var typeName: String { "CompanyPart015.swift" }
@@ -237,6 +271,8 @@ extension TheCompanyPart015 {
 
 public enum TheCompanyPart016: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart016 {
     public static var typeName: String { "CompanyPart016.swift" }
@@ -244,6 +280,8 @@ extension TheCompanyPart016 {
 
 public enum TheCompanyPart017: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart017 {
     public static var typeName: String { "CompanyPart017.swift" }
@@ -251,6 +289,8 @@ extension TheCompanyPart017 {
 
 public enum TheCompanyPart018: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart018 {
     public static var typeName: String { "CompanyPart018.swift" }
@@ -258,6 +298,8 @@ extension TheCompanyPart018 {
 
 public enum TheCompanyPart019: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart019 {
     public static var typeName: String { "CompanyPart019.swift" }
@@ -265,6 +307,8 @@ extension TheCompanyPart019 {
 
 public enum TheCompanyPart020: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart020 {
     public static var typeName: String { "CompanyPart020.swift" }
@@ -272,6 +316,8 @@ extension TheCompanyPart020 {
 
 public enum TheCompanyPart021: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart021 {
     public static var typeName: String { "CompanyPart021.swift" }
@@ -279,6 +325,8 @@ extension TheCompanyPart021 {
 
 public enum TheCompanyPart022: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart022 {
     public static var typeName: String { "CompanyPart022.swift" }
@@ -286,6 +334,8 @@ extension TheCompanyPart022 {
 
 public enum TheCompanyPart023: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart023 {
     public static var typeName: String { "CompanyPart023.swift" }
@@ -293,6 +343,8 @@ extension TheCompanyPart023 {
 
 public enum TheCompanyPart024: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart024 {
     public static var typeName: String { "CompanyPart024.swift" }
@@ -300,6 +352,8 @@ extension TheCompanyPart024 {
 
 public enum TheCompanyPart025: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart025 {
     public static var typeName: String { "CompanyPart025.swift" }
@@ -307,6 +361,8 @@ extension TheCompanyPart025 {
 
 public enum TheCompanyPart026: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart026 {
     public static var typeName: String { "CompanyPart026.swift" }
@@ -314,6 +370,8 @@ extension TheCompanyPart026 {
 
 public enum TheCompanyPart027: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart027 {
     public static var typeName: String { "CompanyPart027.swift" }
@@ -321,6 +379,8 @@ extension TheCompanyPart027 {
 
 public enum TheCompanyPart028: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart028 {
     public static var typeName: String { "CompanyPart028.swift" }
@@ -328,6 +388,8 @@ extension TheCompanyPart028 {
 
 public enum TheCompanyPart029: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart029 {
     public static var typeName: String { "CompanyPart029.swift" }
@@ -335,6 +397,8 @@ extension TheCompanyPart029 {
 
 public enum TheCompanyPart030: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart030 {
     public static var typeName: String { "CompanyPart030.swift" }
@@ -342,6 +406,8 @@ extension TheCompanyPart030 {
 
 public enum TheCompanyPart031: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart031 {
     public static var typeName: String { "CompanyPart031.swift" }
@@ -349,6 +415,8 @@ extension TheCompanyPart031 {
 
 public enum TheCompanyPart032: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart032 {
     public static var typeName: String { "CompanyPart032.swift" }
@@ -356,6 +424,8 @@ extension TheCompanyPart032 {
 
 public enum TheCompanyPart033: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart033 {
     public static var typeName: String { "CompanyPart033.swift" }
@@ -363,6 +433,8 @@ extension TheCompanyPart033 {
 
 public enum TheCompanyPart034: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart034 {
     public static var typeName: String { "CompanyPart034.swift" }
@@ -370,6 +442,8 @@ extension TheCompanyPart034 {
 
 public enum TheCompanyPart035: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart035 {
     public static var typeName: String { "CompanyPart035.swift" }
@@ -377,6 +451,8 @@ extension TheCompanyPart035 {
 
 public enum TheCompanyPart036: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart036 {
     public static var typeName: String { "CompanyPart036.swift" }
@@ -384,6 +460,8 @@ extension TheCompanyPart036 {
 
 public enum TheCompanyPart037: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart037 {
     public static var typeName: String { "CompanyPart037.swift" }
@@ -391,6 +469,8 @@ extension TheCompanyPart037 {
 
 public enum TheCompanyPart038: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart038 {
     public static var typeName: String { "CompanyPart038.swift" }
@@ -398,6 +478,8 @@ extension TheCompanyPart038 {
 
 public enum TheCompanyPart039: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart039 {
     public static var typeName: String { "CompanyPart039.swift" }
@@ -405,6 +487,8 @@ extension TheCompanyPart039 {
 
 public enum TheCompanyPart040: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart040 {
     public static var typeName: String { "CompanyPart040.swift" }
@@ -412,6 +496,8 @@ extension TheCompanyPart040 {
 
 public enum TheCompanyPart041: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart041 {
     public static var typeName: String { "CompanyPart041.swift" }
@@ -419,6 +505,8 @@ extension TheCompanyPart041 {
 
 public enum TheCompanyPart042: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart042 {
     public static var typeName: String { "CompanyPart042.swift" }
@@ -426,6 +514,8 @@ extension TheCompanyPart042 {
 
 public enum TheCompanyPart043: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart043 {
     public static var typeName: String { "CompanyPart043.swift" }
@@ -433,6 +523,8 @@ extension TheCompanyPart043 {
 
 public enum TheCompanyPart044: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart044 {
     public static var typeName: String { "CompanyPart044.swift" }
@@ -440,6 +532,8 @@ extension TheCompanyPart044 {
 
 public enum TheCompanyPart045: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart045 {
     public static var typeName: String { "CompanyPart045.swift" }
@@ -447,6 +541,8 @@ extension TheCompanyPart045 {
 
 public enum TheCompanyPart046: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart046 {
     public static var typeName: String { "CompanyPart046.swift" }
@@ -454,6 +550,8 @@ extension TheCompanyPart046 {
 
 public enum TheCompanyPart047: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart047 {
     public static var typeName: String { "CompanyPart047.swift" }
@@ -461,6 +559,8 @@ extension TheCompanyPart047 {
 
 public enum TheCompanyPart048: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart048 {
     public static var typeName: String { "CompanyPart048.swift" }
@@ -468,6 +568,8 @@ extension TheCompanyPart048 {
 
 public enum TheCompanyPart049: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart049 {
     public static var typeName: String { "CompanyPart049.swift" }
@@ -475,6 +577,8 @@ extension TheCompanyPart049 {
 
 public enum TheCompanyPart050: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart050 {
     public static var typeName: String { "CompanyPart050.swift" }
@@ -482,6 +586,8 @@ extension TheCompanyPart050 {
 
 public enum TheCompanyPart051: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart051 {
     public static var typeName: String { "CompanyPart051.swift" }
@@ -489,6 +595,8 @@ extension TheCompanyPart051 {
 
 public enum TheCompanyPart052: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart052 {
     public static var typeName: String { "CompanyPart052.swift" }
@@ -496,6 +604,8 @@ extension TheCompanyPart052 {
 
 public enum TheCompanyPart053: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart053 {
     public static var typeName: String { "CompanyPart053.swift" }
@@ -503,6 +613,8 @@ extension TheCompanyPart053 {
 
 public enum TheCompanyPart054: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart054 {
     public static var typeName: String { "CompanyPart054.swift" }
@@ -510,6 +622,8 @@ extension TheCompanyPart054 {
 
 public enum TheCompanyPart055: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart055 {
     public static var typeName: String { "CompanyPart055.swift" }
@@ -517,6 +631,8 @@ extension TheCompanyPart055 {
 
 public enum TheCompanyPart056: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart056 {
     public static var typeName: String { "CompanyPart056.swift" }
@@ -524,6 +640,8 @@ extension TheCompanyPart056 {
 
 public enum TheCompanyPart057: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart057 {
     public static var typeName: String { "CompanyPart057.swift" }
@@ -531,6 +649,8 @@ extension TheCompanyPart057 {
 
 public enum TheCompanyPart058: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart058 {
     public static var typeName: String { "CompanyPart058.swift" }
@@ -538,6 +658,8 @@ extension TheCompanyPart058 {
 
 public enum TheCompanyPart059: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart059 {
     public static var typeName: String { "CompanyPart059.swift" }
@@ -545,6 +667,8 @@ extension TheCompanyPart059 {
 
 public enum TheCompanyPart060: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart060 {
     public static var typeName: String { "CompanyPart060.swift" }
@@ -552,6 +676,8 @@ extension TheCompanyPart060 {
 
 public enum TheCompanyPart061: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart061 {
     public static var typeName: String { "CompanyPart061.swift" }
@@ -559,6 +685,8 @@ extension TheCompanyPart061 {
 
 public enum TheCompanyPart062: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart062 {
     public static var typeName: String { "CompanyPart062.swift" }
@@ -566,6 +694,8 @@ extension TheCompanyPart062 {
 
 public enum TheCompanyPart063: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart063 {
     public static var typeName: String { "CompanyPart063.swift" }
@@ -573,6 +703,8 @@ extension TheCompanyPart063 {
 
 public enum TheCompanyPart064: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart064 {
     public static var typeName: String { "CompanyPart064.swift" }
@@ -580,6 +712,8 @@ extension TheCompanyPart064 {
 
 public enum TheCompanyPart065: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart065 {
     public static var typeName: String { "CompanyPart065.swift" }
@@ -587,6 +721,8 @@ extension TheCompanyPart065 {
 
 public enum TheCompanyPart066: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart066 {
     public static var typeName: String { "CompanyPart066.swift" }
@@ -594,6 +730,8 @@ extension TheCompanyPart066 {
 
 public enum TheCompanyPart067: Mine {
     public typealias Kind = WorldFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheCompanyPart067 {
     public static var typeName: String { "CompanyPart067.swift" }
@@ -605,13 +743,119 @@ public enum DocumentFile: Role {}
 public enum ThePages: Mine {
     public typealias Kind = DocumentFile
     public typealias DrawingInputs = (TheCompany, TheCompanyPart001, TheCompanyPart002, TheCompanyPart003, TheCompanyPart004, TheCompanyPart005, TheCompanyPart006, TheCompanyPart007, TheCompanyPart008, TheCompanyPart009, TheCompanyPart010, TheCompanyPart011, TheCompanyPart012, TheCompanyPart013, TheCompanyPart014, TheCompanyPart015, TheCompanyPart016, TheCompanyPart017, TheCompanyPart018, TheCompanyPart019, TheCompanyPart020, TheCompanyPart021, TheCompanyPart022, TheCompanyPart023, TheCompanyPart024, TheCompanyPart025, TheCompanyPart026, TheCompanyPart027, TheCompanyPart028, TheCompanyPart029, TheCompanyPart030, TheCompanyPart031, TheCompanyPart032, TheCompanyPart033, TheCompanyPart034, TheCompanyPart035, TheCompanyPart036, TheCompanyPart037, TheCompanyPart038, TheCompanyPart039, TheCompanyPart040, TheCompanyPart041, TheCompanyPart042, TheCompanyPart043, TheCompanyPart044, TheCompanyPart045, TheCompanyPart046, TheCompanyPart047, TheCompanyPart048, TheCompanyPart049, TheCompanyPart050, TheCompanyPart051, TheCompanyPart052, TheCompanyPart053, TheCompanyPart054, TheCompanyPart055, TheCompanyPart056, TheCompanyPart057, TheCompanyPart058, TheCompanyPart059, TheCompanyPart060, TheCompanyPart061, TheCompanyPart062, TheCompanyPart063, TheCompanyPart064, TheCompanyPart065, TheCompanyPart066, TheCompanyPart067)
+
+    public typealias Language = WorldLanguage
 }
 extension ThePages {
     public static var typeName: String { "ScalePages.swift" }
 }
 public enum TheGeometry: Mine {
     public typealias Kind = DocumentFile
+
+    public typealias Language = WorldLanguage
 }
 extension TheGeometry {
     public static var typeName: String { "Dictionary/Design.swift" }
 }
+
+// Owner-declared Language inputs (Tools/Playground/prepare-contexts.py).
+public enum WorldLanguage: Role {}
+public enum DrawingPalette: Role {}
+public enum ContextScopesOrigin: Role {}
+extension ContextScopesOrigin {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@243e2b53ef91814f8f28762ddab4601bf226059b" }
+}
+public enum ContextScopes: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = ContextScopesOrigin
+}
+extension ContextScopes {
+    public static var typeName: String { ".gate/inputs/language/Checks/Grammar/scopes.swift" }
+}
+public enum ContextAlphabetOrigin: Role {}
+extension ContextAlphabetOrigin {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification@1966abc0464081a3dbe1e31414f3bc683b2c41dc" }
+}
+public enum ContextAlphabet: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = ContextAlphabetOrigin
+}
+extension ContextAlphabet {
+    public static var typeName: String { ".gate/inputs/language/Sources/Alphabet/Alphabet.swift" }
+}
+public enum ContextKitVectorOrigin: Role {}
+extension ContextKitVectorOrigin {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@243e2b53ef91814f8f28762ddab4601bf226059b" }
+}
+public enum ContextKitVector: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = ContextKitVectorOrigin
+}
+extension ContextKitVector {
+    public static var typeName: String { ".gate/inputs/language/Sources/DocumentKit/Vector.swift" }
+}
+public enum ContextKitDesignOrigin: Role {}
+extension ContextKitDesignOrigin {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@243e2b53ef91814f8f28762ddab4601bf226059b" }
+}
+public enum ContextKitDesign: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = ContextKitDesignOrigin
+}
+extension ContextKitDesign {
+    public static var typeName: String { ".gate/inputs/language/Sources/DocumentKit/Design.swift" }
+}
+public enum ContextKitDynamicsOrigin: Role {}
+extension ContextKitDynamicsOrigin {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@243e2b53ef91814f8f28762ddab4601bf226059b" }
+}
+public enum ContextKitDynamics: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = ContextKitDynamicsOrigin
+}
+extension ContextKitDynamics {
+    public static var typeName: String { ".gate/inputs/language/Sources/DocumentKit/Dynamics.swift" }
+}
+public enum ContextRosterOrigin: Role {}
+extension ContextRosterOrigin {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@243e2b53ef91814f8f28762ddab4601bf226059b" }
+}
+public enum ContextRoster: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = ContextRosterOrigin
+}
+extension ContextRoster {
+    public static var typeName: String { ".gate/inputs/language/Sources/Organization/System/Roster.swift" }
+}
+public enum ContextCoreOrigin: Role {}
+extension ContextCoreOrigin {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification@1966abc0464081a3dbe1e31414f3bc683b2c41dc" }
+}
+public enum ContextCore: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = ContextCoreOrigin
+}
+extension ContextCore {
+    public static var typeName: String { ".gate/inputs/language/Sources/VerificationIsIdentification/Core.swift" }
+}
+public enum ContextVerdictOrigin: Role {}
+extension ContextVerdictOrigin {
+    public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification@1966abc0464081a3dbe1e31414f3bc683b2c41dc" }
+}
+public enum ContextVerdict: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = ContextVerdictOrigin
+}
+extension ContextVerdict {
+    public static var typeName: String { ".gate/inputs/language/Sources/VerificationIsIdentification/Verdict.swift" }
+}
+// End owner-declared Language inputs.
+// Owner Court receipt inputs.
+public enum CourtReceiptWorldLanguageOrigin: Role {}
+extension CourtReceiptWorldLanguageOrigin { public static var typeName: String { "https://github.com/DanielSwift1992/verification-is-identification-showcase@179f5ae7caa08d0d46a3e83a30bf30cff195c659" } }
+public enum CourtReceiptWorldLanguage: Theirs {
+    public typealias Kind = CarriedFile
+    public typealias At = CourtReceiptWorldLanguageOrigin
+}
+extension CourtReceiptWorldLanguage { public static var typeName: String { ".gate/receipts/WorldLanguage.json" } }
+// End owner Court receipt inputs.
