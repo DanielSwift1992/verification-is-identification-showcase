@@ -156,9 +156,8 @@ func luminance<X: Structure,Y: Structure,Z: Structure,S: Structure,V: Structure,
     binary = binary or drawing.build()
     with tempfile.TemporaryDirectory(prefix='drawing-profile-') as temp:
         tmp = Path(temp); main = tmp/'main.swift';main.write_text(program); executable=tmp/'read'
-        objects = [str(p) for module in ['VerificationIsIdentification','Alphabet','DocumentKit'] for p in sorted((binary/(module+'.build')).glob('*.o'))]
         sources = [str(base/inputs[row]) for row in sorted({palette_row, metrics_row} | {b['row'] for b in bindings})]
-        compiled = drawing.run(['swiftc','-I',str(binary/'Modules'),'-module-cache-path',str(tmp/'modules'),*sources,str(main),*objects,'-o',str(executable)],120)
+        compiled = drawing.compile_probe(binary, ['VerificationIsIdentification','Alphabet','DocumentKit'], sources, main, executable, 120)
         if compiled.returncode:
             raise ValueError(compiled.stderr.decode(errors='replace'))
         output = drawing.run([str(executable)],20)
@@ -181,7 +180,8 @@ func luminance<X: Structure,Y: Structure,Z: Structure,S: Structure,V: Structure,
     css += '@font-face{font-family:'+json.dumps(font_result['cssFamily'])+';src:url("../'+font_hash+'/font.ttf") format("truetype");font-weight:'+font_weight(content[asset_row])+';font-style:normal;font-display:block;}\n'
     css += 'svg[data-vi-canvas]{font-family:'+json.dumps(font_result['cssFamily'])+';font-optical-sizing:none;font-kerning:none;font-variant-ligatures:none;}\n'
     bound = {name:dict(sha256=sha(data),path=inputs[name]) for name,data in content.items()}
-    reader_files = {'Tools/drawing_profile.py':sha(Path(__file__).read_bytes())}
+    reader_files = {'Tools/drawing_profile.py':sha(Path(__file__).read_bytes()),
+                    'Tools/drawing.py':sha(Path(drawing.__file__).read_bytes())}
     reader_files.update(drawing.owner_environment()['files'])
     receipt = dict(format='drawing-profile/1', reader=dict(id='showcase/DocumentKitProfileReader',version=1,files=reader_files),
                    profile_row=profile['row'],inputs=bound,palette_row=palette_row,css=dict(row=request['css_row'],sha256=sha(css.encode())),

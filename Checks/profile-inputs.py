@@ -93,6 +93,19 @@ def main():
         refused('different coordinate scale',lambda:bindings.write_text(bindings.read_text().replace('Never, CoordinateScale>', 'Never, Twice<CoordinateScale>>',1)), 'luminance')
         refused('false native count',lambda:palette.write_text(re.sub(r'^public typealias TextOnPaperSlack = .+$', 'public typealias TextOnPaperSlack = Never', palette.read_text(), flags=re.M)), 'Legible')
         reset();before,old=reader.resolve(request,root,binary)
+        # Exercise the real compiler with SwiftPM modules beside the objects,
+        # not under Modules. Only the artifact layout changes, never the input
+        # declarations, and neither CSS nor the native receipt may change.
+        with tempfile.TemporaryDirectory(prefix='profile-flat-modules-') as directory:
+            flat=Path(directory)
+            for module in ['VerificationIsIdentification','Alphabet','DocumentKit']:
+                emitted=next(binary.rglob(module+'.swiftmodule'))
+                objects=next(p for p in binary.rglob(module+'.build') if p.is_dir())
+                (flat/(module+'.swiftmodule')).symlink_to(emitted,target_is_directory=emitted.is_dir())
+                (flat/(module+'.build')).symlink_to(objects,target_is_directory=True)
+            (flat/'ModuleCache').symlink_to(binary/'ModuleCache',target_is_directory=True)
+            flat_css,flat_receipt=reader.resolve(request,root,flat)
+            assert (flat_css,flat_receipt)==(before,old),'SwiftPM artifact layout changed the native reading'
         _,_,after,receipt=results['renamed']
         assert after==before and json.loads(receipt)['inputs']!=json.loads(old)['inputs']
         _,_,after,receipt=results['other-palette']
@@ -112,7 +125,7 @@ def main():
         except AssertionError:pass
         else:raise AssertionError(name+': old expected digest accepted a changed owner input')
     assert not list((VARIANTS.parent).glob('*/*.swift')) and not list(VARIANTS.parent.glob('*/receipt.json')),'full owner controls must not return'
-    print('PROFILE INPUTS GREEN: delivery refusals, native count, A3/A4 deltas and owner-edit propagation in both variants')
+    print('PROFILE INPUTS GREEN: SwiftPM layouts, delivery refusals, native count, A3/A4 deltas and owner-edit propagation in both variants')
 
 
 if __name__=='__main__':main()
