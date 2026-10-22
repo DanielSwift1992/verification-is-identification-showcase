@@ -123,7 +123,55 @@ def build():
     result = run(['swift', 'build', '--show-bin-path'], 60, cwd=ROOT)
     if result.returncode:
         raise RuntimeError(result.stderr.decode(errors='replace'))
-    return Path(result.stdout.decode().strip())
+    return Path(result.stdout.decode().strip()).resolve()
+
+
+def link_inputs(binary, dependencies):
+    """Find SwiftPM's emitted modules and objects under its own bin path.
+
+    Toolchains differ on whether a .swiftmodule lives beside the objects or
+    in a Modules directory. Neither layout is the owner's declaration.
+    """
+    binary = Path(binary)
+    includes, objects, commands = set(), [], None
+    for module in dependencies:
+        modules = sorted(binary.rglob(module + '.swiftmodule'))
+        folders = sorted(p for p in binary.rglob(module + '.build') if p.is_dir())
+        if len(folders) != 1:
+            raise ValueError(str(binary) + ': expected one SwiftPM module and object directory for '
+                             + module + ', found ' + str(len(modules)) + '/' + str(len(folders)))
+        emitted = sorted(folders[0].glob('*.o'))
+        if not emitted:
+            raise ValueError(str(folders[0]) + ': no SwiftPM object files for ' + module)
+        if len(modules) > 1 and (binary / 'description.json').is_file():
+            # A package can also build the same module for a host plugin. The
+            # compile command that emitted these objects names their module;
+            # picking a directory by its spelling would choose a layout again.
+            if commands is None:
+                commands = json.loads((binary / 'description.json').read_text()).get('swiftCommands', {})
+            objects_here = {str(p.resolve()) for p in emitted}
+            paired = set()
+            for command in commands.values():
+                objects_said = {str(Path(p).resolve()) for p in command.get('objects', [])}
+                output = command.get('moduleOutputPath')
+                if command.get('moduleName') == module and objects_said and objects_said <= objects_here and output:
+                    paired.add(Path(output).resolve())
+            modules = [p for p in modules if p.resolve() in paired]
+        if len(modules) != 1:
+            raise ValueError(str(binary) + ': expected one SwiftPM module and object directory for '
+                             + module + ', found ' + str(len(modules)) + '/' + str(len(folders)))
+        includes.add(modules[0].parent)
+        objects.extend(str(p) for p in emitted)
+    return [word for path in sorted(includes) for word in ['-I', str(path)]], objects
+
+
+def compile_probe(binary, dependencies, sources, main, executable, budget):
+    includes, objects = link_inputs(binary, dependencies)
+    # The compiler validates this cache against its toolchain and imported
+    # headers. A fresh cache per probe rebuilt the same Foundation imports for
+    # every reading. Presented Swift is still compiled and executed every time.
+    return run(['swiftc', *includes, '-module-cache-path', str(binary / 'ModuleCache'),
+                *sources, str(main), *objects, '-o', str(executable)], budget)
 
 
 def read(request, binary, base=ROOT):
@@ -158,14 +206,12 @@ def read(request, binary, base=ROOT):
                 if prepared.returncode:
                     return dict(result, status='failed', reason='compile',
                                 diagnostic=(prepared.stderr + prepared.stdout).decode(errors='replace'))
-            objects = [str(p) for module in dependencies for p in sorted((binary / (module + '.build')).glob('*.o'))]
-            if any(not list((binary / (module + '.build')).glob('*.o')) for module in dependencies):
-                return dict(result, status='failed', reason='missing-object-module')
             sources = [] if request.get('target') else [str(base / p) for p in request['sources']]
-            compiled = run(['swiftc', '-I', str(binary / 'Modules'),
-                            '-module-cache-path', str(tmp / 'modules'),
-                            *sources, str(main), *objects,
-                            '-o', str(executable)], request.get('compileSeconds', 120))
+            try:
+                compiled = compile_probe(binary, dependencies, sources, main, executable,
+                                         request.get('compileSeconds', 120))
+            except ValueError as error:
+                return dict(result, status='failed', reason='missing-object-module', diagnostic=str(error))
             if compiled.returncode:
                 return dict(result, status='failed', reason='compile', diagnostic=compiled.stderr.decode(errors='replace'))
             readout = run([str(executable)], request.get('readSeconds', 20))
