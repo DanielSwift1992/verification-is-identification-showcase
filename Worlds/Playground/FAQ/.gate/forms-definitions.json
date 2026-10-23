@@ -157,9 +157,9 @@
       "row": "CourtReceiptWorldLanguage",
       "path": ".gate/receipts/WorldLanguage.json",
       "repository": "https://github.com/DanielSwift1992/verification-is-identification-showcase",
-      "revision": "179f5ae7caa08d0d46a3e83a30bf30cff195c659",
+      "revision": "42211f18aa0c4d086ad15d62ba09636024ac5636",
       "source_path": "Contracts/CourtReceipts/v0.5/FAQ/WorldLanguage.json",
-      "sha256": "e4cd52429abf4df5cb903442b53fcf3127365ecd6c20b8990367f7c3bd712612"
+      "sha256": "a7801af559992367ac8536a610416658a55f56b1cbe3d4314a12d42ae6a88327"
     }
   ],
   "languages": {
