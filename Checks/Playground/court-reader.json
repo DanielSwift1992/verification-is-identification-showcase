@@ -1,7 +1,7 @@
 {
   "format": "showcase.court.reader/1",
   "repository": "https://github.com/DanielSwift1992/verification-is-identification",
-  "revision": "0e8b26362c6ae7be65d305bf1c63909eefc46320",
+  "revision": "7b2ce5b294111954fc29e395ea0353d93d177be1",
   "sources": {
     "Sources/Court/ApplicationCourt.swift": "588e8fa2ef128200911082ae5a317ee0aa88a670c1626e513fe424142b1e3b42",
     "Sources/Court/ContinuationCourt.swift": "a73d19ddb69fc19d04f57e7f2ba4c567aef0dee3c0fed609fd44a93dd0db6615",
